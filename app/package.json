@@ -1,0 +1,42 @@
+{
+  "name": "blog",
+  "description": "re-taro's blog",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rintaro Itokawa",
+    "email": "me@re-taro.dev",
+    "url": "https://re-taro.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/re-taro/blog.re-taro.dev",
+    "directory": "app"
+  },
+  "scripts": {
+    "start": "next start",
+    "build": "next build",
+    "dev": "next dev --turbo",
+    "lint": "run-s -c lint:*",
+    "lint:eslint": "eslint . --ext .cjs,.ts,.tsx,.json",
+    "lint:prettier": "prettier --check '**/*.{cjs,ts,tsx,json}",
+    "fmt": "run-s -c fmt:*",
+    "fmt:eslint": "pnpm lint:eslint --fix",
+    "fmt:prettier": "prettier --write '**/*.{cjs,ts,tsx,json}'"
+  },
+  "dependencies": {
+    "next": "13.4.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@re-taro/eslint-config": "1.9.10",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "eslint": "8.43.0",
+    "eslint-config-prettier": "8.8.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.8.8",
+    "tsconfig": "workspace:*"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "blog.re-taro.dev",
+  "description": "re-taro's blog",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.6.2",
+  "license": "MIT",
+  "author": {
+    "name": "Rintaro Itokawa",
+    "email": "me@re-taro.dev",
+    "url": "https://re-taro.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/re-taro/blog.re-taro.dev"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "fmt": "turbo run fmt"
+  },
+  "devDependencies": {
+    "turbo": "1.10.3",
+    "typescript": "5.1.3"
+  }
+}

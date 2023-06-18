@@ -1,0 +1,30 @@
+# articles
+/app/articles/
+
+# generated
+/app/data/
+/app/public/articles/
+/app/public/sitemap*.xml
+/app/public/robots.txt
+
+# dependencies
+**/node_modules/
+
+# testing
+**/coverage/
+
+# next.js
+/app/.next/
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# turborepo
+**/.turbo/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
