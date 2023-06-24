@@ -30,7 +30,7 @@ jobs:
         run: pnpm vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
         id: deploy
-        run: pnpm vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} >> $GITHUB_OUTPUT
+        run: echo "url=$(pnpm vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> $GITHUB_OUTPUT
       - name: Update deployment status
         uses: bobheadxi/deployments@v1.4.0
         if: always()
@@ -39,5 +39,5 @@ jobs:
           token: ${{ github.token }}
           status: ${{ job.status }}
           env: ${{ steps.deployment.outputs.env }}
-          env_url: ${{ steps.deploy.outputs }}
+          env_url: ${{ steps.deploy.outputs.url }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
