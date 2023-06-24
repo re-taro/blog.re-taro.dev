@@ -1,0 +1,17 @@
+{
+  "packages": {
+    "app": {
+      "component": "app"
+    },
+    "packages/tsconfig": {
+      "release-type": "simple",
+      "component": "tsconfig"
+    }
+  },
+  "plugins": [
+    {
+      "type": "node-workspace",
+      "merge": false
+    }
+  ]
+}
