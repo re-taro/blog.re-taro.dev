@@ -20,7 +20,7 @@
     "fmt": "turbo run fmt"
   },
   "devDependencies": {
-    "turbo": "1.10.5",
+    "turbo": "1.10.6",
     "typescript": "5.1.3"
   }
 }
