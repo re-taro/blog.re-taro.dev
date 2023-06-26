@@ -16,6 +16,9 @@
 # next.js
 /app/.next/
 
+# lib
+/packages/**/dist/
+
 # local env files
 .env*.local
 
@@ -28,3 +31,8 @@
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# packelyze
+_packelyze-analyzed.json
+**/lib
+packages/**/src/*.js
