@@ -6,6 +6,9 @@
     "packages/tsconfig": {
       "release-type": "simple",
       "component": "tsconfig"
+    },
+    "packages/mdast-utils": {
+      "component": "mdast-utils"
     }
   },
   "plugins": [
