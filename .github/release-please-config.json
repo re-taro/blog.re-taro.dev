@@ -15,6 +15,9 @@
     },
     "packages/remark-remove-position": {
       "component": "remark-remove-position"
+    },
+    "packages/remark-resolve-reference": {
+      "component": "remark-resolve-reference"
     }
   },
   "plugins": [

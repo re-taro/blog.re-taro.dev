@@ -17,7 +17,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "fmt": "turbo run fmt"
+    "fmt": "turbo run fmt",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "turbo": "1.10.6",
