@@ -12,6 +12,9 @@
     },
     "packages/remark-heading-id": {
       "component": "remark-heading-id"
+    },
+    "packages/remark-remove-position": {
+      "component": "remark-remove-position"
     }
   },
   "plugins": [
