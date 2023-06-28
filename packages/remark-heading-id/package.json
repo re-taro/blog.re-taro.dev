@@ -12,8 +12,7 @@
     "url": "https://github.com/re-taro/blog.re-taro.dev",
     "directory": "packages/remark-heading-id"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {

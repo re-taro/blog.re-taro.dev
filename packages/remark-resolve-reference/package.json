@@ -12,8 +12,7 @@
     "url": "https://github.com/re-taro/blog.re-taro.dev",
     "directory": "packages/remark-resolve-reference"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
@@ -25,7 +24,8 @@
     "lint:ts": "tsc -p . --noEmit",
     "fmt": "run-s -c fmt:*",
     "fmt:eslint": "pnpm lint:eslint --fix",
-    "fmt:prettier": "prettier --write '*.{json,cjs,ts}'"
+    "fmt:prettier": "prettier --write '*.{json,cjs,ts}'",
+    "test": "vitest --run"
   },
   "dependencies": {
     "mdast-util-compact": "4.1.1",
