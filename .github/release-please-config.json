@@ -9,6 +9,9 @@
     },
     "packages/mdast-utils": {
       "component": "mdast-utils"
+    },
+    "packages/remark-heading-id": {
+      "component": "remark-heading-id"
     }
   },
   "plugins": [
