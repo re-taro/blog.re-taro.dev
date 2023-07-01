@@ -3,7 +3,10 @@ import pkg from "./package.json" assert { type: "json" };
 import terser from "@rollup/plugin-terser";
 import analyzed from "./_packelyze-analyzed.json" assert { type: "json" };
 
-const externals = [...Object.keys(pkg.devDependencies)];
+const externals = [
+  ...Object.keys(pkg.dependencies),
+  ...Object.keys(pkg.devDependencies),
+];
 
 export default {
   input: "src/index.ts",
