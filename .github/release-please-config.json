@@ -18,6 +18,12 @@
     },
     "packages/remark-resolve-reference": {
       "component": "remark-resolve-reference"
+    },
+    "packages/remark-section": {
+      "component": "remark-section"
+    },
+    "packages/remark-embed": {
+      "component": "remark-embed"
     }
   },
   "plugins": [
