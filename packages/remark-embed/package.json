@@ -1,0 +1,42 @@
+{
+  "name": "remark-embed",
+  "description": "remark plugin to embed external resources",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rintaro Itokawa",
+    "email": "me@re-taro.dev",
+    "url": "https://re-taro.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/re-taro/blog.re-taro.dev",
+    "directory": "packages/remark-embed"
+  },
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "analyze": "tsc -p tsconfig.packelyze.json && packelyze analyze-dts",
+    "build": "pnpm run analyze && rollup -c",
+    "lint": "run-s -c lint:*",
+    "lint:eslint": "eslint . --ext .json,.cjs,.ts",
+    "lint:prettier": "prettier --check '*.{json,cjs,ts}'",
+    "lint:ts": "tsc -p . --noEmit",
+    "fmt": "run-s -c fmt:*",
+    "fmt:eslint": "pnpm lint:eslint --fix",
+    "fmt:prettier": "prettier --write '*.{json,cjs,ts}'",
+    "test": "vitest --run"
+  },
+  "devDependencies": {
+    "@re-taro/eslint-config": "1.9.13",
+    "@rollup/plugin-terser": "0.4.3",
+    "@rollup/plugin-typescript": "11.1.2",
+    "eslint": "8.44.0",
+    "npm-run-all": "4.1.5",
+    "packelyze": "0.2.0",
+    "prettier": "2.8.8",
+    "rollup": "3.26.0",
+    "tsconfig": "workspace:*",
+    "vitest": "0.32.2"
+  }
+}

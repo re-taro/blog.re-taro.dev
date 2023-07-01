@@ -1,0 +1,10 @@
+{
+  "input": "lib/_eff.d.ts",
+  "output": "_packelyze-analyzed.json",
+  "builtins": [
+    "es",
+    "dom",
+    "node"
+  ],
+  "external": []
+}
