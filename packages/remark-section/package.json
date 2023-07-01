@@ -1,6 +1,6 @@
 {
-  "name": "remark-resolve-reference",
-  "description": "remark plugin to resolve reference links",
+  "name": "remark-section",
+  "description": "remark plugin to add section to markdown",
   "version": "1.0.0",
   "author": {
     "name": "Rintaro Itokawa",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/re-taro/blog.re-taro.dev",
-    "directory": "packages/remark-resolve-reference"
+    "directory": "packages/remark-section"
   },
   "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -28,9 +28,7 @@
     "test": "vitest --run"
   },
   "dependencies": {
-    "mdast-util-compact": "4.1.1",
-    "mdast-utils": "workspace:*",
-    "unist-util-visit": "4.1.2"
+    "mdast-utils": "workspace:*"
   },
   "devDependencies": {
     "@re-taro/eslint-config": "1.9.13",
