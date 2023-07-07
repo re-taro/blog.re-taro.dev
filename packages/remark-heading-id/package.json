@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "github-slugger": "2.0.0",
-    "mdast-util-to-string": "3.2.0",
+    "mdast-util-to-string": "4.0.0",
     "mdast-utils": "workspace:*",
     "unist-util-visit": "4.1.2"
   },
