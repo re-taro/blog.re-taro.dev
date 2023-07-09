@@ -24,6 +24,9 @@
     },
     "packages/remark-embed": {
       "component": "remark-embed"
+    },
+    "packages/remark-description-list": {
+      "component": "remark-description-list"
     }
   },
   "plugins": [
