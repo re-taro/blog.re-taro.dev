@@ -15,6 +15,8 @@ jobs:
         uses: re-taro/actions/setup-node@v1.0.0
         with:
           node-version-file: .tool-versions
+      - name: Use turborepo cache
+        uses: re-taro/actions/turbo-cache@v1.1.0
       - name: Build test
         run: pnpm build
         shell: sh
@@ -26,6 +28,8 @@ jobs:
         uses: re-taro/actions/setup-node@v1.0.0
         with:
           node-version-file: .tool-versions
+      - name: Use turborepo cache
+        uses: re-taro/actions/turbo-cache@v1.1.0
       - name: Lint test
         run: pnpm lint
         shell: sh
@@ -37,6 +41,8 @@ jobs:
         uses: re-taro/actions/setup-node@v1.0.0
         with:
           node-version-file: .tool-versions
+      - name: Use turborepo cache
+        uses: re-taro/actions/turbo-cache@v1.1.0
       - name: Unit test
         run: pnpm test
         shell: sh
