@@ -29,7 +29,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "1.9.15",
+    "@re-taro/eslint-config": "1.9.16",
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
