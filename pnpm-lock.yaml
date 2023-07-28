@@ -31,8 +31,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@types/node':
         specifier: 20.4.5
         version: 20.4.5
@@ -61,8 +61,8 @@ importers:
   packages/mdast-utils:
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@rollup/plugin-terser':
         specifier: 0.4.3
         version: 0.4.3(rollup@3.26.3)
@@ -107,8 +107,8 @@ importers:
         version: 4.1.2
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@rollup/plugin-terser':
         specifier: 0.4.3
         version: 0.4.3(rollup@3.26.3)
@@ -171,8 +171,8 @@ importers:
         version: 4.1.2
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@rollup/plugin-terser':
         specifier: 0.4.3
         version: 0.4.3(rollup@3.26.3)
@@ -241,8 +241,8 @@ importers:
         version: 4.1.2
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@rollup/plugin-terser':
         specifier: 0.4.3
         version: 0.4.3(rollup@3.26.3)
@@ -284,8 +284,8 @@ importers:
         version: 4.0.2
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@rollup/plugin-terser':
         specifier: 0.4.3
         version: 0.4.3(rollup@3.26.3)
@@ -330,8 +330,8 @@ importers:
         version: 4.1.2
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@rollup/plugin-terser':
         specifier: 0.4.3
         version: 0.4.3(rollup@3.26.3)
@@ -385,8 +385,8 @@ importers:
         version: link:../mdast-utils
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@rollup/plugin-terser':
         specifier: 0.4.3
         version: 0.4.3(rollup@3.26.3)
@@ -436,8 +436,8 @@ importers:
   packages/tsconfig:
     devDependencies:
       '@re-taro/eslint-config':
-        specifier: 1.9.20
-        version: 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+        specifier: 1.9.21
+        version: 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       '@tsconfig/strictest':
         specifier: 2.0.1
         version: 2.0.1
@@ -2553,14 +2553,14 @@ packages:
       tslib: 2.5.3
     dev: true
 
-  /@re-taro/eslint-config@1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6):
-    resolution: {integrity: sha512-XG4NdNG2jVKAQQ1fyYzHpZrxVWRcx91VJP6Wd9LFEFTAQJcxE9yysuHSCdG7nsPHV22V8LTqc2ieSgeauYr5yA==}
+  /@re-taro/eslint-config@1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6):
+    resolution: {integrity: sha512-v3nyq2p4zeZynucBmcpxPoqEv74EdZTnntV2L0qsUmyzSbfdtnVmqpAN1KTsTMZEb2zbC7U257QCyAWFlYl1Zw==}
     peerDependencies:
       eslint: ^8.0.0
     dependencies:
-      '@re-taro/eslint-plugin': 1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
+      '@re-taro/eslint-plugin': 1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6)
       eslint: 8.45.0
-      eslint-config-prettier: 8.8.0(eslint@8.45.0)
+      eslint-config-prettier: 8.9.0(eslint@8.45.0)
     transitivePeerDependencies:
       - eslint-import-resolver-node
       - eslint-import-resolver-webpack
@@ -2569,8 +2569,8 @@ packages:
       - typescript
     dev: true
 
-  /@re-taro/eslint-plugin@1.9.20(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6):
-    resolution: {integrity: sha512-ShSxjgx3AHBlQin7VHC+X/GZbMFHYO1sDMsOUD/PQuRmykwlOYwSoEDXvHmraLJIStGc4gdNTL75JW9TS426xA==}
+  /@re-taro/eslint-plugin@1.9.21(eslint@8.45.0)(svelte@3.59.2)(typescript@5.1.6):
+    resolution: {integrity: sha512-dr8Em2N1wE+GuFRsWrgps6yGjpJ0eQFHwv8O7nLrm4Q6gN+dIJga3+0nTrhbJG+pCWwQxu7gR3B3kl6qC4WFYA==}
     peerDependencies:
       eslint: ^8.0.0
     dependencies:
@@ -4854,15 +4854,6 @@ packages:
       optionator: 0.8.3
     optionalDependencies:
       source-map: 0.6.1
-    dev: true
-
-  /eslint-config-prettier@8.8.0(eslint@8.45.0):
-    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-    dependencies:
-      eslint: 8.45.0
     dev: true
 
   /eslint-config-prettier@8.9.0(eslint@8.45.0):
