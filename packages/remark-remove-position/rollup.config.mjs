@@ -8,7 +8,8 @@ const externals = [
   ...Object.keys(pkg.devDependencies),
 ];
 
-export default {
+/** @type {import('rollup').RollupOptions} */
+const options = {
   input: "src/index.ts",
   output: [
     {
@@ -34,3 +35,5 @@ export default {
     }),
   ],
 };
+
+export default options;
