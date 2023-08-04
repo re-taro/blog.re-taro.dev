@@ -2,13 +2,15 @@ import typescript from "@rollup/plugin-typescript";
 import pkg from "./package.json" assert { type: "json" };
 import terser from "@rollup/plugin-terser";
 import analyzed from "./_packelyze-analyzed.json" assert { type: "json" };
+import replace from "@rollup/plugin-replace";
 
 const externals = [
   ...Object.keys(pkg.dependencies),
   ...Object.keys(pkg.devDependencies),
 ];
 
-export default {
+/** @type {import('rollup').RollupOptions} */
+const options = {
   input: "src/index.ts",
   output: [
     {
@@ -24,6 +26,10 @@ export default {
       outDir: ".",
       declaration: true,
     }),
+    replace({
+      "import.meta.vitest": "undefined",
+      preventAssignment: true,
+    }),
     terser({
       mangle: {
         properties: {
@@ -34,3 +40,5 @@ export default {
     }),
   ],
 };
+
+export default options;
