@@ -31,7 +31,7 @@
     "mdast-utils": "workspace:*"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "1.9.25",
+    "@re-taro/eslint-config": "1.9.26",
     "@rollup/plugin-replace": "5.0.2",
     "@rollup/plugin-terser": "0.4.3",
     "@rollup/plugin-typescript": "11.1.2",
