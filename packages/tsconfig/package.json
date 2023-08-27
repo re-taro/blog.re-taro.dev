@@ -21,7 +21,7 @@
     "fmt:prettier": "prettier --write '*.{json,cjs}'"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "1.10.1",
+    "@re-taro/eslint-config": "1.10.2",
     "@tsconfig/strictest": "2.0.1",
     "eslint": "8.48.0",
     "npm-run-all": "4.1.5",
