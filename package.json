@@ -23,6 +23,6 @@
   "devDependencies": {
     "turbo": "1.10.14",
     "typescript": "5.2.2",
-    "vercel": "32.2.3"
+    "vercel": "32.2.4"
   }
 }
