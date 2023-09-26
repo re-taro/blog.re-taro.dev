@@ -12,7 +12,7 @@ jobs:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
-      - uses: actions/checkout@v3.6.0
+      - uses: actions/checkout@v4.1.0
       - name: Setup Node.js
         uses: re-taro/actions/setup-node@v3.2.2
         with:
