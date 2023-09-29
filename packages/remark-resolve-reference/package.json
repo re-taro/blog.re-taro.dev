@@ -49,6 +49,6 @@
     "tsconfig": "workspace:*",
     "unified": "10.1.2",
     "unist-builder": "4.0.0",
-    "vitest": "0.34.5"
+    "vitest": "0.34.6"
   }
 }
