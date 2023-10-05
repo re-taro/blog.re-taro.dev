@@ -65,10 +65,10 @@ importers:
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-terser':
         specifier: 0.4.3
-        version: 0.4.3(rollup@3.29.4)
+        version: 0.4.3(rollup@4.0.0)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
-        version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
+        version: 11.1.4(rollup@4.0.0)(typescript@5.2.2)
       '@types/mdast':
         specifier: 3.0.13
         version: 3.0.13
@@ -88,8 +88,8 @@ importers:
         specifier: 3.0.3
         version: 3.0.3
       rollup:
-        specifier: 3.29.4
-        version: 3.29.4
+        specifier: 4.0.0
+        version: 4.0.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -111,13 +111,13 @@ importers:
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-replace':
         specifier: 5.0.3
-        version: 5.0.3(rollup@3.29.4)
+        version: 5.0.3(rollup@4.0.0)
       '@rollup/plugin-terser':
         specifier: 0.4.3
-        version: 0.4.3(rollup@3.29.4)
+        version: 0.4.3(rollup@4.0.0)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
-        version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
+        version: 11.1.4(rollup@4.0.0)(typescript@5.2.2)
       '@types/mdast':
         specifier: 3.0.13
         version: 3.0.13
@@ -146,8 +146,8 @@ importers:
         specifier: workspace:*
         version: link:../remark-remove-position
       rollup:
-        specifier: 3.29.4
-        version: 3.29.4
+        specifier: 4.0.0
+        version: 4.0.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -178,13 +178,13 @@ importers:
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-replace':
         specifier: 5.0.3
-        version: 5.0.3(rollup@3.29.4)
+        version: 5.0.3(rollup@4.0.0)
       '@rollup/plugin-terser':
         specifier: 0.4.3
-        version: 0.4.3(rollup@3.29.4)
+        version: 0.4.3(rollup@4.0.0)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
-        version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
+        version: 11.1.4(rollup@4.0.0)(typescript@5.2.2)
       '@types/mdast':
         specifier: 3.0.13
         version: 3.0.13
@@ -216,8 +216,8 @@ importers:
         specifier: workspace:*
         version: link:../remark-remove-position
       rollup:
-        specifier: 3.29.4
-        version: 3.29.4
+        specifier: 4.0.0
+        version: 4.0.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -251,10 +251,10 @@ importers:
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-terser':
         specifier: 0.4.3
-        version: 0.4.3(rollup@3.29.4)
+        version: 0.4.3(rollup@4.0.0)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
-        version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
+        version: 11.1.4(rollup@4.0.0)(typescript@5.2.2)
       '@types/mdast':
         specifier: 3.0.13
         version: 3.0.13
@@ -271,8 +271,8 @@ importers:
         specifier: 3.0.3
         version: 3.0.3
       rollup:
-        specifier: 3.29.4
-        version: 3.29.4
+        specifier: 4.0.0
+        version: 4.0.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -294,10 +294,10 @@ importers:
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-terser':
         specifier: 0.4.3
-        version: 0.4.3(rollup@3.29.4)
+        version: 0.4.3(rollup@4.0.0)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
-        version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
+        version: 11.1.4(rollup@4.0.0)(typescript@5.2.2)
       '@types/mdast':
         specifier: 3.0.13
         version: 3.0.13
@@ -314,8 +314,8 @@ importers:
         specifier: 3.0.3
         version: 3.0.3
       rollup:
-        specifier: 3.29.4
-        version: 3.29.4
+        specifier: 4.0.0
+        version: 4.0.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -340,13 +340,13 @@ importers:
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-replace':
         specifier: 5.0.3
-        version: 5.0.3(rollup@3.29.4)
+        version: 5.0.3(rollup@4.0.0)
       '@rollup/plugin-terser':
         specifier: 0.4.3
-        version: 0.4.3(rollup@3.29.4)
+        version: 0.4.3(rollup@4.0.0)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
-        version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
+        version: 11.1.4(rollup@4.0.0)(typescript@5.2.2)
       '@types/mdast':
         specifier: 3.0.13
         version: 3.0.13
@@ -372,8 +372,8 @@ importers:
         specifier: workspace:*
         version: link:../remark-remove-position
       rollup:
-        specifier: 3.29.4
-        version: 3.29.4
+        specifier: 4.0.0
+        version: 4.0.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -398,13 +398,13 @@ importers:
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-replace':
         specifier: 5.0.3
-        version: 5.0.3(rollup@3.29.4)
+        version: 5.0.3(rollup@4.0.0)
       '@rollup/plugin-terser':
         specifier: 0.4.3
-        version: 0.4.3(rollup@3.29.4)
+        version: 0.4.3(rollup@4.0.0)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
-        version: 11.1.4(rollup@3.29.4)(typescript@5.2.2)
+        version: 11.1.4(rollup@4.0.0)(typescript@5.2.2)
       '@types/mdast':
         specifier: 3.0.13
         version: 3.0.13
@@ -430,8 +430,8 @@ importers:
         specifier: workspace:*
         version: link:../remark-remove-position
       rollup:
-        specifier: 3.29.4
-        version: 3.29.4
+        specifier: 4.0.0
+        version: 4.0.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -1160,7 +1160,7 @@ packages:
       - typescript
     dev: true
 
-  /@rollup/plugin-replace@5.0.3(rollup@3.29.4):
+  /@rollup/plugin-replace@5.0.3(rollup@4.0.0):
     resolution: {integrity: sha512-je7fu05B800IrMlWjb2wzJcdXzHYW46iTipfChnBDbIbDXhASZs27W1B58T2Yf45jZtJUONegpbce+9Ut2Ti/Q==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -1169,12 +1169,12 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 5.0.2(rollup@3.29.4)
+      '@rollup/pluginutils': 5.0.2(rollup@4.0.0)
       magic-string: 0.27.0
-      rollup: 3.29.4
+      rollup: 4.0.0
     dev: true
 
-  /@rollup/plugin-terser@0.4.3(rollup@3.29.4):
+  /@rollup/plugin-terser@0.4.3(rollup@4.0.0):
     resolution: {integrity: sha512-EF0oejTMtkyhrkwCdg0HJ0IpkcaVg1MMSf2olHb2Jp+1mnLM04OhjpJWGma4HobiDTF0WCyViWuvadyE9ch2XA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -1183,13 +1183,13 @@ packages:
       rollup:
         optional: true
     dependencies:
-      rollup: 3.29.4
+      rollup: 4.0.0
       serialize-javascript: 6.0.1
       smob: 1.4.0
       terser: 5.18.1
     dev: true
 
-  /@rollup/plugin-typescript@11.1.4(rollup@3.29.4)(typescript@5.2.2):
+  /@rollup/plugin-typescript@11.1.4(rollup@4.0.0)(typescript@5.2.2):
     resolution: {integrity: sha512-WZRh5LBVLQXdKFICUId5J3eIpmjGURaBqntfg3GSZACgeOAFS+lOSMGTwfzDkELTaZVp/lWdMVNU3UkwCUBg/Q==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -1202,9 +1202,9 @@ packages:
       tslib:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 5.0.2(rollup@3.29.4)
+      '@rollup/pluginutils': 5.0.2(rollup@4.0.0)
       resolve: 1.22.3
-      rollup: 3.29.4
+      rollup: 4.0.0
       typescript: 5.2.2
     dev: true
 
@@ -1216,7 +1216,7 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@rollup/pluginutils@5.0.2(rollup@3.29.4):
+  /@rollup/pluginutils@5.0.2(rollup@4.0.0):
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -1228,8 +1228,96 @@ packages:
       '@types/estree': 1.0.1
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.29.4
+      rollup: 4.0.0
     dev: true
+
+  /@rollup/rollup-android-arm-eabi@4.0.0:
+    resolution: {integrity: sha512-rN3qt1JzOx0v7JWyK68zkb3yf1k1f1OhhHR0i7vLlGlediTtM3FKsOkestQN6HwJ9nEaP3KxPHxH5Xv7yr6f4w==}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-android-arm64@4.0.0:
+    resolution: {integrity: sha512-dcdg6Zp2bqIS/+2FHhdSS+lbcySufP2fYYoXkDa4W6uHE22L15psftdQZtFhxvvqRWPD1HsK0xIj5f07zuujkg==}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-darwin-arm64@4.0.0:
+    resolution: {integrity: sha512-mOz75DpOOHGk4+xYbh1E23vmSOrOqskTwq9s/e2Z46eYbTZ0+s/UVoS42cLG8dUe6enF2Xh3hTtiIEzLhO9kmA==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-darwin-x64@4.0.0:
+    resolution: {integrity: sha512-rEBuHQ2ejl9gb0//19F88gR7Z9HY2kcCX8jT5LhCHqGqAvlloETXO1FD7DKEdqGz98UtJy6pVAxxeVBN4tlWag==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-linux-arm-gnueabihf@4.0.0:
+    resolution: {integrity: sha512-W4Elp0SGWqWOkdgoYniOp6ERrhHYRfMPikUZmnU/kAdLXQ9p0M0meF648Z6Y7ClHJr8pIQpcCdmr7E2h8Kn7Fw==}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-linux-arm64-gnu@4.0.0:
+    resolution: {integrity: sha512-/BTevM/UKprMJgFse0nm+YXQ83iDqArru+k3kZtQlvaNMWdkLcyscOP8SwWPpR0CJuLlXr8Gtpps+EgH3TUqLA==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-linux-x64-gnu@4.0.0:
+    resolution: {integrity: sha512-Pz2FD/4FUZM98+rcpuGAJgatW5/dW/pXXrbanjtir38EYqqmdVc0odHwqlQ+KFY2C5P+B6PJO5vom8PmJQLdug==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-linux-x64-musl@4.0.0:
+    resolution: {integrity: sha512-Xs2tOshU5MD7nK5WnaSBUwiFdBlMtyKdXOOnBno4IRbDIyrjLtx9lnSIO47FNP0LtpGfyOcsK/lE/ZsLlnXyIg==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-win32-arm64-msvc@4.0.0:
+    resolution: {integrity: sha512-h2r04SsqVMbmaIRSMN3HKQLYpKewJ7rWQx1SwEZQMeXRkecWFBBNOfoB3iMlvvUfc3VUOonR/3Dm/Op6yOD2Lg==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-win32-ia32-msvc@4.0.0:
+    resolution: {integrity: sha512-1pl05L51RbVLnqZTEpbgG2RxeS7VLysF7vhU8v1EOAMqbLzko64r8+S2SxsNDKODsgusFqHO8rc3w+G9VUjodw==}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@rollup/rollup-win32-x64-msvc@4.0.0:
+    resolution: {integrity: sha512-GDi4TkL95/J0ven1wt+q2cfdg1k9UEIQiF58lSC36KUdA0xtlqgLPEDlNAhu6NTXJ491eiZ71lQbLu1D7hlz9w==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@sinclair/typebox@0.25.24:
     resolution: {integrity: sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==}
@@ -5879,6 +5967,25 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /rollup@4.0.0:
+    resolution: {integrity: sha512-dtlkoIdp/g2glVlQb6FzhMAMzhMYVIJ3KLGjhWKkwz/ambEuHeVZ7Eg6GALhHZOsDRD+ZWSjnUikZXPyb22puQ==}
+    engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      '@rollup/rollup-android-arm-eabi': 4.0.0
+      '@rollup/rollup-android-arm64': 4.0.0
+      '@rollup/rollup-darwin-arm64': 4.0.0
+      '@rollup/rollup-darwin-x64': 4.0.0
+      '@rollup/rollup-linux-arm-gnueabihf': 4.0.0
+      '@rollup/rollup-linux-arm64-gnu': 4.0.0
+      '@rollup/rollup-linux-x64-gnu': 4.0.0
+      '@rollup/rollup-linux-x64-musl': 4.0.0
+      '@rollup/rollup-win32-arm64-msvc': 4.0.0
+      '@rollup/rollup-win32-ia32-msvc': 4.0.0
+      '@rollup/rollup-win32-x64-msvc': 4.0.0
       fsevents: 2.3.2
     dev: true
 
