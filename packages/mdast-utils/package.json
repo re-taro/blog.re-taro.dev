@@ -29,7 +29,7 @@
   "devDependencies": {
     "@re-taro/eslint-config": "1.10.3",
     "@rollup/plugin-terser": "0.4.4",
-    "@rollup/plugin-typescript": "11.1.4",
+    "@rollup/plugin-typescript": "11.1.5",
     "@types/mdast": "3.0.13",
     "@types/unist": "3.0.0",
     "eslint": "8.50.0",
