@@ -64,8 +64,8 @@ importers:
         specifier: 1.10.3
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.0.2)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.0.2)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
         version: 11.1.4(rollup@4.0.2)(typescript@5.2.2)
@@ -113,8 +113,8 @@ importers:
         specifier: 5.0.3
         version: 5.0.3(rollup@4.0.2)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.0.2)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.0.2)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
         version: 11.1.4(rollup@4.0.2)(typescript@5.2.2)
@@ -180,8 +180,8 @@ importers:
         specifier: 5.0.3
         version: 5.0.3(rollup@4.0.2)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.0.2)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.0.2)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
         version: 11.1.4(rollup@4.0.2)(typescript@5.2.2)
@@ -250,8 +250,8 @@ importers:
         specifier: 1.10.3
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.0.2)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.0.2)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
         version: 11.1.4(rollup@4.0.2)(typescript@5.2.2)
@@ -293,8 +293,8 @@ importers:
         specifier: 1.10.3
         version: 1.10.3(eslint@8.50.0)(svelte@3.59.2)(typescript@5.2.2)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.0.2)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.0.2)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
         version: 11.1.4(rollup@4.0.2)(typescript@5.2.2)
@@ -342,8 +342,8 @@ importers:
         specifier: 5.0.3
         version: 5.0.3(rollup@4.0.2)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.0.2)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.0.2)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
         version: 11.1.4(rollup@4.0.2)(typescript@5.2.2)
@@ -400,8 +400,8 @@ importers:
         specifier: 5.0.3
         version: 5.0.3(rollup@4.0.2)
       '@rollup/plugin-terser':
-        specifier: 0.4.3
-        version: 0.4.3(rollup@4.0.2)
+        specifier: 0.4.4
+        version: 0.4.4(rollup@4.0.2)
       '@rollup/plugin-typescript':
         specifier: 11.1.4
         version: 11.1.4(rollup@4.0.2)(typescript@5.2.2)
@@ -1174,11 +1174,11 @@ packages:
       rollup: 4.0.2
     dev: true
 
-  /@rollup/plugin-terser@0.4.3(rollup@4.0.2):
-    resolution: {integrity: sha512-EF0oejTMtkyhrkwCdg0HJ0IpkcaVg1MMSf2olHb2Jp+1mnLM04OhjpJWGma4HobiDTF0WCyViWuvadyE9ch2XA==}
+  /@rollup/plugin-terser@0.4.4(rollup@4.0.2):
+    resolution: {integrity: sha512-XHeJC5Bgvs8LfukDwWZp7yeqin6ns8RTl2B9avbejt6tZqsqvVoWI7ZTQrcNsfKEDWBTnTxM8nMDkO2IFFbd0A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.x || ^3.x
+      rollup: ^2.0.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
@@ -6410,6 +6410,7 @@ packages:
   /terser@5.18.1:
     resolution: {integrity: sha512-j1n0Ao919h/Ai5r43VAnfV/7azUYW43GPxK7qSATzrsERfW7+y2QW9Cp9ufnRF5CQUWbnLSo7UJokSWCqg4tsQ==}
     engines: {node: '>=10'}
+    hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.3
       acorn: 8.9.0
