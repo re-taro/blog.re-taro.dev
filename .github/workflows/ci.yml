@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.3.1
+        uses: re-taro/actions/setup-node@v3.3.2
         with:
           node-version-file: .tool-versions
       - name: Use turborepo cache
-        uses: re-taro/actions/turbo-cache@v3.3.1
+        uses: re-taro/actions/turbo-cache@v3.3.2
       - name: Build test
         run: pnpm build
         shell: sh
@@ -25,11 +25,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.3.1
+        uses: re-taro/actions/setup-node@v3.3.2
         with:
           node-version-file: .tool-versions
       - name: Use turborepo cache
-        uses: re-taro/actions/turbo-cache@v3.3.1
+        uses: re-taro/actions/turbo-cache@v3.3.2
       - name: Lint test
         run: pnpm lint
         shell: sh
@@ -38,11 +38,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.3.1
+        uses: re-taro/actions/setup-node@v3.3.2
         with:
           node-version-file: .tool-versions
       - name: Use turborepo cache
-        uses: re-taro/actions/turbo-cache@v3.3.1
+        uses: re-taro/actions/turbo-cache@v3.3.2
       - name: Unit test
         run: pnpm test
         shell: sh
