@@ -27,7 +27,7 @@
     "fmt:prettier": "prettier --write '*.{json,cjs,ts}'"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "1.10.4",
+    "@re-taro/eslint-config": "2.0.0",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "11.1.5",
     "@types/mdast": "3.0.14",
