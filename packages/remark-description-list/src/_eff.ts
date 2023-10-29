@@ -1,2 +1,2 @@
 // packelyze analyze entrypoint
-export * from "./index";
+export * from ".";

@@ -1,11 +1,3 @@
-import { compact } from "mdast-util-compact";
-import {
-  isDefinition,
-  isImageReference,
-  isLinkReference,
-  isParent,
-} from "mdast-utils";
-import { visit } from "unist-util-visit";
 import type {
   Content,
   Definition,
@@ -17,34 +9,39 @@ import type {
   StaticPhrasingContent,
   Text,
 } from "mdast";
+import { compact } from "mdast-util-compact";
+import {
+  isDefinition,
+  isImageReference,
+  isLinkReference,
+  isParent,
+} from "mdast-utils";
 import type { Plugin } from "unified";
 import type { Visitor } from "unist-util-visit";
+import { visit } from "unist-util-visit";
 
 class UnreachableError extends Error {
-  constructor() {
+  public constructor() {
     super();
     this.name = "UnreachableError";
   }
 }
 
-const definitionVisitorBuilder = (
-  definitionMap: Map<string, Definition>,
-): Visitor<Definition> => {
-  return (node, idx, parent) => {
+const definitionVisitorBuilder =
+  (definitionMap: Map<string, Definition>): Visitor<Definition> =>
+  (node, idx, parent) => {
     if (!isParent(parent) || idx === null) throw new UnreachableError();
     definitionMap.set(node.identifier, node);
     parent.children.splice(idx, 1);
   };
-};
 
-const linkReferenceVisitorBuilder = (
-  definitionMap: Map<string, Definition>,
-): Visitor<LinkReference> => {
-  return (node, idx, parent) => {
+const linkReferenceVisitorBuilder =
+  (definitionMap: Map<string, Definition>): Visitor<LinkReference> =>
+  (node, idx, parent) => {
     if (!isParent(parent) || idx === null) throw new UnreachableError();
     const definition = definitionMap.get(node.identifier);
     if (!definition) {
-      const nodes: Array<StaticPhrasingContent> = [
+      const nodes: StaticPhrasingContent[] = [
         { type: "text", value: "[" },
         ...node.children,
         { type: "text", value: "]" },
@@ -64,12 +61,10 @@ const linkReferenceVisitorBuilder = (
     };
     parent.children[idx] = link;
   };
-};
 
-const imageReferenceVisitorBuilder = (
-  definitionMap: Map<string, Definition>,
-): Visitor<ImageReference> => {
-  return (node, idx, parent) => {
+const imageReferenceVisitorBuilder =
+  (definitionMap: Map<string, Definition>): Visitor<ImageReference> =>
+  (node, idx, parent) => {
     if (!isParent(parent) || idx === null) throw new UnreachableError();
     const definition = definitionMap.get(node.identifier);
     if (!definition) {
@@ -91,20 +86,17 @@ const imageReferenceVisitorBuilder = (
     };
     parent.children[idx] = image;
   };
-};
 
-export const remarkResolveReference: Plugin<Array<never>, Root> = () => {
-  return (tree) => {
-    const definitionMap = new Map<string, Definition>();
+export const remarkResolveReference: Plugin<never[], Root> = () => (tree) => {
+  const definitionMap = new Map<string, Definition>();
 
-    const definitionVisitor = definitionVisitorBuilder(definitionMap);
-    const linkReferenceVisitor = linkReferenceVisitorBuilder(definitionMap);
-    const imageReferenceVisitor = imageReferenceVisitorBuilder(definitionMap);
+  const definitionVisitor = definitionVisitorBuilder(definitionMap);
+  const linkReferenceVisitor = linkReferenceVisitorBuilder(definitionMap);
+  const imageReferenceVisitor = imageReferenceVisitorBuilder(definitionMap);
 
-    visit(tree, isDefinition, definitionVisitor);
-    visit(tree, isLinkReference, linkReferenceVisitor);
-    visit(tree, isImageReference, imageReferenceVisitor);
-  };
+  visit(tree, isDefinition, definitionVisitor);
+  visit(tree, isLinkReference, linkReferenceVisitor);
+  visit(tree, isImageReference, imageReferenceVisitor);
 };
 
 if (import.meta.vitest) {

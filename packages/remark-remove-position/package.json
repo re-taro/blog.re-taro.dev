@@ -14,24 +14,25 @@
   },
   "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "type": "module",
   "sideEffects": false,
   "scripts": {
     "analyze": "tsc -p tsconfig.packelyze.json && packelyze analyze-dts",
     "build": "pnpm run analyze && rollup -c",
     "lint": "run-s -c lint:*",
-    "lint:eslint": "eslint . --ext .json,.cjs,.ts",
-    "lint:prettier": "prettier --check '*.{json,cjs,ts}'",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . -c",
     "lint:ts": "tsc -p . --noEmit",
     "fmt": "run-s -c fmt:*",
     "fmt:eslint": "pnpm lint:eslint --fix",
-    "fmt:prettier": "prettier --write '*.{json,cjs,ts}'"
+    "fmt:prettier": "prettier . -w"
   },
   "dependencies": {
     "mdast-utils": "workspace:*",
     "unist-util-remove-position": "4.0.2"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "1.10.4",
+    "@re-taro/eslint-config": "2.1.1",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "11.1.5",
     "@types/mdast": "3.0.14",

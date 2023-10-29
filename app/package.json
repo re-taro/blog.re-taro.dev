@@ -12,16 +12,17 @@
     "url": "https://github.com/re-taro/blog.re-taro.dev",
     "directory": "app"
   },
+  "type": "module",
   "scripts": {
     "start": "next start",
     "build": "next build",
     "dev": "next dev --turbo",
     "lint": "run-s -c lint:*",
-    "lint:eslint": "eslint . --ext .cjs,.mjs,.ts,.tsx,.json",
-    "lint:prettier": "prettier --check **/*.{cjs,mjs,tsx,json}",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . -c",
     "fmt": "run-s -c fmt:*",
     "fmt:eslint": "pnpm lint:eslint --fix",
-    "fmt:prettier": "prettier --write **/*.{cjs,mjs,tsx,json}"
+    "fmt:prettier": "prettier . -w"
   },
   "dependencies": {
     "next": "14.0.0",
@@ -29,7 +30,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "1.10.4",
+    "@re-taro/eslint-config": "2.1.1",
     "@types/node": "20.8.9",
     "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
