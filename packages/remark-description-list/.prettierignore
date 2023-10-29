@@ -1,1 +1,4 @@
-.lintignore
+dist/
+lib/
+src/*.js
+_packelyze-analyzed.json

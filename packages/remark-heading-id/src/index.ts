@@ -1,27 +1,22 @@
 import GitHubSlugger from "github-slugger";
+import type { Heading, Root } from "mdast";
 import { toString } from "mdast-util-to-string";
 import { isHeading } from "mdast-utils";
-import { visit } from "unist-util-visit";
 import type { Plugin } from "unified";
-import type { Heading, Root } from "mdast";
+import { visit } from "unist-util-visit";
 
-export const remarkHeadingId: Plugin<Array<never>, Root> = () => {
-  return (tree) => {
-    const slugger = new GitHubSlugger();
-    const visitor = visitorBuilder(slugger);
-    visit(tree, isHeading, visitor);
-  };
+const visitorBuilder = (slugger: GitHubSlugger) => (node: Heading) => {
+  const plainText = toString(node);
+  node.identifier = slugger.slug(plainText);
 };
 
-function visitorBuilder(slugger: GitHubSlugger) {
-  return (node: Heading) => {
-    const plainText = toString(node);
-    node.identifier = slugger.slug(plainText);
-  };
-}
+export const remarkHeadingId: Plugin<never[], Root> = () => (tree) => {
+  const slugger = new GitHubSlugger();
+  const visitor = visitorBuilder(slugger);
+  visit(tree, isHeading, visitor);
+};
 
 declare module "mdast" {
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Heading {
     identifier?: string;
   }

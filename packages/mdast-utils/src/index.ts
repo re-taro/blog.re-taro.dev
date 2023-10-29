@@ -19,7 +19,7 @@ import type { Node } from "unist";
 export function findNodeAfter<T extends Node>(
   tree: Parent,
   after: number,
-  predicate: (node: Node) => node is T
+  predicate: (node: Node) => node is T,
 ): [T, number] | [undefined, undefined] {
   const idx = tree.children.slice(after).findIndex(predicate);
   if (idx === -1) return [undefined, undefined];
@@ -28,68 +28,53 @@ export function findNodeAfter<T extends Node>(
   return [tree.children[index] as T, index];
 }
 
-export function isParent(node?: Node | null): node is Parent {
-  return node != null && Object.hasOwn(node, "children");
-}
+export const isParent = (node?: Node | null): node is Parent =>
+  node != null && Object.hasOwn(node, "children");
 
-export function isYAML(node?: Node | null): node is YAML {
-  return node != null && node.type === "yaml";
-}
+export const isYAML = (node?: Node | null): node is YAML =>
+  node != null && node.type === "yaml";
 
-export function isHeading(node?: Node | null): node is Heading {
-  return node != null && node.type === "heading";
-}
+export const isHeading = (node?: Node | null): node is Heading =>
+  node != null && node.type === "heading";
 
-export function isHeadingOfDepth(depth: number) {
-  return (node?: Node | null): node is Heading => {
-    return isHeading(node) && node.depth === depth;
-  };
-}
+export const isHeadingOfDepth =
+  (depth: number) =>
+  (node?: Node | null): node is Heading =>
+    isHeading(node) && node.depth === depth;
 
-export function isParagraph(node?: Node | null): node is Paragraph {
-  return node != null && node.type === "paragraph";
-}
+export const isParagraph = (node?: Node | null): node is Paragraph =>
+  node != null && node.type === "paragraph";
 
-export function isList(node?: Node | null): node is List {
-  return node != null && node.type === "list";
-}
+export const isList = (node?: Node | null): node is List =>
+  node != null && node.type === "list";
 
-export function isListItem(node?: Node | null): node is ListItem {
-  return node != null && node.type === "listItem";
-}
+export const isListItem = (node?: Node | null): node is ListItem =>
+  node != null && node.type === "listItem";
 
-export function isText(node?: Node | null): node is Text {
-  return node != null && node.type === "text";
-}
+export const isText = (node?: Node | null): node is Text =>
+  node != null && node.type === "text";
 
-export function isLink(node?: Node | null): node is Link {
-  return node != null && node.type === "link";
-}
+export const isLink = (node?: Node | null): node is Link =>
+  node != null && node.type === "link";
 
-export function isImage(node?: Node | null): node is Image {
-  return node != null && node.type === "image";
-}
+export const isImage = (node?: Node | null): node is Image =>
+  node != null && node.type === "image";
 
-export function isLinkReference(node?: Node | null): node is LinkReference {
-  return node != null && node.type === "linkReference";
-}
+export const isLinkReference = (node?: Node | null): node is LinkReference =>
+  node != null && node.type === "linkReference";
 
-export function isImageReference(node?: Node | null): node is ImageReference {
-  return node != null && node.type === "imageReference";
-}
+export const isImageReference = (node?: Node | null): node is ImageReference =>
+  node != null && node.type === "imageReference";
 
-export function isDefinition(node?: Node | null): node is Definition {
-  return node != null && node.type === "definition";
-}
+export const isDefinition = (node?: Node | null): node is Definition =>
+  node != null && node.type === "definition";
 
-export function isFootnoteDefinition(
-  node?: Node | null
-): node is FootnoteDefinition {
-  return node != null && node.type === "footnoteDefinition";
-}
+export const isFootnoteDefinition = (
+  node?: Node | null,
+): node is FootnoteDefinition =>
+  node != null && node.type === "footnoteDefinition";
 
-export function isFootnoteReference(
-  node?: Node | null
-): node is FootnoteReference {
-  return node != null && node.type === "footnoteReference";
-}
+export const isFootnoteReference = (
+  node?: Node | null,
+): node is FootnoteReference =>
+  node != null && node.type === "footnoteReference";

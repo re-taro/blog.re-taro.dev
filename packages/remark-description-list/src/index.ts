@@ -1,6 +1,3 @@
-import { hasMinLength } from "ts-array-length";
-import { isList, isListItem, isParagraph, isParent, isText } from "mdast-utils";
-import { visit } from "unist-util-visit";
 import type {
   BlockContent,
   DefinitionContent,
@@ -10,11 +7,14 @@ import type {
   PhrasingContent,
   Root,
 } from "mdast";
+import { isList, isListItem, isParagraph, isParent, isText } from "mdast-utils";
+import { hasMinLength } from "ts-array-length";
 import type { Plugin } from "unified";
 import type { Node, Parent as UnistParent } from "unist";
+import { visit } from "unist-util-visit";
 
 class UnreachableError extends Error {
-  constructor() {
+  public constructor() {
     super();
     this.name = "UnreachableError";
   }
@@ -22,22 +22,22 @@ class UnreachableError extends Error {
 
 type DescriptionList = {
   type: "descriptionList";
-  children: Array<DescriptionListContent>;
+  children: DescriptionListContent[];
 } & Parent;
 
 type DescriptionTerm = {
   type: "descriptionTerm";
-  children: Array<PhrasingContent>;
+  children: PhrasingContent[];
 } & Parent;
 
 type DescriptionDescription = {
   type: "descriptionDescription";
-  children: Array<BlockContent | DefinitionContent>;
+  children: (BlockContent | DefinitionContent)[];
 } & Parent;
 
 type DescriptionListContent = DescriptionTerm | DescriptionDescription;
 
-const isDescriptionTerm = (node: Node): node is ListItem => {
+function isDescriptionTerm(node: Node): node is ListItem {
   if (!isListItem(node)) return false;
   const { children: listItemChildren } = node;
   if (!hasMinLength(listItemChildren, 1)) return false;
@@ -49,27 +49,25 @@ const isDescriptionTerm = (node: Node): node is ListItem => {
   const termLastChildText = termLastChild.value;
 
   return termLastChildText.endsWith(":") && !termLastChildText.endsWith("\\:");
-};
+}
 
-const isDescription = (node: Node): node is List => {
+function isDescription(node: Node): node is List {
   if (!isList(node)) return false;
   const { children: listChildren } = node;
 
   return listChildren.every(isDescriptionTerm);
-};
+}
 
 const convertListItemToDescriptionDescription = (
   node: ListItem,
-): DescriptionDescription => {
-  return {
-    type: "descriptionDescription",
-    children: node.children,
-  };
-};
+): DescriptionDescription => ({
+  type: "descriptionDescription",
+  children: node.children,
+});
 
-const convertListItemToDescriptionListContent = (
+function convertListItemToDescriptionListContent(
   node: ListItem,
-): Array<DescriptionListContent> => {
+): DescriptionListContent[] {
   const { children: listItemChildren } = node;
   const [term, description] = listItemChildren;
   if (!isParagraph(term)) throw new UnreachableError();
@@ -81,18 +79,18 @@ const convertListItemToDescriptionListContent = (
     type: "descriptionTerm",
     children: term.children,
   };
-  const descriptionDescriptions: Array<DescriptionDescription> = (
+  const descriptionDescriptions: DescriptionDescription[] = (
     description?.children ?? []
   ).map(convertListItemToDescriptionDescription);
 
   return [descriptionTerm, ...descriptionDescriptions];
-};
+}
 
-const visitor = (
+function visitor(
   node: List,
   idx: number | null,
   parent: UnistParent | null,
-): void => {
+): void {
   if (!isParent(parent) || idx === null) throw new UnreachableError();
   const { children: listChildren } = node;
   const descriptionListChildren = listChildren.flatMap(
@@ -103,21 +101,17 @@ const visitor = (
     children: descriptionListChildren,
   };
   parent.children[idx] = descriptionList;
-};
+}
 
-export const remarkDescriptionList: Plugin<Array<never>, Root> = () => {
-  return (tree) => {
-    visit(tree, isDescription, visitor);
-  };
+export const remarkDescriptionList: Plugin<never[], Root> = () => (tree) => {
+  visit(tree, isDescription, visitor);
 };
 
 declare module "mdast" {
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface BlockContentMap {
     descriptionList: DescriptionList;
   }
 
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface DefinitionContentMap {
     descriptionTerm: DescriptionTerm;
     descriptionDescription: DescriptionDescription;

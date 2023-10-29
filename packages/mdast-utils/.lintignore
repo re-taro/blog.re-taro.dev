@@ -1,5 +1,0 @@
-node_modules
-lib
-src/*.js
-dist
-_packelyze-analyzed.json

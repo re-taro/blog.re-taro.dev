@@ -1,16 +1,14 @@
-import { findNodeAfter, isHeadingOfDepth } from "mdast-utils";
 import type { Content, Heading, Parent, Root } from "mdast";
+import { findNodeAfter, isHeadingOfDepth } from "mdast-utils";
 import type { Plugin } from "unified";
 
 type Section = {
   type: "section";
-  children: [Heading, ...Array<Content>];
+  children: [Heading, ...Content[]];
 } & Parent;
 
-export const remarkSection: Plugin<Array<never>, Root> = () => {
-  return (tree) => {
-    process(tree, 1);
-  };
+export const remarkSection: Plugin<never[], Root> = () => (tree) => {
+  process(tree, 1);
 };
 
 function process(tree: Parent, depth: number): void {
@@ -50,7 +48,6 @@ function process(tree: Parent, depth: number): void {
 }
 
 declare module "mdast" {
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface BlockContentMap {
     section: Section;
   }

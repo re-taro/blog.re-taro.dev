@@ -1,12 +1,12 @@
-import { hasLength } from "ts-array-length";
-import { isLink, isParagraph, isParent, isText } from "mdast-utils";
-import { visit } from "unist-util-visit";
 import type { Literal, Paragraph, Root } from "mdast";
+import { isLink, isParagraph, isParent, isText } from "mdast-utils";
+import { hasLength } from "ts-array-length";
 import type { Plugin } from "unified";
 import type { Node, Parent } from "unist";
+import { visit } from "unist-util-visit";
 
 class UnreachableError extends Error {
-  constructor() {
+  public constructor() {
     super();
     this.name = "UnreachableError";
   }
@@ -16,10 +16,8 @@ type Embed = {
   type: "embed";
 } & Literal;
 
-export const remarkEmbed: Plugin<Array<never>, Root> = () => {
-  return (tree) => {
-    visit(tree, isEmbed, visitor);
-  };
+export const remarkEmbed: Plugin<never[], Root> = () => (tree) => {
+  visit(tree, isEmbed, visitor);
 };
 
 function visitor(
@@ -62,7 +60,6 @@ function isEmbed(node: Node): node is Paragraph {
 }
 
 declare module "mdast" {
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface BlockContentMap {
     embed: Embed;
   }
