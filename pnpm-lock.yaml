@@ -70,8 +70,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(rollup@4.3.0)(typescript@5.2.2)
       '@types/mdast':
-        specifier: 3.0.14
-        version: 3.0.14
+        specifier: 3.0.15
+        version: 3.0.15
       '@types/unist':
         specifier: 3.0.1
         version: 3.0.1
@@ -119,8 +119,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(rollup@4.3.0)(typescript@5.2.2)
       '@types/mdast':
-        specifier: 3.0.14
-        version: 3.0.14
+        specifier: 3.0.15
+        version: 3.0.15
       '@types/unist':
         specifier: 3.0.1
         version: 3.0.1
@@ -186,8 +186,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(rollup@4.3.0)(typescript@5.2.2)
       '@types/mdast':
-        specifier: 3.0.14
-        version: 3.0.14
+        specifier: 3.0.15
+        version: 3.0.15
       '@types/unist':
         specifier: 3.0.1
         version: 3.0.1
@@ -256,8 +256,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(rollup@4.3.0)(typescript@5.2.2)
       '@types/mdast':
-        specifier: 3.0.14
-        version: 3.0.14
+        specifier: 3.0.15
+        version: 3.0.15
       eslint:
         specifier: 8.53.0
         version: 8.53.0
@@ -299,8 +299,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(rollup@4.3.0)(typescript@5.2.2)
       '@types/mdast':
-        specifier: 3.0.14
-        version: 3.0.14
+        specifier: 3.0.15
+        version: 3.0.15
       eslint:
         specifier: 8.53.0
         version: 8.53.0
@@ -348,8 +348,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(rollup@4.3.0)(typescript@5.2.2)
       '@types/mdast':
-        specifier: 3.0.14
-        version: 3.0.14
+        specifier: 3.0.15
+        version: 3.0.15
       endent:
         specifier: 2.1.0
         version: 2.1.0
@@ -406,8 +406,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(rollup@4.3.0)(typescript@5.2.2)
       '@types/mdast':
-        specifier: 3.0.14
-        version: 3.0.14
+        specifier: 3.0.15
+        version: 3.0.15
       endent:
         specifier: 2.1.0
         version: 2.1.0
@@ -1543,8 +1543,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/mdast@3.0.14:
-    resolution: {integrity: sha512-gVZ04PGgw1qLZKsnWnyFv4ORnaJ+DXLdHTVSFbU8yX6xZ34Bjg4Q32yPkmveUP1yItXReKfB0Aknlh/3zxTKAw==}
+  /@types/mdast@3.0.15:
+    resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
     dependencies:
       '@types/unist': 2.0.7
 
@@ -5395,7 +5395,7 @@ packages:
   /mdast-util-compact@4.1.1:
     resolution: {integrity: sha512-h/UFPIkf4ZlJw50k9UC+CkY+/urhFHZB25GXGh0f+kbqSulzZMSEGWeFjAe2jEQsFu9bSjf0s/TdZXsjvtmxIQ==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       unist-util-visit: 4.1.2
     dev: false
 
@@ -5411,7 +5411,7 @@ packages:
   /mdast-util-from-markdown@0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       mdast-util-to-string: 2.0.0
       micromark: 2.11.4
       parse-entities: 2.0.0
@@ -5423,7 +5423,7 @@ packages:
   /mdast-util-from-markdown@1.3.1:
     resolution: {integrity: sha512-4xTO/M8c82qBcnQc1tgpNtubGUW/Y1tBQ1B0i5CtSoelOLKFYlElIr3bvgREYYO5iRqbMY1YuqZng0GVOI8Qww==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       '@types/unist': 2.0.7
       decode-named-character-reference: 1.0.2
       mdast-util-to-string: 3.2.0
@@ -5532,7 +5532,7 @@ packages:
     dependencies:
       '@types/estree-jsx': 1.0.2
       '@types/hast': 2.3.7
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       mdast-util-from-markdown: 1.3.1
       mdast-util-to-markdown: 1.5.0
     transitivePeerDependencies:
@@ -5544,7 +5544,7 @@ packages:
     dependencies:
       '@types/estree-jsx': 1.0.2
       '@types/hast': 2.3.7
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       '@types/unist': 2.0.7
       ccount: 2.0.1
       mdast-util-from-markdown: 1.3.1
@@ -5575,7 +5575,7 @@ packages:
     dependencies:
       '@types/estree-jsx': 1.0.2
       '@types/hast': 2.3.7
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       mdast-util-from-markdown: 1.3.1
       mdast-util-to-markdown: 1.5.0
     transitivePeerDependencies:
@@ -5585,7 +5585,7 @@ packages:
   /mdast-util-phrasing@3.0.1:
     resolution: {integrity: sha512-WmI1gTXUBJo4/ZmSk79Wcb2HcjPJBzM1nlI/OUWA8yk2X9ik3ffNbBGsU+09BFmXaL1IBb9fiuvq6/KMiNycSg==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       unist-util-is: 5.2.1
     dev: true
 
@@ -5599,7 +5599,7 @@ packages:
   /mdast-util-to-markdown@1.5.0:
     resolution: {integrity: sha512-bbv7TPv/WC49thZPg3jXuqzuvI45IL2EVAr/KxF0BSdHsU0ceFHOmwQn6evxAh1GaoK/6GQ1wp4R4oW2+LFL/A==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       '@types/unist': 2.0.7
       longest-streak: 3.1.0
       mdast-util-phrasing: 3.0.1
@@ -5629,7 +5629,7 @@ packages:
   /mdast-util-to-string@3.2.0:
     resolution: {integrity: sha512-V4Zn/ncyN1QNSqSBxTrMOLpjr+IKdHl2v3KVLoWmDPscP4r9GcCi71gjgvUV1SFSKh92AjAG4peFuBl2/YgCJg==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
     dev: true
 
   /mdast-util-to-string@4.0.0:
@@ -7163,7 +7163,7 @@ packages:
   /remark-parse@10.0.2:
     resolution: {integrity: sha512-3ydxgHa/ZQzG8LvC7jTXccARYDcRld3VfcgIIFs7bI6vbRSxJJmzgLEIIoYKyrfhaY+ujuWaf/PJiMZXoiCXgw==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       mdast-util-from-markdown: 1.3.1
       unified: 10.1.2
     transitivePeerDependencies:
@@ -7184,7 +7184,7 @@ packages:
   /remark-stringify@10.0.3:
     resolution: {integrity: sha512-koyOzCMYoUHudypbj4XpnAKFbkddRMYZHwghnxd7ue5210WzGw6kOBwauJTRUMq16jsovXx8dYNvSSWP89kZ3A==}
     dependencies:
-      '@types/mdast': 3.0.14
+      '@types/mdast': 3.0.15
       mdast-util-to-markdown: 1.5.0
       unified: 10.1.2
     dev: true
