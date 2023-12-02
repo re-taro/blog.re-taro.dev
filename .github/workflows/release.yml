@@ -14,6 +14,12 @@ jobs:
     outputs:
       release-created: ${{ steps.release.outputs['app--release-created'] }}
     steps:
+      - name: Setup | GitHub App
+        id: bot
+        uses: re-taro/actions/gen-installation-token@v3.4.1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
       - uses: actions/checkout@v4.1.1
         with:
           fetch-depth: 0
@@ -24,7 +30,16 @@ jobs:
           config-file: .github/release-please-config.json
           manifest-file: .github/release-please-manifest.json
           release-type: node
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ steps.bot.outputs.token }}
+      - name: Revoke GitHub Apps token
+        env:
+          GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
+        run: |
+          curl --location --silent --request DELETE \
+            --url "${GITHUB_API_URL}/installation/token" \
+            --header "Accept: application/vnd.github+json" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            --header "Authorization: Bearer ${GITHUB_TOKEN}"
   deploy:
     needs: release
     if: ${{ needs.release.outputs.release-created }}
