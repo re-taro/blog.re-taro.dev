@@ -32,7 +32,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@types/node':
         specifier: 20.10.4
         version: 20.10.4
@@ -62,7 +62,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@rollup/plugin-terser':
         specifier: 0.4.4
         version: 0.4.4(rollup@4.7.0)
@@ -108,7 +108,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@rollup/plugin-replace':
         specifier: 5.0.5
         version: 5.0.5(rollup@4.7.0)
@@ -158,8 +158,8 @@ importers:
         specifier: 4.0.0
         version: 4.0.0
       vitest:
-        specifier: 1.0.2
-        version: 1.0.2(@types/node@14.18.33)(terser@5.18.1)
+        specifier: 1.0.3
+        version: 1.0.3(@types/node@14.18.33)(terser@5.18.1)
 
   packages/remark-embed:
     dependencies:
@@ -175,7 +175,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@rollup/plugin-replace':
         specifier: 5.0.5
         version: 5.0.5(rollup@4.7.0)
@@ -228,8 +228,8 @@ importers:
         specifier: 4.0.0
         version: 4.0.0
       vitest:
-        specifier: 1.0.2
-        version: 1.0.2(@types/node@14.18.33)(terser@5.18.1)
+        specifier: 1.0.3
+        version: 1.0.3(@types/node@14.18.33)(terser@5.18.1)
 
   packages/remark-heading-id:
     dependencies:
@@ -248,7 +248,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@rollup/plugin-terser':
         specifier: 0.4.4
         version: 0.4.4(rollup@4.7.0)
@@ -291,7 +291,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@rollup/plugin-terser':
         specifier: 0.4.4
         version: 0.4.4(rollup@4.7.0)
@@ -337,7 +337,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@rollup/plugin-replace':
         specifier: 5.0.5
         version: 5.0.5(rollup@4.7.0)
@@ -384,8 +384,8 @@ importers:
         specifier: 4.0.0
         version: 4.0.0
       vitest:
-        specifier: 1.0.2
-        version: 1.0.2(@types/node@14.18.33)(terser@5.18.1)
+        specifier: 1.0.3
+        version: 1.0.3(@types/node@14.18.33)(terser@5.18.1)
 
   packages/remark-section:
     dependencies:
@@ -395,7 +395,7 @@ importers:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@rollup/plugin-replace':
         specifier: 5.0.5
         version: 5.0.5(rollup@4.7.0)
@@ -442,14 +442,14 @@ importers:
         specifier: 4.0.0
         version: 4.0.0
       vitest:
-        specifier: 1.0.2
-        version: 1.0.2(@types/node@14.18.33)(terser@5.18.1)
+        specifier: 1.0.3
+        version: 1.0.3(@types/node@14.18.33)(terser@5.18.1)
 
   packages/tsconfig:
     devDependencies:
       '@re-taro/eslint-config':
         specifier: 2.1.1
-        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2)
+        version: 2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3)
       '@tsconfig/strictest':
         specifier: 2.0.2
         version: 2.0.2
@@ -1209,7 +1209,7 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@re-taro/eslint-config@2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.2):
+  /@re-taro/eslint-config@2.1.1(eslint-plugin-import@2.28.1)(eslint@8.55.0)(prettier@3.1.0)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.0.3):
     resolution: {integrity: sha512-/CRL8iRSklpZs6SXQDMUM6nbkpIE2d7J/WvU5IPcKYVHbUvKsVO7pzLZK1bR1mgWrCMuX7L6vf+7r0+5xOdi6Q==}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -1253,7 +1253,7 @@ packages:
       eslint-plugin-toml: 0.6.0(eslint@8.55.0)
       eslint-plugin-unicorn: 48.0.1(eslint@8.55.0)
       eslint-plugin-unused-imports: 3.0.0(@typescript-eslint/eslint-plugin@6.9.0)(eslint@8.55.0)
-      eslint-plugin-vitest: 0.3.8(@typescript-eslint/eslint-plugin@6.9.0)(eslint@8.55.0)(typescript@5.3.3)(vitest@1.0.2)
+      eslint-plugin-vitest: 0.3.8(@typescript-eslint/eslint-plugin@6.9.0)(eslint@8.55.0)(typescript@5.3.3)(vitest@1.0.3)
       eslint-plugin-vue: 9.18.1(eslint@8.55.0)
       eslint-plugin-yml: 1.10.0(eslint@8.55.0)
       globals: 13.23.0
@@ -2160,38 +2160,38 @@ packages:
       ts-morph: 12.0.0
     dev: true
 
-  /@vitest/expect@1.0.2:
-    resolution: {integrity: sha512-mAIo/8uddSWkjQMLFcjqZP3WmkwvvN0OtlyZIu33jFnwme3vZds8m8EDMxtj+Uzni2DwtPfHNjJcTM8zTV1f4A==}
+  /@vitest/expect@1.0.3:
+    resolution: {integrity: sha512-J+JzGw/uvlWI3D3g8s0ewQo7C32nieF5VqEJpmIgAr8CAK36GvIQrV90lChEgQy79iwK3zyQx4UhfMeIF4572g==}
     dependencies:
-      '@vitest/spy': 1.0.2
-      '@vitest/utils': 1.0.2
+      '@vitest/spy': 1.0.3
+      '@vitest/utils': 1.0.3
       chai: 4.3.10
     dev: true
 
-  /@vitest/runner@1.0.2:
-    resolution: {integrity: sha512-ZcHJXPT2kg/9Hc4fNkCbItlsgZSs3m4vQbxB8LCSdzpbG85bExCmSvu6K9lWpMNdoKfAr1Jn0BwS9SWUcGnbTQ==}
+  /@vitest/runner@1.0.3:
+    resolution: {integrity: sha512-fCqShW4F8VJ78USVRoc5e1OD5jh1x1quZu4Mgp/lIhZS6PZPtI3wdCfRChWO9ZMJ2Ya7WI3sZTJZD69FR/AosA==}
     dependencies:
-      '@vitest/utils': 1.0.2
+      '@vitest/utils': 1.0.3
       p-limit: 5.0.0
       pathe: 1.1.1
     dev: true
 
-  /@vitest/snapshot@1.0.2:
-    resolution: {integrity: sha512-9ClDz2/aV5TfWA4reV7XR9p+hE0e7bifhwxlURugj3Fw0YXeTFzHmKCNEHd6wOIFMfthbGGwhlq7TOJ2jDO4/g==}
+  /@vitest/snapshot@1.0.3:
+    resolution: {integrity: sha512-2EQwVEuHusEXr0SKuFiI1JVlysSrUceejtusr6vK254tusAz/g4//QrAiD1b7PMdcUKM8QmdgWvqCMaYDsWyNA==}
     dependencies:
       magic-string: 0.30.5
       pathe: 1.1.1
       pretty-format: 29.7.0
     dev: true
 
-  /@vitest/spy@1.0.2:
-    resolution: {integrity: sha512-YlnHmDntp+zNV3QoTVFI5EVHV0AXpiThd7+xnDEbWnD6fw0TH/J4/+3GFPClLimR39h6nA5m0W4Bjm5Edg4A/A==}
+  /@vitest/spy@1.0.3:
+    resolution: {integrity: sha512-aMd7kvqJuZ/h27Q5XqNOh9fRX7cQJ9fcaPX8q/lk5h2MkAqvq/HuqZ7n1xjm2SDOlDqg3xMaEqP/4inNlNG62A==}
     dependencies:
       tinyspy: 2.2.0
     dev: true
 
-  /@vitest/utils@1.0.2:
-    resolution: {integrity: sha512-GPQkGHAnFAP/+seSbB9pCsj339yRrMgILoI5H2sPevTLCYgBq0VRjF8QSllmnQyvf0EontF6KUIt2t5s2SmqoQ==}
+  /@vitest/utils@1.0.3:
+    resolution: {integrity: sha512-ddGKC6CVjxwjA+ourSlMD6Emc+PhIH6+d25ISGBOQjryXi2NtKpsBSOt1yDT793c2Tqij8g8BBxe87jam3B95w==}
     dependencies:
       diff-sequences: 29.6.3
       loupe: 2.3.7
@@ -4013,7 +4013,7 @@ packages:
       eslint-rule-composer: 0.3.0
     dev: true
 
-  /eslint-plugin-vitest@0.3.8(@typescript-eslint/eslint-plugin@6.9.0)(eslint@8.55.0)(typescript@5.3.3)(vitest@1.0.2):
+  /eslint-plugin-vitest@0.3.8(@typescript-eslint/eslint-plugin@6.9.0)(eslint@8.55.0)(typescript@5.3.3)(vitest@1.0.3):
     resolution: {integrity: sha512-MYQJzg3i+nLkaIQgjnOhtqHYIt0W6nErqAOKI3LTSQ2aOgcNHGYTwOhpnwGC1IXTvGWjKgAwb7rHwLpcHWHSAQ==}
     engines: {node: 14.x || >= 16}
     peerDependencies:
@@ -4027,7 +4027,7 @@ packages:
       '@typescript-eslint/eslint-plugin': 6.9.0(@typescript-eslint/parser@6.9.0)(eslint@8.55.0)(typescript@5.3.3)
       '@typescript-eslint/utils': 6.9.0(eslint@8.55.0)(typescript@5.3.3)
       eslint: 8.55.0
-      vitest: 1.0.2(@types/node@20.10.4)
+      vitest: 1.0.3(@types/node@20.10.4)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8490,8 +8490,8 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite-node@1.0.2(@types/node@14.18.33)(terser@5.18.1):
-    resolution: {integrity: sha512-h7BbMJf46fLvFW/9Ygo3snkIBEHFh6fHpB4lge98H5quYrDhPFeI3S0LREz328uqPWSnii2yeJXktQ+Pmqk5BQ==}
+  /vite-node@1.0.3(@types/node@14.18.33)(terser@5.18.1):
+    resolution: {integrity: sha512-7AH08/UgJQm4gWFyXB6xQ1AvI+iMioM2duPmptytxEbkHamVrOhoha4REt9xvOgyiw91G9OykRlixN4zIsQOQg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
@@ -8511,8 +8511,8 @@ packages:
       - terser
     dev: true
 
-  /vite-node@1.0.2(@types/node@20.10.4):
-    resolution: {integrity: sha512-h7BbMJf46fLvFW/9Ygo3snkIBEHFh6fHpB4lge98H5quYrDhPFeI3S0LREz328uqPWSnii2yeJXktQ+Pmqk5BQ==}
+  /vite-node@1.0.3(@types/node@20.10.4):
+    resolution: {integrity: sha512-7AH08/UgJQm4gWFyXB6xQ1AvI+iMioM2duPmptytxEbkHamVrOhoha4REt9xvOgyiw91G9OykRlixN4zIsQOQg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     dependencies:
@@ -8605,8 +8605,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.0.2(@types/node@14.18.33)(terser@5.18.1):
-    resolution: {integrity: sha512-F3NVwwpXfRSDnJmyv+ALPwSRVt0zDkRRE18pwUHSUPXAlWQ47rY1dc99ziMW5bBHyqwK2ERjMisLNoef64qk9w==}
+  /vitest@1.0.3(@types/node@14.18.33)(terser@5.18.1):
+    resolution: {integrity: sha512-zbMmAdRjTki6mYXEjCXMVH8Vb0FX0rAfCSTrbbn3Dqd8Zz6FzImBavkKYsOF+iXd4+k5RoOqi6RyTSoroRS0mw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -8631,11 +8631,11 @@ packages:
         optional: true
     dependencies:
       '@types/node': 14.18.33
-      '@vitest/expect': 1.0.2
-      '@vitest/runner': 1.0.2
-      '@vitest/snapshot': 1.0.2
-      '@vitest/spy': 1.0.2
-      '@vitest/utils': 1.0.2
+      '@vitest/expect': 1.0.3
+      '@vitest/runner': 1.0.3
+      '@vitest/snapshot': 1.0.3
+      '@vitest/spy': 1.0.3
+      '@vitest/utils': 1.0.3
       acorn-walk: 8.3.0
       cac: 6.7.14
       chai: 4.3.10
@@ -8650,7 +8650,7 @@ packages:
       tinybench: 2.5.1
       tinypool: 0.8.1
       vite: 5.0.5(@types/node@14.18.33)(terser@5.18.1)
-      vite-node: 1.0.2(@types/node@14.18.33)(terser@5.18.1)
+      vite-node: 1.0.3(@types/node@14.18.33)(terser@5.18.1)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
@@ -8662,8 +8662,8 @@ packages:
       - terser
     dev: true
 
-  /vitest@1.0.2(@types/node@20.10.4):
-    resolution: {integrity: sha512-F3NVwwpXfRSDnJmyv+ALPwSRVt0zDkRRE18pwUHSUPXAlWQ47rY1dc99ziMW5bBHyqwK2ERjMisLNoef64qk9w==}
+  /vitest@1.0.3(@types/node@20.10.4):
+    resolution: {integrity: sha512-zbMmAdRjTki6mYXEjCXMVH8Vb0FX0rAfCSTrbbn3Dqd8Zz6FzImBavkKYsOF+iXd4+k5RoOqi6RyTSoroRS0mw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -8688,11 +8688,11 @@ packages:
         optional: true
     dependencies:
       '@types/node': 20.10.4
-      '@vitest/expect': 1.0.2
-      '@vitest/runner': 1.0.2
-      '@vitest/snapshot': 1.0.2
-      '@vitest/spy': 1.0.2
-      '@vitest/utils': 1.0.2
+      '@vitest/expect': 1.0.3
+      '@vitest/runner': 1.0.3
+      '@vitest/snapshot': 1.0.3
+      '@vitest/spy': 1.0.3
+      '@vitest/utils': 1.0.3
       acorn-walk: 8.3.0
       cac: 6.7.14
       chai: 4.3.10
@@ -8707,7 +8707,7 @@ packages:
       tinybench: 2.5.1
       tinypool: 0.8.1
       vite: 5.0.5(@types/node@20.10.4)
-      vite-node: 1.0.2(@types/node@20.10.4)
+      vite-node: 1.0.3(@types/node@20.10.4)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
