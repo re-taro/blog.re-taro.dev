@@ -28,7 +28,7 @@
     "fmt:prettier": "prettier . -w"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "2.1.1",
+    "@re-taro/eslint-config": "2.4.2",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "11.1.5",
     "@types/mdast": "3.0.15",
