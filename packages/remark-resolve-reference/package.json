@@ -29,7 +29,7 @@
     "test": "vitest --run"
   },
   "dependencies": {
-    "mdast-util-compact": "4.1.1",
+    "mdast-util-compact": "5.0.0",
     "mdast-utils": "workspace:*",
     "unist-util-visit": "4.1.2"
   },
