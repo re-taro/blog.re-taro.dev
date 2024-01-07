@@ -152,8 +152,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       unified:
-        specifier: 10.1.2
-        version: 10.1.2
+        specifier: 11.0.4
+        version: 11.0.4
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
@@ -222,8 +222,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       unified:
-        specifier: 10.1.2
-        version: 10.1.2
+        specifier: 11.0.4
+        version: 11.0.4
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
@@ -277,8 +277,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       unified:
-        specifier: 10.1.2
-        version: 10.1.2
+        specifier: 11.0.4
+        version: 11.0.4
 
   packages/remark-remove-position:
     dependencies:
@@ -320,8 +320,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       unified:
-        specifier: 10.1.2
-        version: 10.1.2
+        specifier: 11.0.4
+        version: 11.0.4
 
   packages/remark-resolve-reference:
     dependencies:
@@ -378,8 +378,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       unified:
-        specifier: 10.1.2
-        version: 10.1.2
+        specifier: 11.0.4
+        version: 11.0.4
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
@@ -436,8 +436,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       unified:
-        specifier: 10.1.2
-        version: 10.1.2
+        specifier: 11.0.4
+        version: 11.0.4
       unist-builder:
         specifier: 4.0.0
         version: 4.0.0
@@ -7180,7 +7180,7 @@ packages:
       micromark-extension-gfm: 3.0.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      unified: 11.0.3
+      unified: 11.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -7210,7 +7210,7 @@ packages:
       '@types/mdast': 4.0.0
       mdast-util-from-markdown: 2.0.0
       micromark-util-types: 2.0.0
-      unified: 11.0.3
+      unified: 11.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -7228,7 +7228,7 @@ packages:
     dependencies:
       '@types/mdast': 4.0.0
       mdast-util-to-markdown: 2.1.0
-      unified: 11.0.3
+      unified: 11.0.4
     dev: true
 
   /require-directory@2.1.1:
@@ -8264,8 +8264,8 @@ packages:
       vfile: 5.3.7
     dev: true
 
-  /unified@11.0.3:
-    resolution: {integrity: sha512-jlCV402P+YDcFcB2VcN/n8JasOddqIiaxv118wNBoZXEhOn+lYG7BR4Bfg2BwxvlK58dwbuH2w7GX2esAjL6Mg==}
+  /unified@11.0.4:
+    resolution: {integrity: sha512-apMPnyLjAX+ty4OrNap7yumyVAMlKx5IWU2wlzzUdYJO9A8f1p9m/gywF/GM2ZDFcjQPrx59Mc90KwmxsoklxQ==}
     dependencies:
       '@types/unist': 3.0.2
       bail: 2.0.2
