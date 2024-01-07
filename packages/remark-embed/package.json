@@ -46,7 +46,7 @@
     "packelyze": "0.2.0",
     "prettier": "3.1.1",
     "remark-gfm": "4.0.0",
-    "remark-parse": "10.0.2",
+    "remark-parse": "11.0.0",
     "remark-remove-position": "workspace:*",
     "rollup": "4.9.4",
     "tsconfig": "workspace:*",
