@@ -31,7 +31,7 @@
     "github-slugger": "2.0.0",
     "mdast-util-to-string": "4.0.0",
     "mdast-utils": "workspace:*",
-    "unist-util-visit": "4.1.2"
+    "unist-util-visit": "5.0.0"
   },
   "devDependencies": {
     "@re-taro/eslint-config": "2.1.1",
