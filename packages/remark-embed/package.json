@@ -37,7 +37,7 @@
     "@re-taro/eslint-config": "2.1.1",
     "@rollup/plugin-replace": "5.0.5",
     "@rollup/plugin-terser": "0.4.4",
-    "@rollup/plugin-typescript": "11.1.5",
+    "@rollup/plugin-typescript": "11.1.6",
     "@types/mdast": "3.0.15",
     "@types/unist": "3.0.2",
     "endent": "2.1.0",
