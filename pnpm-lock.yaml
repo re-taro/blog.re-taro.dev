@@ -67,8 +67,8 @@ importers:
         specifier: 0.4.4
         version: 0.4.4(rollup@4.9.4)
       '@rollup/plugin-typescript':
-        specifier: 11.1.5
-        version: 11.1.5(rollup@4.9.4)(typescript@5.3.3)
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.9.4)(typescript@5.3.3)
       '@types/mdast':
         specifier: 3.0.15
         version: 3.0.15
@@ -116,8 +116,8 @@ importers:
         specifier: 0.4.4
         version: 0.4.4(rollup@4.9.4)
       '@rollup/plugin-typescript':
-        specifier: 11.1.5
-        version: 11.1.5(rollup@4.9.4)(typescript@5.3.3)
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.9.4)(typescript@5.3.3)
       '@types/mdast':
         specifier: 3.0.15
         version: 3.0.15
@@ -183,8 +183,8 @@ importers:
         specifier: 0.4.4
         version: 0.4.4(rollup@4.9.4)
       '@rollup/plugin-typescript':
-        specifier: 11.1.5
-        version: 11.1.5(rollup@4.9.4)(typescript@5.3.3)
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.9.4)(typescript@5.3.3)
       '@types/mdast':
         specifier: 3.0.15
         version: 3.0.15
@@ -253,8 +253,8 @@ importers:
         specifier: 0.4.4
         version: 0.4.4(rollup@4.9.4)
       '@rollup/plugin-typescript':
-        specifier: 11.1.5
-        version: 11.1.5(rollup@4.9.4)(typescript@5.3.3)
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.9.4)(typescript@5.3.3)
       '@types/mdast':
         specifier: 3.0.15
         version: 3.0.15
@@ -296,8 +296,8 @@ importers:
         specifier: 0.4.4
         version: 0.4.4(rollup@4.9.4)
       '@rollup/plugin-typescript':
-        specifier: 11.1.5
-        version: 11.1.5(rollup@4.9.4)(typescript@5.3.3)
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.9.4)(typescript@5.3.3)
       '@types/mdast':
         specifier: 3.0.15
         version: 3.0.15
@@ -345,8 +345,8 @@ importers:
         specifier: 0.4.4
         version: 0.4.4(rollup@4.9.4)
       '@rollup/plugin-typescript':
-        specifier: 11.1.5
-        version: 11.1.5(rollup@4.9.4)(typescript@5.3.3)
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.9.4)(typescript@5.3.3)
       '@types/mdast':
         specifier: 3.0.15
         version: 3.0.15
@@ -403,8 +403,8 @@ importers:
         specifier: 0.4.4
         version: 0.4.4(rollup@4.9.4)
       '@rollup/plugin-typescript':
-        specifier: 11.1.5
-        version: 11.1.5(rollup@4.9.4)(typescript@5.3.3)
+        specifier: 11.1.6
+        version: 11.1.6(rollup@4.9.4)(typescript@5.3.3)
       '@types/mdast':
         specifier: 3.0.15
         version: 3.0.15
@@ -1315,8 +1315,8 @@ packages:
       terser: 5.18.1
     dev: true
 
-  /@rollup/plugin-typescript@11.1.5(rollup@4.9.4)(typescript@5.3.3):
-    resolution: {integrity: sha512-rnMHrGBB0IUEv69Q8/JGRD/n4/n6b3nfpufUu26axhUcboUzv/twfZU8fIBbTOphRAe0v8EyxzeDpKXqGHfyDA==}
+  /@rollup/plugin-typescript@11.1.6(rollup@4.9.4)(typescript@5.3.3):
+    resolution: {integrity: sha512-R92yOmIACgYdJ7dJ97p4K69I8gg6IEHt8M7dUBxN3W6nrO8uUxX5ixl0yU/N3aZTi8WhPuICvOHXQvF6FaykAA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.14.0||^3.0.0||^4.0.0
@@ -1328,8 +1328,8 @@ packages:
       tslib:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 5.0.2(rollup@4.9.4)
-      resolve: 1.22.3
+      '@rollup/pluginutils': 5.1.0(rollup@4.9.4)
+      resolve: 1.22.8
       rollup: 4.9.4
       typescript: 5.3.3
     dev: true
@@ -1347,6 +1347,21 @@ packages:
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.5
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+      rollup: 4.9.4
+    dev: true
+
+  /@rollup/pluginutils@5.1.0(rollup@4.9.4):
+    resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
@@ -6465,7 +6480,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.3
+      resolve: 1.22.8
       semver: 5.7.1
       validate-npm-package-license: 3.0.4
     dev: true
@@ -7258,15 +7273,6 @@ packages:
 
   /resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
-    dev: true
-
-  /resolve@1.22.3:
-    resolution: {integrity: sha512-P8ur/gp/AmbEzjr729bZnLjXK5Z+4P0zhIJgBgzqRih7hL7BOukHGtSTA3ACMY467GRFz3duQsi0bDZdR7DKdw==}
-    hasBin: true
-    dependencies:
-      is-core-module: 2.13.0
-      path-parse: 1.0.7
-      supports-preserve-symlinks-flag: 1.0.0
     dev: true
 
   /resolve@1.22.8:
