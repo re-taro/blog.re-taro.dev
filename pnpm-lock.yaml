@@ -34,8 +34,8 @@ importers:
         specifier: 2.6.0
         version: 2.6.0(eslint-plugin-import@2.28.1)(eslint@8.56.0)(prettier@3.2.5)(svelte@4.2.2)(typescript@5.3.3)(vitest@1.2.2)
       '@types/node':
-        specifier: 20.11.18
-        version: 20.11.18
+        specifier: 20.11.19
+        version: 20.11.19
       '@types/react':
         specifier: 18.2.55
         version: 18.2.55
@@ -1545,7 +1545,7 @@ packages:
   /@types/concat-stream@2.0.1:
     resolution: {integrity: sha512-v5HP9ZsRbzFq5XRo2liUZPKzwbGK5SuGVMWZjE6iJOm/JNdESk3/rkfcPe0lcal0C32PTLVlYUYqGpMGNdDsDg==}
     dependencies:
-      '@types/node': 20.11.18
+      '@types/node': 20.11.19
     dev: true
 
   /@types/debug@4.1.8:
@@ -1600,8 +1600,8 @@ packages:
     resolution: {integrity: sha512-qelS/Ra6sacc4loe/3MSjXNL1dNQ/GjxNHVzuChwMfmk7HuycRLVQN2qNY3XahK+fZc5E2szqQSKUyAF0E+2bg==}
     dev: true
 
-  /@types/node@20.11.18:
-    resolution: {integrity: sha512-ABT5VWnnYneSBcNWYSCuR05M826RoMyMSGiFivXGx6ZUIsXb9vn4643IEwkg2zbEOSgAiSogtapN2fgc4mAPlw==}
+  /@types/node@20.11.19:
+    resolution: {integrity: sha512-7xMnVEcZFu0DikYjWOlRq7NTPETrm7teqUT2WkQjrTIkEgUyyGdWsj/Zg8bEJt5TNklzbPD1X3fqfsHw3SpapQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -8411,7 +8411,7 @@ packages:
       '@types/concat-stream': 2.0.1
       '@types/debug': 4.1.8
       '@types/is-empty': 1.2.2
-      '@types/node': 20.11.18
+      '@types/node': 20.11.19
       '@types/unist': 3.0.2
       '@ungap/structured-clone': 1.2.0
       concat-stream: 2.0.0
