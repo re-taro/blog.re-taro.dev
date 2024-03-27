@@ -31,7 +31,7 @@
   "dependencies": {
     "mdast-utils": "workspace:*",
     "ts-array-length": "0.1.2",
-    "unist-util-visit": "4.1.2"
+    "unist-util-visit": "5.0.0"
   },
   "devDependencies": {
     "@re-taro/eslint-config": "3.1.1",
