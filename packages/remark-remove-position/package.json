@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "mdast-utils": "workspace:*",
-    "unist-util-remove-position": "4.0.2"
+    "unist-util-remove-position": "5.0.0"
   },
   "devDependencies": {
     "@re-taro/eslint-config": "3.1.1",
