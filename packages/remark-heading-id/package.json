@@ -34,7 +34,7 @@
     "unist-util-visit": "4.1.2"
   },
   "devDependencies": {
-    "@re-taro/eslint-config": "3.1.1",
+    "@re-taro/eslint-config": "4.0.0",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "11.1.6",
     "@types/mdast": "3.0.15",
