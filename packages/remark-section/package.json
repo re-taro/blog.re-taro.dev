@@ -46,7 +46,7 @@
     "remark-remove-position": "workspace:*",
     "rollup": "4.13.1",
     "tsconfig": "workspace:*",
-    "unified": "10.1.2",
+    "unified": "11.0.4",
     "unist-builder": "4.0.0",
     "vitest": "1.4.0"
   }
