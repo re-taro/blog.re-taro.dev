@@ -46,7 +46,7 @@
     "prettier": "3.2.5",
     "remark-parse": "10.0.2",
     "remark-remove-position": "workspace:*",
-    "rollup": "4.13.1",
+    "rollup": "4.13.2",
     "tsconfig": "workspace:*",
     "unified": "10.1.2",
     "unist-builder": "4.0.0",
