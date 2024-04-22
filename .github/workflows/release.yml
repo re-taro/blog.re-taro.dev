@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    outputs:
+      has_changesets: ${{ steps.changesets.outputs.hasChangesets }}
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - name: Setup Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .tool-versions
+      - name: Setup GitHub App
+        id: bot
+        uses: re-taro/actions/gen-installation-token@v3.5.4
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+      - name: Create Release Pull Request
+        id: changesets
+        uses: changesets/action@v1.4.7
+        with:
+          publish: pnpm changeset publish
+        env:
+          GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
+      - name: Revoke GitHub Apps token
+        env:
+          GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
+        run: |
+          curl --location --silent --request DELETE \
+            --url "${GITHUB_API_URL}/installation/token" \
+            --header "Accept: application/vnd.github+json" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            --header "Authorization: Bearer ${GITHUB_TOKEN}"
+  deploy:
+    name: Deploy
+    needs: release
+    runs-on: ubuntu-latest
+    if: ${{ needs.release.outputs.has_changesets == 'false' }}
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - name: Setup Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .tool-versions
+      - name: Deploy | Build
+        run: pnpm build
+      - name: Deploy | Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3.4.1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy --project-name blog --directory dist
