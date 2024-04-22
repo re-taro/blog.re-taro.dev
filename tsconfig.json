@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"incremental": true,
+		"target": "ES2017",
+		"jsx": "react-jsx",
+		"jsxImportSource": "@builder.io/qwik",
+		"lib": [
+			"es2022",
+			"DOM",
+			"WebWorker",
+			"DOM.Iterable"
+		],
+		"module": "ES2022",
+		"moduleResolution": "node",
+		"paths": {
+			"~/*": [
+				"./src/*"
+			]
+		},
+		"resolveJsonModule": true,
+		"types": [
+			"node",
+			"vite/client"
+		],
+		"allowJs": true,
+		"strict": true,
+		"noEmit": true,
+		"outDir": "tmp",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"skipLibCheck": true
+	},
+	"include": [
+		"src",
+		"./*.d.ts",
+		"./*.config.ts"
+	]
+}

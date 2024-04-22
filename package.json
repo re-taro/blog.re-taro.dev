@@ -1,0 +1,52 @@
+{
+	"name": "blog.re-taro.dev",
+	"type": "module",
+	"version": "1.0.0",
+	"private": true,
+	"packageManager": "pnpm@9.0.4",
+	"description": "My personal tech blog",
+	"author": "Rintaro Itokawa <me@re-taro.dev> (https://re-taro.dev)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/re-taro/blog.re-taro.dev"
+	},
+	"sideEffects": [
+		"src/global.css"
+	],
+	"scripts": {
+		"build": "qwik build",
+		"build.client": "vite build",
+		"build.preview": "vite build --ssr src/entry.preview.tsx",
+		"build.server": "vite build -c adapters/static/vite.config.ts",
+		"dev": "vite --mode ssr",
+		"fmt": "run-s -c fmt:*",
+		"fmt:eslint": "pnpm run lint:eslint --fix",
+		"lint": "run-p -c lint:*",
+		"lint:eslint": "eslint .",
+		"lint:tsc": "tsc -p . --incremental --noEmit",
+		"prebuild.pandacss": "panda codegen --silent",
+		"prepare": "panda codegen",
+		"preview": "qwik build preview && vite preview --open",
+		"start": "vite --open --mode ssr",
+		"qwik": "qwik"
+	},
+	"devDependencies": {
+		"@builder.io/partytown": "0.10.1",
+		"@builder.io/qwik": "1.5.2",
+		"@builder.io/qwik-city": "1.5.2",
+		"@builder.io/vite-plugin-macro": "~0.0.7",
+		"@pandacss/dev": "^0.36.1",
+		"@re-taro/eslint-config": "4.1.0",
+		"@types/node": "20.11.30",
+		"eslint": "8.57.0",
+		"eslint-plugin-format": "0.1.1",
+		"eslint-plugin-qwik": "1.5.2",
+		"npm-run-all2": "6.1.2",
+		"postcss": "8.4.38",
+		"typescript": "5.3.3",
+		"vite": "5.1.6",
+		"vite-tsconfig-paths": "4.2.1"
+	},
+	"browserslist": ["defaults and > 0.3%"]
+}
