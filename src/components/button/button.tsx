@@ -18,7 +18,7 @@ export const Button = component$<ButtonProps>(({ size = "medium" }) => {
 	return (
 		<button
 			class={{
-      	[`size-${size}`]: true,
+				[`size-${size}`]: true,
 			}}
 		>
 			<Slot></Slot>
