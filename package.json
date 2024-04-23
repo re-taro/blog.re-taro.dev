@@ -27,8 +27,8 @@
 		"lint:tsc": "tsc -p . --incremental --noEmit",
 		"prebuild.pandacss": "panda codegen --silent",
 		"prepare": "panda codegen",
-		"preview": "qwik build preview && vite preview --open",
-		"start": "vite --open --mode ssr",
+		"preview": "qwik build preview && vite preview",
+		"start": "NODE_ENV=production wrangler pages dev dist",
 		"qwik": "qwik"
 	},
 	"devDependencies": {
