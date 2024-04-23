@@ -4,15 +4,40 @@ import {
 	RouterOutlet,
 	ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
-import { RouterHead } from "./components/router-head/router-head";
-
-import "./global.css";
+import { RouterHead } from "~/components/router-head/router-head";
+import "~/global.css";
 
 export default component$(() => {
 	return (
 		<QwikCityProvider>
 			<head>
 				<meta charSet="utf-8" />
+				<meta name="viewport" content="width=device-width" />
+				<meta
+					name="description"
+					content="Rintaro Itokawa(re-taro)のブログです。"
+				/>
+				<meta property="og:title" content="blog.re-taro.dev" />
+				<meta
+					property="og:description"
+					content="Rintaro Itokawa(re-taro)のブログです。"
+				/>
+				<meta property="og:url" content="https://re-taro.dev" />
+				<meta property="og:image" content="https://og.re-taro.dev?title=blog.re-taro.dev" />
+				<meta property="og:type" content="website" />
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta
+					property="twitter:title"
+					content="blog.re-taro.dev"
+				/>
+				<meta
+					property="twitter:description"
+					content="Rintaro Itokawa(re-taro)のブログです。"
+				/>
+				<meta property="twitter:image" content="https://og.re-taro.dev?title=blog.re-taro.dev" />
+				<meta property="twitter:site" content="@re_taro_" />
+				<link rel="icon" href="/favicon.ico" sizes="any" />
+				<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 				<RouterHead />
 			</head>
 			<body lang="ja">
