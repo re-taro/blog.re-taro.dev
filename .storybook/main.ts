@@ -9,6 +9,7 @@ const config: StorybookConfig = {
 		"@storybook/addon-a11y",
 		"@storybook/addon-actions",
 		"@storybook/addon-backgrounds",
+		"@chromatic-com/storybook",
 	],
 	framework: {
 		name: "storybook-framework-qwik",
