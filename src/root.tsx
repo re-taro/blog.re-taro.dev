@@ -5,7 +5,7 @@ import {
 	ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 import { RouterHead } from "~/components/router-head/router-head";
-import "~/global.css";
+import styles from "~/global.css?url";
 
 export default component$(() => {
 	return (
@@ -38,6 +38,7 @@ export default component$(() => {
 				<meta property="twitter:site" content="@re_taro_" />
 				<link rel="icon" href="/favicon.ico" sizes="any" />
 				<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+				<link rel="stylesheet" href={styles} />
 				<RouterHead />
 			</head>
 			<body lang="ja">

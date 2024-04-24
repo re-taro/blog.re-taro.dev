@@ -11,9 +11,7 @@
 		"type": "git",
 		"url": "https://github.com/re-taro/blog.re-taro.dev"
 	},
-	"sideEffects": [
-		"src/global.css"
-	],
+	"sideEffects": false,
 	"scripts": {
 		"build": "qwik build",
 		"build-storybook": "storybook build",
