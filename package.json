@@ -71,7 +71,7 @@
 		"storybook-framework-qwik": "0.4.0",
 		"typescript": "5.4.5",
 		"vite": "5.2.10",
-		"vite-tsconfig-paths": "4.2.3",
+		"vite-tsconfig-paths": "4.3.2",
 		"wait-on": "7.2.0",
 		"wrangler": "3.51.2"
 	},
