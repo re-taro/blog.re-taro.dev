@@ -2,6 +2,8 @@ import { defineConfig } from "@pandacss/dev";
 
 import { removeUnusedKeyframes } from "./removeUnusedKeyframse";
 import { removeUnusedCssVars } from "./removeUnusedvars";
+import { tokens } from "~/styles/tokens";
+import { globalCss } from "~/styles/globalCss";
 
 export default defineConfig({
 	jsxFramework: "qwik",
@@ -22,4 +24,13 @@ export default defineConfig({
 				return removeUnusedCssVars(removeUnusedKeyframes(content));
 		},
 	},
+	theme: {
+		extend: {
+			breakpoints: {
+				md: "768px",
+			},
+			tokens,
+		},
+	},
+	globalCss,
 });

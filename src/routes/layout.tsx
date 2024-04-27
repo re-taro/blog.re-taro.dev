@@ -1,5 +1,8 @@
 import { Slot, component$ } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import { Footer } from "~/components/Footer/Footer";
+import { Header } from "~/components/Header/Header";
+import { css } from "~/styled-system/css";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
 	cacheControl({
@@ -9,5 +12,25 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-	return <Slot />;
+	return (
+		<div class={css({
+			display: "grid",
+			gridTemplateRows: "[auto 1fr auto]",
+			gridTemplateAreas: `
+        "header"
+        "main"
+        "footer"`,
+			minHeight: "[100lvh]",
+		})}
+		>
+			<Header />
+			<main class={css({
+				gridArea: "main",
+			})}
+			>
+				<Slot />
+			</main>
+			<Footer />
+		</div>
+	);
 });

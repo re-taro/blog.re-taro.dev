@@ -10,6 +10,8 @@ node_modules
 *.local
 tsconfig.tsbuildinfo
 /storybook-static
+/playwright-report
+/.wrangler
 
 # Panda CSS
 src/styled-system
