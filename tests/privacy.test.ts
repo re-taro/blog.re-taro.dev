@@ -5,7 +5,20 @@ test.describe("/privacy", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("http://localhost:8788/privacy");
 	});
-	test.describe("rendering", () => {});
+	test.describe("rendering", () => {
+		test("should render heading", async ({ page }) => {
+			const heading = await page.$("h1");
+			const headingText = await heading?.textContent();
+
+			expect(headingText).toBe("Privacy Policy");
+		});
+		test("should render policy link", async ({ page }) => {
+			const link = await page.$("a[href=\"https://policies.google.com/technologies/partner-sites\"]");
+			const text = await link?.textContent();
+
+			expect(text).toEqual("Google Analytics");
+		});
+	});
 	test.describe("action", () => {});
 	test.describe("validation", () => {});
 	test.describe("a11y", () => {
