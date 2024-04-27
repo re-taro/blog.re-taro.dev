@@ -35,6 +35,7 @@ jobs:
         with:
           urls: |
             ${{ inputs.url }}
+            ${{ inputs.url }}/privacy
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true

@@ -1,9 +1,9 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
-test.describe("/", () => {
+test.describe("/privacy", () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto("http://localhost:8788/");
+		await page.goto("http://localhost:8788/privacy");
 	});
 	test.describe("rendering", () => {});
 	test.describe("action", () => {});
