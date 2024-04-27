@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@builder.io/partytown':
-        specifier: 0.10.1
-        version: 0.10.1
+        specifier: 0.10.2
+        version: 0.10.2
       '@builder.io/qwik':
         specifier: 1.5.2
         version: 1.5.2(@types/node@20.12.7)(lightningcss@1.23.0)(undici@6.13.0)
@@ -778,9 +778,10 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@builder.io/partytown@0.10.1':
-    resolution: {integrity: sha512-HTyW2do++3JUFKTLBjTGwhUu4MTwBDq0dBlWaQm7tLaQk237tnHNkBZmquDXkZ6CkSv8aHiIH40Wm2/nxkjQsQ==}
+  '@builder.io/partytown@0.10.2':
+    resolution: {integrity: sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==}
     engines: {node: '>=18.0.0'}
+    hasBin: true
 
   '@builder.io/qwik-city@1.4.1':
     resolution: {integrity: sha512-SUNxptxOkJJEZN0X1o0SkR2f+8NqAONXKMSAhM6iOfzhJd9ceFpEoz2Jl1oalrZrWnPWVu386EB9f5899fhWAg==}
@@ -7972,7 +7973,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@builder.io/partytown@0.10.1': {}
+  '@builder.io/partytown@0.10.2': {}
 
   '@builder.io/qwik-city@1.4.1(@types/node@20.12.7)(lightningcss@1.23.0)(rollup@4.16.1)':
     dependencies:
