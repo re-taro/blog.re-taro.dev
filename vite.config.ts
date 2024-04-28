@@ -9,7 +9,16 @@ import { macroPlugin } from "@builder.io/vite-plugin-macro";
 export default defineConfig(() => {
 	return {
 		plugins: [
-			macroPlugin({ preset: "pandacss" }),
+			macroPlugin({
+				preset: "pandacss",
+				filter: (ident, id) => {
+					return (
+						["css", "jsx", "patterns", "tokens", "types"].includes(ident)
+						&& !!id.match(/\/styled-system\/{css,jsx,patterns,tokens,types}\Z/g)
+						&& (id.startsWith(".") || id.startsWith("~"))
+					);
+				},
+			}),
 			qwikCity(),
 			qwikVite(),
 			tsconfigPaths(),
