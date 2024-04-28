@@ -1,8 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { css } from "~/styled-system/css";
+import type { SystemStyleObject } from "~/styled-system/types";
 
-export const Header = component$(() => {
+interface Props {
+	css?: SystemStyleObject;
+}
+
+export const Header = component$(({ css: cssStyle }: Props) => {
 	return (
 		<header class={css({
 			position: "fixed",
@@ -14,8 +19,7 @@ export const Header = component$(() => {
 			padding: "6",
 			backgroundColor: "bg.main",
 			zIndex: "calc(infinity)",
-			gridArea: "header",
-		})}
+		}, cssStyle)}
 		>
 			<Link
 				class={css({

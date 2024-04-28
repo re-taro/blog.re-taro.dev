@@ -1,8 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { css } from "~/styled-system/css";
+import type { SystemStyleObject } from "~/styled-system/types";
 
-export const Footer = component$(() => {
+interface Props {
+	css?: SystemStyleObject;
+}
+
+export const Footer = component$(({ css: cssStyle }: Props) => {
 	return (
 		<footer
 			class={css({
@@ -12,8 +17,7 @@ export const Footer = component$(() => {
 				borderTopWidth: "1px",
 				borderTopStyle: "solid",
 				borderTopColor: "border.main",
-				gridArea: "footer",
-			})}
+			}, cssStyle)}
 		>
 			<p class={css({
 				marginBlockStart: "0",

@@ -23,14 +23,11 @@ export default component$(() => {
 			minHeight: "[100lvh]",
 		})}
 		>
-			<Header />
-			<main class={css({
-				gridArea: "main",
-			})}
-			>
+			<Header css={css.raw({ gridArea: "header" })} />
+			<main class={css({ gridArea: "main" })}>
 				<Slot />
 			</main>
-			<Footer />
+			<Footer css={css.raw({ gridArea: "footer" })} />
 		</div>
 	);
 });
