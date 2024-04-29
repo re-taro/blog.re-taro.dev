@@ -7,7 +7,7 @@ import { visit } from "./visit";
 
 export interface Embed extends M.Node {
 	type: "embed";
-	src?: string | undefined;
+	src: string;
 	width?: string | undefined;
 	height?: string | undefined;
 	frameBorder?: string | undefined;

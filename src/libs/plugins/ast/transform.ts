@@ -12,11 +12,11 @@ export const astTransform: Plugin<
   M.Root,
   A.Root
 > = function () {
-	return (tree) => {
+	return async (tree) => {
 		const additionalHandlers = this.data("astFromMdastHandlers") ?? {};
 		const state = createState(tree, additionalHandlers);
 
-		const children = state.transformAll(tree);
+		const children = await state.transformAll(tree);
 
 		const footnotes = Array.from(state.astFootnoteDefinition.values()).sort(
 			(a, b) => a.index - b.index,
@@ -34,8 +34,8 @@ export const astTransform: Plugin<
 };
 
 interface State {
-	transformOne: (node: M.Node) => A.Content | undefined;
-	transformAll: (node: M.Parent) => Array<A.Content>;
+	transformOne: (node: M.Node) => Promise<A.Content | undefined>;
+	transformAll: (node: M.Parent) => Promise<Array<A.Content>>;
 	headingSlugger: GitHubSlugger;
 	mdastFootnoteDefinition: Map<string, M.FootnoteDefinition>;
 	astFootnoteDefinition: Map<string, A.FootnoteDefinition>;
@@ -44,26 +44,25 @@ interface State {
 export type Handler<T extends M.Node> = (
 	node: T,
 	state: State,
-) => A.Content | undefined;
+) => Promise<A.Content | undefined>;
 
 export type Handlers = Record<string, Handler<any>>;
 
 function createState(tree: M.Root, additionalHandlers: Handlers): State {
 	const handlers: Handlers = { ...defaultHandlers, ...additionalHandlers };
 
-	const transformOne = (node: M.Node): A.Content | undefined => {
+	const transformOne = async (node: M.Node): Promise<A.Content | undefined> => {
 		const handler = handlers[node.type];
 		if (!handler)
 			throw new Error(`Cannot handle node type: ${node.type}`);
 
 		// eslint-disable-next-line ts/no-use-before-define
-		return handler(node, state);
+		return await handler(node, state);
 	};
 
-	const transformAll = (node: M.Parent): Array<A.Content> => {
-		return node.children
-			.map(n => transformOne(n))
-			.filter((n): n is A.Content => n !== undefined);
+	const transformAll = async (node: M.Parent): Promise<Array<A.Content>> => {
+		const results = await Promise.all(node.children.map(n => transformOne(n)));
+		return results.filter((n): n is A.Content => n !== undefined);
 	};
 
 	const mdastFootnoteDefinition = new Map<string, M.FootnoteDefinition>();

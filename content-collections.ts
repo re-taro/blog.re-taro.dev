@@ -13,9 +13,9 @@ import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkMath from "remark-math";
 
-import { remarkLinkCard } from "~/libs/plugins/remark/remarkLinkCard";
+import { remarkEmbed } from "~/libs/plugins/remark/remarkEmbed";
 import { astTransform } from "~/libs/plugins/ast/transform";
-import { astLinkCard } from "~/libs/plugins/ast/linkCard";
+import { astEmbed } from "~/libs/plugins/ast/embed";
 import { astSection } from "~/libs/plugins/ast/section";
 import { astToc } from "~/libs/plugins/ast/toc";
 import { astArticle } from "~/libs/plugins/ast/article";
@@ -129,7 +129,7 @@ async function traverseMdAst<T extends M.RootContent>(
 		case "mdxjsEsm":
 		case "inlineMath":
 		case "math":
-		case "link-card":
+		case "embed":
 			return;
 		case "image": {
 			if (
@@ -217,9 +217,9 @@ const blog = defineCollection({
 			.use(remarkParse)
 			.use(remarkGfm)
 			.use(remarkMath)
-			.use(remarkLinkCard)
+			.use(remarkEmbed)
 			.use(astTransform)
-			.use(astLinkCard)
+			.use(astEmbed)
 			.use(astSection)
 			.use(astToc)
 			.use(astArticle)

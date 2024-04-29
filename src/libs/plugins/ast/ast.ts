@@ -1,4 +1,5 @@
 import type { Node as UnistNode } from "unist";
+import type { OEmbed } from "~/libs/oEmbedSchema";
 
 export interface Node extends UnistNode {}
 
@@ -39,7 +40,6 @@ export type Content =
 	| FootnoteReference
 	| Code
 	| Math
-	| LinkCard
 	| Embed
 	| Section;
 
@@ -168,12 +168,17 @@ export interface Math extends Literal {
 	type: "math";
 }
 
-export interface LinkCard extends Literal {
-	type: "link-card";
-}
-
-export interface Embed extends Literal {
+export interface Embed extends Node {
 	type: "embed";
+	src: string;
+	width?: string | undefined;
+	height?: string | undefined;
+	frameBorder?: string | undefined;
+	allowFullScreen?: string | undefined;
+	mozAllowFullScreen?: string | undefined;
+	msAllowFullScreen?: string | undefined;
+	style?: string | undefined;
+	oembed?: OEmbed | undefined;
 }
 
 export interface Section extends Parent {
