@@ -1,15 +1,15 @@
 import type { Plugin } from "unified";
 import type { Position } from "unist";
 
-import type * as Astar from "./ast";
+import type * as A from "./ast";
 
-export const astSection: Plugin<Array<never>, Astar.Root> = function () {
+export const astSection: Plugin<Array<never>, A.Root> = function () {
 	return (tree) => {
 		transform(tree, 1);
 	};
 };
 
-function transform(tree: Astar.Parent, level: number): void {
+function transform(tree: A.Parent, level: number): void {
 	if (level > 6)
 		return;
 
@@ -22,13 +22,13 @@ function transform(tree: Astar.Parent, level: number): void {
 		const endIdx = findNodeAfter(tree, startIdx, isHeadingOfLevel(level));
 
 		const children = tree.children.slice(startIdx, endIdx) as [
-			Astar.Heading,
-			...Array<Astar.Content>,
+			A.Heading,
+			...Array<A.Content>,
 		];
 		const firstChild = children.at(0);
 		const lastChild = children.at(-1);
 		const position: Position | undefined = firstChild?.position && lastChild?.position ? { start: firstChild.position.start, end: lastChild.position.end } : undefined;
-		const section: Astar.Section = {
+		const section: A.Section = {
 			type: "section",
 			children,
 			position,
@@ -43,19 +43,19 @@ function transform(tree: Astar.Parent, level: number): void {
 
 function isHeadingOfLevel(
 	level: number,
-): (node: Astar.Node) => node is Astar.Heading {
-	return (node): node is Astar.Heading =>
+): (node: A.Node) => node is A.Heading {
+	return (node): node is A.Heading =>
 		isHeading(node) && node.level === level;
 }
 
-function isHeading(node: Astar.Node): node is Astar.Heading {
+function isHeading(node: A.Node): node is A.Heading {
 	return node.type === "heading";
 }
 
 function findNodeAfter(
-	tree: Astar.Parent,
+	tree: A.Parent,
 	after: number | undefined,
-	predicate: (node: Astar.Node) => boolean,
+	predicate: (node: A.Node) => boolean,
 ): number | undefined {
 	const idx = tree.children.findIndex(
 		(node, idx) =>

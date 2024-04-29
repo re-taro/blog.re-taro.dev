@@ -1,9 +1,9 @@
 import type { Plugin } from "unified";
 
 import { isSection } from "./check";
-import type { Parent, Root, Toc } from "./ast";
+import type * as A from "./ast";
 
-export const astToc: Plugin<Array<never>, Root> = function () {
+export const astToc: Plugin<Array<never>, A.Root> = function () {
 	const data = this.data();
 
 	return (tree) => {
@@ -13,9 +13,9 @@ export const astToc: Plugin<Array<never>, Root> = function () {
 	};
 };
 
-function process(tree: Parent): Array<Toc> {
+function process(tree: A.Parent): Array<A.Toc> {
 	return tree.children.filter(isSection).map(
-		(section): Toc => ({
+		(section): A.Toc => ({
 			type: "toc",
 			plain: section.children[0].plain,
 			id: section.children[0].id,
@@ -26,6 +26,6 @@ function process(tree: Parent): Array<Toc> {
 
 declare module "unified" {
 	interface Data {
-		toc?: Array<Toc>;
+		toc?: Array<A.Toc>;
 	}
 }
