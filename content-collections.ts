@@ -199,6 +199,8 @@ const blog = defineCollection({
 	directory: "contents",
 	include: "**/*.md",
 	schema: z => ({
+		title: z.string({ message: "Value of \"title\" must be a string." }),
+		description: z.string({ message: "Value of \"description\" must be a string." }),
 		tags: z.array(z.string(), { message: "Value of \"tags\" must be an array of strings." }),
 		published: z.boolean({ message: "Value of \"published\" must be a boolean." }),
 		publishedAt: z.string({ message: "Value of \"publishedAt\" must be a date." }).refine((v) => {

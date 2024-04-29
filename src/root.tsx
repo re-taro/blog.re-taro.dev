@@ -22,7 +22,7 @@ export default component$(() => {
 					property="og:description"
 					content="Rintaro Itokawa(re-taro)のブログです。"
 				/>
-				<meta property="og:url" content="https://re-taro.dev" />
+				<meta property="og:url" content="https://blog.re-taro.dev" />
 				<meta property="og:image" content="https://og.re-taro.dev?title=blog.re-taro.dev" />
 				<meta property="og:type" content="website" />
 				<meta property="twitter:card" content="summary_large_image" />

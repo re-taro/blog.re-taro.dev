@@ -1,7 +1,7 @@
 import fs from "node:fs";
 
 const pages = fs
-	.readdirSync("src/routes")
+	.readdirSync("src/routes", { recursive: true })
 	.map((it) => {
 		const path = `src/routes/${it}`;
 		const stat = fs.statSync(path);
