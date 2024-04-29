@@ -13,5 +13,7 @@ tsconfig.tsbuildinfo
 /playwright-report
 /.wrangler
 
-# Panda CSS
+# Generated
 src/styled-system
+.content-collections
+/public/img
