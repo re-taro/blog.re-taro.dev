@@ -13,9 +13,8 @@
 		"module": "ES2022",
 		"moduleResolution": "node",
 		"paths": {
-			"~/*": [
-				"./src/*"
-			]
+			"~/*": ["./src/*"],
+			"content-collections": ["./.content-collections/generated"]
 		},
 		"resolveJsonModule": true,
 		"types": [
@@ -31,9 +30,6 @@
 		"isolatedModules": true,
 		"skipLibCheck": true
 	},
-	"include": [
-		"src",
-		"./*.d.ts",
-		"./*.config.ts"
-	]
+	"include": ["**/*.ts", "**/*.tsx"],
+	"exclude": [".content-collections", "dist", "server", "node_modules"]
 }

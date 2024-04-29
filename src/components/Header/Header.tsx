@@ -3,7 +3,7 @@ import { Link } from "@builder.io/qwik-city";
 import { css } from "~/styled-system/css";
 import type { SystemStyleObject } from "~/styled-system/types";
 
-interface Props {
+export interface Props {
 	css?: SystemStyleObject;
 }
 

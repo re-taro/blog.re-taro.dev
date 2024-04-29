@@ -1,0 +1,246 @@
+import { parse } from "node:path";
+import crypto from "node:crypto";
+import { access, mkdir, readFile, writeFile } from "node:fs/promises";
+
+import type * as M from "mdast";
+import { codeToHast } from "shiki";
+import sharp from "sharp";
+import type * as H from "hast";
+import { defineCollection, defineConfig } from "@content-collections/core";
+import { unified } from "unified";
+import { Temporal } from "temporal-polyfill";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkMath from "remark-math";
+
+import { remarkLinkCard } from "~/libs/plugins/remark/remarkLinkCard";
+import { astTransform } from "~/libs/plugins/ast/transform";
+import { astLinkCard } from "~/libs/plugins/ast/linkCard";
+import { astSection } from "~/libs/plugins/ast/section";
+import { astToc } from "~/libs/plugins/ast/toc";
+import { astArticle } from "~/libs/plugins/ast/article";
+
+interface TransformedImage {
+	path: string;
+	dim: {
+		w: number;
+		h: number;
+	};
+}
+
+interface WithTransformedImage {
+	transformed?: TransformedImage[];
+}
+
+interface ImageTransformationConfig {
+	readonly outputRoot: string;
+	readonly outputSubDir: string;
+	readonly sourceBaseDir: string;
+	readonly scaling: number;
+}
+
+interface TransformContext {
+	readonly filePath: string;
+}
+
+function isAbslutePath(imgUrl: string): boolean {
+	return /^https?:\/\//.test(imgUrl) || imgUrl.startsWith("/");
+}
+
+function srcImgPath(
+	config: ImageTransformationConfig,
+	ctx: TransformContext,
+	imgUrl: string,
+): string {
+	if (isAbslutePath(imgUrl))
+		return imgUrl;
+
+	const contentDir = /^(.+)\/?$/.exec(config.sourceBaseDir)?.[0];
+	if (contentDir === undefined)
+		return imgUrl;
+
+	const srcPath = parse(ctx.filePath);
+
+	if (srcPath.dir === "")
+		return `${contentDir}/${imgUrl}`;
+	else
+		return `${contentDir}/${srcPath.dir}/${imgUrl}`;
+}
+
+function generateImgDistFileName(
+	imgUrl: string,
+	dim?: {
+		width: number;
+		height: number;
+	},
+) {
+	if (isAbslutePath(imgUrl))
+		return imgUrl;
+
+	const baseNameHash = crypto
+		.createHash("sha256")
+		.update(imgUrl)
+		.digest("base64")
+		.slice(0, 8);
+	const baseName = parse(imgUrl).name;
+	if (dim)
+		return `${baseName}-${baseNameHash}-${Math.round(dim.width)}x${Math.round(dim.height)}.webp`;
+	else
+		return `${baseName}-${baseNameHash}.webp`;
+}
+
+async function exists(path: string): Promise<boolean> {
+	try {
+		await access(path);
+		return true;
+	}
+	catch {
+		return false;
+	}
+}
+
+async function traverseMdAst<T extends M.RootContent>(
+	config: ImageTransformationConfig,
+	ctx: TransformContext,
+	ast: T,
+) {
+	switch (ast.type) {
+		case "code":
+			if (ast.lang) {
+				const styled = await codeToHast(ast.value, {
+					lang: ast.lang,
+					theme: "nord",
+				});
+				// MEMO: This is a safty cast
+				(ast as unknown as { hast: H.Root }).hast = styled;
+			}
+			return;
+		case "break":
+		case "definition":
+		case "html":
+		case "footnoteReference":
+		case "imageReference":
+		case "inlineCode":
+		case "text":
+		case "thematicBreak":
+		case "yaml":
+		case "mdxTextExpression":
+		case "mdxFlowExpression":
+		case "mdxjsEsm":
+		case "inlineMath":
+		case "math":
+		case "link-card":
+			return;
+		case "image": {
+			if (
+				ast.url.startsWith("https://")
+				|| ast.url.startsWith("http://")
+				|| ast.url.startsWith("/")
+			)
+				return;
+
+			const buffer = await readFile(srcImgPath(config, ctx, ast.url));
+			const image = sharp(buffer);
+			let { width, height } = await image.metadata();
+			if (!(width && height))
+				return;
+
+			const images: TransformedImage[] = [];
+
+			while (width > 300) {
+				const fileName = generateImgDistFileName(ast.url, { width, height });
+				const distPath = `${config.outputSubDir}/${fileName}`;
+				const distPathOnFs = `${config.outputRoot}/${distPath}`;
+
+				if (!(await exists(distPathOnFs))) {
+					const resized = await image
+						.resize(Math.round(width), Math.round(height))
+						.toBuffer();
+					await writeFile(distPathOnFs, resized);
+					// eslint-disable-next-line no-console
+					console.log(`INFO: transformed markdown image: ${fileName}`);
+				}
+
+				images.push({
+					path: `/${distPath}`,
+					dim: {
+						w: Math.round(width),
+						h: Math.round(height),
+					},
+				});
+				width *= config.scaling;
+				height *= config.scaling;
+			}
+			(ast as WithTransformedImage).transformed = images;
+			return;
+		}
+		default:
+			await Promise.all(
+				ast.children.map(child => traverseMdAst(config, ctx, child)),
+			);
+	}
+}
+
+async function generateImages(
+	config: ImageTransformationConfig,
+	ctx: TransformContext,
+	ast: M.Root,
+) {
+	await mkdir(`${config.outputRoot}/${config.outputSubDir}`, {
+		recursive: true,
+	});
+	await Promise.all(
+		ast.children.map(child => traverseMdAst(config, ctx, child)),
+	);
+}
+
+const blog = defineCollection({
+	name: "blog",
+	directory: "contents",
+	include: "**/*.md",
+	schema: z => ({
+		tags: z.array(z.string(), { message: "Value of \"tags\" must be an array of strings." }),
+		published: z.boolean({ message: "Value of \"published\" must be a boolean." }),
+		publishedAt: z.string({ message: "Value of \"publishedAt\" must be a date." }).refine((v) => {
+			try {
+				Temporal.PlainDate.from(v);
+
+				return true;
+			}
+			catch {
+				return false;
+			}
+		}, { message: "Value of \"publishedAt\" must be a valid date." }),
+	}),
+	transform: async (document) => {
+		const mdast = unified()
+			.use(remarkParse)
+			.use(remarkGfm)
+			.use(remarkMath)
+			.use(remarkLinkCard)
+			.use(astTransform)
+			.use(astLinkCard)
+			.use(astSection)
+			.use(astToc)
+			.use(astArticle)
+			.parse(document.content);
+		const config = {
+			outputRoot: "public",
+			outputSubDir: "img",
+			scaling: 0.7,
+			sourceBaseDir: "contents",
+		};
+		const ctx = {
+			filePath: document._meta.filePath,
+		};
+		await generateImages(config, ctx, mdast);
+		return {
+			...document,
+			mdast: mdast as any, // MEMO: This cast is an escape hatch for serializable type
+		};
+	},
+});
+
+export default defineConfig({
+	collections: [blog],
+});
