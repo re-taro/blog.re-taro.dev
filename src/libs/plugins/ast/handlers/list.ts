@@ -3,11 +3,11 @@ import type * as M from "mdast";
 import type * as A from "../ast";
 import type { Handler } from "../transform";
 
-export const list: Handler<M.List> = (
+export const list: Handler<M.List> = async (
 	node,
 	state,
-): A.UnorderedList | A.OrderedList | undefined => {
-	const children = state.transformAll(node);
+): Promise<A.UnorderedList | A.OrderedList | undefined> => {
+	const children = await state.transformAll(node);
 	if (children.length === 0)
 		return;
 

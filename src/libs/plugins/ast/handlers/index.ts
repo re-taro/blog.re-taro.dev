@@ -24,7 +24,7 @@ import { tableRow } from "./tableRow";
 import { text } from "./text";
 import { thematicBreak } from "./thematicBreak";
 
-const ignore: Handler<M.Node> = (): undefined => {
+const ignore: Handler<M.Node> = async (): Promise<undefined> => {
 	// noop
 };
 

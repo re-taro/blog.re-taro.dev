@@ -4,10 +4,10 @@ import { unreachable } from "../../error";
 import type * as A from "../ast";
 import type { Handler } from "../transform";
 
-export const footnoteReference: Handler<M.FootnoteReference> = (
+export const footnoteReference: Handler<M.FootnoteReference> = async (
 	node,
 	state,
-): A.FootnoteReference | undefined => {
+): Promise< A.FootnoteReference | undefined> => {
 	const usedDef = state.astFootnoteDefinition.get(node.identifier);
 	if (usedDef) {
 		usedDef.count += 1;
@@ -29,7 +29,7 @@ export const footnoteReference: Handler<M.FootnoteReference> = (
 		type: "footnoteDefinition",
 		index: footnoteIndex,
 		count: 1,
-		children: state.transformAll(mdastDef),
+		children: await state.transformAll(mdastDef),
 		position: mdastDef.position,
 	};
 	state.astFootnoteDefinition.set(node.identifier, newDef);

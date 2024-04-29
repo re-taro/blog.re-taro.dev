@@ -4,11 +4,11 @@ import type * as A from "../ast";
 import type { Handler } from "../transform";
 import { astarToString } from "../toString";
 
-export const heading: Handler<M.Heading> = (
+export const heading: Handler<M.Heading> = async (
 	node,
 	state,
-): A.Heading | undefined => {
-	const children = state.transformAll(node);
+): Promise<A.Heading | undefined> => {
+	const children = await state.transformAll(node);
 	if (children.length === 0)
 		return;
 

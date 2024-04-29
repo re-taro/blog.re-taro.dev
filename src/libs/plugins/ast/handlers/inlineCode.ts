@@ -3,9 +3,9 @@ import type * as M from "mdast";
 import type * as A from "../ast";
 import type { Handler } from "../transform";
 
-export const inlineCode: Handler<M.InlineCode> = (
+export const inlineCode: Handler<M.InlineCode> = async (
 	node,
-): A.InlineCode => {
+): Promise<A.InlineCode> => {
 	return {
 		type: "inlineCode",
 		value: node.value,

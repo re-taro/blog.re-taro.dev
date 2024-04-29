@@ -161,7 +161,6 @@ export interface Code extends Literal {
 	type: "code";
 	lang?: string | undefined;
 	filename?: string | undefined;
-	diff: boolean;
 }
 
 export interface Math extends Literal {
