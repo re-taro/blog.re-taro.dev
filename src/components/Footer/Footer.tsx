@@ -7,7 +7,7 @@ export interface Props {
 	css?: SystemStyleObject;
 }
 
-export const Footer = component$(({ css: cssStyle }: Props) => {
+export const Footer = component$<Props>(({ css: cssStyle }) => {
 	return (
 		<footer
 			class={css({
