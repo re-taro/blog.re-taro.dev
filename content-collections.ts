@@ -13,11 +13,13 @@ import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 
 import { remarkEmbed } from "~/libs/plugins/remark/remarkEmbed";
+import { remarkDescriptionList } from "~/libs/plugins/remark/remarkDescriptionList";
 import { astTransform } from "~/libs/plugins/ast/transform";
 import { astEmbed } from "~/libs/plugins/ast/embed";
 import { astSection } from "~/libs/plugins/ast/section";
 import { astToc } from "~/libs/plugins/ast/toc";
 import { astArticle } from "~/libs/plugins/ast/article";
+import { astDescriptionList } from "~/libs/plugins/ast/descriptionList";
 
 interface TransformedImage {
 	path: string;
@@ -216,7 +218,9 @@ const blog = defineCollection({
 			.use(remarkParse)
 			.use(remarkGfm)
 			.use(remarkEmbed)
+			.use(remarkDescriptionList)
 			.use(astTransform)
+			.use(astDescriptionList)
 			.use(astEmbed)
 			.use(astSection)
 			.use(astToc)

@@ -17,3 +17,11 @@ export function isFootnoteDefinition(
 ): node is M.FootnoteDefinition {
 	return node.type === "footnoteDefinition";
 }
+
+export function isList(node: M.Node): node is M.List {
+	return node.type === "list";
+}
+
+export function isListItem(node: M.Node): node is M.ListItem {
+	return node.type === "listItem";
+}

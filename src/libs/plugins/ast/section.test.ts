@@ -3,15 +3,9 @@ import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { describe, expect, it } from "vitest";
 
-import remarkGfm from "remark-gfm";
-import remarkMath from "remark-math";
-import { remarkEmbed } from "../remark/remarkEmbed";
 import { astSection } from "./section";
 import { astTransform } from "./transform";
 import type * as A from "./ast";
-import { astArticle } from "./article";
-import { astEmbed } from "./embed";
-import { astToc } from "./toc";
 
 describe("astSection", () => {
 	it("when nested heading is found (from AST)", async () => {
