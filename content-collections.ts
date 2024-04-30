@@ -11,7 +11,6 @@ import { unified } from "unified";
 import { Temporal } from "temporal-polyfill";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
-import remarkMath from "remark-math";
 
 import { remarkEmbed } from "~/libs/plugins/remark/remarkEmbed";
 import { astTransform } from "~/libs/plugins/ast/transform";
@@ -28,7 +27,7 @@ interface TransformedImage {
 	};
 }
 
-interface WithTransformedImage {
+export interface WithTransformedImage {
 	transformed?: TransformedImage[];
 }
 
@@ -127,8 +126,6 @@ async function traverseMdAst<T extends M.RootContent>(
 		case "mdxTextExpression":
 		case "mdxFlowExpression":
 		case "mdxjsEsm":
-		case "inlineMath":
-		case "math":
 		case "embed":
 			return;
 		case "image": {
@@ -218,7 +215,6 @@ const blog = defineCollection({
 		const mdast = unified()
 			.use(remarkParse)
 			.use(remarkGfm)
-			.use(remarkMath)
 			.use(remarkEmbed)
 			.use(astTransform)
 			.use(astEmbed)

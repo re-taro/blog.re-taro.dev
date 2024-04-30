@@ -11,11 +11,9 @@ import { heading } from "./heading";
 import { html } from "./html";
 import { image } from "./image";
 import { inlineCode } from "./inlineCode";
-import { inilneMath } from "./inlineMath";
 import { link } from "./link";
 import { list } from "./list";
 import { listItem } from "./listItem";
-import { math } from "./math";
 import { paragraph } from "./paragraph";
 import { strong } from "./strong";
 import { table } from "./table";
@@ -39,11 +37,9 @@ export const defaultHandlers: Handlers = {
 	html,
 	image,
 	inlineCode,
-	inilneMath,
 	link,
 	list,
 	listItem,
-	math,
 	paragraph,
 	strong,
 	table,

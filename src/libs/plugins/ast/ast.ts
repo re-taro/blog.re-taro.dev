@@ -19,7 +19,6 @@ export type Content =
 	| Emphasis
 	| Delete
 	| InlineCode
-	| InlineMath
 	| Link
 	| Image
 	| Break
@@ -39,7 +38,6 @@ export type Content =
 	| TableCell
 	| FootnoteReference
 	| Code
-	| Math
 	| Embed
 	| Section;
 
@@ -61,10 +59,6 @@ export interface Delete extends Parent {
 
 export interface InlineCode extends Literal {
 	type: "inlineCode";
-}
-
-export interface InlineMath extends Literal {
-	type: "inlineMath";
 }
 
 export interface Link extends Parent {
@@ -161,10 +155,6 @@ export interface Code extends Literal {
 	type: "code";
 	lang?: string | undefined;
 	filename?: string | undefined;
-}
-
-export interface Math extends Literal {
-	type: "math";
 }
 
 export interface Embed extends Node {
