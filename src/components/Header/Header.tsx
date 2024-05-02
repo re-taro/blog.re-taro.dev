@@ -7,7 +7,7 @@ export interface Props {
 	css?: SystemStyleObject;
 }
 
-export const Header = component$<Props>(({ css: cssStyle }) => {
+export default component$<Props>(({ css: cssStyle }) => {
 	return (
 		<header class={css({
 			position: "fixed",

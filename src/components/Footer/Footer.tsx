@@ -7,13 +7,14 @@ export interface Props {
 	css?: SystemStyleObject;
 }
 
-export const Footer = component$<Props>(({ css: cssStyle }) => {
+export default component$<Props>(({ css: cssStyle }) => {
 	return (
 		<footer
 			class={css({
 				width: "full",
 				marginTop: "4",
-				padding: "[1rem .5rem]",
+				paddingY: "4",
+				paddingX: "6",
 				borderTopWidth: "1px",
 				borderTopStyle: "solid",
 				borderTopColor: "border.main",
