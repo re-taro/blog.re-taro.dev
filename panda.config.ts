@@ -24,6 +24,11 @@ export default defineConfig({
 				return removeUnusedCssVars(removeUnusedKeyframes(content));
 		},
 	},
+	conditions: {
+		extend: {
+			supportsAlternativeTextAfter: "@supports (content: \"a\" / \"b\")",
+		},
+	},
 	theme: {
 		extend: {
 			breakpoints: {
