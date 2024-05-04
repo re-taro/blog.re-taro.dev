@@ -14,7 +14,8 @@ const embed: Handler<MEmbed> = async (node): Promise<Embed> => {
 			type: "embed",
 			position: node.position,
 			src: node.src,
-			oembed: metadata.oEmbed as OEmbed | undefined, // MEMO: This is a safety cast.
+			oembed: metadata.oEmbed as OEmbed | undefined, // MEMO: This is a safety cast
+			meta: metadata,
 		};
 	}
 	else {

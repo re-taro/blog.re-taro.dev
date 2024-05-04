@@ -1,3 +1,4 @@
+import type { Metadata } from "unfurl.js/dist/types";
 import type { Node as UnistNode } from "unist";
 import type { OEmbed } from "~/libs/oEmbedSchema";
 
@@ -167,6 +168,7 @@ export interface Embed extends Node {
 	mozAllowFullScreen?: string | undefined;
 	msAllowFullScreen?: string | undefined;
 	style?: string | undefined;
+	meta?: Metadata | undefined;
 	oembed?: OEmbed | undefined;
 }
 
