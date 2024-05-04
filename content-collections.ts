@@ -112,7 +112,7 @@ async function traverseMdAst<T extends M.RootContent>(
 					lang: ast.lang,
 					theme: "nord",
 				});
-				// MEMO: This is a safty cast
+				// @ts-expect-error - This is a safty cast
 				(ast as unknown as { hast: H.Root }).hast = styled;
 			}
 			return;
