@@ -30,7 +30,7 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 						color: "blue.400",
 					},
 
-				 _focus: {
+					_focus: {
 						color: "blue.400",
 					},
 				})}

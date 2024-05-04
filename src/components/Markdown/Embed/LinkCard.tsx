@@ -88,16 +88,19 @@ export default component$<Props>(({ node, meta }) => {
 					</footer>
 				</div>
 				{meta.open_graph.images && (
-					<img
-						src={meta.open_graph.images[0].url}
-						alt={meta.open_graph.images[0].alt ?? ""}
-						class={css({
-							maxWidth: "[40%]",
-							maxHeight: "32",
-							objectFit: "cover",
-							borderLeft: "[1px solid {colors.border.main}]",
-						})}
-					/>
+					<>
+						{/* eslint-disable-next-line qwik/jsx-img */}
+						<img
+							src={meta.open_graph.images[0].url}
+							alt={meta.open_graph.images[0].alt ?? ""}
+							class={css({
+								maxWidth: "[40%]",
+								maxHeight: "32",
+								objectFit: "cover",
+								borderLeft: "[1px solid {colors.border.main}]",
+							})}
+						/>
+					</>
 				)}
 			</article>
 		</a>

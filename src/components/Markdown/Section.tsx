@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import MarkdownChildren from "./Markdown";
 import type * as A from "~/libs/plugins/ast/ast";
-import { css } from "~/styled-system/css";
+import { css, cx } from "~/styled-system/css";
 
 interface Props {
 	node: A.Section;
@@ -11,7 +11,7 @@ interface Props {
 export default component$<Props>(({ node, footnoteDefs }) => {
 	return (
 		<section
-			class={css({
+			class={cx(css({
 				"& > * + *": {
 					marginTop: "6",
 				},
@@ -23,7 +23,7 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 					borderBottom: "[1px solid {colors.border.main}]",
 					scrollMarginTop: "[6.25rem]",
 				},
-			})}
+			}), "markdown_section")}
 			aria-labelledby={node.children[0].id}
 		>
 			<MarkdownChildren nodes={node.children} footnoteDefs={footnoteDefs} />
