@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "storybook-framework-qwik";
 import { QwikCityMockProvider } from "@builder.io/qwik-city";
 
-import { Footer } from "./Footer";
+import Footer from "./Footer";
 
 type T = typeof Footer;
 

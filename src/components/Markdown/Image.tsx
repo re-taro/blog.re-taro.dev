@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import type { WithTransformedImage } from "../../../../../../content-collections";
+import type { WithTransformedImage } from "../../../content-collections";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
