@@ -24,6 +24,7 @@ export default component$(() => {
 				/>
 				<meta property="og:url" content="https://blog.re-taro.dev" />
 				<meta property="og:image" content="https://og.re-taro.dev?title=blog.re-taro.dev" />
+				<meta property="og:image:alt" content="Rintaro Itokawa(re-taro)のブログです。" />
 				<meta property="og:type" content="website" />
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta
@@ -35,7 +36,12 @@ export default component$(() => {
 					content="Rintaro Itokawa(re-taro)のブログです。"
 				/>
 				<meta property="twitter:image" content="https://og.re-taro.dev?title=blog.re-taro.dev" />
+				<meta
+					property="twitter:image:alt"
+					content="Rintaro Itokawa(re-taro)のブログです。"
+				/>
 				<meta property="twitter:site" content="@re_taro_" />
+				<meta property="twitter:creator" content="@re_taro_" />
 				<link rel="icon" href="/favicon.ico" sizes="any" />
 				<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 				<link rel="stylesheet" href={styles} />

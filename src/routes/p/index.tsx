@@ -1,12 +1,60 @@
-import type { RequestHandler } from "@builder.io/qwik-city";
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import type { DocumentHead } from "@builder.io/qwik-city";
+import { routeLoader$, useNavigate } from "@builder.io/qwik-city";
 import { allBlogs } from "content-collections";
 import { Temporal } from "temporal-polyfill";
+import { css } from "~/styled-system/css";
 
-export const onGet: RequestHandler = ({ redirect }) => {
+export const useLatestMarkdownLoader = routeLoader$(() => {
 	const latestPost = allBlogs.filter(b => b.published).sort((a, b) => Temporal.PlainDate.compare(
 		Temporal.PlainDate.from(a.publishedAt),
 		Temporal.PlainDate.from(b.publishedAt),
 	))[0];
 
-	redirect(301, `/p/${latestPost._meta.path}`);
+	return latestPost;
+});
+
+export default component$(() => {
+	const second = useSignal(3);
+	const nav = useNavigate();
+	const latestPost = useLatestMarkdownLoader();
+	// eslint-disable-next-line qwik/no-use-visible-task
+	useVisibleTask$(({ cleanup }) => {
+		const id = setInterval(() => {
+			if (second.value === 0)
+				nav(`/p/${latestPost.value._meta.path}`);
+			else
+				second.value--;
+		}, 1000);
+
+		cleanup(() => clearInterval(id));
+	});
+
+	return (
+		<section
+			class={css({
+				padding: "[5.25rem 1rem 0]",
+			})}
+		>
+			<h1
+				class={css({
+					color: "text.main",
+					fontSize: "2xl",
+					fontWeight: "bold",
+					lineHeight: "tight",
+				})}
+			>
+				{second}
+				秒後に最新の記事へリダイレクトされます...
+			</h1>
+		</section>
+	);
+});
+
+export const head: DocumentHead = ({ resolveValue }) => {
+	const blog = resolveValue(useLatestMarkdownLoader);
+
+	return {
+		title: `Redirecting to ${blog.title}...`,
+	};
 };
