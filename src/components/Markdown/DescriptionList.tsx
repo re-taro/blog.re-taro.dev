@@ -12,23 +12,28 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 	return (
 		<dl class={css({
 			"& > dt": {
+				position: "relative",
 				marginLeft: "[1em]",
 
 				_before: {
+					position: "absolute",
 					content: "'-'",
 					marginLeft: "[-1em]",
 				},
 
 				_after: {
+					position: "absolute",
 					content: "':'",
 				},
 
 				_supportsAlternativeTextAfter: {
 					_before: {
+						position: "absolute",
 						content: "'-' / ''",
 					},
 
 					_after: {
+						position: "absolute",
 						content: "':' / ''",
 					},
 				},

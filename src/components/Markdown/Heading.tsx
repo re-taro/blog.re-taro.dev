@@ -17,10 +17,12 @@ const heading = cva({
 	variants: {
 		level: {
 			1: {
+				position: "relative",
 				fontSize: "2xl",
 				marginLeft: "[1em]",
 
 				_before: {
+					position: "absolute",
 					content: "'#'",
 					marginLeft: "[-1em]",
 
@@ -30,10 +32,12 @@ const heading = cva({
 				},
 			},
 			2: {
+				position: "relative",
 				fontSize: "2xl",
 				marginLeft: "[1em]",
 
 				_before: {
+					position: "absolute",
 					content: "'##'",
 					marginLeft: "[-1em]",
 
@@ -43,10 +47,12 @@ const heading = cva({
 				},
 			},
 			3: {
+				position: "relative",
 				fontSize: "xl",
 				marginLeft: "[1em]",
 
 				_before: {
+					position: "absolute",
 					content: "'###'",
 					marginLeft: "[-1em]",
 
@@ -56,10 +62,12 @@ const heading = cva({
 				},
 			},
 			4: {
+				position: "relative",
 				fontSize: "ml",
 				marginLeft: "[1em]",
 
 				_before: {
+					position: "absolute",
 					content: "'####'",
 					marginLeft: "[-1em]",
 

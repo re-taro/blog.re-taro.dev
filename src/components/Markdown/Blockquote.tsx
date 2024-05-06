@@ -16,9 +16,11 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 			"borderRadius": "sm",
 
 			"& > p": {
+				position: "relative",
 				marginLeft: "[1em]",
 
 				_before: {
+					position: "absolute",
 					content: "'>'",
 					marginLeft: "[-1em]",
 

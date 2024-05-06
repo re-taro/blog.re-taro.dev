@@ -8,7 +8,7 @@ const pages = fs
 	.map((it) => {
 		const path = `src/routes/${it}`;
 		const stat = fs.statSync(path);
-		if (stat.isDirectory())
+		if (stat.isDirectory() && !it.includes("features"))
 			return { name: it, value: it };
 
 		return null;

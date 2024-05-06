@@ -14,9 +14,11 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 			"paddingLeft": "6",
 
 			"& > li": {
+				position: "relative",
 				marginLeft: "[1em]",
 
 				_before: {
+					position: "absolute",
 					content: "'-'",
 					marginLeft: "[-1em]",
 				},

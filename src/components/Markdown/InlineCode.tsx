@@ -12,8 +12,6 @@ export default component$<Props>(({ node }) => {
 			paddingY: "[.1rem]",
 			paddingX: "[.4rem]",
 			fontFamily: "mono",
-			border: "[1px solid {colors.border.main}]",
-			borderRadius: "[.2rem]",
 
 			_before: {
 				content: "'`'",

@@ -17,9 +17,11 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 				"counterReset": "list",
 
 				"& > li": {
+					position: "relative",
 					marginLeft: "[1em]",
 
 					_before: {
+						position: "absolute",
 						content: "counter(list) '.'",
 						marginLeft: "[-1em]",
 						counterIncrement: "list",

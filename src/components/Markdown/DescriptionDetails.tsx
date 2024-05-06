@@ -11,10 +11,12 @@ interface Props {
 export default component$<Props>(({ node, footnoteDefs }) => {
 	return (
 		<dd class={css({
+			position: "relative",
 			paddingLeft: "6",
 			marginLeft: "[1em]",
 
 			_before: {
+				position: "absolute",
 				content: "'-'",
 				marginLeft: "[-1em]",
 
