@@ -2,7 +2,6 @@ import { parse } from "node:path";
 import crypto from "node:crypto";
 import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 
-import type * as M from "mdast";
 import { codeToHast } from "shiki";
 import sharp from "sharp";
 import type * as H from "hast";
@@ -11,6 +10,7 @@ import { unified } from "unified";
 import { Temporal } from "temporal-polyfill";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
+import type * as A from "~/libs/plugins/ast/ast";
 
 import { remarkEmbed } from "~/libs/plugins/remark/remarkEmbed";
 import { remarkDescriptionList } from "~/libs/plugins/remark/remarkDescriptionList";
@@ -30,7 +30,7 @@ interface TransformedImage {
 }
 
 export interface WithTransformedImage {
-	transformed?: TransformedImage[];
+	transformed?: Array<TransformedImage>;
 }
 
 interface ImageTransformationConfig {
@@ -100,7 +100,7 @@ async function exists(path: string): Promise<boolean> {
 	}
 }
 
-async function traverseMdAst<T extends M.RootContent>(
+async function traverseMdAst<T extends A.Content>(
 	config: ImageTransformationConfig,
 	ctx: TransformContext,
 	ast: T,
@@ -117,17 +117,11 @@ async function traverseMdAst<T extends M.RootContent>(
 			}
 			return;
 		case "break":
-		case "definition":
 		case "html":
 		case "footnoteReference":
-		case "imageReference":
 		case "inlineCode":
 		case "text":
 		case "thematicBreak":
-		case "yaml":
-		case "mdxTextExpression":
-		case "mdxFlowExpression":
-		case "mdxjsEsm":
 		case "embed":
 			return;
 		case "image": {
@@ -183,7 +177,7 @@ async function traverseMdAst<T extends M.RootContent>(
 async function generateImages(
 	config: ImageTransformationConfig,
 	ctx: TransformContext,
-	ast: M.Root,
+	ast: A.Article,
 ) {
 	await mkdir(`${config.outputRoot}/${config.outputSubDir}`, {
 		recursive: true,
@@ -212,9 +206,19 @@ const blog = defineCollection({
 				return false;
 			}
 		}, { message: "Value of \"publishedAt\" must be a valid date." }),
+		updatedAt: z.string({ message: "Value of \"updatedAt\" must be a date." }).refine((v) => {
+			try {
+				Temporal.PlainDate.from(v);
+
+				return true;
+			}
+			catch {
+				return false;
+			}
+		}, { message: "Value of \"updatedAt\" must be a valid date." }).optional(),
 	}),
 	transform: async (document) => {
-		const mdast = unified()
+		const processor = unified()
 			.use(remarkParse)
 			.use(remarkGfm)
 			.use(remarkEmbed)
@@ -225,7 +229,10 @@ const blog = defineCollection({
 			.use(astSection)
 			.use(astToc)
 			.use(astArticle)
-			.parse(document.content);
+			.freeze();
+
+		const mdast = await processor.run(processor.parse(document.content));
+
 		const config = {
 			outputRoot: "public",
 			outputSubDir: "img",
