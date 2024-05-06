@@ -36,26 +36,37 @@ export default component$<Props>(({ css: cssStyle }) => {
 					rel="noreferrer"
 					target="_blank"
 					class={css({
-						color: "blue.200",
+						color: "accent.secondary",
 
 						_hover: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 
 						_focus: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 					})}
 				>
 					CC BY-NC-SA 4.0
 				</a>
 				{" "}
-				Copyright &copy; 2022
+				Copyright &copy; 2021
 				{" "}
 				<a
 					href="https://re-taro.dev"
 					rel="noreferrer"
 					target="_blank"
+					class={css({
+						color: "accent.secondary",
+
+						_hover: {
+							color: "accent.main",
+						},
+
+						_focus: {
+							color: "accent.main",
+						},
+					})}
 				>
 					Rintaro Itokawa
 				</a>
@@ -65,14 +76,14 @@ export default component$<Props>(({ css: cssStyle }) => {
 				<Link
 					href="/privacy"
 					class={css({
-						color: "blue.200",
+						color: "accent.secondary",
 
 						_hover: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 
 						_focus: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 					})}
 				>

@@ -22,8 +22,8 @@ export default component$<Props>(({ node }) => {
 					"overflowX": "scroll",
 					"fontFamily": "mono",
 					"fontSize": "s",
-					"borderTop": "[1px, solid, {colors.border.main}]",
-					"borderBottom": "[1px, solid, {colors.border.main}]",
+					"borderTop": "[1px solid {colors.border.main}]",
+					"borderBottom": "[1px solid {colors.border.main}]",
 
 					"& > pre.shiki > code": {
 						counterReset: "line-number",

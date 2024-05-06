@@ -31,7 +31,7 @@ export default component$<Props>(({ node, meta }) => {
 					backgroundColor: "bg.teriary",
 				},
 
-				_focusVisible: {
+				_focus: {
 					backgroundColor: "bg.teriary",
 				},
 			})}

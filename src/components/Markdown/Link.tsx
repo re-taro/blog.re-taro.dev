@@ -16,14 +16,14 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 			target="_blank"
 			rel="noreferrer"
 			class={css({
-				color: "blue.200",
+				color: "accent.secondary",
 
 				_hover: {
-					color: "blue.400",
+					color: "accent.main",
 				},
 
 				_focus: {
-					color: "blue.400",
+					color: "accent.main",
 				},
 			})}
 		>

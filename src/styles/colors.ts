@@ -1,6 +1,14 @@
 import { defineTokens } from "@pandacss/dev";
 
 export const colors = defineTokens.colors({
+	accent: {
+		main: {
+			value: "#c084fc",
+		},
+		secondary: {
+			value: "#e9d5ff",
+		},
+	},
 	bg: {
 		main: {
 			value: "#0b1215",
