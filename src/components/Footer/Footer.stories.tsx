@@ -6,7 +6,7 @@ import Footer from "./Footer";
 type T = typeof Footer;
 
 const meta: Meta = {
-	title: "Footer",
+	title: "components/Footer",
 	component: Footer,
 	parameters: {
 		layout: "centered",

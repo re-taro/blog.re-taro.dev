@@ -6,7 +6,7 @@ import Header from "./Header";
 type T = typeof Header;
 
 const meta: Meta = {
-	title: "Header",
+	title: "components/Header",
 	component: Header,
 	parameters: {
 		layout: "centered",
