@@ -28,6 +28,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.5.4
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Run | ESLint
         run: pnpm run lint:eslint
   type-test:
@@ -40,6 +42,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.5.4
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Run | tsc
         run: pnpm run lint:tsc
   unit-test:
