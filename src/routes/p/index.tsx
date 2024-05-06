@@ -22,7 +22,7 @@ export default component$(() => {
 	useVisibleTask$(({ cleanup }) => {
 		const id = setInterval(() => {
 			if (second.value === 0)
-				nav(`/p/${latestPost.value._meta.path}`);
+				nav(`/p/${latestPost.value._meta.directory}`);
 			else
 				second.value--;
 		}, 1000);
@@ -44,7 +44,7 @@ export default component$(() => {
 					lineHeight: "tight",
 				})}
 			>
-				{second}
+				{second.value}
 				秒後に最新の記事へリダイレクトされます...
 			</h1>
 		</section>

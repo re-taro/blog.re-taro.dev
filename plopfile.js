@@ -174,7 +174,7 @@ function config(
 		actions: [
 			{
 				type: "add",
-				path: "contents/{{ulid}}.md",
+				path: "contents/{{ulid}}/slug.md",
 				templateFile: "templates/contents/slug.md.hbs",
 			},
 		],
