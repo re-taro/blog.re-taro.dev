@@ -38,7 +38,7 @@ export interface MetaTagsSource {
 function twitterMetaTags(
 	src: MetaTagsSource,
 	twitter: TwitterTagsSource,
-): DocumentMeta[] {
+): Array<DocumentMeta> {
 	const site
 		= typeof twitter.username === "string"
 			? twitter.username
@@ -79,7 +79,7 @@ function twitterMetaTags(
 	];
 }
 
-export function ogMetaTags(src: MetaTagsSource): DocumentMeta[] {
+export function ogMetaTags(src: MetaTagsSource): Array<DocumentMeta> {
 	return [
 		{
 			property: "og:title",
