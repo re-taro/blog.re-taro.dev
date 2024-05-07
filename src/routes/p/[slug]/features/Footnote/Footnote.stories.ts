@@ -5,7 +5,7 @@ import type * as A from "~/libs/plugins/ast/ast";
 type T = typeof Footnote;
 
 const meta: Meta = {
-	title: "Footnote",
+	title: "features/Footnote",
 	component: Footnote,
 	parameters: {
 		layout: "centered",

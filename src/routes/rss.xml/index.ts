@@ -6,12 +6,12 @@ function blog2xml(blog: (typeof allBlogs)[0]) {
 	return {
 		item: {
 			title: blog.title,
-			link: `https://blog.re-taro.dev/p/${blog._meta.path}`,
+			link: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 			guid: {
 				$: {
 					isPermaLink: true,
 				},
-				_: `https://blog.re-taro.dev/p/${blog._meta.path}`,
+				_: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 			},
 			description: blog.description,
 			pubDate: new Date(blog.publishedAt).toUTCString(),
