@@ -198,7 +198,7 @@ const blog = defineCollection({
 		published: z.boolean({ message: "Value of \"published\" must be a boolean." }),
 		publishedAt: z.string({ message: "Value of \"publishedAt\" must be a date." }).refine((v) => {
 			try {
-				Temporal.PlainDate.from(v);
+				Temporal.ZonedDateTime.from(v);
 
 				return true;
 			}
@@ -208,7 +208,7 @@ const blog = defineCollection({
 		}, { message: "Value of \"publishedAt\" must be a valid date." }),
 		updatedAt: z.string({ message: "Value of \"updatedAt\" must be a date." }).refine((v) => {
 			try {
-				Temporal.PlainDate.from(v);
+				Temporal.ZonedDateTime.from(v);
 
 				return true;
 			}

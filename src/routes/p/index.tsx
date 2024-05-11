@@ -6,9 +6,9 @@ import { Temporal } from "temporal-polyfill";
 import { css } from "~/styled-system/css";
 
 export const useLatestMarkdownLoader = routeLoader$(() => {
-	const latestPost = allBlogs.filter(b => b.published).sort((a, b) => Temporal.PlainDate.compare(
-		Temporal.PlainDate.from(a.publishedAt),
-		Temporal.PlainDate.from(b.publishedAt),
+	const latestPost = allBlogs.filter(b => b.published).sort((a, b) => Temporal.ZonedDateTime.compare(
+		Temporal.ZonedDateTime.from(a.publishedAt),
+		Temporal.ZonedDateTime.from(b.publishedAt),
 	))[0];
 
 	return latestPost;

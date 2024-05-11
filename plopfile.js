@@ -148,7 +148,7 @@ function config(
 		},
 	});
 	plop.setHelper("date", () => {
-		const date = Temporal.Now.zonedDateTimeISO("Asia/Tokyo").toPlainDate().toString();
+		const date = Temporal.Now.zonedDateTimeISO("Asia/Tokyo").toString();
 
 		return date;
 	});
