@@ -10,6 +10,10 @@ import { unified } from "unified";
 import { Temporal } from "temporal-polyfill";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
+import remarkRetext from "remark-retext";
+import retextEnglish from "retext-english";
+import retextEquality from "retext-equality";
+import retextStringify from "retext-stringify";
 import type * as A from "~/libs/plugins/ast/ast";
 
 import { remarkEmbed } from "~/libs/plugins/remark/remarkEmbed";
@@ -243,9 +247,19 @@ const blog = defineCollection({
 			filePath: document._meta.filePath,
 		};
 		await generateImages(config, ctx, mdast);
+		const abstract = await unified()
+			.use(remarkParse)
+			.use(
+				remarkRetext,
+				unified().use(retextEnglish).use(retextEquality) as any,
+			)
+			.use(retextStringify)
+			.process(document.content);
+
 		return {
 			...document,
 			mdast: mdast as any, // MEMO: This cast is an escape hatch for serializable type
+			abstract: String(abstract).slice(0, 400),
 		};
 	},
 });
