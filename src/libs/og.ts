@@ -100,3 +100,11 @@ export function ogMetaTags(src: MetaTagsSource): Array<DocumentMeta> {
 		...(src.twitter ? twitterMetaTags(src, src.twitter) : []),
 	];
 }
+
+export function createOgpImageUrl(title: string, tags: Array<string>): URL {
+	const url = new URL("https://og.re-taro.dev");
+	url.searchParams.append("title", title);
+	url.searchParams.append("text", tags.join(","));
+
+	return url;
+}

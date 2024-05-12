@@ -87,6 +87,7 @@
 		"postcss": "8.4.38",
 		"remark-gfm": "4.0.0",
 		"remark-parse": "11.0.0",
+		"schema-dts": "1.1.2",
 		"sharp": "0.33.3",
 		"shiki": "1.3.0",
 		"sirv-cli": "2.0.2",
