@@ -3,7 +3,7 @@ title: initial
 description: A slug to test the rendering of the markdown.
 tags: []
 published: true
-publishedAt: 2024-04-25T05:52:00.000+09:00[Asia/Tokyo]
+publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 ---
 
 # initial
