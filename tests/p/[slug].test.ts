@@ -1,7 +1,7 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
-test.describe("/[slug]", () => {
+test.describe("/p/01HXEV0G1DXQR91W6G90M7CKGR", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("http://localhost:8788/p/01HXEV0G1DXQR91W6G90M7CKGR");
 	});
