@@ -34,12 +34,12 @@ const heading = cva({
 			2: {
 				position: "relative",
 				fontSize: "2xl",
-				marginLeft: "[1em]",
+				marginLeft: "[1.8em]",
 
 				_before: {
 					position: "absolute",
 					content: "'##'",
-					marginLeft: "[-1em]",
+					marginLeft: "[-1.8em]",
 
 					_supportsAlternativeTextAfter: {
 						content: "'##' / ''",
@@ -49,12 +49,12 @@ const heading = cva({
 			3: {
 				position: "relative",
 				fontSize: "xl",
-				marginLeft: "[1em]",
+				marginLeft: "[2.4em]",
 
 				_before: {
 					position: "absolute",
 					content: "'###'",
-					marginLeft: "[-1em]",
+					marginLeft: "[-2.4em]",
 
 					_supportsAlternativeTextAfter: {
 						content: "'###' / ''",
@@ -64,12 +64,12 @@ const heading = cva({
 			4: {
 				position: "relative",
 				fontSize: "ml",
-				marginLeft: "[1em]",
+				marginLeft: "[3em]",
 
 				_before: {
 					position: "absolute",
 					content: "'####'",
-					marginLeft: "[-1em]",
+					marginLeft: "[-3em]",
 
 					_supportsAlternativeTextAfter: {
 						content: "'####' / ''",

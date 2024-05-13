@@ -48,7 +48,16 @@ export default component$<Props>(({ article, abstract, slug, publishedAt, update
 
 	return (
 		<article>
-			<Header title={article.title} publishedAt={publishedAt} updatedAt={updatedAt} tags={tags} />
+			<Header
+				title={article.title}
+				publishedAt={publishedAt}
+				updatedAt={updatedAt}
+				tags={tags}
+				css={css.raw({
+					maxWidth: "[calc(80ch + 30ch + 1rem)]",
+					marginX: "auto",
+				})}
+			/>
 			<div class={css({
 				display: "flex",
 				flexDirection: "row-reverse",
@@ -69,6 +78,10 @@ export default component$<Props>(({ article, abstract, slug, publishedAt, update
 				/>
 				<div class={css({
 					"width": "[calc(100% - 30ch - 1rem)]",
+					"color": "text.main",
+					"fontSize": "m",
+					"fontWeight": "normal",
+					"lineHeight": "normal",
 
 					"& > markdown_section:first-child > markdown_heading": {
 						marginTop: "0",

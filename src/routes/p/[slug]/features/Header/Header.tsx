@@ -4,15 +4,17 @@ import Tags from "../Tags/Tags";
 import Heading from "~/components/Markdown/Heading";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
+import type { SystemStyleObject } from "~/styled-system/types";
 
 interface Props {
 	title: A.Heading;
 	publishedAt: string;
 	updatedAt?: string | undefined;
 	tags: Array<string>;
+	css?: SystemStyleObject | undefined;
 }
 
-export default component$<Props>(({ title, publishedAt, updatedAt, tags }) => {
+export default component$<Props>(({ title, publishedAt, updatedAt, tags, css: cssStyle }) => {
 	return (
 		<header
 			class={css({
@@ -25,7 +27,7 @@ export default component$<Props>(({ title, publishedAt, updatedAt, tags }) => {
 				"& > markdown_heading": {
 					gridArea: "title",
 				},
-			})}
+			}, cssStyle)}
 		>
 			<dl
 				class={css({

@@ -108,3 +108,10 @@ export function createOgpImageUrl(title: string, tags: Array<string>): URL {
 
 	return url;
 }
+
+export function articleTags(tags: Array<string>): Array<DocumentMeta> {
+	return tags.map(tag => ({
+		name: "article:tag",
+		content: tag,
+	}));
+}

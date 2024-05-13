@@ -5,7 +5,7 @@ export function getFootnoteIndex(
 	footnoteDefinitions: Array<A.FootnoteDefinition>,
 ): number {
 	const index = footnoteDefinitions.findIndex((footnoteDefinition) => {
-		return footnoteDefinition.index === footnoteReference.referenceIndex;
+		return footnoteDefinition.index === footnoteReference.footnoteIndex;
 	});
 	if (index === -1)
 		throw new Error("Footnote definition not found");
