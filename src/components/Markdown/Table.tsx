@@ -12,32 +12,36 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 	const [headerRow, ...bodyRows] = node.children;
 
 	return (
-		<table class={css({
-			marginY: "4",
-			borderSpacingY: "0",
-			borderSpacingX: "[.4rem]",
-			fontFamily: "mono",
-			textAlign: "left",
-			whiteSpace: "nowrap",
-			borderCollapse: "collapse",
+		<table
+			class={css({
+				marginInlineStart: "0",
+				marginX: "0",
+				marginY: "4",
+				borderSpacingY: "0",
+				borderSpacingX: "[.4rem]",
+				fontFamily: "mono",
+				textAlign: "left",
+				whiteSpace: "nowrap",
+				borderCollapse: "collapse",
 
-			lg: {
-				overflowX: "scroll",
-			},
-		})}
-		>
-			<thead class={css({
-				_supportsAlternativeTextAfter: {
-					"& tr:last-child": {
-						_after: {
-							content: "'|\A|' / ''",
-							whiteSpace: "pre",
-						},
-					},
+				lg: {
+					overflowX: "scroll",
 				},
 			})}
+		>
+			<thead
+				class={css({
+					_supportsAlternativeTextAfter: {
+						"& tr:last-child": {
+							_after: {
+								content: "'|\\A|' / ''",
+								whiteSpace: "pre",
+							},
+						},
+					},
+				})}
 			>
-				<TableRow node={headerRow} footnoteDefs={footnoteDefs} align={node.align} />
+				<TableRow node={headerRow} footnoteDefs={footnoteDefs} align={node.align} head />
 			</thead>
 			<tbody>
 				{bodyRows.map((row, idx) => (

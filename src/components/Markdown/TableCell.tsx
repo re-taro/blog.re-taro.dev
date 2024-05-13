@@ -49,7 +49,7 @@ const tabCell = cva({
 					position: "relative",
 
 					_before: {
-						content: "'|\A|' / ''",
+						content: "'|\\A|' / ''",
 						whiteSpace: "pre",
 					},
 

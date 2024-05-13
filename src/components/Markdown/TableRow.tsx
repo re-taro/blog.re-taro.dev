@@ -12,14 +12,15 @@ interface Props extends MarkdownProps {
 export default component$<Props>(({ node, footnoteDefs, head = false, align }) => {
 	if (node.type === "tableRow") {
 		return (
-			<tr class={css({
-				_supportsAlternativeTextAfter: {
-					_after: {
-						content: "'|' / ''",
-						fontWeight: "normal",
+			<tr
+				class={css({
+					_supportsAlternativeTextAfter: {
+						_after: {
+							content: "'|' / ''",
+							fontWeight: "normal",
+						},
 					},
-				},
-			})}
+				})}
 			>
 				{node.children.map((cell, idx) => (
 					<TableCell
