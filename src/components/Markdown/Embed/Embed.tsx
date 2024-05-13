@@ -10,6 +10,7 @@ interface Props {
 }
 
 export default component$<Props>(({ node }) => {
+	const url = new URL(node.src);
 	if (typeof node.oembed !== "undefined") {
 		if (node.oembed.type === "photo" && node.oembed.url) {
 			return (
@@ -30,6 +31,16 @@ export default component$<Props>(({ node }) => {
 	else if (typeof node.meta !== "undefined") {
 		return (
 			<LinkCard node={node} meta={node.meta} />
+		);
+	}
+	else if (url.hostname === "www.youtube.com") {
+		return (
+			<iframe src={node.src} width={node.width} height={node.height} />
+		);
+	}
+	else if (url.hostname === "docs.google.com" && url.pathname.startsWith("/presentation/d/")) {
+		return (
+			<iframe src={node.src} width={node.width} allowFullscreen={node.allowFullScreen} style={node.style} />
 		);
 	}
 	else {

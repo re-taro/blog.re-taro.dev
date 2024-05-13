@@ -64,10 +64,7 @@ describe("remarkEmbed", () => {
 					width: "100%",
 				},
 				{
-					allowFullScreen: "true",
-					frameBorder: "0",
-					mozAllowFullScreen: "true",
-					msAllowFullScreen: "true",
+					allowFullScreen: true,
 					oembed: false,
 					position: {
 						end: {

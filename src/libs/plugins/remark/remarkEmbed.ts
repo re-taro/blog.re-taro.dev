@@ -10,10 +10,7 @@ export interface Embed extends M.Node {
 	src: string;
 	width?: string | undefined;
 	height?: string | undefined;
-	frameBorder?: string | undefined;
-	allowFullScreen?: string | undefined;
-	mozAllowFullScreen?: string | undefined;
-	msAllowFullScreen?: string | undefined;
+	allowFullScreen?: boolean | undefined;
 	style?: string | undefined;
 	oembed: boolean;
 }
@@ -91,10 +88,7 @@ function embed(): Extension {
 					position: node.position,
 					src: getEmbedUrl(isWeb).href,
 					width: "100%",
-					frameBorder: "0",
-					allowFullScreen: "true",
-					mozAllowFullScreen: "true",
-					msAllowFullScreen: "true",
+					allowFullScreen: true,
 					style: "aspect-ratio: 960/569;",
 					oembed: false,
 				};

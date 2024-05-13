@@ -25,10 +25,7 @@ const embed: Handler<MEmbed> = async (node): Promise<Embed> => {
 			src:	node.src,
 			width:	node.width,
 			height:	node.height,
-			frameBorder:	node.frameBorder,
 			allowFullScreen:	node.allowFullScreen,
-			mozAllowFullScreen:	node.mozAllowFullScreen,
-			msAllowFullScreen:	node.msAllowFullScreen,
 			style:	node.style,
 		};
 	}
