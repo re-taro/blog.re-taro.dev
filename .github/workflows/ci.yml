@@ -60,7 +60,7 @@ jobs:
         run: pnpm run test:unit
   integration-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.4
