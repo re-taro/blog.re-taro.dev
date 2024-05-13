@@ -35,6 +35,7 @@ jobs:
         with:
           urls: |
             ${{ inputs.url }}
+            ${{ inputs.url }}/p/01HXEV0G1DXQR91W6G90M7CKGR
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true

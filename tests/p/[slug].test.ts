@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 
 test.describe("/[slug]", () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto("http://localhost:8788/01HXEV0G1DXQR91W6G90M7CKGR");
+		await page.goto("http://localhost:8788/p/01HXEV0G1DXQR91W6G90M7CKGR");
 	});
 	test.describe("rendering", () => {});
 	test.describe("action", () => {});

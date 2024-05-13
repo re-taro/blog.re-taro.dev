@@ -1,5 +1,6 @@
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { allBlogs } from "content-collections";
+import { Temporal } from "temporal-polyfill";
 import { Builder } from "xml2js";
 
 function blog2xml(blog: (typeof allBlogs)[0]) {
@@ -14,7 +15,9 @@ function blog2xml(blog: (typeof allBlogs)[0]) {
 				_: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 			},
 			description: blog.description,
-			pubDate: new Date(blog.publishedAt).toUTCString(),
+			pubDate: new Date(Temporal.ZonedDateTime.from(blog.publishedAt).toString({
+				timeZoneName: "never",
+			})).toUTCString(),
 		},
 	};
 }
