@@ -20,10 +20,10 @@ export default component$(() => {
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap" />
 				<RouterHead />
+				<ServiceWorkerRegister />
 			</head>
 			<body lang="ja">
 				<RouterOutlet />
-				<ServiceWorkerRegister />
 			</body>
 		</QwikCityProvider>
 	);
