@@ -18,11 +18,6 @@ export default component$<Props>(({ node }) => {
 			<img
 				loading="lazy"
 				decoding="async"
-				class={css({
-					width: "full",
-					maxWidth: "full",
-					height: "auto",
-				})}
 				src={srcs[0].path}
 				width={srcs[0].dim.w}
 				height={srcs[0].dim.h}
