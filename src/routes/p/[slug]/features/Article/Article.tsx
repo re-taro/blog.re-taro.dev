@@ -83,7 +83,7 @@ export default component$<Props>(({ article, abstract, slug, publishedAt, update
 					"fontWeight": "normal",
 					"lineHeight": "normal",
 
-					"& > markdown_section:first-child > markdown_heading": {
+					"& > .markdown_section:first-child > .markdown_heading": {
 						marginTop: "0",
 					},
 

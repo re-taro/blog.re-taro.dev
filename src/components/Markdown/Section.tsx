@@ -16,11 +16,10 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 					marginTop: "6",
 				},
 
-				"& > markdown_heading": {
+				"& > .markdown_heading": {
 					paddingBottom: "1",
 					marginTop: "8",
 					fontWeight: "bold",
-					borderBottom: "[1px solid {colors.border.main}]",
 					scrollMarginTop: "[6.25rem]",
 				},
 			}), "markdown_section")}

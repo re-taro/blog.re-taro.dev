@@ -24,7 +24,7 @@ export default component$<Props>(({ title, publishedAt, updatedAt, tags, css: cs
 				"gap": "3",
 				"paddingBottom": "8",
 
-				"& > markdown_heading": {
+				"& > .markdown_heading": {
 					gridArea: "title",
 				},
 			}, cssStyle)}
