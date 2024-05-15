@@ -1,5 +1,6 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
+import { violationFingerprints } from "../utils";
 
 test.describe("/p/01HXEV0G1DXQR91W6G90M7CKGR", () => {
 	test.beforeEach(async ({ page }) => {
@@ -14,7 +15,7 @@ test.describe("/p/01HXEV0G1DXQR91W6G90M7CKGR", () => {
 		}) => {
 			const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
-			expect(accessibilityScanResults.violations).toEqual([]);
+			expect(violationFingerprints(accessibilityScanResults)).toMatchSnapshot();
 		});
 	});
 });

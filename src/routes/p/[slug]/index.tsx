@@ -27,7 +27,7 @@ export const useMarkdownLoader = routeLoader$(async (req) => {
 export default component$(() => {
 	const blog = useMarkdownLoader();
 	return (
-		<main
+		<section
 			class={css({
 				marginTop: "[5.25rem]",
 				paddingX: "6",
@@ -35,7 +35,7 @@ export default component$(() => {
 			})}
 		>
 			<Article article={blog.value.mdast as A.Article} abstract={blog.value.abstract} slug={blog.value._meta.directory} publishedAt={blog.value.publishedAt} updatedAt={blog.value.updatedAt} tags={blog.value.tags} />
-		</main>
+		</section>
 	);
 });
 

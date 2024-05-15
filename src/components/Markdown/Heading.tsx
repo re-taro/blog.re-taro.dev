@@ -90,7 +90,7 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 	const Tag = `h${node.level}` as const;
 
 	return (
-		<Tag id={node.id} class={cx(heading({ level: node.level }), "markdown_heading")}>
+		<Tag id={node.id} title={node.id} class={cx(heading({ level: node.level }), "markdown_heading")}>
 			{node.level > 1
 				? (
 					<a href={`#${node.id}`} aria-hidden="true" tabIndex={-1}>
