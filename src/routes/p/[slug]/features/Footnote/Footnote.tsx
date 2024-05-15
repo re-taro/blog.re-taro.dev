@@ -24,6 +24,7 @@ export default component$<FootnoteProps>(({ footnotes }) => {
 			/>
 			<section aria-labelledby="footnote">
 				<h2
+					aria-hidden
 					class={css({
 						position: "absolute",
 						width: "[1px]",

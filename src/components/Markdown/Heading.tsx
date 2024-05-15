@@ -93,7 +93,7 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 		<Tag id={node.id} class={cx(heading({ level: node.level }), "markdown_heading")}>
 			{node.level > 1
 				? (
-					<a href={`#${node.id}`} aria-hidden="true">
+					<a href={`#${node.id}`} aria-hidden="true" tabIndex={-1}>
 						<MarkdownChildren nodes={node.children} footnoteDefs={footnoteDefs} />
 					</a>
 					)

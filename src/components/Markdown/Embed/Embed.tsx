@@ -35,12 +35,12 @@ export default component$<Props>(({ node }) => {
 	}
 	else if (url.hostname === "www.youtube.com") {
 		return (
-			<iframe src={node.src} width={node.width} height={node.height} />
+			<iframe src={node.src} width={node.width} height={node.height} title="Youtube Embed" />
 		);
 	}
 	else if (url.hostname === "docs.google.com" && url.pathname.startsWith("/presentation/d/")) {
 		return (
-			<iframe src={node.src} width={node.width} allowFullscreen={node.allowFullScreen} style={node.style} />
+			<iframe src={node.src} width={node.width} allowFullscreen={node.allowFullScreen} style={node.style} title="Google Slides Embed" />
 		);
 	}
 	else {
