@@ -86,7 +86,7 @@ interface FootnoteDefinitionProps {
 
 export function FootnoteDefinition({ footnote, footnoteDefs, idx }: FootnoteDefinitionProps) {
 	return (
-		<li id={getFootnoteDefId(idx)}>
+		<li id={getFootnoteDefId(idx + 1)}>
 			<div
 				class={css({
 					"display": "grid",
@@ -101,7 +101,7 @@ export function FootnoteDefinition({ footnote, footnoteDefs, idx }: FootnoteDefi
 			>
 				<Markdown nodes={footnote.children} footnoteDefs={footnoteDefs} />
 				<a
-					href={`#${getFootnoteRefId(idx)}`}
+					href={`#${getFootnoteRefId(idx + 1)}`}
 					class={css({
 						gridArea: "link",
 						alignSelf: "end",
