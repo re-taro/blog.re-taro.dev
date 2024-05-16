@@ -3,6 +3,7 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
 	testDir: "tests",
 	testMatch: "**/*.test.ts",
+	snapshotPathTemplate: "{testDir}/{testFileName}-snapshots/{projectName}/{testName}-{arg}{ext}",
 	fullyParallel: true,
 	expect: {
 		timeout: 10 * 60 * 1000,
@@ -10,7 +11,7 @@ export default defineConfig({
 			maxDiffPixelRatio: 0.03,
 		},
 	},
-	timeout: 10 * 60 * 1000,
+	timeout: 5 * 60 * 1000,
 	// eslint-disable-next-line node/prefer-global/process
 	forbidOnly: !!process.env.CI,
 	// eslint-disable-next-line node/prefer-global/process
