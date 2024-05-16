@@ -61,9 +61,6 @@ jobs:
   integration-test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    strategy:
-      matrix:
-        shard: [1/3, 2/3, 3/3]
     steps:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.4
@@ -79,7 +76,7 @@ jobs:
         run: |
           pnpm concurrently -k -s first -n "APP,TEST" -c "magenta,blue" \
             "pnpm start" \
-            "pnpm wait-on http://127.0.0.1:8788 && pnpm test:integration --shard=${{ matrix.shard }}"
+            "pnpm wait-on http://127.0.0.1:8788 && pnpm test:integration"
   storybook-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
