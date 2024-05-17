@@ -96,7 +96,7 @@
 		"sharp": "0.33.4",
 		"shiki": "1.3.0",
 		"sirv-cli": "2.0.2",
-		"storybook": "^8.0.9",
+		"storybook": "^8.0.10",
 		"storybook-framework-qwik": "0.4.0",
 		"temporal-polyfill": "0.2.4",
 		"ts-array-length": "0.1.2",
