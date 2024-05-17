@@ -80,7 +80,7 @@
 		"hast-util-from-html": "2.0.1",
 		"hast-util-select": "6.0.2",
 		"hast-util-to-html": "9.0.1",
-		"isomorphic-dompurify": "2.9.0",
+		"isomorphic-dompurify": "2.10.0",
 		"mdast-util-from-markdown": "2.0.0",
 		"npm-run-all2": "6.1.2",
 		"playwright": "1.43.1",
