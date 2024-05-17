@@ -30,8 +30,8 @@ importers:
         specifier: 2.27.1
         version: 2.27.1
       '@chromatic-com/storybook':
-        specifier: 1.3.3
-        version: 1.3.3(react@18.2.0)
+        specifier: 1.3.5
+        version: 1.3.5(react@18.2.0)
       '@content-collections/cli':
         specifier: 0.1.2
         version: 0.1.2(@content-collections/core@0.4.1)
@@ -972,8 +972,8 @@ packages:
   '@changesets/write@0.3.0':
     resolution: {integrity: sha512-slGLb21fxZVUYbyea+94uFiD6ntQW0M2hIKNznFizDhZPDgn2c/fv1UzzlW43RVzh1BEDuIqW6hzlJ1OflNmcw==}
 
-  '@chromatic-com/storybook@1.3.3':
-    resolution: {integrity: sha512-1y9r691T5vVGDZ0HY3YrCXUnvtrT2YrhDuvDZSvYSNUVpM/Imz6i1dnNMKb3eoI1qRsH55mI4zCt+Iq94NLedQ==}
+  '@chromatic-com/storybook@1.3.5':
+    resolution: {integrity: sha512-Eunwu6qCvEHSOCaI0SHsAHJKhHOho+/yHguES34Afi8WZAOq2bw50U8GTQMSft76My87QFlPkCt/Qak4H3MAZw==}
     engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
 
   '@clack/core@0.3.4':
@@ -3446,8 +3446,8 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
-  chromatic@11.3.0:
-    resolution: {integrity: sha512-q1ZtJDJrjLGnz60ivpC16gmd7KFzcaA4eTb7gcytCqbaKqlHhCFr1xQmcUDsm14CK7JsqdkFU6S+JQdOd2ZNJg==}
+  chromatic@11.3.5:
+    resolution: {integrity: sha512-M3xCyoEIjdcsXX3NhN60joXxEthy+wxNEcsCMM0u9u8Yna7tJvwvOsJStbOJDwEBo6TdIKckARN3BbArpduFbA==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -9394,9 +9394,9 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@chromatic-com/storybook@1.3.3(react@18.2.0)':
+  '@chromatic-com/storybook@1.3.5(react@18.2.0)':
     dependencies:
-      chromatic: 11.3.0
+      chromatic: 11.3.5
       filesize: 10.1.0
       jsonfile: 6.1.0
       react-confetti: 6.1.0(react@18.2.0)
@@ -12432,7 +12432,7 @@ snapshots:
 
   chownr@2.0.0: {}
 
-  chromatic@11.3.0: {}
+  chromatic@11.3.5: {}
 
   ci-info@3.9.0: {}
 
