@@ -53,7 +53,7 @@
 		"@playwright/test": "1.43.1",
 		"@qnighy/dedent": "0.1.1",
 		"@re-taro/eslint-config": "4.1.0",
-		"@storybook/addon-a11y": "8.0.9",
+		"@storybook/addon-a11y": "8.0.10",
 		"@storybook/addon-actions": "8.0.9",
 		"@storybook/addon-backgrounds": "8.0.9",
 		"@storybook/addon-essentials": "8.0.9",
