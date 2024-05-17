@@ -78,8 +78,8 @@ importers:
         specifier: 8.1.1
         version: 8.1.1(prettier@3.2.5)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.12)(lightningcss@1.23.0))
       '@storybook/html':
-        specifier: 8.0.10
-        version: 8.0.10
+        specifier: 8.1.1
+        version: 8.1.1(prettier@3.2.5)
       '@storybook/html-vite':
         specifier: 8.0.10
         version: 8.0.10(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.12)(lightningcss@1.23.0))
@@ -2487,6 +2487,10 @@ packages:
 
   '@storybook/html@8.0.10':
     resolution: {integrity: sha512-X4LSpSU2cj/8k+AKwk3V1hlRIUrwbb5XYAn2Xiym0aehNPPS7YgLqEOienT3yCmP+5AnpRZn2IQgwreRAdz+rA==}
+    engines: {node: '>=18.0.0'}
+
+  '@storybook/html@8.1.1':
+    resolution: {integrity: sha512-dohBN6X+UFWwlS2A35J3DDiyk0OZUI/U+i0Jh3ycDQAJNQaKRseqvprv++b7t0VJ0YruB4Hx4zWjF+Jjg6VthA==}
     engines: {node: '>=18.0.0'}
 
   '@storybook/icons@1.2.9':
@@ -11658,6 +11662,18 @@ snapshots:
       ts-dedent: 2.2.0
     transitivePeerDependencies:
       - encoding
+      - supports-color
+
+  '@storybook/html@8.1.1(prettier@3.2.5)':
+    dependencies:
+      '@storybook/docs-tools': 8.1.1(prettier@3.2.5)
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 8.1.1
+      '@storybook/types': 8.1.1
+      ts-dedent: 2.2.0
+    transitivePeerDependencies:
+      - encoding
+      - prettier
       - supports-color
 
   '@storybook/icons@1.2.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
