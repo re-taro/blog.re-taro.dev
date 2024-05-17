@@ -3,13 +3,6 @@ import type { Parameters } from "storybook-framework-qwik";
 import "../src/global.css";
 
 export const parameters: Parameters = {
-	a11y: {
-		config: {},
-		options: {
-			checks: { "color-contrast": { options: { noScroll: true } } },
-			restoreScroll: true,
-		},
-	},
 	backgrounds: {
 		default: "main",
 		values: [
@@ -26,8 +19,5 @@ export const parameters: Parameters = {
 				value: "#3c4144",
 			},
 		],
-	},
-	options: {
-		showRoots: true,
 	},
 };

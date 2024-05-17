@@ -3,17 +3,18 @@ import { Link } from "@builder.io/qwik-city";
 import { css } from "~/styled-system/css";
 import type { SystemStyleObject } from "~/styled-system/types";
 
-interface Props {
+export interface Props {
 	css?: SystemStyleObject;
 }
 
-export const Footer = component$(({ css: cssStyle }: Props) => {
+export default component$<Props>(({ css: cssStyle }) => {
 	return (
 		<footer
 			class={css({
 				width: "full",
 				marginTop: "4",
-				padding: "[1rem .5rem]",
+				paddingY: "4",
+				paddingX: "6",
 				borderTopWidth: "1px",
 				borderTopStyle: "solid",
 				borderTopColor: "border.main",
@@ -35,26 +36,37 @@ export const Footer = component$(({ css: cssStyle }: Props) => {
 					rel="noreferrer"
 					target="_blank"
 					class={css({
-						color: "blue.200",
+						color: "accent.secondary",
 
 						_hover: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 
 						_focus: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 					})}
 				>
 					CC BY-NC-SA 4.0
 				</a>
 				{" "}
-				Copyright &copy; 2022
+				Copyright &copy; 2021
 				{" "}
 				<a
 					href="https://re-taro.dev"
 					rel="noreferrer"
 					target="_blank"
+					class={css({
+						color: "accent.secondary",
+
+						_hover: {
+							color: "accent.main",
+						},
+
+						_focus: {
+							color: "accent.main",
+						},
+					})}
 				>
 					Rintaro Itokawa
 				</a>
@@ -64,14 +76,14 @@ export const Footer = component$(({ css: cssStyle }: Props) => {
 				<Link
 					href="/privacy"
 					class={css({
-						color: "blue.200",
+						color: "accent.secondary",
 
 						_hover: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 
 						_focus: {
-							color: "blue.400",
+							color: "accent.main",
 						},
 					})}
 				>

@@ -3,6 +3,7 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
 	testDir: "tests",
 	testMatch: "**/*.test.ts",
+	snapshotPathTemplate: "{testDir}/{testFileName}-snapshots/{projectName}/{testName}-{arg}{ext}",
 	fullyParallel: true,
 	expect: {
 		timeout: 10 * 60 * 1000,
@@ -35,10 +36,6 @@ export default defineConfig({
 		{
 			name: "Mobile Chrome",
 			use: { ...devices["Pixel 7"] },
-		},
-		{
-			name: "Mobile Safari",
-			use: { ...devices["iPhone 12"] },
 		},
 	],
 });

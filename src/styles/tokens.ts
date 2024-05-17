@@ -35,6 +35,12 @@ export const tokens = defineTokens({
 		"xl": {
 			value: "1.5rem",
 		},
+		"ml": {
+			value: "1.3rem",
+		},
+		"sl": {
+			value: "1.2rem",
+		},
 		"l": {
 			value: "1.125rem",
 		},
@@ -49,6 +55,11 @@ export const tokens = defineTokens({
 		},
 		"2xs": {
 			value: "0.625rem",
+		},
+	},
+	fonts: {
+		mono: {
+			value: "\"SFMono-Regular\", \"Consolas\", \"Liberation Mono\", \"Menlo\", monospace;",
 		},
 	},
 	colors,

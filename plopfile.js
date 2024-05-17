@@ -1,11 +1,14 @@
 import fs from "node:fs";
 
+import { Temporal } from "temporal-polyfill";
+import { ulid } from "ulid";
+
 const pages = fs
-	.readdirSync("src/routes")
+	.readdirSync("src/routes", { recursive: true })
 	.map((it) => {
 		const path = `src/routes/${it}`;
 		const stat = fs.statSync(path);
-		if (stat.isDirectory())
+		if (stat.isDirectory() && !it.includes("features"))
 			return { name: it, value: it };
 
 		return null;
@@ -143,6 +146,38 @@ function config(
 
 			return actions;
 		},
+	});
+	plop.setHelper("date", () => {
+		const date = Temporal.Now.zonedDateTimeISO("Asia/Tokyo").toString();
+
+		return date;
+	});
+	plop.setHelper("ulid", () => {
+		const id = ulid();
+
+		return id;
+	});
+	plop.setGenerator("slug", {
+		description: "Create a new slug",
+		prompts: [
+			{
+				type: "input",
+				name: "title",
+				message: "title please",
+			},
+			{
+				type: "input",
+				name: "description",
+				message: "description please",
+			},
+		],
+		actions: [
+			{
+				type: "add",
+				path: "contents/{{ulid}}/slug.md",
+				templateFile: "templates/contents/slug.md.hbs",
+			},
+		],
 	});
 }
 

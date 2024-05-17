@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "storybook-framework-qwik";
 import { QwikCityMockProvider } from "@builder.io/qwik-city";
 
-import { Header } from "./Header";
+import Header from "./Header";
 
 type T = typeof Header;
 
 const meta: Meta = {
-	title: "Header",
+	title: "components/Header",
 	component: Header,
 	parameters: {
 		layout: "centered",

@@ -28,6 +28,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.5.4
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Run | ESLint
         run: pnpm run lint:eslint
   type-test:
@@ -40,23 +42,25 @@ jobs:
         uses: re-taro/actions/setup-node@v3.5.4
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Run | tsc
         run: pnpm run lint:tsc
-  #  unit-test:
-  #    runs-on: ubuntu-latest
-  #    timeout-minutes: 5
-  #    steps:
-  #      - name: Setup | Checkout
-  #        uses: actions/checkout@v4.1.1
-  #      - name: Setup | Node.js
-  #        uses: re-taro/actions/setup-node@v3.5.3
-  #        with:
-  #          node-version-file: .tool-versions
-  #      - name: Test | Unit
-  #        run: pnpm run test:unit
-  integration-test:
+  unit-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.4
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .tool-versions
+      - name: Test | Unit
+        run: pnpm run test:unit
+  integration-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.4

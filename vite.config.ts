@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { join } from "node:path";
 import { defineConfig } from "vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
@@ -5,8 +7,10 @@ import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { partytownVite } from "@builder.io/partytown/utils";
 import { macroPlugin } from "@builder.io/vite-plugin-macro";
+import contentCollections from "@content-collections/vite";
+import { configDefaults } from "vitest/config";
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
 	return {
 		plugins: [
 			macroPlugin({
@@ -23,11 +27,18 @@ export default defineConfig(() => {
 			qwikVite(),
 			tsconfigPaths(),
 			partytownVite({ dest: join(__dirname, "dist", "~partytown") }),
+			mode !== "test" && contentCollections(),
 		],
 		preview: {
 			headers: {
 				"Cache-Control": "public, max-age=600",
 			},
+		},
+		test: {
+			testTransformMode: {
+				ssr: ["**/*"],
+			},
+			exclude: [...configDefaults.exclude, "tests/**/*"],
 		},
 	};
 });
