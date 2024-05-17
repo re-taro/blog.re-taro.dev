@@ -59,7 +59,7 @@
 		"@storybook/addon-essentials": "8.0.10",
 		"@storybook/addon-interactions": "8.0.10",
 		"@storybook/addon-links": "8.0.10",
-		"@storybook/blocks": "8.0.9",
+		"@storybook/blocks": "8.0.10",
 		"@storybook/builder-vite": "8.0.9",
 		"@storybook/html": "8.0.9",
 		"@storybook/html-vite": "8.0.9",
