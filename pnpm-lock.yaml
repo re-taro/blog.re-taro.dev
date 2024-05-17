@@ -18,8 +18,8 @@ importers:
         specifier: 1.5.4
         version: 1.5.4(@types/node@20.12.7)(lightningcss@1.23.0)(undici@6.13.0)
       '@builder.io/qwik-city':
-        specifier: 1.5.2
-        version: 1.5.2(@types/node@20.12.7)(lightningcss@1.23.0)(rollup@4.16.1)
+        specifier: 1.5.4
+        version: 1.5.4(@types/node@20.12.7)(lightningcss@1.23.0)(rollup@4.16.1)
       '@builder.io/vite-plugin-macro':
         specifier: ~0.0.7
         version: 0.0.7(@types/node@20.12.7)(lightningcss@1.23.0)(rollup@4.16.1)
@@ -900,8 +900,8 @@ packages:
     resolution: {integrity: sha512-SUNxptxOkJJEZN0X1o0SkR2f+8NqAONXKMSAhM6iOfzhJd9ceFpEoz2Jl1oalrZrWnPWVu386EB9f5899fhWAg==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
 
-  '@builder.io/qwik-city@1.5.2':
-    resolution: {integrity: sha512-hQ9OxIgfMg7msfPV/oowlzT6sOSJqtZD+8svEzPFsTeYwxkZZV7g0QEudsO0xX5htWj9bcDlE19SCPI2kvL/qA==}
+  '@builder.io/qwik-city@1.5.4':
+    resolution: {integrity: sha512-8zmEkVv2eBtLUGdntf3Ryd5GcvHvuMt1PiSu6wTpqYwUmZwWMfSqNsxuEE6+bndTcOKVAZNwvdvjQfcGE0peOQ==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
 
   '@builder.io/qwik@1.5.4':
@@ -3157,6 +3157,7 @@ packages:
 
   astring@1.8.6:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
+    hasBin: true
 
   async@3.2.5:
     resolution: {integrity: sha512-baNZyqaaLhyLVKm/DlvdW051MSgO6b8eVfIezl9E5PqWxFgzLm/wQntEW4zOytVburDEr0JlALEpdOFwvErLsg==}
@@ -7537,6 +7538,7 @@ packages:
   svgo@3.2.0:
     resolution: {integrity: sha512-4PP6CMW/V7l/GmKRKzsLR8xxjdHTV4IMvhTnpuHwwBazSIlw5W/5SmPjN8Dwyt7lKbSJrRDgp4t9ph0HgChFBQ==}
     engines: {node: '>=14.0.0'}
+    hasBin: true
 
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
@@ -9177,7 +9179,7 @@ snapshots:
       - terser
     optional: true
 
-  '@builder.io/qwik-city@1.5.2(@types/node@20.12.7)(lightningcss@1.23.0)(rollup@4.16.1)':
+  '@builder.io/qwik-city@1.5.4(@types/node@20.12.7)(lightningcss@1.23.0)(rollup@4.16.1)':
     dependencies:
       '@mdx-js/mdx': 3.0.1
       '@types/mdx': 2.0.13
