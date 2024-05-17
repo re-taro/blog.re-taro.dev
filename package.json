@@ -61,7 +61,7 @@
 		"@storybook/addon-links": "8.0.10",
 		"@storybook/blocks": "8.0.10",
 		"@storybook/builder-vite": "8.0.10",
-		"@storybook/html": "8.0.9",
+		"@storybook/html": "8.0.10",
 		"@storybook/html-vite": "8.0.9",
 		"@storybook/test": "8.0.9",
 		"@storybook/test-runner": "0.17.0",

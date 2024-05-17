@@ -78,8 +78,8 @@ importers:
         specifier: 8.0.10
         version: 8.0.10(typescript@5.4.5)(vite@5.2.10(@types/node@20.12.7)(lightningcss@1.23.0))
       '@storybook/html':
-        specifier: 8.0.9
-        version: 8.0.9
+        specifier: 8.0.10
+        version: 8.0.10
       '@storybook/html-vite':
         specifier: 8.0.9
         version: 8.0.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)(vite@5.2.10(@types/node@20.12.7)(lightningcss@1.23.0))
@@ -2437,6 +2437,10 @@ packages:
 
   '@storybook/html-vite@8.0.9':
     resolution: {integrity: sha512-MUHs7AJGmGw+uL2dTbqjMM6qbIP5VWKVmnMTA8ElpMpvGWsOau019IL66YYl3HQKCqpso8M4Al10C2zlDqCc7w==}
+    engines: {node: '>=18.0.0'}
+
+  '@storybook/html@8.0.10':
+    resolution: {integrity: sha512-X4LSpSU2cj/8k+AKwk3V1hlRIUrwbb5XYAn2Xiym0aehNPPS7YgLqEOienT3yCmP+5AnpRZn2IQgwreRAdz+rA==}
     engines: {node: '>=18.0.0'}
 
   '@storybook/html@8.0.9':
@@ -11256,6 +11260,17 @@ snapshots:
       - utf-8-validate
       - vite
       - vite-plugin-glimmerx
+
+  '@storybook/html@8.0.10':
+    dependencies:
+      '@storybook/docs-tools': 8.0.10
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 8.0.10
+      '@storybook/types': 8.0.10
+      ts-dedent: 2.2.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
 
   '@storybook/html@8.0.9':
     dependencies:
