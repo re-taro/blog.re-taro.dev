@@ -29,7 +29,7 @@ const tabCell = cva({
 				content: "'|' / ''",
 				fontWeight: "normal",
 				marginInlineEnd: "[.8em]",
-				float: "left",
+				float: "[left]",
 			},
 
 			"&:last-child": {
