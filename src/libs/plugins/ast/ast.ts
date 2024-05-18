@@ -164,7 +164,6 @@ export interface Embed extends Node {
 	width?: string | undefined;
 	height?: string | undefined;
 	allowFullScreen?: boolean | undefined;
-	style?: string | undefined;
 	meta?: Metadata | undefined;
 	oembed?: OEmbed | undefined;
 }

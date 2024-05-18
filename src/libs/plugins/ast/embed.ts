@@ -26,7 +26,6 @@ const embed: Handler<MEmbed> = async (node): Promise<Embed> => {
 			width:	node.width,
 			height:	node.height,
 			allowFullScreen:	node.allowFullScreen,
-			style:	node.style,
 		};
 	}
 };

@@ -4,6 +4,7 @@ import Photo from "./Photo";
 import Video from "./Video";
 import LinkCard from "./LinkCard";
 import type * as A from "~/libs/plugins/ast/ast";
+import { css } from "~/styled-system/css";
 
 interface Props {
 	node: A.Embed;
@@ -35,12 +36,52 @@ export default component$<Props>(({ node }) => {
 	}
 	else if (url.hostname === "www.youtube.com") {
 		return (
-			<iframe src={node.src} width={node.width} height={node.height} title="Youtube Embed" />
+			<div
+				class={css({
+					position: "relative",
+					width: "full",
+					paddingBottom: "[56.25%]",
+				})}
+			>
+				<iframe
+					class={css({
+						position: "absolute",
+						top: "0",
+						left: "0",
+						width: "full",
+						height: "full",
+					})}
+					src={node.src}
+					width={node.width}
+					height={node.height}
+					title="Youtube Embed"
+				/>
+			</div>
 		);
 	}
 	else if (url.hostname === "docs.google.com" && url.pathname.startsWith("/presentation/d/")) {
 		return (
-			<iframe src={node.src} width={node.width} allowFullscreen={node.allowFullScreen} style={node.style} title="Google Slides Embed" />
+			<div
+				class={css({
+					position: "relative",
+					width: "full",
+					paddingBottom: "[59.27%]",
+				})}
+			>
+				<iframe
+					class={css({
+						position: "absolute",
+						top: "0",
+						left: "0",
+						width: "full",
+						height: "full",
+					})}
+					src={node.src}
+					width={node.width}
+					allowFullscreen={node.allowFullScreen}
+					title="Google Slides Embed"
+				/>
+			</div>
 		);
 	}
 	else {
