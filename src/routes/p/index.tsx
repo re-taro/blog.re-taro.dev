@@ -21,7 +21,7 @@ export default component$(() => {
 	// eslint-disable-next-line qwik/no-use-visible-task
 	useVisibleTask$(({ cleanup }) => {
 		const id = setInterval(() => {
-			if (second.value === 0)
+			if (second.value === 1)
 				nav(`/p/${latestPost.value._meta.directory}`);
 			else
 				second.value--;
