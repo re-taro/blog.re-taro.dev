@@ -17,13 +17,13 @@ export default component$<Props>(({ node }) => {
 		return (
 			<div
 				class={css({
-					"marginY": "2",
-					"paddingY": "2",
-					"overflowX": "scroll",
-					"fontFamily": "mono",
-					"fontSize": "s",
 					"borderTop": "[1px solid {colors.border.main}]",
 					"borderBottom": "[1px solid {colors.border.main}]",
+					"marginY": "2",
+					"paddingY": "2",
+					"fontFamily": "mono",
+					"fontSize": "s",
+					"overflow": "auto",
 
 					"& > pre.shiki > code": {
 						counterReset: "line-number",

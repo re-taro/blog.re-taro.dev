@@ -3,6 +3,9 @@ import crypto from "node:crypto";
 import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 
 import { codeToHast } from "shiki";
+import {
+	transformerNotationDiff,
+} from "@shikijs/transformers";
 import sharp from "sharp";
 import type * as H from "hast";
 import { defineCollection, defineConfig } from "@content-collections/core";
@@ -114,7 +117,15 @@ async function traverseMdAst<T extends A.Content>(
 			if (ast.lang) {
 				const styled = await codeToHast(ast.value, {
 					lang: ast.lang,
-					theme: "nord",
+					theme: "vitesse-dark",
+					transformers: [
+						transformerNotationDiff(),
+						{
+							pre(node) {
+								node.properties.style = "color: #dbd7cacc;";
+							},
+						},
+					],
 				});
 				// @ts-expect-error - This is a safty cast
 				(ast as unknown as { hast: H.Root }).hast = styled;

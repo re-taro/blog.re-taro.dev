@@ -11,7 +11,6 @@ export interface Embed extends M.Node {
 	width?: string | undefined;
 	height?: string | undefined;
 	allowFullScreen?: boolean | undefined;
-	style?: string | undefined;
 	oembed: boolean;
 }
 
@@ -89,7 +88,6 @@ function embed(): Extension {
 					src: getEmbedUrl(isWeb).href,
 					width: "100%",
 					allowFullScreen: true,
-					style: "aspect-ratio: 960/569;",
 					oembed: false,
 				};
 

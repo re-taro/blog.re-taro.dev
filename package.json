@@ -53,6 +53,7 @@
 		"@playwright/test": "1.43.1",
 		"@qnighy/dedent": "0.1.1",
 		"@re-taro/eslint-config": "4.1.0",
+		"@shikijs/transformers": "1.5.2",
 		"@storybook/addon-a11y": "8.1.1",
 		"@storybook/addon-actions": "8.1.1",
 		"@storybook/addon-backgrounds": "8.1.1",

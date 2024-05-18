@@ -79,7 +79,6 @@ describe("remarkEmbed", () => {
 						},
 					},
 					src: "https://docs.google.com/presentation/d/1Jx4nQbzFk5BYTTZwuOMGQOd359G_orJU-OrG4Bg3ohg/embed",
-					style: "aspect-ratio: 960/569;",
 					type: "embed",
 					width: "100%",
 				},
