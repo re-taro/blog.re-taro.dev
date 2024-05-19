@@ -7,6 +7,11 @@
 				"groupName": "playwright",
 				"matchPackagePatterns": ["@playwright/*", "playwright"],
 				"semanticCommitType": "fix"
+			},
+			{
+				"groupName": "shiki",
+				"matchPackagePatterns": ["@shikijs/*", "shiki"],
+				"semanticCommitType": "fix"
 			}
 		]
 	}
