@@ -88,6 +88,8 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 | .webp.gz  | 2608 |   28% |
 | .webp.br  | 2433 |   27% |
 
+テーブルのデザインは[@jxck](https://twitter.com/Jxck_)さんの[テーブルデザイン](https://blog.jxck.io/entries/2022-03-06/markdown-style-table-css.html)を参考にしました。この場を借りて感謝を申し上げます。
+
 ### 画像
 
 画像は`<img>`を用いて表現する。
