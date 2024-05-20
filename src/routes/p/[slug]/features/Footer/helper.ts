@@ -14,7 +14,7 @@ export function getPostUrl(slug: string): URL {
 
 export function getEditPostUrl(slug: string): URL {
 	return new URL(
-		joinPath("re-taro/blog.re-taro.dev/blob/master/contents/", slug, "slug.md"),
+		joinPath("re-taro/blog.re-taro.dev/blob/main/contents/", slug, "slug.md"),
 		"https://github.com",
 	);
 }
