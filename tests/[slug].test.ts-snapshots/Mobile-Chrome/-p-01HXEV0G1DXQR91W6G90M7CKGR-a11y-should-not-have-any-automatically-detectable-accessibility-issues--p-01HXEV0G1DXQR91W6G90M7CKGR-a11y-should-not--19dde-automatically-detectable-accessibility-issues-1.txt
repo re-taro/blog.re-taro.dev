@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "rule": "link-in-text-block",
+    "targets": [
+      [
+        "a[href$=\"Jxck_\"]"
+      ],
+      [
+        "p:nth-child(4) > .lffuOT[target=\"_blank\"][rel=\"noreferrer\"]:nth-child(2)"
+      ]
+    ]
+  }
+]
