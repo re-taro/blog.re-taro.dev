@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.1.2
+
+### Patch Changes
+
+- [#87](https://github.com/re-taro/blog.re-taro.dev/pull/87) [`f7fc999`](https://github.com/re-taro/blog.re-taro.dev/commit/f7fc9999486c165ab9a76a853ed078feab80658b) Thanks [@re-taro](https://github.com/re-taro)! - Fix github branch
+
 ## 1.1.1
 
 ### Patch Changes
