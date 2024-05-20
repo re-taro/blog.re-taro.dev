@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.1.1
+
+### Patch Changes
+
+- [#85](https://github.com/re-taro/blog.re-taro.dev/pull/85) [`9f84315`](https://github.com/re-taro/blog.re-taro.dev/commit/9f843150fe28a0dbe04d4ccd2078be492d4179e3) Thanks [@re-taro](https://github.com/re-taro)! - Fix GTM settings
+
 ## 1.1.0
 
 ### Minor Changes
