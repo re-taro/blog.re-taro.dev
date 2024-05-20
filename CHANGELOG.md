@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.1.0
+
+### Minor Changes
+
+- [#83](https://github.com/re-taro/blog.re-taro.dev/pull/83) [`d0767e6`](https://github.com/re-taro/blog.re-taro.dev/commit/d0767e60bf8ab898fd34b0c5856812195a6def25) Thanks [@re-taro](https://github.com/re-taro)! - Add gtag.js
+
 ## 1.0.0
 
 ### Major Changes
