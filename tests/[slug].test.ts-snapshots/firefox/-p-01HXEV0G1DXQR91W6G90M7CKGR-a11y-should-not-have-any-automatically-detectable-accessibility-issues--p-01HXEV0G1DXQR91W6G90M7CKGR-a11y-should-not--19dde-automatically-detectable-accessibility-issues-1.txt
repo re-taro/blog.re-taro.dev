@@ -15,6 +15,12 @@
       ],
       [
         "p:nth-child(4) > .lffuOT[target=\"_blank\"][rel=\"noreferrer\"]:nth-child(2)"
+      ],
+      [
+        "section[aria-labelledby=\"design\"] > p > .lffuOT[target=\"_blank\"][rel=\"noreferrer\"]:nth-child(1)"
+      ],
+      [
+        "a[href$=\"blog.s2n.tech\"]"
       ]
     ]
   }

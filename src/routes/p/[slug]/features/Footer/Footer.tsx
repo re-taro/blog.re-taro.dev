@@ -10,7 +10,7 @@ interface Props {
 export default component$<Props>(({ plainTitle, slug }) => {
 	const editUrl = getEditPostUrl(slug);
 
-	const title = `${plainTitle} | blog.re-taro.dev`;
+	const title = `${plainTitle} | ${"blog.re-taro.dev".replaceAll(".", "․")}`;
 	const url = getPostUrl(slug).href;
 
 	const twitterUrl = new URL("https://twitter.com/share");

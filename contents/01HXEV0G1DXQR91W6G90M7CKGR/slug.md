@@ -88,7 +88,7 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 | .webp.gz  | 2608 |   28% |
 | .webp.br  | 2433 |   27% |
 
-テーブルのデザインは[@jxck](https://twitter.com/Jxck_)さんの[テーブルデザイン](https://blog.jxck.io/entries/2022-03-06/markdown-style-table-css.html)を参考にしました。この場を借りて感謝を申し上げます。
+テーブルのデザインは[jxck](https://twitter.com/Jxck_)さんの[テーブルデザイン](https://blog.jxck.io/entries/2022-03-06/markdown-style-table-css.html)を参考にしました。この場を借りて感謝を申し上げます。
 
 ### 画像
 
@@ -340,3 +340,7 @@ https://re-taro.dev
 https://www.youtube.com/watch?v=SHkF48SgiSA
 
 https://docs.google.com/presentation/d/1Jx4nQbzFk5BYTTZwuOMGQOd359G_orJU-OrG4Bg3ohg/edit?usp=sharing
+
+### design
+
+ToCは[しゅんちゃん](https://twitter.com/shun_shobon)の[ブログ](https://blog.s2n.tech)を参考にしています。この場を借りて感謝を申し上げます。
