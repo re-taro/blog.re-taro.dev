@@ -44,7 +44,7 @@ export default component$(() => {
 					Tags
 				</h1>
 				{
-					Array.from(allBlogs.filter(blog => blog.published).reduce((acc, blog) => {
+					Array.from(allBlogs.filter(blog => import.meta.env.DEV || blog.published).reduce((acc, blog) => {
 						blog.tags.forEach((tag) => {
 							if (acc.has(tag))
 								acc.get(tag)?.push(blog); // MEMO: This is an safe operation because the tag is already in the map.
@@ -87,9 +87,9 @@ export default component$(() => {
 								>
 									{tag}
 								</h2>
-								{blogs.filter(blog => blog.published).sort((a, b) => Temporal.ZonedDateTime.compare(
-									Temporal.ZonedDateTime.from(a.publishedAt),
+								{blogs.filter(blog => import.meta.env.DEV || blog.published).sort((a, b) => Temporal.ZonedDateTime.compare(
 									Temporal.ZonedDateTime.from(b.publishedAt),
+									Temporal.ZonedDateTime.from(a.publishedAt),
 								)).map((blog, idx) => (
 									<section
 										class={css({
