@@ -46,6 +46,20 @@ jobs:
         run: pnpm build
       - name: Run | tsc
         run: pnpm run lint:tsc
+  slug-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.6
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
+      - name: Run | Slug
+        run: pnpm run lint:textlint
   unit-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5

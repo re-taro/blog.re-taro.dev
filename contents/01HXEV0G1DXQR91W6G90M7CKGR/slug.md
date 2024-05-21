@@ -4,6 +4,7 @@ description: A slug to test the rendering of the markdown.
 tags: ["markdown", "blog"]
 published: true
 publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
+updatedAt: 2024-05-22T01:24:36.648+09:00[Asia/Tokyo]
 ---
 
 # initial
@@ -20,23 +21,23 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 
 ### heading section 3
 
-ここは`<h3>`セクションである。
+ここは `<h3>` セクションである。
 
 #### heading section 4
 
-ここは`<h4>`セクションである。
+ここは `<h4>` セクションである。
 
 ### テキストの装飾
 
 テキストの装飾は以下の通りである。
 
-- **太字**は`<strong>`を用いて表現する
-- *斜体*は`<em>`を用いて表現する
-- ~~取り消し線~~は`<del>`を用いて表現する
+- **太字**は `<strong>` を用いて表現する
+- *斜体*は `<em>` を用いて表現する
+- ~~取り消し線~~は `<del>` を用いて表現する
 
 ### 脚注
 
-脚注は`<sup>`を用いて表現する。
+脚注は `<sup>` を用いて表現する。
 
 これは脚注である[^1]。
 
@@ -44,7 +45,7 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 
 ### リスト
 
-リストは2つの種類がある。
+リストは 2 つの種類がある。
 
 1. 番号付きリスト
 2. 番号なしリスト
@@ -52,15 +53,15 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 それぞれは使うタグが違う
 
 - ここはリスト
-- unordered list は`<ul>`を用いて表現する
+- unordered list は `<ul>` を用いて表現する
   - 入れ子も可能
   - ここは入れ子のリスト
 - リストの中で引用もできる
-  - > 引用は`<blockquote>`を用いて表現する
+  - > 引用は `<blockquote>` を用いて表現する
 
 ### 定義リスト
 
-定義リストは、`<dl>`を用いて表現する。
+定義リストは、`<dl>` を用いて表現する。
 
 - term 1:
   - details 1
@@ -70,7 +71,7 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 
 ### 引用
 
-引用は`<blockquote>`を用いて表現する。
+引用は `<blockquote>` を用いて表現する。
 
 > これは引用である。
 >
@@ -80,7 +81,7 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 
 ### テーブル
 
-テーブルは`<table>`を用いて表現する。
+テーブルは `<table>` を用いて表現する。
 
 | file type | size | ratio |
 | :-------- | ---: | ----: |
@@ -88,17 +89,17 @@ publishedAt: 2004-04-25T05:52:00.000+09:00[Asia/Tokyo]
 | .webp.gz  | 2608 |   28% |
 | .webp.br  | 2433 |   27% |
 
-テーブルのデザインは[jxck](https://twitter.com/Jxck_)さんの[テーブルデザイン](https://blog.jxck.io/entries/2022-03-06/markdown-style-table-css.html)を参考にしました。この場を借りて感謝を申し上げます。
+テーブルのデザインは [jxck](https://twitter.com/Jxck_) さんの [テーブルデザイン](https://blog.jxck.io/entries/2022-03-06/markdown-style-table-css.html) を参考にした。
 
 ### 画像
 
-画像は`<img>`を用いて表現する。
+画像は `<img>` を用いて表現する。
 
 ![my icon](./rintaro.jpg)
 
 ### コード
 
-コードは`<code>`を用いて表現する。
+コードは `<code>` を用いて表現する。
 
 ```rs:main.rs
 use std::net::{SocketAddr, SocketAddrV4};
@@ -343,4 +344,4 @@ https://docs.google.com/presentation/d/1Jx4nQbzFk5BYTTZwuOMGQOd359G_orJU-OrG4Bg3
 
 ### design
 
-ToCは[しゅんちゃん](https://twitter.com/shun_shobon)の[ブログ](https://blog.s2n.tech)を参考にしています。この場を借りて感謝を申し上げます。
+ToC は [しゅんちゃん](https://twitter.com/shun_shobon) の [ブログ](https://blog.s2n.tech) を参考にした。
