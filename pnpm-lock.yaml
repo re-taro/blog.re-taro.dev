@@ -57,8 +57,8 @@ importers:
         specifier: 1.6.0
         version: 1.6.0
       '@storybook/addon-a11y':
-        specifier: 8.1.1
-        version: 8.1.1
+        specifier: 8.1.2
+        version: 8.1.2
       '@storybook/addon-actions':
         specifier: 8.1.1
         version: 8.1.1
@@ -2298,8 +2298,8 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
-  '@storybook/addon-a11y@8.1.1':
-    resolution: {integrity: sha512-QNDe2nyyfNMGhqnPPrEbrlKjcWisJTcJDKNWFe8q1LQxnTt1ku1oE64NbA4z52Ps9WsLXusCMzwaTlzzOLpYSg==}
+  '@storybook/addon-a11y@8.1.2':
+    resolution: {integrity: sha512-A9T5vp2j1nI7adm0YWeOV4OS6TDBb70gZDwcOlGApsL1hHDQGNKrY3N4Wpymk9v21K062QHpvPH+Fw1ZVffrQw==}
 
   '@storybook/addon-actions@8.1.1':
     resolution: {integrity: sha512-EEBjOMuQOdCSVrwPQEkJFc42I0TWj/bK+8lboV0jXi61ZI3okDPCJ/04vu5iTvX0HjRoYqqwBjyYj0Crf7ihag==}
@@ -2321,6 +2321,9 @@ packages:
 
   '@storybook/addon-highlight@8.1.1':
     resolution: {integrity: sha512-i27OsZmxBJWV0Yf7aRbke19Yin9F+v0YyAyD2JDulcjdZdsInUd8/qsQQYd3YmTkQ+0S0SnEdeTAJ4qca9KTtA==}
+
+  '@storybook/addon-highlight@8.1.2':
+    resolution: {integrity: sha512-1PDE2RRV33oMGZJ4ZJ9GbLlsWEIq/opEfbSa9cy1C4K0mcfLtdSbDk5bT23wfU78HFYF2q5+aJ7jVFwHJjueTA==}
 
   '@storybook/addon-interactions@8.1.1':
     resolution: {integrity: sha512-cF26lkVWxR7vZv6BW+P4JcJILIKykfn749VfdYyOoYegbJcOt5t2Soto2zdaqg7ZoVBeZherYyjebiXiwOPrng==}
@@ -10866,9 +10869,9 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@storybook/addon-a11y@8.1.1':
+  '@storybook/addon-a11y@8.1.2':
     dependencies:
-      '@storybook/addon-highlight': 8.1.1
+      '@storybook/addon-highlight': 8.1.2
       axe-core: 4.9.1
 
   '@storybook/addon-actions@8.1.1':
@@ -10961,6 +10964,10 @@ snapshots:
       - supports-color
 
   '@storybook/addon-highlight@8.1.1':
+    dependencies:
+      '@storybook/global': 5.0.0
+
+  '@storybook/addon-highlight@8.1.2':
     dependencies:
       '@storybook/global': 5.0.0
 
