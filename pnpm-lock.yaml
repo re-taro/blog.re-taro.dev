@@ -198,8 +198,8 @@ importers:
         specifier: 0.1.2
         version: 0.1.2
       ts-pattern:
-        specifier: 5.1.1
-        version: 5.1.1
+        specifier: 5.1.2
+        version: 5.1.2
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -7867,8 +7867,8 @@ packages:
   ts-pattern@5.0.8:
     resolution: {integrity: sha512-aafbuAQOTEeWmA7wtcL94w6I89EgLD7F+IlWkr596wYxeb0oveWDO5dQpv85YP0CGbxXT/qXBIeV6IYLcoZ2uA==}
 
-  ts-pattern@5.1.1:
-    resolution: {integrity: sha512-i+owkHr5RYdQxj8olUgRrqpiWH9x27PuWVfXwDmJ/n/CoF/SAa7WW1i2oUpPDMQpJ4U+bGRUcZkVq7i1m3zFCg==}
+  ts-pattern@5.1.2:
+    resolution: {integrity: sha512-u+ElKUIWnqisjpRBhv6Y89yNq7Pmz6xL0v7pTSckrVZ0+5Vf32oh/3jmxWl80rAOGcnbBa7fCyeqNdP4yXzWWg==}
 
   tsconfck@3.0.2:
     resolution: {integrity: sha512-6lWtFjwuhS3XI4HsX4Zg0izOI3FU/AI9EGVlPEUMDIhvLPMD4wkiof0WCoDgW7qY+Dy198g4d9miAqUHWHFH6Q==}
@@ -18659,7 +18659,7 @@ snapshots:
 
   ts-pattern@5.0.8: {}
 
-  ts-pattern@5.1.1: {}
+  ts-pattern@5.1.2: {}
 
   tsconfck@3.0.2(typescript@5.4.5):
     optionalDependencies:
