@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@axe-core/playwright':
-        specifier: 4.9.0
-        version: 4.9.0(playwright-core@1.44.0)
+        specifier: 4.9.1
+        version: 4.9.1(playwright-core@1.44.1)
       '@builder.io/partytown':
         specifier: 0.10.2
         version: 0.10.2
@@ -45,8 +45,8 @@ importers:
         specifier: 0.39.2
         version: 0.39.2(jsdom@24.0.0)(typescript@5.4.5)
       '@playwright/test':
-        specifier: 1.44.0
-        version: 1.44.0
+        specifier: 1.44.1
+        version: 1.44.1
       '@qnighy/dedent':
         specifier: 0.1.1
         version: 0.1.1
@@ -112,7 +112,7 @@ importers:
         version: 4.9.1
       axe-playwright:
         specifier: 2.0.1
-        version: 2.0.1(playwright@1.44.0)
+        version: 2.0.1(playwright@1.44.1)
       concurrently:
         specifier: 8.2.2
         version: 8.2.2
@@ -147,8 +147,8 @@ importers:
         specifier: 6.2.0
         version: 6.2.0
       playwright:
-        specifier: 1.44.0
-        version: 1.44.0
+        specifier: 1.44.1
+        version: 1.44.1
       plop:
         specifier: 4.0.1
         version: 4.0.1
@@ -258,8 +258,8 @@ packages:
     resolution: {integrity: sha512-Xk1sIhyNC/esHGGVjL/niHLowM0csl/kFO5uawBy4IrWwy0o1G8LGt3jP6nmWGz+USxeeqbihAmp/oVZju6wug==}
     hasBin: true
 
-  '@axe-core/playwright@4.9.0':
-    resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
+  '@axe-core/playwright@4.9.1':
+    resolution: {integrity: sha512-8m4WZbZq7/aq7ZY5IG8GqV+ZdvtGn/iJdom+wBg+iv/3BAOBIfNQtIu697a41438DzEEyptXWmC3Xl5Kx/o9/g==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
 
@@ -1967,8 +1967,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.44.0':
-    resolution: {integrity: sha512-rNX5lbNidamSUorBhB4XZ9SQTjAqfe5M+p37Z8ic0jPFBMo5iCtQz1kRWkEMg+rYOKSlVycpQmpqjSFq7LXOfg==}
+  '@playwright/test@1.44.1':
+    resolution: {integrity: sha512-1hZ4TNvD5z9VuhNJ/walIjvMVvYkZKf71axoF/uiAqpntQJXpG64dlXhoDXE3OczPuTuvjf/M5KWFg5VAVUS3Q==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -6835,18 +6835,18 @@ packages:
   pkg-types@1.1.0:
     resolution: {integrity: sha512-/RpmvKdxKf8uILTtoOhAgf30wYbP2Qw+L9p3Rvshx1JZVX+XQNZQFjlbmGHEGIm4CkVPlSn+NXmIM8+9oWQaSA==}
 
-  playwright-core@1.43.1:
-    resolution: {integrity: sha512-EI36Mto2Vrx6VF7rm708qSnesVQKbxEWvPrfA1IPY6HgczBplDx7ENtx+K2n4kJ41sLLkuGfmb0ZLSSXlDhqPg==}
-    engines: {node: '>=16'}
-    hasBin: true
-
   playwright-core@1.44.0:
     resolution: {integrity: sha512-ZTbkNpFfYcGWohvTTl+xewITm7EOuqIqex0c7dNZ+aXsbrLj0qI8XlGKfPpipjm0Wny/4Lt4CJsWJk1stVS5qQ==}
     engines: {node: '>=16'}
     hasBin: true
 
-  playwright@1.44.0:
-    resolution: {integrity: sha512-F9b3GUCLQ3Nffrfb6dunPOkE5Mh68tR7zN32L4jCk4FjQamgesGay7/dAAe1WaMEGV04DkdJfcJzjoCKygUaRQ==}
+  playwright-core@1.44.1:
+    resolution: {integrity: sha512-wh0JWtYTrhv1+OSsLPgFzGzt67Y7BE/ZS3jEqgGBlp2ppp1ZDj8c+9IARNW4dwf1poq5MgHreEM2KV/GuR4cFA==}
+    engines: {node: '>=16'}
+    hasBin: true
+
+  playwright@1.44.1:
+    resolution: {integrity: sha512-qr/0UJ5CFAtloI3avF95Y0L1xQo6r3LQArLIg/z/PoGJ6xa+EwzrwO5lpNr/09STxdHuUoP2mvuELJS+hLdtgg==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -8571,10 +8571,10 @@ snapshots:
     dependencies:
       default-browser-id: 3.0.0
 
-  '@axe-core/playwright@4.9.0(playwright-core@1.44.0)':
+  '@axe-core/playwright@4.9.1(playwright-core@1.44.1)':
     dependencies:
       axe-core: 4.9.1
-      playwright-core: 1.44.0
+      playwright-core: 1.44.1
 
   '@babel/code-frame@7.24.2':
     dependencies:
@@ -10600,9 +10600,9 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playwright/test@1.44.0':
+  '@playwright/test@1.44.1':
     dependencies:
-      playwright: 1.44.0
+      playwright: 1.44.1
 
   '@polka/url@1.0.0-next.25': {}
 
@@ -11663,7 +11663,7 @@ snapshots:
       jest-serializer-html: 7.1.0
       jest-watch-typeahead: 2.2.2(jest@29.7.0(@types/node@20.12.12))
       nyc: 15.1.0
-      playwright: 1.44.0
+      playwright: 1.44.1
     transitivePeerDependencies:
       - '@swc/helpers'
       - '@types/node'
@@ -12559,14 +12559,14 @@ snapshots:
       mustache: 4.2.0
       rimraf: 3.0.2
 
-  axe-playwright@2.0.1(playwright@1.44.0):
+  axe-playwright@2.0.1(playwright@1.44.1):
     dependencies:
       '@types/junit-report-builder': 3.0.2
       axe-core: 4.9.1
       axe-html-reporter: 2.2.3(axe-core@4.9.1)
       junit-report-builder: 3.2.1
       picocolors: 1.0.0
-      playwright: 1.44.0
+      playwright: 1.44.1
 
   axios@1.6.8:
     dependencies:
@@ -15417,7 +15417,7 @@ snapshots:
       jest-process-manager: 0.4.0
       jest-runner: 29.7.0
       nyc: 15.1.0
-      playwright-core: 1.43.1
+      playwright-core: 1.44.0
       rimraf: 3.0.2
       uuid: 8.3.2
     transitivePeerDependencies:
@@ -17419,13 +17419,13 @@ snapshots:
       mlly: 1.6.1
       pathe: 1.1.2
 
-  playwright-core@1.43.1: {}
-
   playwright-core@1.44.0: {}
 
-  playwright@1.44.0:
+  playwright-core@1.44.1: {}
+
+  playwright@1.44.1:
     dependencies:
-      playwright-core: 1.44.0
+      playwright-core: 1.44.1
     optionalDependencies:
       fsevents: 2.3.2
 
