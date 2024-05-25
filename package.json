@@ -38,7 +38,7 @@
 		"test:unit": "vitest"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "4.9.0",
+		"@axe-core/playwright": "4.9.1",
 		"@builder.io/partytown": "0.10.2",
 		"@builder.io/qwik": "1.5.5",
 		"@builder.io/qwik-city": "1.5.5",
@@ -50,7 +50,7 @@
 		"@content-collections/core": "0.5.0",
 		"@content-collections/vite": "0.2.1",
 		"@pandacss/dev": "0.39.2",
-		"@playwright/test": "1.44.0",
+		"@playwright/test": "1.44.1",
 		"@qnighy/dedent": "0.1.1",
 		"@re-taro/eslint-config": "4.1.0",
 		"@shikijs/transformers": "1.6.0",
@@ -84,7 +84,7 @@
 		"isomorphic-dompurify": "2.10.0",
 		"mdast-util-from-markdown": "2.0.0",
 		"npm-run-all2": "6.2.0",
-		"playwright": "1.44.0",
+		"playwright": "1.44.1",
 		"plop": "4.0.1",
 		"postcss": "8.4.38",
 		"remark-gfm": "4.0.0",
