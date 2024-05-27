@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.1.3
+
+### Patch Changes
+
+- [#121](https://github.com/re-taro/blog.re-taro.dev/pull/121) [`57b88e8`](https://github.com/re-taro/blog.re-taro.dev/commit/57b88e8e1de43d866a9fbdbdac0d1122dbebff57) Thanks [@re-taro](https://github.com/re-taro)! - Fix footnote bug
+
 ## 1.1.2
 
 ### Patch Changes
