@@ -61,8 +61,15 @@ function createState(tree: M.Root, additionalHandlers: Handlers): State {
 	};
 
 	const transformAll = async (node: M.Parent): Promise<Array<A.Content>> => {
-		const results = await Promise.all(node.children.map(n => transformOne(n)));
-		return results.filter((n): n is A.Content => n !== undefined);
+		const results: Array<A.Content> = [];
+
+		for (const n of node.children) {
+			const result = await transformOne(n);
+			if (result !== undefined)
+				results.push(result);
+		}
+
+		return results;
 	};
 
 	const mdastFootnoteDefinition = new Map<string, M.FootnoteDefinition>();
