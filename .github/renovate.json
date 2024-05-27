@@ -12,6 +12,11 @@
 				"groupName": "shiki",
 				"matchPackagePatterns": ["@shikijs/*", "shiki"],
 				"semanticCommitType": "fix"
+			},
+			{
+				"groupName": "storybook",
+				"matchPackagePatterns": ["@storybook/*", "storybook"],
+				"semanticCommitType": "fix"
 			}
 		]
 	}
