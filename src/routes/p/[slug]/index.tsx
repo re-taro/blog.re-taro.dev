@@ -11,7 +11,7 @@ import { articleTags, createOgpImageUrl, ogMetaTags } from "~/libs/og";
 export const onStaticGenerate: StaticGenerateHandler = () => {
 	return {
 		params: allBlogs
-			.filter(blog => blog.published)
+			.filter(blog => import.meta.env.DEV || blog.published)
 			.map(blog => ({ slug: blog._meta.directory })),
 	};
 };

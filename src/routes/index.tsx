@@ -43,9 +43,9 @@ export default component$(() => {
 				>
 					Archive
 				</h1>
-				{allBlogs.filter(blog => blog.published).sort((a, b) => Temporal.ZonedDateTime.compare(
-					Temporal.ZonedDateTime.from(a.publishedAt),
+				{allBlogs.filter(blog => import.meta.env.DEV || blog.published).sort((a, b) => Temporal.ZonedDateTime.compare(
 					Temporal.ZonedDateTime.from(b.publishedAt),
+					Temporal.ZonedDateTime.from(a.publishedAt),
 				)).map((blog, idx) => (
 					<section
 						class={css({
