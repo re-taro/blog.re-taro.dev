@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.2.0
+
+### Minor Changes
+
+- [#141](https://github.com/re-taro/blog.re-taro.dev/pull/141) [`c75c79b`](https://github.com/re-taro/blog.re-taro.dev/commit/c75c79bf98f3fb3443189f57410a8f1a03bde592) Thanks [@re-taro](https://github.com/re-taro)! - Wrote post
+
 ## 1.1.3
 
 ### Patch Changes
