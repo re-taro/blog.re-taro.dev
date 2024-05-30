@@ -30,8 +30,8 @@ importers:
         specifier: 2.27.5
         version: 2.27.5
       '@chromatic-com/storybook':
-        specifier: 1.4.0
-        version: 1.4.0(react@18.2.0)
+        specifier: 1.5.0
+        version: 1.5.0(react@18.2.0)
       '@content-collections/cli':
         specifier: 0.1.2
         version: 0.1.2(@content-collections/core@0.5.0)
@@ -998,8 +998,8 @@ packages:
   '@changesets/write@0.3.1':
     resolution: {integrity: sha512-SyGtMXzH3qFqlHKcvFY2eX+6b0NGiFcNav8AFsYwy5l8hejOeoeTDemu5Yjmke2V5jpzY+pBvM0vCCQ3gdZpfw==}
 
-  '@chromatic-com/storybook@1.4.0':
-    resolution: {integrity: sha512-CpskwN1RsgaDMSe7mnwrmst9XeLfvrSbCJOc/eaHIDzhSiKhdbbEF83cYjMYnvODPMW8QNVdw9gWMh+yzBQtSw==}
+  '@chromatic-com/storybook@1.5.0':
+    resolution: {integrity: sha512-LkLKv7SWu/6kGep1ft2HA1T/cm14wU0zoW71gE4cZRcgUoRQJtyhITFTLHrjqAxz6bVqNgqzQtd5oBZ2nK3L3g==}
     engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
 
   '@clack/core@0.3.4':
@@ -3658,8 +3658,8 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
-  chromatic@11.3.5:
-    resolution: {integrity: sha512-M3xCyoEIjdcsXX3NhN60joXxEthy+wxNEcsCMM0u9u8Yna7tJvwvOsJStbOJDwEBo6TdIKckARN3BbArpduFbA==}
+  chromatic@11.4.1:
+    resolution: {integrity: sha512-f1Ud4EA7KvNKIIkO/qk/0epiCoyHjcyoejuncilSqC0KAHahmIgrWdZxEu+N8QfqqYbEBc5SrhAjiVWHePXTKw==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -4747,10 +4747,6 @@ packages:
 
   filelist@1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
-
-  filesize@10.1.0:
-    resolution: {integrity: sha512-GTLKYyBSDz3nPhlLVPjPWZCnhkd9TrrRArNcy8Z+J2cqScB7h2McAzR6NBX6nYOoWafql0roY8hrocxnZBv9CQ==}
-    engines: {node: '>= 10.4.0'}
 
   filesize@10.1.2:
     resolution: {integrity: sha512-Dx770ai81ohflojxhU+oG+Z2QGvKdYxgEr9OSA8UVrqhwNHjfH9A8f5NKfg83fEH8ZFA5N5llJo5T3PIoZ4CRA==}
@@ -10341,10 +10337,10 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@chromatic-com/storybook@1.4.0(react@18.2.0)':
+  '@chromatic-com/storybook@1.5.0(react@18.2.0)':
     dependencies:
-      chromatic: 11.3.5
-      filesize: 10.1.0
+      chromatic: 11.4.1
+      filesize: 10.1.2
       jsonfile: 6.1.0
       react-confetti: 6.1.0(react@18.2.0)
       strip-ansi: 7.1.0
@@ -13855,7 +13851,7 @@ snapshots:
 
   chownr@2.0.0: {}
 
-  chromatic@11.3.5: {}
+  chromatic@11.4.1: {}
 
   ci-info@3.9.0: {}
 
@@ -15205,8 +15201,6 @@ snapshots:
   filelist@1.0.4:
     dependencies:
       minimatch: 5.1.6
-
-  filesize@10.1.0: {}
 
   filesize@10.1.2: {}
 
