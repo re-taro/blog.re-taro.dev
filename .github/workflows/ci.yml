@@ -13,7 +13,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.6
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Run | Build
@@ -25,7 +25,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.6
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Setup | Build
@@ -39,7 +39,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.6
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Setup | Build
@@ -53,7 +53,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.6
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Setup | Build
@@ -67,7 +67,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.6
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Test | Unit
@@ -79,7 +79,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.6
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Setup | Playwright
@@ -98,7 +98,7 @@ jobs:
       - name: Setup | Checkout
         uses: actions/checkout@v4.1.6
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Setup | Playwright
