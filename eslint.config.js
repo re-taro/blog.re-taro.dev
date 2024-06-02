@@ -6,6 +6,7 @@ import qwikPlugin from "eslint-plugin-qwik";
 export default re_taro({
 	typescript: true,
 	formatters: true,
+	markdown: false,
 	ignores: ["src/styled-system"],
 }, {
 	files: ["src/**/*.tsx"],
