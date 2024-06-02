@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.3.0
+
+### Minor Changes
+
+- [`18310f1`](https://github.com/re-taro/blog.re-taro.dev/commit/18310f1f701c1a9f184b5d4fc093b65c8e62c6c7) Thanks [@re-taro](https://github.com/re-taro)! - Wrote blog post about React Compiler eslintSuppressionRules
+
 ## 1.2.0
 
 ### Minor Changes
