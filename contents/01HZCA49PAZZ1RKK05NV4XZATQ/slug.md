@@ -4,6 +4,7 @@ description: React Compiler における eslintSuppressionRules の使い方に�
 tags: ["React", "React Compiler"]
 published: true
 publishedAt: 2024-06-02T20:07:36.528+09:00[Asia/Tokyo]
+updatedAt: 2024-06-03T09:50:34.000+09:00[Asia/Tokyo]
 ---
 
 # eslintSuppressionRules を考察してみる
@@ -18,7 +19,9 @@ publishedAt: 2024-06-02T20:07:36.528+09:00[Asia/Tokyo]
 >
 > --- https://react.dev/learn/react-compiler
 
-とある通り、まだ本番環境での使用は推奨されていない。
+とある通り、React Compiler は React 19 RC を必要とするため、アップグレードせずに使用することは推奨されていない。
+
+もし React 18 でも使ってみたいんだいという場合は [@shun_shobon](https://twitter.com/shun_shobon) の書いた [こちら](https://blog.s2n.tech/articles/react-compiler-on-18) の記事を参考にしてみてほしい。
 
 先日公開された [React Compiler Code reading #1](https://youtu.be/PqPgr_hlVKM?si=OIgDQWxUwbV3se-A) の中で `eslintSuppressionRules` という設定を見つけた。この設定の想定されるであろう使い方について考えてみた。
 
