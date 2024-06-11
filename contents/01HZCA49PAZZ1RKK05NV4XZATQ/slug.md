@@ -4,6 +4,7 @@ description: React Compiler における eslintSuppressionRules の使い方に�
 tags: ["React", "React Compiler"]
 published: true
 publishedAt: 2024-06-02T20:07:36.528+09:00[Asia/Tokyo]
+updatedAt: 2024-06-11T16:21:21.528+09:00[Asia/Tokyo]
 ---
 
 # eslintSuppressionRules を考察してみる
@@ -22,6 +23,8 @@ publishedAt: 2024-06-02T20:07:36.528+09:00[Asia/Tokyo]
 
 先日公開された [React Compiler Code reading #1](https://youtu.be/PqPgr_hlVKM?si=OIgDQWxUwbV3se-A) の中で `eslintSuppressionRules` という設定を見つけた。この設定の想定されるであろう使い方について考えてみた。
 
+この記事で参照するコードの commit は [113c8e7](https://github.com/facebook/react/tree/113c8e7f72bcf5d3bc285546da1508b45da3cf53) である。
+
 ## React Compiler とは
 
 詳しくはドキュメント[^1]を読むことをおすすめする。簡潔に説明すると、React Compiler は `React.memo` や `useMemo` を始めとしたメモ化を自動で行い不要な再レンダリングを防ぐコンパイラである。
@@ -35,19 +38,19 @@ publishedAt: 2024-06-02T20:07:36.528+09:00[Asia/Tokyo]
 結論から言うと `eslintSuppressionRules` は、登録された ESLint ルールが無効化された場合に React Compiler が例外をスローするようにする設定である。
 
 ```ts:Options.ts
-export interface PluginOptions {
-	// ...some options
+export type PluginOptions = {
+  // ...some options
 
-	/**
-		* By default React Compiler will skip compilation of code that suppresses the default
-		* React ESLint rules, since this is a strong indication that the code may be breaking React rules
-		* in some way.
-		*
-		* Use eslintSuppressionRules to pass a custom set of rule names: any code which suppresses the
-		* provided rules will skip compilation. To disable this feature (never bailout of compilation
-		* even if the default ESLint is suppressed), pass an empty array.
-		*/
-	eslintSuppressionRules?: Array<string> | null | undefined;
+  /**
+   * By default React Compiler will skip compilation of code that suppresses the default
+   * React ESLint rules, since this is a strong indication that the code may be breaking React rules
+   * in some way.
+   *
+   * Use eslintSuppressionRules to pass a custom set of rule names: any code which suppresses the
+   * provided rules will skip compilation. To disable this feature (never bailout of compilation
+   * even if the default ESLint is suppressed), pass an empty array.
+   */
+  eslintSuppressionRules?: Array<string> | null | undefined;
 };
 ```
 
