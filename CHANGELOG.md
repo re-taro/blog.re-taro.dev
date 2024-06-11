@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.5.0
+
+### Minor Changes
+
+- [#177](https://github.com/re-taro/blog.re-taro.dev/pull/177) [`f94a2e8`](https://github.com/re-taro/blog.re-taro.dev/commit/f94a2e8d935798c180da552076f3bb54da4353fd) Thanks [@re-taro](https://github.com/re-taro)! - Fix React Compiler eslint slug
+
 ## 1.4.0
 
 ### Minor Changes
