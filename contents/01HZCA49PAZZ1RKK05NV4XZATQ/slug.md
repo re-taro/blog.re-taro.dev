@@ -73,6 +73,41 @@ https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/
 
 [^2]: https://react.dev/reference/rules/rules-of-hooks にある通り hoosk はコンポーネントのトップレベルもしくはカスタムフック内でのみ呼び出すべきであるなど。
 
+(2024/06/11 追記) ただし、 `"use no memo"` ディレクティブを書いた場合は、React Compiler は例外をスローしない。
+
+```ts:Program.ts
+  // Top level "use no forget", skip this file entirely
+  if (
+    findDirectiveDisablingMemoization(program.node.directives, options) != null
+  ) {
+    return;
+  }
+```
+
+https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Program.ts#L243-L248
+
+```ts:Program.ts
+    const useNoForget = findDirectiveDisablingMemoization(
+      fn.node.body.directives,
+      pass.opts
+    );
+    if (useNoForget != null) {
+      pass.opts.logger?.logEvent(pass.filename, {
+        kind: "CompileError",
+        fnLoc: fn.node.body.loc ?? null,
+        detail: {
+          severity: ErrorSeverity.Todo,
+          reason: 'Skipped due to "use no forget" directive.',
+          loc: useNoForget.loc ?? null,
+          suggestions: null,
+        },
+      });
+      return null;
+    }
+```
+
+https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Program.ts#L478-L493
+
 ### ESLint v9との関係と使い方
 
 前項で `eslintSuppressionRules` は React Compiler が正しく動作するための設定であることを述べた。他にも `eslintSuppressionRules` が必要な理由が無いか考えてると、次のような理由があることに気づいた。
