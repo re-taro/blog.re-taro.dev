@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.4.0
+
+### Minor Changes
+
+- [#175](https://github.com/re-taro/blog.re-taro.dev/pull/175) [`c78bef2`](https://github.com/re-taro/blog.re-taro.dev/commit/c78bef2d3b6b37dbd449ae82c7ec9fdb7b3050b1) Thanks [@re-taro](https://github.com/re-taro)! - Wrote blog about React Compiler's opt-in and out
+
 ## 1.3.0
 
 ### Minor Changes
