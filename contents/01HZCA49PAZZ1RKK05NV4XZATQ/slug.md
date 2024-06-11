@@ -23,6 +23,8 @@ updatedAt: 2024-06-11T16:21:21.528+09:00[Asia/Tokyo]
 
 先日公開された [React Compiler Code reading #1](https://youtu.be/PqPgr_hlVKM?si=OIgDQWxUwbV3se-A) の中で `eslintSuppressionRules` という設定を見つけた。この設定の想定されるであろう使い方について考えてみた。
 
+この記事で参照するコードの commit は [113c8e7](https://github.com/facebook/react/tree/113c8e7f72bcf5d3bc285546da1508b45da3cf53) である。
+
 ## React Compiler とは
 
 詳しくはドキュメント[^1]を読むことをおすすめする。簡潔に説明すると、React Compiler は `React.memo` や `useMemo` を始めとしたメモ化を自動で行い不要な再レンダリングを防ぐコンパイラである。
