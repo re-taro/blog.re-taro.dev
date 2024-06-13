@@ -107,7 +107,7 @@
 		"textlint-rule-ja-space-around-link": "2.4.2",
 		"textlint-rule-preset-overflow-techblog": "0.0.2",
 		"ts-array-length": "0.1.2",
-		"ts-pattern": "5.1.2",
+		"ts-pattern": "5.2.0",
 		"typescript": "5.4.5",
 		"ulid": "2.3.0",
 		"unfurl.js": "6.4.0",
