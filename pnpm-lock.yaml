@@ -54,8 +54,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0)(lightningcss@1.23.0))
       '@shikijs/transformers':
-        specifier: 1.6.5
-        version: 1.6.5
+        specifier: 1.7.0
+        version: 1.7.0
       '@storybook/addon-a11y':
         specifier: 8.1.9
         version: 8.1.9
@@ -180,8 +180,8 @@ importers:
         specifier: 0.33.4
         version: 0.33.4
       shiki:
-        specifier: 1.6.5
-        version: 1.6.5
+        specifier: 1.7.0
+        version: 1.7.0
       sirv-cli:
         specifier: 2.0.2
         version: 2.0.2
@@ -2433,11 +2433,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@shikijs/core@1.6.5':
-    resolution: {integrity: sha512-XcQYt6e4L61ruAxHiL3Xg1DL/XkWWjzDdeckB/DtN8jAxoAU+bcxsV6DetC8NafHpL4YpGhxy9iXF0ND/u6HmA==}
+  '@shikijs/core@1.7.0':
+    resolution: {integrity: sha512-O6j27b7dGmJbR3mjwh/aHH8Ld+GQvA0OQsNO43wKWnqbAae3AYXrhFyScHGX8hXZD6vX2ngjzDFkZY5srtIJbQ==}
 
-  '@shikijs/transformers@1.6.5':
-    resolution: {integrity: sha512-iuKa1uQtPQEe5vgCsXIb162b/3imRiAIdoF5IqafrTWL1uqZUpipfPjWZPuAAszOzYU//yIYRbhUk8reHVXA/w==}
+  '@shikijs/transformers@1.7.0':
+    resolution: {integrity: sha512-QX3TP+CS4yYLt4X4Dk7wT0MsC7yweTYHMAAKY+ay+uuR9yRdFae/h+hivny2O+YixJHfZl57xtiZfWSrHdyVhQ==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -8086,8 +8086,8 @@ packages:
   shell-quote@1.8.1:
     resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
 
-  shiki@1.6.5:
-    resolution: {integrity: sha512-iFzypldJG0zeyRHKAhaSGCf+YWXpMMyUyOrCVFBFKGGdF5vrB6jbd66/SQljxV20aSrVZEAQwUto/hhuNi/CIg==}
+  shiki@1.7.0:
+    resolution: {integrity: sha512-H5pMn4JA7ayx8H0qOz1k2qANq6mZVCMl1gKLK6kWIrv1s2Ial4EmD4s4jE8QB5Dw03d/oCQUxc24sotuyR5byA==}
 
   side-channel@1.0.6:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
@@ -11840,11 +11840,11 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.16.1':
     optional: true
 
-  '@shikijs/core@1.6.5': {}
+  '@shikijs/core@1.7.0': {}
 
-  '@shikijs/transformers@1.6.5':
+  '@shikijs/transformers@1.7.0':
     dependencies:
-      shiki: 1.6.5
+      shiki: 1.7.0
 
   '@sideway/address@4.1.5':
     dependencies:
@@ -19813,9 +19813,9 @@ snapshots:
 
   shell-quote@1.8.1: {}
 
-  shiki@1.6.5:
+  shiki@1.7.0:
     dependencies:
-      '@shikijs/core': 1.6.5
+      '@shikijs/core': 1.7.0
 
   side-channel@1.0.6:
     dependencies:
