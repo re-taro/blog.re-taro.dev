@@ -70,7 +70,7 @@
 		"@storybook/test-runner": "0.18.2",
 		"@types/hast": "3.0.4",
 		"@types/mdast": "4.0.4",
-		"@types/node": "20.14.7",
+		"@types/node": "20.14.8",
 		"@types/unist": "3.0.2",
 		"@types/xml2js": "0.4.14",
 		"axe-core": "4.9.1",
