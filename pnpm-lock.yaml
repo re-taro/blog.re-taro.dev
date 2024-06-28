@@ -123,8 +123,8 @@ importers:
         specifier: 0.1.2
         version: 0.1.2(eslint@8.57.0)
       eslint-plugin-qwik:
-        specifier: 1.5.7
-        version: 1.5.7(eslint@8.57.0)
+        specifier: 1.6.0
+        version: 1.6.0(eslint@8.57.0)
       github-slugger:
         specifier: 2.0.0
         version: 2.0.0
@@ -4582,8 +4582,8 @@ packages:
       vue-eslint-parser:
         optional: true
 
-  eslint-plugin-qwik@1.5.7:
-    resolution: {integrity: sha512-hZZTB6NHqQUEdLsofF3GrPvlmMcvCEjfbBZomn3nJKzazsnfuTzPfkOmK0kTYeEPu5T2kyuDxGukoii+S1Zj/A==}
+  eslint-plugin-qwik@1.6.0:
+    resolution: {integrity: sha512-bMR16PBdj0izI4GYHY8XRkhFrrClFOYMChs0L3rqSavupG9CJo0E0yQ4D5UDwsN2K+wB34dWKYYyfOmjhK0CpA==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     peerDependencies:
       eslint: ^8.57.0
@@ -14875,7 +14875,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-qwik@1.5.7(eslint@8.57.0):
+  eslint-plugin-qwik@1.6.0(eslint@8.57.0):
     dependencies:
       eslint: 8.57.0
       jsx-ast-utils: 3.3.5
