@@ -30,8 +30,8 @@ importers:
         specifier: 2.27.6
         version: 2.27.6
       '@chromatic-com/storybook':
-        specifier: 1.5.0
-        version: 1.5.0(react@18.2.0)
+        specifier: 1.5.1
+        version: 1.5.1(react@18.2.0)
       '@content-collections/cli':
         specifier: 0.1.2
         version: 0.1.2(@content-collections/core@0.6.0(typescript@5.4.5))
@@ -998,8 +998,8 @@ packages:
   '@changesets/write@0.3.1':
     resolution: {integrity: sha512-SyGtMXzH3qFqlHKcvFY2eX+6b0NGiFcNav8AFsYwy5l8hejOeoeTDemu5Yjmke2V5jpzY+pBvM0vCCQ3gdZpfw==}
 
-  '@chromatic-com/storybook@1.5.0':
-    resolution: {integrity: sha512-LkLKv7SWu/6kGep1ft2HA1T/cm14wU0zoW71gE4cZRcgUoRQJtyhITFTLHrjqAxz6bVqNgqzQtd5oBZ2nK3L3g==}
+  '@chromatic-com/storybook@1.5.1':
+    resolution: {integrity: sha512-ltArb7aWxKpdkxr1nHDv3p+9BMkf+/ywPlVYX8uZDCm0ItW2AnG9ZsQwTmA/y4PFF1NgeJuR9coBGN3pmG/qqw==}
     engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
 
   '@clack/core@0.3.4':
@@ -10395,7 +10395,7 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@chromatic-com/storybook@1.5.0(react@18.2.0)':
+  '@chromatic-com/storybook@1.5.1(react@18.2.0)':
     dependencies:
       chromatic: 11.4.1
       filesize: 10.1.2
