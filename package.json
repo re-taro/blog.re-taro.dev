@@ -85,7 +85,7 @@
 		"hast-util-to-html": "9.0.1",
 		"isomorphic-dompurify": "2.12.0",
 		"mdast-util-from-markdown": "2.0.1",
-		"npm-run-all2": "6.2.1",
+		"npm-run-all2": "6.2.2",
 		"playwright": "1.45.1",
 		"plop": "4.0.1",
 		"postcss": "8.4.39",
