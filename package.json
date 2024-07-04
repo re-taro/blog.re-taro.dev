@@ -47,7 +47,7 @@
 		"@builder.io/vite-plugin-macro": "0.0.7",
 		"@changesets/changelog-github": "0.5.0",
 		"@changesets/cli": "2.27.7",
-		"@chromatic-com/storybook": "1.6.0",
+		"@chromatic-com/storybook": "1.6.1",
 		"@content-collections/cli": "0.1.2",
 		"@content-collections/core": "0.6.0",
 		"@content-collections/vite": "0.2.1",
