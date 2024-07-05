@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 1.6.0
+
+### Minor Changes
+
+- [#237](https://github.com/re-taro/blog.re-taro.dev/pull/237) [`8fdbff1`](https://github.com/re-taro/blog.re-taro.dev/commit/8fdbff1c9143555255bc8b42ce4ef0dcb491aea5) Thanks [@re-taro](https://github.com/re-taro)! - Wrote blog about event listener options
+
 ## 1.5.0
 
 ### Minor Changes
