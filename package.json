@@ -78,7 +78,7 @@
 		"concurrently": "8.2.2",
 		"eslint": "8.57.0",
 		"eslint-plugin-format": "0.1.2",
-		"eslint-plugin-qwik": "1.6.0",
+		"eslint-plugin-qwik": "1.7.0",
 		"github-slugger": "2.0.0",
 		"hast-util-from-html": "2.0.1",
 		"hast-util-select": "6.0.2",
