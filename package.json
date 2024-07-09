@@ -117,7 +117,7 @@
 		"vite-tsconfig-paths": "4.3.2",
 		"vitest": "2.0.1",
 		"wait-on": "7.2.0",
-		"wrangler": "3.63.1",
+		"wrangler": "3.63.2",
 		"xml2js": "0.6.2"
 	},
 	"browserslist": [
