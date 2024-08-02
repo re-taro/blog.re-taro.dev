@@ -18,8 +18,8 @@ importers:
         specifier: 1.5.7
         version: 1.5.7(@types/node@20.14.14)(lightningcss@1.23.0)(undici@6.13.0)
       '@builder.io/qwik-city':
-        specifier: 1.5.7
-        version: 1.5.7(@types/node@20.14.14)(lightningcss@1.23.0)(rollup@4.16.1)
+        specifier: 1.7.3
+        version: 1.7.3(@types/node@20.14.14)(lightningcss@1.23.0)(rollup@4.16.1)
       '@builder.io/vite-plugin-macro':
         specifier: 0.0.7
         version: 0.0.7(@types/node@20.14.14)(lightningcss@1.23.0)(rollup@4.16.1)
@@ -918,8 +918,8 @@ packages:
     resolution: {integrity: sha512-SUNxptxOkJJEZN0X1o0SkR2f+8NqAONXKMSAhM6iOfzhJd9ceFpEoz2Jl1oalrZrWnPWVu386EB9f5899fhWAg==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
 
-  '@builder.io/qwik-city@1.5.7':
-    resolution: {integrity: sha512-2b1gr4IQu+AgL9q20RwbtTGtzzMctTMC1Aly61B7B+g5/UYYN4KHapoRaS+3NXrsDT+ahF09vfoDIxHzmuHtAA==}
+  '@builder.io/qwik-city@1.7.3':
+    resolution: {integrity: sha512-ZCD8HQ4AmSaBCENaDeFDh3h5drxjUi44miEUSnBf73gSACDSChq70LaM+Y2wwoaArDT6OQ3YzuN/lzFpFWynQg==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
 
   '@builder.io/qwik@1.5.7':
@@ -9760,7 +9760,7 @@ snapshots:
       - terser
     optional: true
 
-  '@builder.io/qwik-city@1.5.7(@types/node@20.14.14)(lightningcss@1.23.0)(rollup@4.16.1)':
+  '@builder.io/qwik-city@1.7.3(@types/node@20.14.14)(lightningcss@1.23.0)(rollup@4.16.1)':
     dependencies:
       '@mdx-js/mdx': 3.0.1
       '@types/mdx': 2.0.13
@@ -18878,7 +18878,7 @@ snapshots:
       css-tree: 2.3.1
       css-what: 6.1.0
       csso: 5.0.5
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   symbol-tree@3.2.4: {}
 
