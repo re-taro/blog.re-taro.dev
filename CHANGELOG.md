@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.0.0
+
+### Major Changes
+
+- [#291](https://github.com/re-taro/blog.re-taro.dev/pull/291) [`fba5698`](https://github.com/re-taro/blog.re-taro.dev/commit/fba56987dd83c216637ccbfe93ea2d6f48a31023) Thanks [@re-taro](https://github.com/re-taro)! - Changethe framwork to Solid.js
+
 ## 1.6.0
 
 ### Minor Changes
