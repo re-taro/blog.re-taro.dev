@@ -16,7 +16,7 @@ importers:
         version: 0.14.1(solid-js@1.8.17)
       '@solidjs/start':
         specifier: 1.0.2
-        version: 1.0.2(rollup@4.20.0)(solid-js@1.8.17)(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.14.14)(lightningcss@1.23.0)(terser@5.31.3))
+        version: 1.0.2(rollup@4.20.0)(solid-js@1.8.17)(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.14.14)(lightningcss@1.23.0)(terser@5.31.3))
       dompurify:
         specifier: 3.1.6
         version: 3.1.6
@@ -187,8 +187,8 @@ importers:
         specifier: 5.0.0
         version: 5.0.0
       vinxi:
-        specifier: 0.3.12
-        version: 0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
+        specifier: 0.3.14
+        version: 0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
       vite-tsconfig-paths:
         specifier: 4.3.2
         version: 4.3.2(typescript@5.5.4)(vite@5.3.5(@types/node@20.14.14)(lightningcss@1.23.0)(terser@5.31.3))
@@ -979,6 +979,7 @@ packages:
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -986,6 +987,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.3':
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
+    deprecated: Use @eslint/object-schema instead
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2038,6 +2040,7 @@ packages:
   are-we-there-yet@2.0.0:
     resolution: {integrity: sha512-Ci/qENmwHnsYo9xKIcUJN5LeDKdJ6R1Z1j9V/J5wyq8nh/mYPEpIKJbBZXtZjG04HiK7zV/p6Vs9952MrMeUIw==}
     engines: {node: '>=10'}
+    deprecated: This package is no longer supported.
 
   argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
@@ -3413,6 +3416,7 @@ packages:
   gauge@3.0.2:
     resolution: {integrity: sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q==}
     engines: {node: '>=10'}
+    deprecated: This package is no longer supported.
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -3486,10 +3490,12 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-modules@1.0.0:
     resolution: {integrity: sha512-sKzpEkf11GpOFuw0Zzjzmt4B4UZwjOcG757PPvrfhxcLFbq0wpsgpOqxpxtxFiCG4DtG93M6XRVbF2oGdev7bg==}
@@ -3741,6 +3747,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -4861,6 +4868,7 @@ packages:
 
   npmlog@5.0.1:
     resolution: {integrity: sha512-AqZtDUWOMKs1G/8lwylVjrdYgqA4d9nu8hc+0gzRxlDb1I10+FHBGMXs6aiQHFdCUUlqH99MUMuLfzWDNDtfxw==}
+    deprecated: This package is no longer supported.
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
@@ -5568,10 +5576,12 @@ packages:
 
   rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup-plugin-inject@3.0.2:
@@ -5756,9 +5766,11 @@ packages:
 
   shikiji-core@0.9.19:
     resolution: {integrity: sha512-AFJu/vcNT21t0e6YrfadZ+9q86gvPum6iywRyt1OtIPjPFe25RQnYJyxHQPMLKCCWA992TPxmEmbNcOZCAJclw==}
+    deprecated: Shikiji is merged back to Shiki v1.0, please migrate over to get the latest updates
 
   shikiji@0.9.19:
     resolution: {integrity: sha512-Kw2NHWktdcdypCj1GkKpXH4o6Vxz8B8TykPlPuLHOGSV8VkhoCLcFOH4k19K4LXAQYRQmxg+0X/eM+m2sLhAkg==}
+    deprecated: Shikiji is merged back to Shiki v1.0, please migrate over to get the latest updates
 
   side-channel@1.0.6:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
@@ -6266,6 +6278,7 @@ packages:
 
   try-resolve@1.0.1:
     resolution: {integrity: sha512-yHeaPjCBzVaXwWl5IMUapTaTC2rn/eBYg2fsG2L+CvJd+ttFbk0ylDnpTO3wVhosmE1tQEvcebbBeKLCwScQSQ==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   ts-api-utils@1.3.0:
     resolution: {integrity: sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==}
@@ -6635,8 +6648,8 @@ packages:
   vfile@6.0.2:
     resolution: {integrity: sha512-zND7NlS8rJYb/sPqkb13ZvbbUoExdbi4w3SfRrMq6R3FvnLQmmfpajJNITuuYm6AZ5uao9vy4BAos3EXBPf2rg==}
 
-  vinxi@0.3.12:
-    resolution: {integrity: sha512-YU/Scild/Rdy6qwgdILYRlO99Wp8ti2CmlMlYioEg7lRtxAST5iCFjviDya+BYQDgc3Pugh4KzOypVwjZknF2A==}
+  vinxi@0.3.14:
+    resolution: {integrity: sha512-z92mH3xmnnsodTAURFnfEg4FnCo95JnjjY08nyjl3Z69xVRtQ5V6ckfV9bMp/5G6yT52wnmoLXAfPRPF6vfG+A==}
     hasBin: true
 
   vite-node@2.0.5:
@@ -8307,11 +8320,11 @@ snapshots:
     dependencies:
       solid-js: 1.8.17
 
-  '@solidjs/start@1.0.2(rollup@4.20.0)(solid-js@1.8.17)(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.14.14)(lightningcss@1.23.0)(terser@5.31.3))':
+  '@solidjs/start@1.0.2(rollup@4.20.0)(solid-js@1.8.17)(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.14.14)(lightningcss@1.23.0)(terser@5.31.3))':
     dependencies:
-      '@vinxi/plugin-directives': 0.3.1(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
-      '@vinxi/server-components': 0.3.3(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
-      '@vinxi/server-functions': 0.3.3(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/plugin-directives': 0.3.1(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/server-components': 0.3.3(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/server-functions': 0.3.3(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
       defu: 6.1.4
       error-stack-parser: 2.1.4
       glob: 10.4.5
@@ -8845,7 +8858,7 @@ snapshots:
       consola: 3.2.3
       defu: 6.1.4
       get-port-please: 3.1.2
-      h3: 1.11.1
+      h3: 1.12.0
       http-shutdown: 1.2.2
       jiti: 1.21.6
       mlly: 1.7.1
@@ -8858,7 +8871,7 @@ snapshots:
     transitivePeerDependencies:
       - uWebSockets.js
 
-  '@vinxi/plugin-directives@0.3.1(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))':
+  '@vinxi/plugin-directives@0.3.1(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
       '@babel/parser': 7.25.3
       acorn: 8.12.1
@@ -8869,29 +8882,29 @@ snapshots:
       magicast: 0.2.11
       recast: 0.23.9
       tslib: 2.6.3
-      vinxi: 0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
+      vinxi: 0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
 
-  '@vinxi/server-components@0.3.3(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))':
+  '@vinxi/server-components@0.3.3(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
-      '@vinxi/plugin-directives': 0.3.1(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/plugin-directives': 0.3.1(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
       acorn: 8.12.1
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.12.1)
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
+      vinxi: 0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
 
-  '@vinxi/server-functions@0.3.3(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))':
+  '@vinxi/server-functions@0.3.3(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
-      '@vinxi/plugin-directives': 0.3.1(vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/plugin-directives': 0.3.1(vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2))
       acorn: 8.12.1
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.12.1)
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
+      vinxi: 0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2)
 
   '@vitest/expect@2.0.5':
     dependencies:
@@ -8947,7 +8960,7 @@ snapshots:
       '@vue/compiler-ssr': 3.4.19
       '@vue/shared': 3.4.19
       estree-walker: 2.0.2
-      magic-string: 0.30.10
+      magic-string: 0.30.11
       postcss: 8.4.40
       source-map-js: 1.2.0
 
@@ -9388,7 +9401,7 @@ snapshots:
 
   caniuse-api@3.0.0:
     dependencies:
-      browserslist: 4.23.0
+      browserslist: 4.23.3
       caniuse-lite: 1.0.30001647
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
@@ -11661,7 +11674,7 @@ snapshots:
       crossws: 0.2.4
       defu: 6.1.4
       get-port-please: 3.1.2
-      h3: 1.11.1
+      h3: 1.12.0
       http-shutdown: 1.2.2
       jiti: 1.21.6
       mlly: 1.7.1
@@ -14630,7 +14643,7 @@ snapshots:
       anymatch: 3.1.3
       chokidar: 3.6.0
       destr: 2.0.3
-      h3: 1.11.1
+      h3: 1.12.0
       listhen: 1.7.2
       lru-cache: 10.4.3
       mri: 1.2.0
@@ -14734,7 +14747,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vinxi@0.3.12(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2):
+  vinxi@0.3.14(@types/node@20.14.14)(ioredis@5.4.1)(lightningcss@1.23.0)(terser@5.31.3)(xml2js@0.6.2):
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-syntax-jsx': 7.24.7(@babel/core@7.25.2)
