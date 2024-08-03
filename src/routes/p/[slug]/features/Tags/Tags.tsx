@@ -1,30 +1,17 @@
-import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { A } from "@solidjs/router";
+import type { Component } from "solid-js";
+import { Index } from "solid-js";
 import { css } from "~/styled-system/css";
-
-interface TagsProps {
-	tags: Array<string>;
-}
-
-export default component$<TagsProps>(({ tags }) => {
-	return (
-		<ul
-			class={css({
-				display: "inline-flex",
-			})}
-		>
-			{tags.map((tag, idx) => (
-				<Tag tag={tag} key={idx} />
-			))}
-		</ul>
-	);
-});
 
 interface TagProps {
 	tag: string;
 }
 
-function Tag({ tag }: TagProps) {
+interface TagsProps {
+	tags: Array<string>;
+}
+
+const Tag: Component<TagProps> = (props) => {
 	return (
 		<li
 			class={css({
@@ -68,8 +55,8 @@ function Tag({ tag }: TagProps) {
 				},
 			})}
 		>
-			<Link
-				href={`/tags#${tag}`}
+			<A
+				href={`/tags#${props.tag}`}
 				class={css({
 					color: "accent.secondary",
 
@@ -82,8 +69,26 @@ function Tag({ tag }: TagProps) {
 					},
 				})}
 			>
-				{tag}
-			</Link>
+				{props.tag}
+			</A>
 		</li>
 	);
-}
+};
+
+const Tags: Component<TagsProps> = (props) => {
+	return (
+		<ul
+			class={css({
+				display: "inline-flex",
+			})}
+		>
+			<Index each={props.tags}>
+				{tag => (
+					<Tag tag={tag()} />
+				)}
+			</Index>
+		</ul>
+	);
+};
+
+export default Tags;

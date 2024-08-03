@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import { getEditPostUrl, getPostUrl } from "./helper";
 import { css } from "~/styled-system/css";
 
@@ -7,11 +7,11 @@ interface Props {
 	slug: string;
 }
 
-export default component$<Props>(({ plainTitle, slug }) => {
-	const editUrl = getEditPostUrl(slug);
+const Footer: Component<Props> = (props) => {
+	const editUrl = getEditPostUrl(props.slug);
 
-	const title = `${plainTitle} | ${"blog.re-taro.dev".replaceAll(".", "․")}`;
-	const url = getPostUrl(slug).href;
+	const title = `${props.plainTitle} | ${"blog.re-taro.dev".replaceAll(".", "․")}`;
+	const url = getPostUrl(props.slug).href;
 
 	const twitterUrl = new URL("https://twitter.com/share");
 	twitterUrl.searchParams.set("text", title);
@@ -93,4 +93,6 @@ export default component$<Props>(({ plainTitle, slug }) => {
 			</ul>
 		</footer>
 	);
-});
+};
+
+export default Footer;

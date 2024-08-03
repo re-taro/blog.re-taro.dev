@@ -1,4 +1,4 @@
-import DOMPurify from "isomorphic-dompurify";
+import DOMPurify from "dompurify";
 
 export function sanitize(html: string) {
 	return DOMPurify.sanitize(html, {

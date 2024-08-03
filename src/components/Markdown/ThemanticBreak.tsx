@@ -1,7 +1,7 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import { css } from "~/styled-system/css";
 
-export default component$(() => {
+const ThemanticBreak: Component = () => {
 	return (
 		<hr class={css({
 			marginY: "4",
@@ -11,4 +11,6 @@ export default component$(() => {
 		})}
 		/>
 	);
-});
+};
+
+export default ThemanticBreak;

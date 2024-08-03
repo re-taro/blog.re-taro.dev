@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import { getFootnoteDefId, getFootnoteIndex, getFootnoteRefId } from "./helper";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
@@ -8,8 +8,8 @@ interface Props {
 	footnoteDefs: Array<A.FootnoteDefinition>;
 }
 
-export default component$<Props>(({ node, footnoteDefs }) => {
-	const index = getFootnoteIndex(node, footnoteDefs);
+const FootnoteReference: Component<Props> = (props) => {
+	const index = getFootnoteIndex(props.node, props.footnoteDefs);
 	const fnRefId = getFootnoteRefId(index);
 	const fnDefId = getFootnoteDefId(index);
 
@@ -40,4 +40,6 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 			</a>
 		</sup>
 	);
-});
+};
+
+export default FootnoteReference;

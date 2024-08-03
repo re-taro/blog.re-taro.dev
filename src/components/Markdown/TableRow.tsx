@@ -1,5 +1,5 @@
-import { component$ } from "@builder.io/qwik";
-
+import type { Component } from "solid-js";
+import { Index } from "solid-js";
 import type { MarkdownProps } from "./Markdown";
 import TableCell from "./TableCell";
 import { css } from "~/styled-system/css";
@@ -9,8 +9,8 @@ interface Props extends MarkdownProps {
 	head?: boolean;
 }
 
-export default component$<Props>(({ node, footnoteDefs, head = false, align }) => {
-	if (node.type === "tableRow") {
+const TableRow: Component<Props> = (props) => {
+	if (props.node.type === "tableRow") {
 		return (
 			<tr
 				class={css({
@@ -22,19 +22,22 @@ export default component$<Props>(({ node, footnoteDefs, head = false, align }) =
 					},
 				})}
 			>
-				{node.children.map((cell, idx) => (
-					<TableCell
-						node={cell}
-						footnoteDefs={footnoteDefs}
-						align={align[idx]}
-						head={head}
-						key={idx}
-					/>
-				))}
+				<Index each={props.node.children}>
+					{(cell, idx) => (
+						<TableCell
+							node={cell()}
+							footnoteDefs={props.footnoteDefs}
+							align={props.align[idx]}
+							head={props.head ?? false}
+						/>
+					)}
+				</Index>
 			</tr>
 		);
 	}
 	else {
 		return null;
 	}
-});
+};
+
+export default TableRow;

@@ -1,4 +1,5 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
+import { Index } from "solid-js";
 import Table from "./Table";
 import Strong from "./Strong";
 import Emphasis from "./Emphasis";
@@ -29,73 +30,80 @@ export interface MarkdownProps {
 	footnoteDefs: Array<FootnoteDefinition>;
 }
 
-function Markdown({ node, footnoteDefs }: MarkdownProps) {
-	switch (node.type) {
+const Markdown: Component<MarkdownProps> = (props) => {
+	switch (props.node.type) {
 		case "text":
-			return node.value;
+			return props.node.value;
 		case "strong":
-			return <Strong node={node} footnoteDefs={footnoteDefs} />;
+			return <Strong node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "emphasis":
-			return <Emphasis node={node} footnoteDefs={footnoteDefs} />;
+			return <Emphasis node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "delete":
-			return <Delete node={node} footnoteDefs={footnoteDefs} />;
+			return <Delete node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "inlineCode":
-			return <InlineCode node={node} />;
+			return <InlineCode node={props.node} />;
 		case "link":
-			return <Link node={node} footnoteDefs={footnoteDefs} />;
+			return <Link node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "image":
-			return <Image node={node} />;
+			return <Image node={props.node} />;
 		case "break":
 			return <Break />;
 		case "thematicBreak":
 			return <ThemanticBreak />;
 		case "html":
-			return <HTML node={node} />;
+			return <HTML node={props.node} />;
 		case "heading":
-			return <Heading node={node} footnoteDefs={footnoteDefs} />;
+			return <Heading node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "paragraph":
-			return <Paragraph node={node} footnoteDefs={footnoteDefs} />;
+			return <Paragraph node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "blockquote":
-			return <BlockQuote node={node} footnoteDefs={footnoteDefs} />;
+			return <BlockQuote node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "unorderedList":
-			return <UnorderedList node={node} footnoteDefs={footnoteDefs} />;
+			return <UnorderedList node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "orderedList":
-			return <OrderedList node={node} footnoteDefs={footnoteDefs} />;
+			return <OrderedList node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "listItem":
-			return <ListItem node={node} footnoteDefs={footnoteDefs} />;
+			return <ListItem node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "descriptionList":
-			return <DescriptionList node={node} footnoteDefs={footnoteDefs} />;
+			return <DescriptionList node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "descriptionTerm":
-			return <DescriptionTerm node={node} footnoteDefs={footnoteDefs} />;
+			return <DescriptionTerm node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "descriptionDetails":
-			return <DescriptionDetails node={node} footnoteDefs={footnoteDefs} />;
+			return <DescriptionDetails node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "table":
-			return <Table node={node} footnoteDefs={footnoteDefs} />;
+			return <Table node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "footnoteReference":
-			return <FootnoteReference node={node} footnoteDefs={footnoteDefs} />;
+			return <FootnoteReference node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "code":
-			return <Code node={node} />;
+			return <Code node={props.node} />;
 		case "embed":
-			return <Embed node={node} />;
+			return <Embed node={props.node} />;
 		case "section":
-			return <Section node={node} footnoteDefs={footnoteDefs} />;
+			return <Section node={props.node} footnoteDefs={props.footnoteDefs} />;
 		case "tableCell":
 		case "tableRow":
-			throw new Error(`Unexpected node type: ${node.type}`);
+			throw new Error(`Unexpected node type: ${props.node.type}`);
+		default: {
+			props.node satisfies never;
+
+			throw new Error("Unreachable");
+		}
 	}
-}
+};
 
 interface MarkdownChildrenProps {
 	nodes: Array<Content>;
 	footnoteDefs: Array<FootnoteDefinition>;
 }
 
-export default component$<MarkdownChildrenProps>(({ nodes, footnoteDefs }) => {
+const MarkdownChildren: Component<MarkdownChildrenProps> = (props) => {
 	return (
-		<>
-			{nodes.map((node, idx) => (
-				<Markdown node={node} footnoteDefs={footnoteDefs} key={idx} />
+		<Index each={props.nodes}>
+			{(node => (
+				<Markdown node={node()} footnoteDefs={props.footnoteDefs} />
 			))}
-		</>
+		</Index>
 	);
-});
+};
+
+export default MarkdownChildren;

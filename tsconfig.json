@@ -2,12 +2,11 @@
 	"compilerOptions": {
 		"incremental": true,
 		"target": "ESNext",
-		"jsx": "react-jsx",
-		"jsxImportSource": "@builder.io/qwik",
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
 		"lib": [
 			"ESNext",
 			"DOM",
-			"WebWorker",
 			"DOM.Iterable"
 		],
 		"module": "ESNext",
@@ -18,18 +17,18 @@
 		},
 		"resolveJsonModule": true,
 		"types": [
-			"node",
-			"vite/client"
+			"vinxi/types/client"
 		],
 		"allowJs": true,
 		"strict": true,
 		"noEmit": true,
 		"outDir": "tmp",
+		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
 		"skipLibCheck": true
 	},
 	"include": ["**/*.ts", "**/*.tsx"],
-	"exclude": [".content-collections", "dist", "server", "node_modules"]
+	"exclude": [".content-collections", "dist", "node_modules"]
 }

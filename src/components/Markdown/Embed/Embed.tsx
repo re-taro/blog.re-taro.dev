@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import Rich from "./Rich";
 import Photo from "./Photo";
 import Video from "./Video";
@@ -10,28 +10,28 @@ interface Props {
 	node: A.Embed;
 }
 
-export default component$<Props>(({ node }) => {
-	const url = new URL(node.src);
-	if (typeof node.oembed !== "undefined") {
-		if (node.oembed.type === "photo" && node.oembed.url) {
+const Embed: Component<Props> = (props) => {
+	const url = new URL(props.node.src);
+	if (typeof props.node.oembed !== "undefined") {
+		if (props.node.oembed.type === "photo" && props.node.oembed.url) {
 			return (
-				<Photo node={node.oembed} />
+				<Photo node={props.node.oembed} />
 			);
 		}
-		else if (node.oembed.type === "video" && node.oembed.html) {
+		else if (props.node.oembed.type === "video" && props.node.oembed.html) {
 			return (
-				<Video node={node.oembed} />
+				<Video node={props.node.oembed} />
 			);
 		}
-		else if (node.oembed.type === "rich" && node.oembed.html) {
+		else if (props.node.oembed.type === "rich" && props.node.oembed.html) {
 			return (
-				<Rich node={node.oembed} />
+				<Rich node={props.node.oembed} />
 			);
 		}
 	}
-	else if (typeof node.meta !== "undefined") {
+	else if (typeof props.node.meta !== "undefined") {
 		return (
-			<LinkCard node={node} meta={node.meta} />
+			<LinkCard node={props.node} meta={props.node.meta} />
 		);
 	}
 	else if (url.hostname === "www.youtube.com") {
@@ -51,9 +51,9 @@ export default component$<Props>(({ node }) => {
 						width: "full",
 						height: "full",
 					})}
-					src={node.src}
-					width={node.width}
-					height={node.height}
+					src={props.node.src}
+					width={props.node.width}
+					height={props.node.height}
 					title="Youtube Embed"
 				/>
 			</div>
@@ -76,9 +76,9 @@ export default component$<Props>(({ node }) => {
 						width: "full",
 						height: "full",
 					})}
-					src={node.src}
-					width={node.width}
-					allowFullscreen={node.allowFullScreen}
+					src={props.node.src}
+					width={props.node.width}
+					allowfullscreen={props.node.allowFullScreen}
 					title="Google Slides Embed"
 				/>
 			</div>
@@ -87,4 +87,6 @@ export default component$<Props>(({ node }) => {
 	else {
 		return null;
 	}
-});
+};
+
+export default Embed;

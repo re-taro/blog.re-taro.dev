@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import type { WithTransformedImage } from "../../../content-collections";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
@@ -7,8 +7,8 @@ interface Props {
 	node: A.Image;
 }
 
-export default component$<Props>(({ node }) => {
-	const data = (node as (WithTransformedImage | undefined) & A.Image).transformed;
+const Image: Component<Props> = (props) => {
+	const data = (props.node as (WithTransformedImage | undefined) & A.Image).transformed;
 
 	if (data) {
 		const srcs = data.sort((a, b) => b.dim.w - a.dim.w);
@@ -22,24 +22,23 @@ export default component$<Props>(({ node }) => {
 				width={srcs[0].dim.w}
 				height={srcs[0].dim.h}
 				srcset={srcset}
-				alt={node.alt}
+				alt={props.node.alt}
 			/>
 		);
 	}
 	else {
 		return (
-			<>
-				{/* eslint-disable-next-line qwik/jsx-img */}
-				<img
-					loading="lazy"
-					class={css({
-						width: "full",
-						height: "auto",
-					})}
-					src={node.url}
-					alt={node.alt}
-				/>
-			</>
+			<img
+				loading="lazy"
+				class={css({
+					width: "full",
+					height: "auto",
+				})}
+				src={props.node.url}
+				alt={props.node.alt}
+			/>
 		);
 	}
-});
+};
+
+export default Image;

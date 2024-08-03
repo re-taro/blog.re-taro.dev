@@ -1,5 +1,7 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 
-export default component$(() => {
+const Break: Component = () => {
 	return <br />;
-});
+};
+
+export default Break;

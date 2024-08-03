@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import MarkdownChildren from "./Markdown";
 import type * as A from "~/libs/plugins/ast/ast";
 
@@ -7,10 +7,12 @@ interface Props {
 	footnoteDefs: Array<A.FootnoteDefinition>;
 }
 
-export default component$<Props>(({ node, footnoteDefs }) => {
+const ListItem: Component<Props> = (props) => {
 	return (
 		<li>
-			<MarkdownChildren nodes={node.children} footnoteDefs={footnoteDefs} />
+			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
 		</li>
 	);
-});
+};
+
+export default ListItem;

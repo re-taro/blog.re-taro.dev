@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
@@ -6,7 +6,7 @@ interface Props {
 	node: A.InlineCode;
 }
 
-export default component$<Props>(({ node }) => {
+const InlineCode: Component<Props> = (props) => {
 	return (
 		<code class={css({
 			paddingY: "[.1rem]",
@@ -32,7 +32,9 @@ export default component$<Props>(({ node }) => {
 			},
 		})}
 		>
-			{node.value}
+			{props.node.value}
 		</code>
 	);
-});
+};
+
+export default InlineCode;
