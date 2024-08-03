@@ -1,7 +1,7 @@
-import { component$ } from "@builder.io/qwik";
 import { fromHtml } from "hast-util-from-html";
 import { select } from "hast-util-select";
 import { toHtml } from "hast-util-to-html";
+import type { Component } from "solid-js";
 import { sanitize } from "./sanitize";
 import { css } from "~/styled-system/css";
 import type { OEmbedRich } from "~/libs/oEmbedSchema";
@@ -21,8 +21,10 @@ function transform(html: string) {
 	return toHtml(hast);
 }
 
-export default component$<Props>(({ node }) => {
+const Rich: Component<Props> = (props) => {
 	return (
-		<div class={css({ width: "full" })} dangerouslySetInnerHTML={transform(sanitize(node.html))} data-oembed />
+		<div class={css({ width: "full" })} innerHTML={transform(sanitize(props.node.html))} data-oembed />
 	);
-});
+};
+
+export default Rich;

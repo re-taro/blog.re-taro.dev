@@ -1,12 +1,12 @@
-import { component$ } from "@builder.io/qwik";
-
+import type { Component } from "solid-js";
+import { Dynamic } from "solid-js/web";
 import type { MarkdownProps } from "./Markdown";
 import MarkdownChildren from "./Markdown";
 import { cva } from "~/styled-system/css";
 
 interface Props extends MarkdownProps {
 	align: "left" | "center" | "right" | null;
-	head?: boolean;
+	head: boolean;
 }
 
 const tabCell = cva({
@@ -113,16 +113,18 @@ const tabCell = cva({
 	],
 });
 
-export default component$<Props>(({ node, footnoteDefs, align, head }) => {
-	if (node.type === "tableCell") {
-		const Tag = head ? "th" : "td";
+const TableCell: Component<Props> = (props) => {
+	if (props.node.type === "tableCell") {
+		const tag = props.head ? "th" : "td";
 		return (
-			<Tag class={tabCell({ head, align: align === null ? undefined : align })}>
-				<MarkdownChildren nodes={node.children} footnoteDefs={footnoteDefs} />
-			</Tag>
+			<Dynamic component={tag} class={tabCell({ head: props.head, align: props.align === null ? undefined : props.align })}>
+				<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
+			</Dynamic>
 		);
 	}
 	else {
 		return null;
 	}
-});
+};
+
+export default TableCell;

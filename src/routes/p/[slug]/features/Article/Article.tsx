@@ -1,6 +1,6 @@
-import { component$ } from "@builder.io/qwik";
 import type { Article as JsonLdArticle, WithContext } from "schema-dts";
 import { Temporal } from "temporal-polyfill";
+import type { Component } from "solid-js";
 import Header from "../Header/Header";
 import Toc from "../Toc/Toc";
 import Footnote from "../Footnote/Footnote";
@@ -19,25 +19,25 @@ interface Props {
 	tags: Array<string>;
 }
 
-export default component$<Props>(({ article, abstract, slug, publishedAt, updatedAt, tags }) => {
+const Article: Component<Props> = (props) => {
 	const jsonLd: WithContext<JsonLdArticle> = {
 		"@context": "https://schema.org",
 		"@type": "Article",
-		"headline": article.title.plain,
-		abstract,
-		"datePublished": Temporal.ZonedDateTime.from(publishedAt).toString({
+		"headline": props.article.title.plain,
+		"abstract": props.abstract,
+		"datePublished": Temporal.ZonedDateTime.from(props.publishedAt).toString({
 			timeZoneName: "never",
 		}),
-		...(typeof updatedAt !== "undefined"
+		...(typeof props.updatedAt !== "undefined"
 			? {
-					dateModified: Temporal.ZonedDateTime.from(updatedAt).toString(
+					dateModified: Temporal.ZonedDateTime.from(props.updatedAt).toString(
 						{
 							timeZoneName: "never",
 						},
 					),
 				}
 			: {}),
-		"image": createOgpImageUrl(article.title.plain, tags)
+		"image": createOgpImageUrl(props.article.title.plain, props.tags)
 			.href,
 		"author": {
 			"@type": "Person",
@@ -49,10 +49,10 @@ export default component$<Props>(({ article, abstract, slug, publishedAt, update
 	return (
 		<article>
 			<Header
-				title={article.title}
-				publishedAt={publishedAt}
-				updatedAt={updatedAt}
-				tags={tags}
+				title={props.article.title}
+				publishedAt={props.publishedAt}
+				updatedAt={props.updatedAt}
+				tags={props.tags}
 				css={css.raw({
 					maxWidth: "[calc(80ch + 30ch + 1rem)]",
 					marginX: "auto",
@@ -67,7 +67,7 @@ export default component$<Props>(({ article, abstract, slug, publishedAt, update
 			})}
 			>
 				<Toc
-					toc={article.toc}
+					toc={props.article.toc}
 					css={css.raw({
 						"width": "[30ch]",
 
@@ -92,12 +92,14 @@ export default component$<Props>(({ article, abstract, slug, publishedAt, update
 					},
 				})}
 				>
-					<Markdown nodes={article.children} footnoteDefs={article.footnotes} />
-					<Footnote footnotes={article.footnotes} />
-					<Footer plainTitle={article.title.plain} slug={slug} />
+					<Markdown nodes={props.article.children} footnoteDefs={props.article.footnotes} />
+					<Footnote footnotes={props.article.footnotes} />
+					<Footer plainTitle={props.article.title.plain} slug={props.slug} />
 				</div>
 			</div>
-			<script type="application/ld+json" dangerouslySetInnerHTML={JSON.stringify(jsonLd)} />
+			<script type="application/ld+json" innerHTML={JSON.stringify(jsonLd)} />
 		</article>
 	);
-});
+};
+
+export default Article;

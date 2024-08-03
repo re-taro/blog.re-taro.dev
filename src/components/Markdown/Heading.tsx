@@ -1,4 +1,5 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
+import { Dynamic } from "solid-js/web";
 import MarkdownChildren from "./Markdown";
 import type * as A from "~/libs/plugins/ast/ast";
 import { cva, cx } from "~/styled-system/css";
@@ -86,18 +87,20 @@ const heading = cva({
 	},
 });
 
-export default component$<Props>(({ node, footnoteDefs }) => {
-	const Tag = `h${node.level}` as const;
+const Heading: Component<Props> = (props) => {
+	const tag = `h${props.node.level}` as const;
 
 	return (
-		<Tag id={node.id} title={node.id} class={cx(heading({ level: node.level }), "markdown_heading")}>
-			{node.level > 1
+		<Dynamic component={tag} id={props.node.id} title={props.node.id} class={cx(heading({ level: props.node.level }), "markdown_heading")}>
+			{props.node.level > 1
 				? (
-					<a href={`#${node.id}`} aria-hidden="true" tabIndex={-1}>
-						<MarkdownChildren nodes={node.children} footnoteDefs={footnoteDefs} />
+					<a href={`#${props.node.id}`} aria-hidden="true" tabIndex={-1}>
+						<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
 					</a>
 					)
-				: <MarkdownChildren nodes={node.children} footnoteDefs={footnoteDefs} />}
-		</Tag>
+				: <MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />}
+		</Dynamic>
 	);
-});
+};
+
+export default Heading;

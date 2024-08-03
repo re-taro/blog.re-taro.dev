@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import { css } from "~/styled-system/css";
 import type { OEmbedPhoto } from "~/libs/oEmbedSchema";
 
@@ -6,7 +6,7 @@ interface Props {
 	node: OEmbedPhoto;
 }
 
-export default component$<Props>(({ node }) => {
+const Photo: Component<Props> = (props) => {
 	return (
 		<img
 			class={css({
@@ -14,13 +14,15 @@ export default component$<Props>(({ node }) => {
 				maxHeight: "full",
 				maxWidth: "full",
 			})}
-			width={node.width}
-			height={node.height}
-			src={node.url}
-			alt={node.title}
+			width={props.node.width}
+			height={props.node.height}
+			src={props.node.url}
+			alt={props.node.title}
 			loading="lazy"
 			decoding="async"
 			data-oembed
 		/>
 	);
-});
+};
+
+export default Photo;

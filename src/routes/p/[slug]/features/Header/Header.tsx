@@ -1,5 +1,5 @@
-import { component$ } from "@builder.io/qwik";
 import { Temporal } from "temporal-polyfill";
+import type { Component } from "solid-js";
 import Tags from "../Tags/Tags";
 import Heading from "~/components/Markdown/Heading";
 import type * as A from "~/libs/plugins/ast/ast";
@@ -9,12 +9,12 @@ import type { SystemStyleObject } from "~/styled-system/types";
 interface Props {
 	title: A.Heading;
 	publishedAt: string;
-	updatedAt?: string | undefined;
+	updatedAt?: string;
 	tags: Array<string>;
-	css?: SystemStyleObject | undefined;
+	css?: SystemStyleObject;
 }
 
-export default component$<Props>(({ title, publishedAt, updatedAt, tags, css: cssStyle }) => {
+const Header: Component<Props> = (props) => {
 	return (
 		<header
 			class={css({
@@ -27,7 +27,7 @@ export default component$<Props>(({ title, publishedAt, updatedAt, tags, css: cs
 				"& > .markdown_heading": {
 					gridArea: "title",
 				},
-			}, cssStyle)}
+			}, props.css)}
 		>
 			<dl
 				class={css({
@@ -65,14 +65,14 @@ export default component$<Props>(({ title, publishedAt, updatedAt, tags, css: cs
 				>
 					<dt>投稿日</dt>
 					<dd>
-						<time dateTime={Temporal.ZonedDateTime.from(publishedAt).toString({ timeZoneName: "never" })}>
-							{Temporal.ZonedDateTime.from(publishedAt)
+						<time dateTime={Temporal.ZonedDateTime.from(props.publishedAt).toString({ timeZoneName: "never" })}>
+							{Temporal.ZonedDateTime.from(props.publishedAt)
 								.toPlainDate()
 								.toLocaleString("ja-JP")}
 						</time>
 					</dd>
 				</div>
-				{typeof updatedAt !== "undefined" && (
+				{typeof props.updatedAt !== "undefined" && (
 					<div
 						class={css({
 							"display": "inline",
@@ -100,8 +100,8 @@ export default component$<Props>(({ title, publishedAt, updatedAt, tags, css: cs
 					>
 						<dt>更新日</dt>
 						<dd>
-							<time dateTime={Temporal.ZonedDateTime.from(updatedAt).toString({ timeZoneName: "never" })}>
-								{Temporal.ZonedDateTime.from(updatedAt)
+							<time dateTime={Temporal.ZonedDateTime.from(props.updatedAt).toString({ timeZoneName: "never" })}>
+								{Temporal.ZonedDateTime.from(props.updatedAt)
 									.toPlainDate()
 									.toLocaleString("ja-JP")}
 							</time>
@@ -135,11 +135,13 @@ export default component$<Props>(({ title, publishedAt, updatedAt, tags, css: cs
 				>
 					<dt>タグ</dt>
 					<dd>
-						<Tags tags={tags} />
+						<Tags tags={props.tags} />
 					</dd>
 				</div>
 			</dl>
-			<Heading node={title} footnoteDefs={[]} />
+			<Heading node={props.title} footnoteDefs={[]} />
 		</header>
 	);
-});
+};
+
+export default Header;

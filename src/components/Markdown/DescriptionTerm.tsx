@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import MarkdownChildren from "./Markdown";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
@@ -8,13 +8,15 @@ interface Props {
 	footnoteDefs: Array<A.FootnoteDefinition>;
 }
 
-export default component$<Props>(({ node, footnoteDefs }) => {
+const DescriptionTerm: Component<Props> = (props) => {
 	return (
 		<dt class={css({
 			fontWeight: "bold",
 		})}
 		>
-			<MarkdownChildren nodes={node.children} footnoteDefs={footnoteDefs} />
+			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
 		</dt>
 	);
-});
+};
+
+export default DescriptionTerm;

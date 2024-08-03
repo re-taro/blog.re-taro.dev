@@ -1,5 +1,5 @@
-import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { A } from "@solidjs/router";
+import type { Component } from "solid-js";
 import { css } from "~/styled-system/css";
 import type { SystemStyleObject } from "~/styled-system/types";
 
@@ -7,7 +7,7 @@ export interface Props {
 	css?: SystemStyleObject;
 }
 
-export default component$<Props>(({ css: cssStyle }) => {
+const Footer: Component<Props> = (props) => {
 	return (
 		<footer
 			class={css({
@@ -18,7 +18,7 @@ export default component$<Props>(({ css: cssStyle }) => {
 				borderTopWidth: "1px",
 				borderTopStyle: "solid",
 				borderTopColor: "border.main",
-			}, cssStyle)}
+			}, props.css)}
 		>
 			<p class={css({
 				marginBlockStart: "0",
@@ -73,7 +73,7 @@ export default component$<Props>(({ css: cssStyle }) => {
 				{" "}
 				See
 				{" "}
-				<Link
+				<A
 					href="/privacy"
 					class={css({
 						color: "accent.secondary",
@@ -88,9 +88,11 @@ export default component$<Props>(({ css: cssStyle }) => {
 					})}
 				>
 					Privacy Policy
-				</Link>
+				</A>
 				.
 			</p>
 		</footer>
 	);
-});
+};
+
+export default Footer;

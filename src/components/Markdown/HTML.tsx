@@ -1,10 +1,12 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import type * as A from "~/libs/plugins/ast/ast";
 
 interface Props {
 	node: A.Html;
 }
 
-export default component$<Props>(({ node }) => {
-	return <span dangerouslySetInnerHTML={node.value} />;
-});
+const HTML: Component<Props> = (props) => {
+	return <span innerHTML={props.node.value} />;
+};
+
+export default HTML;

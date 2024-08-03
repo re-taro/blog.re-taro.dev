@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
 import type { Metadata } from "unfurl.js/dist/types";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
@@ -8,8 +8,8 @@ interface Props {
 	meta: Metadata;
 }
 
-export default component$<Props>(({ node, meta }) => {
-	const url = new URL(node.src);
+const LichCard: Component<Props> = (props) => {
+	const url = new URL(props.node.src);
 
 	return (
 		<a
@@ -51,7 +51,7 @@ export default component$<Props>(({ node, meta }) => {
 						whiteSpace: "nowrap",
 					})}
 					>
-						{meta.title}
+						{props.meta.title}
 					</h2>
 					<p class={css({
 						overflow: "hidden",
@@ -59,7 +59,7 @@ export default component$<Props>(({ node, meta }) => {
 						whiteSpace: "nowrap",
 					})}
 					>
-						{meta.description}
+						{props.meta.description}
 					</p>
 					<footer class={css({
 						display: "flex",
@@ -68,7 +68,7 @@ export default component$<Props>(({ node, meta }) => {
 					})}
 					>
 						<img
-							src={meta.favicon ?? ""}
+							src={props.meta.favicon ?? ""}
 							width={16}
 							height={16}
 							alt=""
@@ -87,22 +87,21 @@ export default component$<Props>(({ node, meta }) => {
 						</span>
 					</footer>
 				</div>
-				{meta.open_graph.images && (
-					<>
-						{/* eslint-disable-next-line qwik/jsx-img */}
-						<img
-							src={meta.open_graph.images[0].url}
-							alt={meta.open_graph.images[0].alt ?? ""}
-							class={css({
-								maxWidth: "[40%]",
-								maxHeight: "32",
-								objectFit: "cover",
-								borderLeft: "[1px solid {colors.border.main}]",
-							})}
-						/>
-					</>
+				{props.meta.open_graph.images && (
+					<img
+						src={props.meta.open_graph.images[0].url}
+						alt={props.meta.open_graph.images[0].alt ?? ""}
+						class={css({
+							maxWidth: "[40%]",
+							maxHeight: "32",
+							objectFit: "cover",
+							borderLeft: "[1px solid {colors.border.main}]",
+						})}
+					/>
 				)}
 			</article>
 		</a>
 	);
-});
+};
+
+export default LichCard;

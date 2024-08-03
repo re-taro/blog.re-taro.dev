@@ -1,5 +1,5 @@
-import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { A } from "@solidjs/router";
+import type { Component } from "solid-js";
 import { css } from "~/styled-system/css";
 import type { SystemStyleObject } from "~/styled-system/types";
 
@@ -7,7 +7,7 @@ export interface Props {
 	css?: SystemStyleObject;
 }
 
-export default component$<Props>(({ css: cssStyle }) => {
+const Header: Component<Props> = (props) => {
 	return (
 		<header class={css({
 			position: "fixed",
@@ -19,9 +19,9 @@ export default component$<Props>(({ css: cssStyle }) => {
 			padding: "6",
 			backgroundColor: "bg.main",
 			zIndex: "calc(infinity)",
-		}, cssStyle)}
+		}, props.css)}
 		>
-			<Link
+			<A
 				class={css({
 					color: "text.main",
 					fontSize: "xl",
@@ -40,7 +40,9 @@ export default component$<Props>(({ css: cssStyle }) => {
 				href="/"
 			>
 				blog.re-taro.dev
-			</Link>
+			</A>
 		</header>
 	);
-});
+};
+
+export default Header;

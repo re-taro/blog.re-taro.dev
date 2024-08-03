@@ -1,6 +1,6 @@
-import { component$ } from "@builder.io/qwik";
 import type * as H from "hast";
 import { hastToHtml } from "shiki";
+import type { Component } from "solid-js";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
@@ -8,8 +8,8 @@ interface Props {
 	node: A.Code;
 }
 
-export default component$<Props>(({ node }) => {
-	const styled = (node as unknown as { hast: H.Root | undefined }).hast; // MEMO: This is a safety cast
+const Code: Component<Props> = (props) => {
+	const styled = (props.node as unknown as { hast: H.Root | undefined }).hast; // MEMO: This is a safety cast
 
 	if (typeof styled !== "undefined") {
 		const html = hastToHtml(styled.children as any); // MEMO: This is a safety cast `styled.children` is `Array<H.RootContent>`
@@ -42,11 +42,13 @@ export default component$<Props>(({ node }) => {
 						},
 					},
 				})}
-				dangerouslySetInnerHTML={html}
+				innerHTML={html}
 			/>
 		);
 	}
 	else {
 		return null;
 	}
-});
+};
+
+export default Code;

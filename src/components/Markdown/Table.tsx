@@ -1,4 +1,5 @@
-import { component$ } from "@builder.io/qwik";
+import type { Component } from "solid-js";
+import { Index } from "solid-js";
 import TableRow from "./TableRow";
 import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
@@ -8,8 +9,8 @@ interface Props {
 	footnoteDefs: Array<A.FootnoteDefinition>;
 }
 
-export default component$<Props>(({ node, footnoteDefs }) => {
-	const [headerRow, ...bodyRows] = node.children;
+const Table: Component<Props> = (props) => {
+	const [headerRow, ...bodyRows] = props.node.children;
 
 	return (
 		<table
@@ -41,13 +42,17 @@ export default component$<Props>(({ node, footnoteDefs }) => {
 					},
 				})}
 			>
-				<TableRow node={headerRow} footnoteDefs={footnoteDefs} align={node.align} head />
+				<TableRow node={headerRow} footnoteDefs={props.footnoteDefs} align={props.node.align} head />
 			</thead>
 			<tbody>
-				{bodyRows.map((row, idx) => (
-					<TableRow node={row} footnoteDefs={footnoteDefs} align={node.align} key={idx} />
-				))}
+				<Index each={bodyRows}>
+					{row => (
+						<TableRow node={row()} footnoteDefs={props.footnoteDefs} align={props.node.align} />
+					)}
+				</Index>
 			</tbody>
 		</table>
 	);
-});
+};
+
+export default Table;
