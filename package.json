@@ -63,7 +63,7 @@
 		"axe-core": "4.10.0",
 		"axe-playwright": "2.0.1",
 		"concurrently": "8.2.2",
-		"eslint": "9.8.0",
+		"eslint": "9.9.0",
 		"eslint-plugin-format": "0.1.2",
 		"github-slugger": "2.0.0",
 		"hast-util-from-html": "2.0.1",
