@@ -29,11 +29,11 @@ import { astArticle } from "~/libs/plugins/ast/article";
 import { astDescriptionList } from "~/libs/plugins/ast/descriptionList";
 
 interface TransformedImage {
-	path: string;
 	dim: {
-		w: number;
 		h: number;
+		w: number;
 	};
+	path: string;
 }
 
 export interface WithTransformedImage {
@@ -43,8 +43,8 @@ export interface WithTransformedImage {
 interface ImageTransformationConfig {
 	readonly outputRoot: string;
 	readonly outputSubDir: string;
-	readonly sourceBaseDir: string;
 	readonly scaling: number;
+	readonly sourceBaseDir: string;
 }
 
 interface TransformContext {
@@ -63,7 +63,7 @@ function srcImgPath(
 	if (isAbslutePath(imgUrl))
 		return imgUrl;
 
-	const contentDir = /^(.+)\/?$/.exec(config.sourceBaseDir)?.[0];
+	const contentDir = /^.+$/.exec(config.sourceBaseDir)?.[0];
 	if (contentDir === undefined)
 		return imgUrl;
 
@@ -78,8 +78,8 @@ function srcImgPath(
 function generateImgDistFileName(
 	imgUrl: string,
 	dim?: {
-		width: number;
 		height: number;
+		width: number;
 	},
 ) {
 	if (isAbslutePath(imgUrl))
@@ -144,19 +144,20 @@ async function traverseMdAst<T extends A.Content>(
 				ast.url.startsWith("https://")
 				|| ast.url.startsWith("http://")
 				|| ast.url.startsWith("/")
-			)
+			) {
 				return;
+			}
 
 			const buffer = await readFile(srcImgPath(config, ctx, ast.url));
 			const image = sharp(buffer);
-			let { width, height } = await image.metadata();
+			let { height, width } = await image.metadata();
 			if (!(width && height))
 				return;
 
 			const images: TransformedImage[] = [];
 
 			while (width > 300) {
-				const fileName = generateImgDistFileName(ast.url, { width, height });
+				const fileName = generateImgDistFileName(ast.url, { height, width });
 				const distPath = `${config.outputSubDir}/${fileName}`;
 				const distPathOnFs = `${config.outputRoot}/${distPath}`;
 
@@ -170,11 +171,11 @@ async function traverseMdAst<T extends A.Content>(
 				}
 
 				images.push({
-					path: `/${distPath}`,
 					dim: {
-						w: Math.round(width),
 						h: Math.round(height),
+						w: Math.round(width),
 					},
+					path: `/${distPath}`,
 				});
 				width *= config.scaling;
 				height *= config.scaling;
@@ -203,13 +204,11 @@ async function generateImages(
 }
 
 const blog = defineCollection({
-	name: "blog",
 	directory: "contents",
 	include: "**/*.md",
+	name: "blog",
 	schema: z => ({
-		title: z.string({ message: "Value of \"title\" must be a string." }),
 		description: z.string({ message: "Value of \"description\" must be a string." }),
-		tags: z.array(z.string(), { message: "Value of \"tags\" must be an array of strings." }),
 		published: z.boolean({ message: "Value of \"published\" must be a boolean." }),
 		publishedAt: z.string({ message: "Value of \"publishedAt\" must be a date." }).refine((v) => {
 			try {
@@ -221,6 +220,8 @@ const blog = defineCollection({
 				return false;
 			}
 		}, { message: "Value of \"publishedAt\" must be a valid date." }),
+		tags: z.array(z.string(), { message: "Value of \"tags\" must be an array of strings." }),
+		title: z.string({ message: "Value of \"title\" must be a string." }),
 		updatedAt: z.string({ message: "Value of \"updatedAt\" must be a date." }).refine((v) => {
 			try {
 				Temporal.ZonedDateTime.from(v);
@@ -269,8 +270,8 @@ const blog = defineCollection({
 
 		return {
 			...document,
-			mdast: mdast as any, // MEMO: This cast is an escape hatch for serializable type
 			abstract: String(abstract).slice(0, 400),
+			mdast: mdast as any, // MEMO: This cast is an escape hatch for serializable type
 		};
 	},
 });

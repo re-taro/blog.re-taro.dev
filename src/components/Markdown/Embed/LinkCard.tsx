@@ -4,8 +4,8 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.Embed;
 	meta: Metadata;
+	node: A.Embed;
 }
 
 const LichCard: Component<Props> = (props) => {
@@ -17,23 +17,21 @@ const LichCard: Component<Props> = (props) => {
 				display: "block",
 			})}
 			href={url.href}
-			target="_blank"
 			rel="noreferrer"
+			target="_blank"
 		>
 			<article class={css({
-				display: "flex",
-				overflow: "hidden",
-				border: "[1px solid {colors.border.main}]",
-				borderRadius: "sm",
-				transition: "[background-color 0.25s ease-in-out]",
-
-				_hover: {
-					backgroundColor: "bg.teriary",
-				},
-
 				_focus: {
 					backgroundColor: "bg.teriary",
 				},
+				_hover: {
+					backgroundColor: "bg.teriary",
+				},
+				border: "[1px solid {colors.border.main}]",
+				borderRadius: "sm",
+				display: "flex",
+				overflow: "hidden",
+				transition: "[background-color 0.25s ease-in-out]",
 			})}
 			>
 				<div class={css({
@@ -44,8 +42,8 @@ const LichCard: Component<Props> = (props) => {
 				>
 					<h2 class={css({
 						fontSize: "l",
-						lineHeight: "tight",
 						fontWeight: "bold",
+						lineHeight: "tight",
 						overflow: "hidden",
 						textOverflow: "ellipsis",
 						whiteSpace: "nowrap",
@@ -62,20 +60,20 @@ const LichCard: Component<Props> = (props) => {
 						{props.meta.description}
 					</p>
 					<footer class={css({
+						alignItems: "center",
 						display: "flex",
 						gap: "1",
-						alignItems: "center",
 					})}
 					>
 						<img
+							class={css({
+								aspectRatio: "square",
+								maxHeight: "4",
+							})}
+							alt=""
+							height={16}
 							src={props.meta.favicon ?? ""}
 							width={16}
-							height={16}
-							alt=""
-							class={css({
-								maxHeight: "4",
-								aspectRatio: "square",
-							})}
 						/>
 						<span class={css({
 							overflow: "hidden",
@@ -89,14 +87,14 @@ const LichCard: Component<Props> = (props) => {
 				</div>
 				{props.meta.open_graph.images && (
 					<img
-						src={props.meta.open_graph.images[0].url}
-						alt={props.meta.open_graph.images[0].alt ?? ""}
 						class={css({
-							maxWidth: "[40%]",
-							maxHeight: "32",
-							objectFit: "cover",
 							borderLeft: "[1px solid {colors.border.main}]",
+							maxHeight: "32",
+							maxWidth: "[40%]",
+							objectFit: "cover",
 						})}
+						alt={props.meta.open_graph.images[0].alt ?? ""}
+						src={props.meta.open_graph.images[0].url}
 					/>
 				)}
 			</article>

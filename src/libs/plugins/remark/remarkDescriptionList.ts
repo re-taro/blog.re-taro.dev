@@ -9,23 +9,23 @@ import { isList, isListItem, isParagraph, isText } from "./check";
 import { visit } from "./visit";
 
 export interface DescriptionList extends M.Parent {
-	type: "descriptionList";
 	children: Array<DescriptionContent>;
+	type: "descriptionList";
 }
 
 export interface DescriptionTerm extends M.Parent {
-	type: "descriptionTerm";
 	children: Array<M.PhrasingContent>;
+	type: "descriptionTerm";
 }
 
 export interface DescriptionDetails extends M.Parent {
-	type: "descriptionDetails";
 	children: Array<M.BlockContent | M.DefinitionContent>;
+	type: "descriptionDetails";
 }
 
 export interface DescriptionContentMap {
-	descriptionTerm: DescriptionTerm;
 	descriptionDetails: DescriptionDetails;
+	descriptionTerm: DescriptionTerm;
 }
 export type DescriptionContent =
   DescriptionContentMap[keyof DescriptionContentMap];
@@ -52,8 +52,8 @@ function descriptionList(): Extension {
 				// termの最後のtextの位置情報を更新
 				termLikeLastChild.position = termLikeLastChild.position
 					? {
-							start: termLikeLastChild.position.start,
 							end: addColumn(termLikeLastChild.position.end, -1),
+							start: termLikeLastChild.position.start,
 						}
 					: undefined;
 				// termの最後のtextが空文字列になった場合は削除
@@ -63,24 +63,24 @@ function descriptionList(): Extension {
 				const termPosition: Position | undefined
 				= listItem.position && termLike.position
 					? {
-							start: listItem.position.start,
 							end: termLike.position.end,
+							start: listItem.position.start,
 						}
 					: undefined;
 
 				const descriptionTerm: DescriptionTerm = {
-					type: "descriptionTerm",
 					children: termLike.children,
 					position: termPosition,
+					type: "descriptionTerm",
 				};
 
 				const descriptionDetails: Array<DescriptionDetails> = detailsLikeList
 					.flatMap(details => details.children)
 					.map((details) => {
 						return {
-							type: "descriptionDetails",
 							children: details.children,
 							position: details.position,
+							type: "descriptionDetails",
 						};
 					});
 
@@ -88,9 +88,9 @@ function descriptionList(): Extension {
 			});
 
 			const descriptionList: DescriptionList = {
-				type: "descriptionList",
 				children: descriptionChildren,
 				position: node.position,
+				type: "descriptionList",
 			};
 
 			parent.children[idx] = descriptionList;
@@ -103,8 +103,8 @@ function descriptionList(): Extension {
 }
 
 interface DescriptionListLike extends M.List {
-	ordered: false;
 	children: Array<DescriptionTermLike>;
+	ordered: false;
 }
 
 interface DescriptionTermLike extends M.ListItem {
@@ -160,9 +160,9 @@ function isDescriptionTermLike(node: M.Node): node is DescriptionTermLike {
 
 declare module "mdast" {
 	interface RootContentMap {
+		descriptionDetails: DescriptionDetails;
 		descriptionList: DescriptionList;
 		descriptionTerm: DescriptionTerm;
-		descriptionDetails: DescriptionDetails;
 	}
 
 	interface BlockContentMap {

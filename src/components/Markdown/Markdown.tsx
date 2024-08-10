@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import { Index } from "solid-js";
+import { Index, Match, Switch } from "solid-js";
 import Table from "./Table";
 import Strong from "./Strong";
 import Emphasis from "./Emphasis";
@@ -26,81 +26,99 @@ import Section from "./Section";
 import type { Content, FootnoteDefinition } from "~/libs/plugins/ast/ast";
 
 export interface MarkdownProps {
-	node: Content;
 	footnoteDefs: Array<FootnoteDefinition>;
+	node: Content;
 }
 
 const Markdown: Component<MarkdownProps> = (props) => {
-	switch (props.node.type) {
-		case "text":
-			return props.node.value;
-		case "strong":
-			return <Strong node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "emphasis":
-			return <Emphasis node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "delete":
-			return <Delete node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "inlineCode":
-			return <InlineCode node={props.node} />;
-		case "link":
-			return <Link node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "image":
-			return <Image node={props.node} />;
-		case "break":
-			return <Break />;
-		case "thematicBreak":
-			return <ThemanticBreak />;
-		case "html":
-			return <HTML node={props.node} />;
-		case "heading":
-			return <Heading node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "paragraph":
-			return <Paragraph node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "blockquote":
-			return <BlockQuote node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "unorderedList":
-			return <UnorderedList node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "orderedList":
-			return <OrderedList node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "listItem":
-			return <ListItem node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "descriptionList":
-			return <DescriptionList node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "descriptionTerm":
-			return <DescriptionTerm node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "descriptionDetails":
-			return <DescriptionDetails node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "table":
-			return <Table node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "footnoteReference":
-			return <FootnoteReference node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "code":
-			return <Code node={props.node} />;
-		case "embed":
-			return <Embed node={props.node} />;
-		case "section":
-			return <Section node={props.node} footnoteDefs={props.footnoteDefs} />;
-		case "tableCell":
-		case "tableRow":
-			throw new Error(`Unexpected node type: ${props.node.type}`);
-		default: {
-			props.node satisfies never;
-
-			throw new Error("Unreachable");
-		}
-	}
+	return (
+		<Switch>
+			<Match when={(() => props.node.type === "text" ? props.node : undefined)()}>
+				{node => node().value}
+			</Match>
+			<Match when={(() => props.node.type === "strong" ? props.node : undefined)()}>
+				{node => <Strong footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "emphasis" ? props.node : undefined)()}>
+				{node => <Emphasis footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "delete" ? props.node : undefined)()}>
+				{node => <Delete footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "inlineCode" ? props.node : undefined)()}>
+				{node => <InlineCode node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "link" ? props.node : undefined)()}>
+				{node => <Link footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "image" ? props.node : undefined)()}>
+				{node => <Image node={node()} />}
+			</Match>
+			<Match when={props.node.type === "break"}>
+				<Break />
+			</Match>
+			<Match when={props.node.type === "thematicBreak"}>
+				<ThemanticBreak />
+			</Match>
+			<Match when={(() => props.node.type === "html" ? props.node : undefined)()}>
+				{node => <HTML node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "heading" ? props.node : undefined)()}>
+				{node => <Heading footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "paragraph" ? props.node : undefined)()}>
+				{node => <Paragraph footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "blockquote" ? props.node : undefined)()}>
+				{node => <BlockQuote footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "unorderedList" ? props.node : undefined)()}>
+				{node => <UnorderedList footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "orderedList" ? props.node : undefined)()}>
+				{node => <OrderedList footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "listItem" ? props.node : undefined)()}>
+				{node => <ListItem footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "descriptionList" ? props.node : undefined)()}>
+				{node => <DescriptionList footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "descriptionTerm" ? props.node : undefined)()}>
+				{node => <DescriptionTerm footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "descriptionDetails" ? props.node : undefined)()}>
+				{node => <DescriptionDetails footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "table" ? props.node : undefined)()}>
+				{node => <Table footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "footnoteReference" ? props.node : undefined)()}>
+				{node => <FootnoteReference footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "code" ? props.node : undefined)()}>
+				{node => <Code node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "embed" ? props.node : undefined)()}>
+				{node => <Embed node={node()} />}
+			</Match>
+			<Match when={(() => props.node.type === "section" ? props.node : undefined)()}>
+				{node => <Section footnoteDefs={props.footnoteDefs} node={node()} />}
+			</Match>
+		</Switch>
+	);
 };
 
 interface MarkdownChildrenProps {
-	nodes: Array<Content>;
 	footnoteDefs: Array<FootnoteDefinition>;
+	nodes: Array<Content>;
 }
 
 const MarkdownChildren: Component<MarkdownChildrenProps> = (props) => {
 	return (
 		<Index each={props.nodes}>
 			{(node => (
-				<Markdown node={node()} footnoteDefs={props.footnoteDefs} />
+				<Markdown footnoteDefs={props.footnoteDefs} node={node()} />
 			))}
 		</Index>
 	);

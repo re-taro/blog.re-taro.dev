@@ -12,8 +12,8 @@ export const paragraph: Handler<M.Paragraph> = async (
 		return;
 
 	return {
-		type: "paragraph",
 		children,
 		position: node.position,
+		type: "paragraph",
 	};
 };

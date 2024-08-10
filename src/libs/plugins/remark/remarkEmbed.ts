@@ -6,12 +6,12 @@ import { isLink, isParagraph, isText } from "./check";
 import { visit } from "./visit";
 
 export interface Embed extends M.Node {
-	type: "embed";
-	src: string;
-	width?: string | undefined;
-	height?: string | undefined;
-	allowFullScreen?: boolean | undefined;
 	oembed: boolean;
+	src: string;
+	type: "embed";
+	allowFullScreen?: boolean | undefined;
+	height?: string | undefined;
+	width?: string | undefined;
 }
 
 export const remarkEmbed: Plugin = function () {
@@ -45,12 +45,12 @@ function embed(): Extension {
 				};
 
 				const embed: Embed = {
-					type: "embed",
-					position: node.position,
-					src: convertToEmbedUrl(url.href),
-					width: "100%",
 					height: "360",
 					oembed: false,
+					position: node.position,
+					src: convertToEmbedUrl(url.href),
+					type: "embed",
+					width: "100%",
 				};
 
 				parent.children[idx] = embed;
@@ -83,22 +83,22 @@ function embed(): Extension {
 				const isWeb = url.pathname.startsWith("/presentation/d/e/");
 
 				const embed: Embed = {
-					type: "embed",
-					position: node.position,
-					src: getEmbedUrl(isWeb).href,
-					width: "100%",
 					allowFullScreen: true,
 					oembed: false,
+					position: node.position,
+					src: getEmbedUrl(isWeb).href,
+					type: "embed",
+					width: "100%",
 				};
 
 				parent.children[idx] = embed;
 			}
 			else {
 				const embed: Embed = {
-					type: "embed",
+					oembed: true,
 					position: node.position,
 					src: url.href,
-					oembed: true,
+					type: "embed",
 				};
 
 				parent.children[idx] = embed;

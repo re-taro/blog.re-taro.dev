@@ -23,7 +23,8 @@ function transform(html: string) {
 
 const Rich: Component<Props> = (props) => {
 	return (
-		<div class={css({ width: "full" })} innerHTML={transform(sanitize(props.node.html))} data-oembed />
+		// eslint-disable-next-line solid/no-innerhtml
+		<div data-oembed class={css({ width: "full" })} innerHTML={transform(sanitize(props.node.html))} />
 	);
 };
 

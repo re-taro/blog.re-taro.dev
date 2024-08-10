@@ -6,23 +6,23 @@ import type { Handler } from "../transform";
 export const list: Handler<M.List> = async (
 	node,
 	state,
-): Promise<A.UnorderedList | A.OrderedList | undefined> => {
+): Promise<A.OrderedList | A.UnorderedList | undefined> => {
 	const children = await state.transformAll(node);
 	if (children.length === 0)
 		return;
 
 	if (node.ordered ?? false) {
 		return {
-			type: "orderedList",
-			start: node.start ?? 1,
 			children,
 			position: node.position,
+			start: node.start ?? 1,
+			type: "orderedList",
 		};
 	}
 
 	return {
-		type: "unorderedList",
 		children,
 		position: node.position,
+		type: "unorderedList",
 	};
 };

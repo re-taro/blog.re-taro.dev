@@ -5,7 +5,7 @@ import type { Handler } from "../transform";
 
 export const hardBreak: Handler<M.Break> = async (node): Promise<A.Break> => {
 	return {
-		type: "break",
 		position: node.position,
+		type: "break",
 	};
 };

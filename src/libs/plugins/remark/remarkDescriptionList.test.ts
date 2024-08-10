@@ -23,125 +23,125 @@ describe("remarkDescriptionList", () => {
 
 		const result = transformer.runSync(transformer.parse(markdown).children[0]);
 		const expected = {
-			type: "descriptionList",
 			children: [
 				{
-					type: "descriptionTerm",
 					children: [
 						{
+							position: {
+								end: { column: 9, line: 1, offset: 8 },
+								start: { column: 3, line: 1, offset: 2 },
+							},
 							type: "text",
 							value: "term 1",
-							position: {
-								start: { line: 1, column: 3, offset: 2 },
-								end: { line: 1, column: 9, offset: 8 },
-							},
 						},
 					],
 					position: {
-						start: { line: 1, column: 1, offset: 0 },
-						end: { line: 1, column: 10, offset: 9 },
+						end: { column: 10, line: 1, offset: 9 },
+						start: { column: 1, line: 1, offset: 0 },
 					},
+					type: "descriptionTerm",
 				},
 				{
-					type: "descriptionDetails",
 					children: [
 						{
-							type: "paragraph",
 							children: [
 								{
+									position: {
+										end: { column: 13, line: 2, offset: 22 },
+										start: { column: 4, line: 2, offset: 13 },
+									},
 									type: "text",
 									value: "details 1",
-									position: {
-										start: { line: 2, column: 4, offset: 13 },
-										end: { line: 2, column: 13, offset: 22 },
-									},
 								},
 							],
 							position: {
-								start: { line: 2, column: 4, offset: 13 },
-								end: { line: 2, column: 13, offset: 22 },
+								end: { column: 13, line: 2, offset: 22 },
+								start: { column: 4, line: 2, offset: 13 },
 							},
+							type: "paragraph",
 						},
 					],
 					position: {
-						start: { line: 2, column: 2, offset: 11 },
-						end: { line: 2, column: 13, offset: 22 },
+						end: { column: 13, line: 2, offset: 22 },
+						start: { column: 2, line: 2, offset: 11 },
 					},
+					type: "descriptionDetails",
 				},
 				{
-					type: "descriptionDetails",
 					children: [
 						{
-							type: "paragraph",
 							children: [
 								{
+									position: {
+										end: { column: 13, line: 3, offset: 35 },
+										start: { column: 4, line: 3, offset: 26 },
+									},
 									type: "text",
 									value: "details 2",
-									position: {
-										start: { line: 3, column: 4, offset: 26 },
-										end: { line: 3, column: 13, offset: 35 },
-									},
 								},
 							],
 							position: {
-								start: { line: 3, column: 4, offset: 26 },
-								end: { line: 3, column: 13, offset: 35 },
+								end: { column: 13, line: 3, offset: 35 },
+								start: { column: 4, line: 3, offset: 26 },
 							},
+							type: "paragraph",
 						},
 					],
 					position: {
-						start: { line: 3, column: 2, offset: 24 },
-						end: { line: 3, column: 13, offset: 35 },
+						end: { column: 13, line: 3, offset: 35 },
+						start: { column: 2, line: 3, offset: 24 },
 					},
+					type: "descriptionDetails",
 				},
 				{
-					type: "descriptionTerm",
 					children: [
 						{
+							position: {
+								end: { column: 9, line: 4, offset: 44 },
+								start: { column: 3, line: 4, offset: 38 },
+							},
 							type: "text",
 							value: "term 2",
-							position: {
-								start: { line: 4, column: 3, offset: 38 },
-								end: { line: 4, column: 9, offset: 44 },
-							},
 						},
 					],
 					position: {
-						start: { line: 4, column: 1, offset: 36 },
-						end: { line: 4, column: 10, offset: 45 },
+						end: { column: 10, line: 4, offset: 45 },
+						start: { column: 1, line: 4, offset: 36 },
 					},
+					type: "descriptionTerm",
 				},
 				{
-					type: "descriptionDetails",
 					children: [
 						{
-							type: "paragraph",
 							children: [
 								{
+									position: {
+										end: { column: 13, line: 5, offset: 58 },
+										start: { column: 4, line: 5, offset: 49 },
+									},
 									type: "text",
 									value: "details 3",
-									position: {
-										start: { line: 5, column: 4, offset: 49 },
-										end: { line: 5, column: 13, offset: 58 },
-									},
 								},
 							],
 							position: {
-								start: { line: 5, column: 4, offset: 49 },
-								end: { line: 5, column: 13, offset: 58 },
+								end: { column: 13, line: 5, offset: 58 },
+								start: { column: 4, line: 5, offset: 49 },
 							},
+							type: "paragraph",
 						},
 					],
 					position: {
-						start: { line: 5, column: 2, offset: 47 },
-						end: { line: 5, column: 13, offset: 58 },
+						end: { column: 13, line: 5, offset: 58 },
+						start: { column: 2, line: 5, offset: 47 },
 					},
+					type: "descriptionDetails",
 				},
 			],
 			position: {
-				start: { line: 1, column: 1, offset: 0 },
-				end: { line: 5, column: 13, offset: 58 },
+				end: { column: 13, line: 5, offset: 58 },
+				start: { column: 1, line: 1, offset: 0 },
 			},
+			type: "descriptionList",
 		} satisfies RootContent;
 
 		expect(result).toStrictEqual(expected);
@@ -162,99 +162,99 @@ describe("remarkDescriptionList", () => {
 
 		const result = transformer.runSync(transformer.parse(markdown).children[0]);
 		const expected = {
-			type: "descriptionList",
 			children: [
 				{
-					type: "descriptionTerm",
 					children: [
 						{
+							position: {
+								end: { column: 9, line: 1, offset: 8 },
+								start: { column: 3, line: 1, offset: 2 },
+							},
 							type: "text",
 							value: "term 1",
-							position: {
-								start: { line: 1, column: 3, offset: 2 },
-								end: { line: 1, column: 9, offset: 8 },
-							},
 						},
 					],
 					position: {
-						start: { line: 1, column: 1, offset: 0 },
-						end: { line: 1, column: 10, offset: 9 },
+						end: { column: 10, line: 1, offset: 9 },
+						start: { column: 1, line: 1, offset: 0 },
 					},
+					type: "descriptionTerm",
 				},
 				{
-					type: "descriptionTerm",
 					children: [
 						{
+							position: {
+								end: { column: 9, line: 2, offset: 18 },
+								start: { column: 3, line: 2, offset: 12 },
+							},
 							type: "text",
 							value: "term 2",
-							position: {
-								start: { line: 2, column: 3, offset: 12 },
-								end: { line: 2, column: 9, offset: 18 },
-							},
 						},
 					],
 					position: {
-						start: { line: 2, column: 1, offset: 10 },
-						end: { line: 2, column: 10, offset: 19 },
+						end: { column: 10, line: 2, offset: 19 },
+						start: { column: 1, line: 2, offset: 10 },
 					},
+					type: "descriptionTerm",
 				},
 				{
-					type: "descriptionDetails",
 					children: [
 						{
-							type: "paragraph",
 							children: [
 								{
+									position: {
+										end: { column: 13, line: 3, offset: 32 },
+										start: { column: 4, line: 3, offset: 23 },
+									},
 									type: "text",
 									value: "details 1",
-									position: {
-										start: { line: 3, column: 4, offset: 23 },
-										end: { line: 3, column: 13, offset: 32 },
-									},
 								},
 							],
 							position: {
-								start: { line: 3, column: 4, offset: 23 },
-								end: { line: 3, column: 13, offset: 32 },
+								end: { column: 13, line: 3, offset: 32 },
+								start: { column: 4, line: 3, offset: 23 },
 							},
+							type: "paragraph",
 						},
 					],
 					position: {
-						start: { line: 3, column: 2, offset: 21 },
-						end: { line: 3, column: 13, offset: 32 },
+						end: { column: 13, line: 3, offset: 32 },
+						start: { column: 2, line: 3, offset: 21 },
 					},
+					type: "descriptionDetails",
 				},
 				{
-					type: "descriptionDetails",
 					children: [
 						{
-							type: "paragraph",
 							children: [
 								{
+									position: {
+										end: { column: 13, line: 4, offset: 45 },
+										start: { column: 4, line: 4, offset: 36 },
+									},
 									type: "text",
 									value: "details 2",
-									position: {
-										start: { line: 4, column: 4, offset: 36 },
-										end: { line: 4, column: 13, offset: 45 },
-									},
 								},
 							],
 							position: {
-								start: { line: 4, column: 4, offset: 36 },
-								end: { line: 4, column: 13, offset: 45 },
+								end: { column: 13, line: 4, offset: 45 },
+								start: { column: 4, line: 4, offset: 36 },
 							},
+							type: "paragraph",
 						},
 					],
 					position: {
-						start: { line: 4, column: 2, offset: 34 },
-						end: { line: 4, column: 13, offset: 45 },
+						end: { column: 13, line: 4, offset: 45 },
+						start: { column: 2, line: 4, offset: 34 },
 					},
+					type: "descriptionDetails",
 				},
 			],
 			position: {
-				start: { line: 1, column: 1, offset: 0 },
-				end: { line: 4, column: 13, offset: 45 },
+				end: { column: 13, line: 4, offset: 45 },
+				start: { column: 1, line: 1, offset: 0 },
 			},
+			type: "descriptionList",
 		} satisfies RootContent;
 
 		expect(result).toStrictEqual(expected);

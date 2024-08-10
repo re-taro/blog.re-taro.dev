@@ -3,37 +3,37 @@ import type { Component } from "solid-js";
 import { Index } from "solid-js";
 
 export type OgType =
-	| "music.song"
+	| "article"
+	| "book"
 	| "music.album"
 	| "music.playlist"
 	| "music.radio_station"
-	| "video.movie"
-	| "video.episode"
-	| "video.tv_show"
-	| "video.other"
-	| "article"
-	| "book"
+	| "music.song"
 	| "profile"
+	| "video.episode"
+	| "video.movie"
+	| "video.other"
+	| "video.tv_show"
 	| "website";
 
 export interface TwitterTagsSource {
 	imgType: "summary" | "summary_large_image";
-	imgUrl?: string;
 	username:
-		| string
 		| {
-			site: string;
 			creator: string;
-		};
+			site: string;
+		}
+		| string;
 	description?: string;
+	imgUrl?: string;
 	title?: string;
 }
 
 export interface MetaTagsSource {
+	description: string;
+	imgUrl: string;
 	title: string;
 	type: OgType;
-	imgUrl: string;
-	description: string;
 	twitter?: TwitterTagsSource;
 }
 
@@ -52,13 +52,13 @@ const TwitterMetaTags: Component<{
 
 	return (
 		<>
-			<Meta name="twitter:card" content={props.twitter.imgType} />
-			<Meta name="twitter:site" content={`@${site}`} />
-			<Meta name="twitter:creator" content={`@${creator}`} />
-			<Meta name="twitter:title" content={props.twitter.title} />
-			<Meta name="twitter:description" content={props.twitter.description} />
-			<Meta name="twitter:image" content={props.twitter.imgUrl} />
-			<Meta name="twitter:image:alt" content={props.twitter.description} />
+			<Meta content={props.twitter.imgType} name="twitter:card" />
+			<Meta content={`@${site}`} name="twitter:site" />
+			<Meta content={`@${creator}`} name="twitter:creator" />
+			<Meta content={props.twitter.title} name="twitter:title" />
+			<Meta content={props.twitter.description} name="twitter:description" />
+			<Meta content={props.twitter.imgUrl} name="twitter:image" />
+			<Meta content={props.twitter.description} name="twitter:image:alt" />
 		</>
 	);
 };
@@ -66,11 +66,11 @@ const TwitterMetaTags: Component<{
 export const OgMetaTags: Component<MetaTagsSource> = (props) => {
 	return (
 		<>
-			<Meta property="og:title" content={props.title} />
-			<Meta property="og:type" content={props.type} />
-			<Meta property="og:image" content={props.imgUrl} />
-			<Meta property="og:image:alt" content={props.description} />
-			<Meta property="og:description" content={props.description} />
+			<Meta content={props.title} property="og:title" />
+			<Meta content={props.type} property="og:type" />
+			<Meta content={props.imgUrl} property="og:image" />
+			<Meta content={props.description} property="og:image:alt" />
+			<Meta content={props.description} property="og:description" />
 			{props.twitter && <TwitterMetaTags src={props} twitter={props.twitter} />}
 		</>
 	);
@@ -80,7 +80,7 @@ export const ArticleTags: Component<{ tags: Array<string> }> = (props) => {
 	return (
 		<Index each={props.tags}>
 			{tag => (
-				<Meta property="article:tag" content={tag()} />
+				<Meta content={tag()} property="article:tag" />
 			)}
 		</Index>
 	);

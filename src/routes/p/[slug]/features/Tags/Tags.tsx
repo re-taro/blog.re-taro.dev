@@ -15,14 +15,11 @@ const Tag: Component<TagProps> = (props) => {
 	return (
 		<li
 			class={css({
-				"color": "text.main",
-
 				"&:first-child": {
 					_before: {
 						content: "'['",
 						paddingInlineEnd: "1",
 					},
-
 					_supportsAlternativeTextAfter: {
 						_before: {
 							content: "'[' / ''",
@@ -30,22 +27,11 @@ const Tag: Component<TagProps> = (props) => {
 						},
 					},
 				},
-
-				"_after": {
-					content: "','",
-					paddingInlineEnd: "2",
-
-					_supportsAlternativeTextAfter: {
-						content: "',' / ''",
-					},
-				},
-
 				"&:last-child": {
 					_after: {
 						content: "']'",
 						paddingInlineStart: "1",
 					},
-
 					_supportsAlternativeTextAfter: {
 						_after: {
 							content: "']' / ''",
@@ -53,21 +39,27 @@ const Tag: Component<TagProps> = (props) => {
 						},
 					},
 				},
+				"_after": {
+					_supportsAlternativeTextAfter: {
+						content: "',' / ''",
+					},
+					content: "','",
+					paddingInlineEnd: "2",
+				},
+				"color": "text.main",
 			})}
 		>
 			<A
-				href={`/tags#${props.tag}`}
 				class={css({
-					color: "accent.secondary",
-
-					_hover: {
-						color: "accent.main",
-					},
-
 					_focus: {
 						color: "accent.main",
 					},
+					_hover: {
+						color: "accent.main",
+					},
+					color: "accent.secondary",
 				})}
+				href={`/tags#${props.tag}`}
 			>
 				{props.tag}
 			</A>

@@ -10,32 +10,30 @@ export interface Props {
 const Header: Component<Props> = (props) => {
 	return (
 		<header class={css({
+			alignItems: "center",
+			backgroundColor: "bg.main",
+			display: "flex",
+			insetInline: "0",
+			padding: "6",
 			position: "fixed",
 			top: "0",
-			insetInline: "0",
-			display: "flex",
-			alignItems: "center",
 			width: "full",
-			padding: "6",
-			backgroundColor: "bg.main",
 			zIndex: "calc(infinity)",
 		}, props.css)}
 		>
 			<A
 				class={css({
+					_focus: {
+						opacity: "1",
+					},
+					_hover: {
+						opacity: "1",
+					},
 					color: "text.main",
 					fontSize: "xl",
 					fontWeight: "bold",
 					opacity: "0.6",
 					transition: "[opacity 0.3s ease-in]",
-
-					_hover: {
-						opacity: "1",
-					},
-
-					_focus: {
-						opacity: "1",
-					},
 				})}
 				href="/"
 			>

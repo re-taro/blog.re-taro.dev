@@ -13,10 +13,10 @@ export const footnoteReference: Handler<M.FootnoteReference> = async (
 		usedDef.count += 1;
 
 		return {
-			type: "footnoteReference",
 			footnoteIndex: usedDef.index,
-			referenceIndex: usedDef.count,
 			position: node.position,
+			referenceIndex: usedDef.count,
+			type: "footnoteReference",
 		};
 	}
 
@@ -26,18 +26,18 @@ export const footnoteReference: Handler<M.FootnoteReference> = async (
 
 	const footnoteIndex = state.astFootnoteDefinition.size;
 	const newDef: A.FootnoteDefinition = {
-		type: "footnoteDefinition",
-		index: footnoteIndex,
-		count: 1,
 		children: await state.transformAll(mdastDef),
+		count: 1,
+		index: footnoteIndex,
 		position: mdastDef.position,
+		type: "footnoteDefinition",
 	};
 	state.astFootnoteDefinition.set(node.identifier, newDef);
 
 	return {
-		type: "footnoteReference",
 		footnoteIndex,
-		referenceIndex: 1,
 		position: node.position,
+		referenceIndex: 1,
+		type: "footnoteReference",
 	};
 };

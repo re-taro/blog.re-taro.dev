@@ -4,35 +4,31 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.Strong;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.Strong;
 }
 
 const Strong: Component<Props> = (props) => {
 	return (
 		<strong class={css({
-			fontWeight: "bold",
-
-			_before: {
-				content: "'**'",
-			},
-
 			_after: {
 				content: "'**'",
 			},
-
+			_before: {
+				content: "'**'",
+			},
 			_supportsAlternativeTextAfter: {
-				_before: {
-					content: "'**' / ''",
-				},
-
 				_after: {
 					content: "'**' / ''",
 				},
+				_before: {
+					content: "'**' / ''",
+				},
 			},
+			fontWeight: "bold",
 		})}
 		>
-			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
+			<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={props.node.children} />
 		</strong>
 	);
 };

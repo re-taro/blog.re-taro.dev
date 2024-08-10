@@ -14,13 +14,13 @@ const Photo: Component<Props> = (props) => {
 				maxHeight: "full",
 				maxWidth: "full",
 			})}
-			width={props.node.width}
-			height={props.node.height}
-			src={props.node.url}
-			alt={props.node.title}
-			loading="lazy"
-			decoding="async"
 			data-oembed
+			alt={props.node.title}
+			decoding="async"
+			height={props.node.height}
+			loading="lazy"
+			src={props.node.url}
+			width={props.node.width}
 		/>
 	);
 };

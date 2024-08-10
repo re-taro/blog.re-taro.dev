@@ -17,9 +17,9 @@ const descriptionList: Handler<MDescriptionList> = async (
 		return;
 
 	return {
-		type: "descriptionList",
 		children,
 		position: node.position,
+		type: "descriptionList",
 	};
 };
 
@@ -32,9 +32,9 @@ const descriptionTerm: Handler<MDescriptionTerm> = async (
 		return;
 
 	return {
-		type: "descriptionTerm",
 		children,
 		position: node.position,
+		type: "descriptionTerm",
 	};
 };
 
@@ -47,9 +47,9 @@ const descriptionDetails: Handler<MDescriptionDetails> = async (
 		return;
 
 	return {
-		type: "descriptionDetails",
 		children,
 		position: node.position,
+		type: "descriptionDetails",
 	};
 };
 

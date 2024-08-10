@@ -8,7 +8,7 @@ function nodeToString(node: A.Node): string {
 	if (isParent(node))
 		return nodesToString(node.children);
 
-	if (isLiteral(node) && ["text", "inlineCode"].includes(node.type))
+	if (isLiteral(node) && ["inlineCode", "text"].includes(node.type))
 		return node.value;
 
 	return "";

@@ -12,8 +12,8 @@ export const tableRow: Handler<M.TableRow> = async (
 		return;
 
 	return {
-		type: "tableRow",
 		children,
 		position: node.position,
+		type: "tableRow",
 	};
 };

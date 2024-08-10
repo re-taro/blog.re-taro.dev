@@ -7,8 +7,8 @@ export const inlineCode: Handler<M.InlineCode> = async (
 	node,
 ): Promise<A.InlineCode> => {
 	return {
+		position: node.position,
 		type: "inlineCode",
 		value: node.value,
-		position: node.position,
 	};
 };

@@ -40,52 +40,48 @@ const Footer: Component<Props> = (props) => {
 					})}
 				>
 					<a
-						href={editUrl.href}
-						target="_blank"
-						rel="noreferrer"
 						class={css({
-							paddingX: "4",
-							paddingY: "2",
-							color: "text.secondary",
-							border: "[1px solid {colors.border.main}]",
-							borderRadius: "full",
-
-							_hover: {
-								color: "text.main",
-							},
-
 							_focus: {
 								color: "text.main",
 							},
+							_hover: {
+								color: "text.main",
+							},
+							border: "[1px solid {colors.border.main}]",
+							borderRadius: "full",
+							color: "text.secondary",
+							paddingX: "4",
+							paddingY: "2",
 						})}
+						href={editUrl.href}
+						rel="noreferrer"
+						target="_blank"
 					>
 						編集の提案をする
 					</a>
 				</li>
 				<li>
 					<a
-						href={twitterUrl.toString()}
-						target="_blank"
-						rel="noreferrer"
 						class={css({
-							paddingX: "4",
-							paddingY: "2",
+							_focus: {
+								backgroundColor: "accent.main",
+								color: "bg.main",
+							},
+							_hover: {
+								backgroundColor: "accent.main",
+								color: "bg.main",
+							},
 							backgroundColor: "[unset]",
-							color: "text.main",
 							border: "[1px solid {colors.accent.main}]",
 							borderRadius: "full",
+							color: "text.main",
+							paddingX: "4",
+							paddingY: "2",
 							transition: "[background-color 0.2s ease-in-out, color 0.2s ease-in-out]",
-
-							_hover: {
-								color: "bg.main",
-								backgroundColor: "accent.main",
-							},
-
-							_focus: {
-								color: "bg.main",
-								backgroundColor: "accent.main",
-							},
 						})}
+						href={twitterUrl.toString()}
+						rel="noreferrer"
+						target="_blank"
 					>
 						Twitterにポスト
 					</a>

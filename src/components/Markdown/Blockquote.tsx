@@ -4,34 +4,32 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.Blockquote;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.Blockquote;
 }
 
 const Blockquote: Component<Props> = (props) => {
 	return (
-		<blockquote class={css({
-			"padding": "4",
-			"border": "[1px solid {colors.border.main}]",
-			"borderRadius": "sm",
-
-			"& > p": {
-				position: "relative",
-				marginLeft: "[1em]",
-
-				_before: {
-					position: "absolute",
-					content: "'>'",
-					marginLeft: "[-1em]",
-
-					_supportsAlternativeTextAfter: {
-						content: "'>' / ''",
+		<blockquote
+			class={css({
+				"& > p": {
+					_before: {
+						_supportsAlternativeTextAfter: {
+							content: "'>' / ''",
+						},
+						content: "'>'",
+						marginLeft: "[-1em]",
+						position: "absolute",
 					},
+					marginLeft: "[1em]",
+					position: "relative",
 				},
-			},
-		})}
+				"border": "[1px solid {colors.border.main}]",
+				"borderRadius": "sm",
+				"padding": "4",
+			})}
 		>
-			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
+			<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={props.node.children} />
 		</blockquote>
 	);
 };

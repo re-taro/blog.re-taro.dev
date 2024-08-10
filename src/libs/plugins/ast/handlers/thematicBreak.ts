@@ -7,7 +7,7 @@ export const thematicBreak: Handler<M.ThematicBreak> = async (
 	node,
 ): Promise< A.ThematicBreak> => {
 	return {
-		type: "thematicBreak",
 		position: node.position,
+		type: "thematicBreak",
 	};
 };

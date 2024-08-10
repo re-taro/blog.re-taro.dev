@@ -1,14 +1,14 @@
 import { A } from "@solidjs/router";
 import type { Component } from "solid-js";
-import { Index, createSignal, onCleanup, onMount } from "solid-js";
+import { Index, Show, createSignal, onCleanup, onMount } from "solid-js";
 import type * as Ast from "~/libs/plugins/ast/ast";
 import { css, cx } from "~/styled-system/css";
 import type { SystemStyleObject } from "~/styled-system/types";
 
 interface TocItemProps {
-	toc: Ast.Toc;
 	activeIds: Array<string>;
 	level: number;
+	toc: Ast.Toc;
 }
 
 interface TocProps {
@@ -20,45 +20,43 @@ const TocItem: Component<TocItemProps> = (props) => {
 	return (
 		<li
 			class={cx(css({
-				paddingY: "1",
-				paddingLeft: "2",
 				borderLeft: "[2px solid {colors.border.main}]",
+				paddingLeft: "2",
+				paddingY: "1",
 				transition: "[border-color 0.2s ease-in-out]",
 			}), props.activeIds.includes(props.toc.id) && css({
 				borderLeftColor: "accent.main",
 			}))}
 		>
 			<A
-				href={`#${props.toc.id}`}
 				class={css({
-					color: "text.secondary",
-					transition: "[color 0.2s ease-in-out]",
-
-					_hover: {
-						color: "text.main",
-					},
-
 					_focus: {
 						color: "text.main",
 					},
+					_hover: {
+						color: "text.main",
+					},
+					color: "text.secondary",
+					transition: "[color 0.2s ease-in-out]",
 				})}
+				href={`#${props.toc.id}`}
 			>
 				{props.toc.plain}
 			</A>
-			{props.toc.children.length > 0 && (
+			<Show when={props.toc.children.length > 0}>
 				<ul
 					class={css({
-						paddingY: "1",
 						paddingLeft: "2",
+						paddingY: "1",
 					})}
 				>
 					<Index each={props.toc.children}>
 						{child => (
-							<TocItem toc={child()} activeIds={props.activeIds} level={props.level + 1} />
+							<TocItem activeIds={props.activeIds} level={props.level + 1} toc={child()} />
 						)}
 					</Index>
 				</ul>
-			)}
+			</Show>
 		</li>
 	);
 };
@@ -127,29 +125,29 @@ const Toc: Component<TocProps> = (props) => {
 		<div class={css(props.css)}>
 			<nav
 				class={css({
+					color: "text.secondary",
 					position: "sticky",
 					top: "[6.25rem]",
-					color: "text.secondary",
 				})}
 			>
 				<h2
 					class={css({
-						marginBottom: "2",
-						fontSize: "xl",
 						color: "text.main",
+						fontSize: "xl",
+						marginBottom: "2",
 					})}
 				>
 					toc
 				</h2>
 				<ul
 					class={css({
-						paddingY: "1",
 						paddingLeft: "2",
+						paddingY: "1",
 					})}
 				>
 					<Index each={props.toc}>
 						{item => (
-							<TocItem toc={item()} activeIds={activeIds()} level={1} />
+							<TocItem activeIds={activeIds()} level={1} toc={item()} />
 						)}
 					</Index>
 				</ul>

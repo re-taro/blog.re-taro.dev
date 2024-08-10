@@ -3,8 +3,8 @@ name: need changeset
 on:
   pull_request:
     paths:
-      - "src/**"
-      - "contents/**"
+      - 'src/**'
+      - 'contents/**'
 
 jobs:
   changeset-test:

@@ -11,41 +11,40 @@ const Footer: Component<Props> = (props) => {
 	return (
 		<footer
 			class={css({
-				width: "full",
-				marginTop: "4",
-				paddingY: "4",
-				paddingX: "6",
-				borderTopWidth: "1px",
-				borderTopStyle: "solid",
 				borderTopColor: "border.main",
+				borderTopStyle: "solid",
+				borderTopWidth: "1px",
+				marginTop: "4",
+				paddingX: "6",
+				paddingY: "4",
+				width: "full",
 			}, props.css)}
 		>
-			<p class={css({
-				marginBlockStart: "0",
-				marginBlockEnd: "0",
-				marginInlineStart: "auto",
-				marginInlineEnd: "auto",
-				fontSize: "l",
-				lineHeight: "normal",
-				textAlign: "center",
-				color: "text.secondary",
-			})}
+			<p
+				class={css({
+					color: "text.secondary",
+					fontSize: "l",
+					lineHeight: "normal",
+					marginBlockEnd: "0",
+					marginBlockStart: "0",
+					marginInlineEnd: "auto",
+					marginInlineStart: "auto",
+					textAlign: "center",
+				})}
 			>
 				<a
-					href="https://creativecommons.org/licenses/by-nc-sa/4.0"
-					rel="noreferrer"
-					target="_blank"
 					class={css({
-						color: "accent.secondary",
-
-						_hover: {
-							color: "accent.main",
-						},
-
 						_focus: {
 							color: "accent.main",
 						},
+						_hover: {
+							color: "accent.main",
+						},
+						color: "accent.secondary",
 					})}
+					href="https://creativecommons.org/licenses/by-nc-sa/4.0"
+					rel="noreferrer"
+					target="_blank"
 				>
 					CC BY-NC-SA 4.0
 				</a>
@@ -53,20 +52,18 @@ const Footer: Component<Props> = (props) => {
 				Copyright &copy; 2021
 				{" "}
 				<a
-					href="https://re-taro.dev"
-					rel="noreferrer"
-					target="_blank"
 					class={css({
-						color: "accent.secondary",
-
-						_hover: {
-							color: "accent.main",
-						},
-
 						_focus: {
 							color: "accent.main",
 						},
+						_hover: {
+							color: "accent.main",
+						},
+						color: "accent.secondary",
 					})}
+					href="https://re-taro.dev"
+					rel="noreferrer"
+					target="_blank"
 				>
 					Rintaro Itokawa
 				</a>
@@ -74,18 +71,16 @@ const Footer: Component<Props> = (props) => {
 				See
 				{" "}
 				<A
-					href="/privacy"
 					class={css({
-						color: "accent.secondary",
-
-						_hover: {
-							color: "accent.main",
-						},
-
 						_focus: {
 							color: "accent.main",
 						},
+						_hover: {
+							color: "accent.main",
+						},
+						color: "accent.secondary",
 					})}
+					href="/privacy"
 				>
 					Privacy Policy
 				</A>

@@ -6,9 +6,9 @@ export default defineConfig({
 		tsconfigPaths(),
 	],
 	test: {
+		exclude: [...configDefaults.exclude, "tests/**/*"],
 		testTransformMode: {
 			ssr: ["**/*"],
 		},
-		exclude: [...configDefaults.exclude, "tests/**/*"],
 	},
 });

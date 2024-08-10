@@ -4,43 +4,40 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.DescriptionList;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.DescriptionList;
 }
 
 const DescriptionList: Component<Props> = (props) => {
 	return (
-		<dl class={css({
-			"& > dt": {
-				position: "relative",
-				marginLeft: "[1em]",
-
-				_before: {
-					position: "absolute",
-					content: "'-'",
-					marginLeft: "[-1em]",
-				},
-
-				_after: {
-					position: "absolute",
-					content: "':'",
-				},
-
-				_supportsAlternativeTextAfter: {
-					_before: {
-						position: "absolute",
-						content: "'-' / ''",
-					},
-
+		<dl
+			class={css({
+				"& > dt": {
 					_after: {
+						content: "':'",
 						position: "absolute",
-						content: "':' / ''",
 					},
+					_before: {
+						content: "'-'",
+						marginLeft: "[-1em]",
+						position: "absolute",
+					},
+					_supportsAlternativeTextAfter: {
+						_after: {
+							content: "':' / ''",
+							position: "absolute",
+						},
+						_before: {
+							content: "'-' / ''",
+							position: "absolute",
+						},
+					},
+					marginLeft: "[1em]",
+					position: "relative",
 				},
-			},
-		})}
+			})}
 		>
-			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
+			<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={props.node.children} />
 		</dl>
 	);
 };

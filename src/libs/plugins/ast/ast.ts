@@ -12,35 +12,35 @@ export interface Parent extends Node {
 	children: Array<Content>;
 }
 
-export type Nodes = Root | Content;
+export type Nodes = Content | Root;
 
 export type Content =
-	| Text
-	| Strong
-	| Emphasis
-	| Delete
-	| InlineCode
-	| Link
-	| Image
-	| Break
-	| ThematicBreak
-	| Html
-	| Heading
-	| Paragraph
 	| Blockquote
-	| UnorderedList
-	| OrderedList
-	| ListItem
+	| Break
+	| Code
+	| Delete
+	| DescriptionDetails
 	| DescriptionList
 	| DescriptionTerm
-	| DescriptionDetails
-	| Table
-	| TableRow
-	| TableCell
-	| FootnoteReference
-	| Code
 	| Embed
-	| Section;
+	| Emphasis
+	| FootnoteReference
+	| Heading
+	| Html
+	| Image
+	| InlineCode
+	| Link
+	| ListItem
+	| OrderedList
+	| Paragraph
+	| Section
+	| Strong
+	| Table
+	| TableCell
+	| TableRow
+	| Text
+	| ThematicBreak
+	| UnorderedList;
 
 export interface Text extends Literal {
 	type: "text";
@@ -69,8 +69,8 @@ export interface Link extends Parent {
 }
 
 export interface Image extends Node {
-	type: "image";
 	alt: string;
+	type: "image";
 	url: string;
 	title?: string | undefined;
 }
@@ -88,10 +88,10 @@ export interface Html extends Literal {
 }
 
 export interface Heading extends Parent {
-	type: "heading";
-	level: 1 | 2 | 3 | 4 | 5 | 6;
 	id: string;
+	level: 1 | 2 | 3 | 4 | 5 | 6;
 	plain: string;
+	type: "heading";
 }
 
 export interface Paragraph extends Parent {
@@ -107,8 +107,8 @@ export interface UnorderedList extends Parent {
 }
 
 export interface OrderedList extends Parent {
-	type: "orderedList";
 	start: number;
+	type: "orderedList";
 }
 
 export interface ListItem extends Parent {
@@ -128,8 +128,8 @@ export interface DescriptionDetails extends Parent {
 }
 
 export interface Table extends Parent {
+	align: Array<"center" | "left" | "right" | null>;
 	type: "table";
-	align: Array<"left" | "center" | "right" | null>;
 }
 
 export interface TableRow extends Parent {
@@ -141,52 +141,52 @@ export interface TableCell extends Parent {
 }
 
 export interface FootnoteDefinition extends Parent {
-	type: "footnoteDefinition";
-	index: number;
 	count: number;
+	index: number;
+	type: "footnoteDefinition";
 }
 
 export interface FootnoteReference extends Node {
-	type: "footnoteReference";
 	footnoteIndex: number;
 	referenceIndex: number;
+	type: "footnoteReference";
 }
 
 export interface Code extends Literal {
 	type: "code";
-	lang?: string | undefined;
 	filename?: string | undefined;
+	lang?: string | undefined;
 }
 
 export interface Embed extends Node {
-	type: "embed";
 	src: string;
-	width?: string | undefined;
-	height?: string | undefined;
+	type: "embed";
 	allowFullScreen?: boolean | undefined;
+	height?: string | undefined;
 	meta?: Metadata | undefined;
 	oembed?: OEmbed | undefined;
+	width?: string | undefined;
 }
 
 export interface Section extends Parent {
-	type: "section";
 	children: [Heading, ...Array<Content>];
+	type: "section";
 }
 
 export interface Root extends Parent {
-	type: "root";
 	footnotes: Array<FootnoteDefinition>;
+	type: "root";
 }
 
 export interface Toc extends Node {
-	type: "toc";
-	plain: string;
-	id: string;
 	children: Array<Toc>;
+	id: string;
+	plain: string;
+	type: "toc";
 }
 
 export interface Article extends Omit<Root, "type"> {
-	type: "article";
 	title: Heading;
 	toc: Array<Toc>;
+	type: "article";
 }

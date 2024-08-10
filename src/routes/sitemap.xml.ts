@@ -11,10 +11,10 @@ function createUrlSet() {
 	];
 
 	const blogUrls = allBlogs.filter(blog => import.meta.env.DEV || blog.published).map(blog => ({
-		loc: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 		lastmod: Temporal.ZonedDateTime.from(blog.updatedAt ?? blog.publishedAt).toString({
 			timeZoneName: "never",
 		}),
+		loc: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 	}));
 
 	return {
@@ -33,5 +33,5 @@ export const GET = SolidGET(() => {
 	const builder = new Builder();
 	const xml = builder.buildObject(createUrlSet());
 
-	return new Response(xml, { status: 200, headers: { "Content-Type": "application/xml" } });
+	return new Response(xml, { headers: { "Content-Type": "application/xml" }, status: 200 });
 });

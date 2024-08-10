@@ -20,17 +20,17 @@ export const colors = defineTokens.colors({
 			value: "#3c4144",
 		},
 	},
+	border: {
+		main: {
+			value: "#909191",
+		},
+	},
 	text: {
 		main: {
 			value: "#ced0d0",
 		},
 		secondary: {
 			value: "#b4b5b5",
-		},
-	},
-	border: {
-		main: {
-			value: "#909191",
 		},
 	},
 });

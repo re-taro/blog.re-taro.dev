@@ -16,11 +16,11 @@ export const heading: Handler<M.Heading> = async (
 	const id = state.headingSlugger.slug(plain);
 
 	return {
-		type: "heading",
-		level: node.depth,
-		id,
-		plain,
 		children,
+		id,
+		level: node.depth,
+		plain,
 		position: node.position,
+		type: "heading",
 	};
 };

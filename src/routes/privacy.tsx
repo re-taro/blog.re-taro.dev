@@ -29,30 +29,29 @@ export default function Page() {
 				>
 					<li
 						class={css({
-							position: "relative",
-							marginLeft: "[1em]",
-
 							_before: {
-								position: "absolute",
 								content: "'-'",
 								left: "[-1em]",
+								position: "absolute",
 							},
+							marginLeft: "[1em]",
+							position: "relative",
 						})}
 					>
 						本サイトは
 						<a
-							href="https://policies.google.com/technologies/partner-sites"
-							rel="noreferrer"
-							target="_blank"
 							class={css({
-								color: "accent.secondary",
-								_hover: {
-									color: "accent.main",
-								},
 								_focus: {
 									color: "accent.main",
 								},
+								_hover: {
+									color: "accent.main",
+								},
+								color: "accent.secondary",
 							})}
+							href="https://policies.google.com/technologies/partner-sites"
+							rel="noreferrer"
+							target="_blank"
 						>
 							Google Analytics
 						</a>

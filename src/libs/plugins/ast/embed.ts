@@ -11,21 +11,21 @@ const embed: Handler<MEmbed> = async (node): Promise<Embed> => {
 		const metadata = await unfurl(node.src);
 
 		return {
-			type: "embed",
+			meta: metadata,
+			oembed: metadata.oEmbed as OEmbed | undefined, // MEMO: This is a safety cast
 			position: node.position,
 			src: node.src,
-			oembed: metadata.oEmbed as OEmbed | undefined, // MEMO: This is a safety cast
-			meta: metadata,
+			type: "embed",
 		};
 	}
 	else {
 		return {
-			type:	"embed",
+			allowFullScreen:	node.allowFullScreen,
+			height:	node.height,
 			position:	node.position,
 			src:	node.src,
+			type:	"embed",
 			width:	node.width,
-			height:	node.height,
-			allowFullScreen:	node.allowFullScreen,
 		};
 	}
 };

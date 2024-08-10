@@ -1,5 +1,6 @@
 import { Temporal } from "temporal-polyfill";
 import type { Component } from "solid-js";
+import { Show } from "solid-js";
 import Tags from "../Tags/Tags";
 import Heading from "~/components/Markdown/Heading";
 import type * as A from "~/libs/plugins/ast/ast";
@@ -7,60 +8,55 @@ import { css } from "~/styled-system/css";
 import type { SystemStyleObject } from "~/styled-system/types";
 
 interface Props {
-	title: A.Heading;
 	publishedAt: string;
-	updatedAt?: string;
 	tags: Array<string>;
+	title: A.Heading;
 	css?: SystemStyleObject;
+	updatedAt?: string;
 }
 
 const Header: Component<Props> = (props) => {
 	return (
 		<header
 			class={css({
-				"display": "grid",
-				"gridTemplateAreas": `"meta" "title"`,
-				"gridTemplateRows": "[repeat(2, auto)]",
-				"gap": "3",
-				"paddingBottom": "8",
-
 				"& > .markdown_heading": {
 					gridArea: "title",
 				},
+				"display": "grid",
+				"gap": "3",
+				"gridTemplateAreas": `"meta" "title"`,
+				"gridTemplateRows": "[repeat(2, auto)]",
+				"paddingBottom": "8",
 			}, props.css)}
 		>
 			<dl
 				class={css({
+					alignItems: "center",
+					columnGap: "4",
 					display: "flex",
 					flexWrap: "wrap",
 					gridArea: "meta",
-					columnGap: "4",
-					alignItems: "center",
 				})}
 			>
 				<div
 					class={css({
-						"display": "inline",
-						"color": "text.main",
-
-						"& > dt": {
+						"& > dd": {
 							display: "inline",
-							marginRight: "1",
-
+						},
+						"& > dt": {
 							_after: {
 								content: "':'",
 							},
-
 							_supportsAlternativeTextAfter: {
 								_after: {
 									content: "':' / ''",
 								},
 							},
-						},
-
-						"& > dd": {
 							display: "inline",
+							marginRight: "1",
 						},
+						"color": "text.main",
+						"display": "inline",
 					})}
 				>
 					<dt>投稿日</dt>
@@ -72,65 +68,59 @@ const Header: Component<Props> = (props) => {
 						</time>
 					</dd>
 				</div>
-				{typeof props.updatedAt !== "undefined" && (
-					<div
-						class={css({
-							"display": "inline",
-							"color": "text.main",
-
-							"& > dt": {
-								display: "inline",
-								marginRight: "1",
-
-								_after: {
-									content: "':'",
+				<Show when={props.updatedAt}>
+					{updatedAt => (
+						<div
+							class={css({
+								"& > dd": {
+									display: "inline",
 								},
-
-								_supportsAlternativeTextAfter: {
+								"& > dt": {
 									_after: {
-										content: "':' / ''",
+										content: "':'",
 									},
+									_supportsAlternativeTextAfter: {
+										_after: {
+											content: "':' / ''",
+										},
+									},
+									display: "inline",
+									marginRight: "1",
 								},
-							},
-
-							"& > dd": {
-								display: "inline",
-							},
-						})}
-					>
-						<dt>更新日</dt>
-						<dd>
-							<time dateTime={Temporal.ZonedDateTime.from(props.updatedAt).toString({ timeZoneName: "never" })}>
-								{Temporal.ZonedDateTime.from(props.updatedAt)
-									.toPlainDate()
-									.toLocaleString("ja-JP")}
-							</time>
-						</dd>
-					</div>
-				)}
+								"color": "text.main",
+								"display": "inline",
+							})}
+						>
+							<dt>更新日</dt>
+							<dd>
+								<time dateTime={Temporal.ZonedDateTime.from(updatedAt()).toString({ timeZoneName: "never" })}>
+									{Temporal.ZonedDateTime.from(updatedAt())
+										.toPlainDate()
+										.toLocaleString("ja-JP")}
+								</time>
+							</dd>
+						</div>
+					)}
+				</Show>
 				<div
 					class={css({
-						"display": "inline",
-						"color": "text.main",
-
-						"& > dt": {
+						"& > dd": {
 							display: "inline",
-							marginRight: "1",
-
+						},
+						"& > dt": {
 							_after: {
 								content: "':'",
 							},
-
 							_supportsAlternativeTextAfter: {
 								_after: {
 									content: "':' / ''",
 								},
 							},
-						},
-
-						"& > dd": {
 							display: "inline",
+							marginRight: "1",
 						},
+						"color": "text.main",
+						"display": "inline",
 					})}
 				>
 					<dt>タグ</dt>
@@ -139,7 +129,7 @@ const Header: Component<Props> = (props) => {
 					</dd>
 				</div>
 			</dl>
-			<Heading node={props.title} footnoteDefs={[]} />
+			<Heading footnoteDefs={[]} node={props.title} />
 		</header>
 	);
 };

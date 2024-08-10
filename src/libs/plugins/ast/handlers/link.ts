@@ -12,10 +12,10 @@ export const link: Handler<M.Link> = async (
 		return;
 
 	return {
-		type: "link",
-		url: node.url,
-		title: node.title ?? undefined,
 		children,
 		position: node.position,
+		title: node.title ?? undefined,
+		type: "link",
+		url: node.url,
 	};
 };

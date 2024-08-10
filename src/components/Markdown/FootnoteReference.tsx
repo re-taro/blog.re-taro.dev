@@ -1,11 +1,12 @@
 import type { Component } from "solid-js";
+import { A } from "@solidjs/router";
 import { getFootnoteDefId, getFootnoteIndex, getFootnoteRefId } from "./helper";
-import type * as A from "~/libs/plugins/ast/ast";
+import type * as Ast from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.FootnoteReference;
-	footnoteDefs: Array<A.FootnoteDefinition>;
+	footnoteDefs: Array<Ast.FootnoteDefinition>;
+	node: Ast.FootnoteReference;
 }
 
 const FootnoteReference: Component<Props> = (props) => {
@@ -19,25 +20,23 @@ const FootnoteReference: Component<Props> = (props) => {
 				fontWeight: "bold",
 				scrollMarginTop: "[6.25rem]",
 			})}
-			id={fnRefId}
 			aria-labelledby={fnDefId}
+			id={fnRefId}
 		>
-			<a
-				href={`#${fnDefId}`}
+			<A
 				class={css({
-					color: "accent.secondary",
-
-					_hover: {
-						color: "accent.main",
-					},
-
 					_focus: {
 						color: "accent.main",
 					},
+					_hover: {
+						color: "accent.main",
+					},
+					color: "accent.secondary",
 				})}
+				href={`#${fnDefId}`}
 			>
 				{index}
-			</a>
+			</A>
 		</sup>
 	);
 };

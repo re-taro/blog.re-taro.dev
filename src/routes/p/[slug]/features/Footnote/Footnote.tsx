@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import { Index } from "solid-js";
+import { Index, Show } from "solid-js";
 import Markdown from "~/components/Markdown/Markdown";
 import { getFootnoteDefId, getFootnoteRefId } from "~/components/Markdown/helper";
 import type * as A from "~/libs/plugins/ast/ast";
@@ -20,33 +20,30 @@ const FootnoteDefinition: Component<FootnoteDefinitionProps> = (props) => {
 		<li id={getFootnoteDefId(props.idx + 1)}>
 			<div
 				class={css({
-					"display": "grid",
-					"gridTemplateAreas": "'content link noop'",
-					"gridTemplateColumns": "[auto auto 1fr]",
-					"gap": "2",
-
 					"& > *": {
 						margin: "0",
 					},
+					"display": "grid",
+					"gap": "2",
+					"gridTemplateAreas": "'content link noop'",
+					"gridTemplateColumns": "[auto auto 1fr]",
 				})}
 			>
-				<Markdown nodes={props.footnote.children} footnoteDefs={props.footnoteDefs} />
+				<Markdown footnoteDefs={props.footnoteDefs} nodes={props.footnote.children} />
 				<a
-					href={`#${getFootnoteRefId(props.idx + 1)}`}
 					class={css({
-						gridArea: "link",
-						alignSelf: "end",
-						color: "accent.secondary",
-
-						_hover: {
-							color: "accent.main",
-						},
-
 						_focus: {
 							color: "accent.main",
 						},
+						_hover: {
+							color: "accent.main",
+						},
+						alignSelf: "end",
+						color: "accent.secondary",
+						gridArea: "link",
 					})}
 					aria-label="Back to content"
+					href={`#${getFootnoteRefId(props.idx + 1)}`}
 				>
 					↵
 				</a>
@@ -59,26 +56,23 @@ const FootnoteDefinitionList: Component<FootnoteProps> = (props) => {
 	return (
 		<ol
 			class={css({
-				"color": "text.main",
-				"paddingLeft": "6",
-				"counterReset": "list",
-
 				"& > li": {
-					position: "relative",
-					marginLeft: "[1em]",
-					marginY: "2",
-
 					_before: {
-						position: "absolute",
-						content: "counter(list) '.'",
-						marginLeft: "[-1em]",
-						counterIncrement: "list",
-
 						_supportsAlternativeTextAfter: {
 							content: "counter(list) '.' / ''",
 						},
+						content: "counter(list) '.'",
+						counterIncrement: "list",
+						marginLeft: "[-1em]",
+						position: "absolute",
 					},
+					marginLeft: "[1em]",
+					marginY: "2",
+					position: "relative",
 				},
+				"color": "text.main",
+				"counterReset": "list",
+				"paddingLeft": "6",
 			})}
 		>
 			<Index each={props.footnotes}>
@@ -91,39 +85,36 @@ const FootnoteDefinitionList: Component<FootnoteProps> = (props) => {
 };
 
 const Footnote: Component<FootnoteProps> = (props) => {
-	if (props.footnotes.length === 0)
-		return null;
-
 	return (
-		<>
+		<Show when={props.footnotes.length !== 0}>
 			<hr
 				class={css({
+					borderTop: "[1px solid {colors.border.main}]",
+					height: "[1px]",
 					marginY: "4",
 					width: "full",
-					height: "[1px]",
-					borderTop: "[1px solid {colors.border.main}]",
 				})}
 			/>
 			<section aria-labelledby="footnote">
 				<h2
-					aria-hidden
 					class={css({
-						position: "absolute",
-						width: "[1px]",
+						borderWidth: "0",
+						clip: "rect(0 0 0 0)",
 						height: "[1px]",
-						padding: "0",
 						margin: "[-1px]",
 						overflow: "hidden",
-						clip: "rect(0 0 0 0)",
+						padding: "0",
+						position: "absolute",
 						whiteSpace: "nowrap",
-						borderWidth: "0",
+						width: "[1px]",
 					})}
+					aria-hidden
 				>
 					脚注
 				</h2>
 				<FootnoteDefinitionList footnotes={props.footnotes} />
 			</section>
-		</>
+		</Show>
 	);
 };
 

@@ -12,8 +12,8 @@ export const blockquote: Handler<M.Blockquote> = async (
 		return;
 
 	return {
-		type: "blockquote",
 		children,
 		position: node.position,
+		type: "blockquote",
 	};
 };

@@ -8,9 +8,9 @@ import type * as A from "./ast";
 import { defaultHandlers } from "./handlers";
 
 export const astTransform: Plugin<
-  Array<never>,
-  M.Root,
-  A.Root
+	Array<never>,
+	M.Root,
+	A.Root
 > = function () {
 	return async (tree) => {
 		const additionalHandlers = this.data("astFromMdastHandlers") ?? {};
@@ -23,10 +23,10 @@ export const astTransform: Plugin<
 		);
 
 		const root: A.Root = {
-			type: "root",
-			footnotes,
 			children,
+			footnotes,
 			position: tree.position,
+			type: "root",
 		};
 
 		return root;
@@ -34,11 +34,11 @@ export const astTransform: Plugin<
 };
 
 interface State {
-	transformOne: (node: M.Node) => Promise<A.Content | undefined>;
-	transformAll: (node: M.Parent) => Promise<Array<A.Content>>;
+	astFootnoteDefinition: Map<string, A.FootnoteDefinition>;
 	headingSlugger: GitHubSlugger;
 	mdastFootnoteDefinition: Map<string, M.FootnoteDefinition>;
-	astFootnoteDefinition: Map<string, A.FootnoteDefinition>;
+	transformAll: (node: M.Parent) => Promise<Array<A.Content>>;
+	transformOne: (node: M.Node) => Promise<A.Content | undefined>;
 }
 
 export type Handler<T extends M.Node> = (
@@ -79,11 +79,11 @@ function createState(tree: M.Root, additionalHandlers: Handlers): State {
 	});
 
 	const state: State = {
-		transformOne,
-		transformAll,
+		astFootnoteDefinition: new Map(),
 		headingSlugger: new GitHubSlugger(),
 		mdastFootnoteDefinition,
-		astFootnoteDefinition: new Map(),
+		transformAll,
+		transformOne,
 	};
 
 	return state;
