@@ -1,7 +1,6 @@
 import { parse } from "node:path";
 import crypto from "node:crypto";
 import { access, mkdir, readFile, writeFile } from "node:fs/promises";
-
 import { codeToHast } from "shiki";
 import {
 	transformerNotationDiff,
@@ -17,16 +16,15 @@ import remarkRetext from "remark-retext";
 import retextEnglish from "retext-english";
 import retextEquality from "retext-equality";
 import retextStringify from "retext-stringify";
-import type * as A from "~/libs/plugins/ast/ast";
-
-import { remarkEmbed } from "~/libs/plugins/remark/remarkEmbed";
-import { remarkDescriptionList } from "~/libs/plugins/remark/remarkDescriptionList";
-import { astTransform } from "~/libs/plugins/ast/transform";
-import { astEmbed } from "~/libs/plugins/ast/embed";
-import { astSection } from "~/libs/plugins/ast/section";
-import { astToc } from "~/libs/plugins/ast/toc";
-import { astArticle } from "~/libs/plugins/ast/article";
-import { astDescriptionList } from "~/libs/plugins/ast/descriptionList";
+import type * as A from "./src/libs/plugins/ast/ast";
+import { remarkEmbed } from "./src/libs/plugins/remark/remarkEmbed";
+import { remarkDescriptionList } from "./src/libs/plugins/remark/remarkDescriptionList";
+import { astTransform } from "./src/libs/plugins/ast/transform";
+import { astEmbed } from "./src/libs/plugins/ast/embed";
+import { astSection } from "./src/libs/plugins/ast/section";
+import { astToc } from "./src/libs/plugins/ast/toc";
+import { astArticle } from "./src/libs/plugins/ast/article";
+import { astDescriptionList } from "./src/libs/plugins/ast/descriptionList";
 
 interface TransformedImage {
 	dim: {

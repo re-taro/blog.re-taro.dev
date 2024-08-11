@@ -47,13 +47,13 @@ importers:
         version: 2.27.7
       '@content-collections/cli':
         specifier: 0.1.2
-        version: 0.1.2(@content-collections/core@0.6.0(typescript@5.5.4))
+        version: 0.1.2(@content-collections/core@0.6.4(typescript@5.5.4))
       '@content-collections/core':
-        specifier: 0.6.0
-        version: 0.6.0(typescript@5.5.4)
+        specifier: 0.6.4
+        version: 0.6.4(typescript@5.5.4)
       '@content-collections/vite':
         specifier: 0.2.1
-        version: 0.2.1(@content-collections/core@0.6.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.3))
+        version: 0.2.1(@content-collections/core@0.6.4(typescript@5.5.4))(vite@5.3.5(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.3))
       '@pandacss/dev':
         specifier: 0.45.0
         version: 0.45.0(jsdom@24.1.1)(typescript@5.5.4)
@@ -478,8 +478,8 @@ packages:
     peerDependencies:
       '@content-collections/core': 0.x
 
-  '@content-collections/core@0.6.0':
-    resolution: {integrity: sha512-zVBF5NVtgy6GCHHe32GUrhJF4yFRKS4QoZI7f6jU0u4zw3AZC6YcGvZpwlV3vbl/FC2pYlPb3aE8+l3thGt7sQ==}
+  '@content-collections/core@0.6.4':
+    resolution: {integrity: sha512-Hn76c2ZR/IhNwdSkmOlDnmCGWFAuFhLtVOXgptTrSOnjFPGCBz6caDDdG9B5yg9zvdSBO9KesztU6bsvDwJQrg==}
     peerDependencies:
       typescript: ^5.0.2
 
@@ -7506,13 +7506,13 @@ snapshots:
 
   '@cloudflare/workers-shared@0.1.0': {}
 
-  '@content-collections/cli@0.1.2(@content-collections/core@0.6.0(typescript@5.5.4))':
+  '@content-collections/cli@0.1.2(@content-collections/core@0.6.4(typescript@5.5.4))':
     dependencies:
-      '@content-collections/core': 0.6.0(typescript@5.5.4)
-      '@content-collections/integrations': 0.1.1(@content-collections/core@0.6.0(typescript@5.5.4))
+      '@content-collections/core': 0.6.4(typescript@5.5.4)
+      '@content-collections/integrations': 0.1.1(@content-collections/core@0.6.4(typescript@5.5.4))
       clerc: 0.42.2
 
-  '@content-collections/core@0.6.0(typescript@5.5.4)':
+  '@content-collections/core@0.6.4(typescript@5.5.4)':
     dependencies:
       '@parcel/watcher': 2.4.1
       camelcase: 8.0.0
@@ -7526,14 +7526,14 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/integrations@0.1.1(@content-collections/core@0.6.0(typescript@5.5.4))':
+  '@content-collections/integrations@0.1.1(@content-collections/core@0.6.4(typescript@5.5.4))':
     dependencies:
-      '@content-collections/core': 0.6.0(typescript@5.5.4)
+      '@content-collections/core': 0.6.4(typescript@5.5.4)
 
-  '@content-collections/vite@0.2.1(@content-collections/core@0.6.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@content-collections/vite@0.2.1(@content-collections/core@0.6.4(typescript@5.5.4))(vite@5.3.5(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
-      '@content-collections/core': 0.6.0(typescript@5.5.4)
-      '@content-collections/integrations': 0.1.1(@content-collections/core@0.6.0(typescript@5.5.4))
+      '@content-collections/core': 0.6.4(typescript@5.5.4)
+      '@content-collections/integrations': 0.1.1(@content-collections/core@0.6.4(typescript@5.5.4))
       vite: 5.3.5(@types/node@20.14.15)(lightningcss@1.25.1)(terser@5.31.3)
 
   '@cspotcode/source-map-support@0.8.1':
