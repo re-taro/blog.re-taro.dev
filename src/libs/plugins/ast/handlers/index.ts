@@ -30,8 +30,10 @@ export const defaultHandlers: Handlers = {
 	blockquote,
 	break: hardBreak,
 	code,
+	definition: ignore,
 	delete: strikethrough,
 	emphasis,
+	footnoteDefinition: ignore,
 	footnoteReference,
 	heading,
 	html,
@@ -47,6 +49,4 @@ export const defaultHandlers: Handlers = {
 	tableRow,
 	text,
 	thematicBreak,
-	definition: ignore,
-	footnoteDefinition: ignore,
 };

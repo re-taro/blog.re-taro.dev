@@ -3,12 +3,13 @@ import { css } from "~/styled-system/css";
 
 const ThemanticBreak: Component = () => {
 	return (
-		<hr class={css({
-			marginY: "4",
-			width: "full",
-			height: "[1px]",
-			borderTop: "[1px solid {colors.border.main}]",
-		})}
+		<hr
+			class={css({
+				borderTop: "[1px solid {colors.border.main}]",
+				height: "[1px]",
+				marginY: "4",
+				width: "full",
+			})}
 		/>
 	);
 };

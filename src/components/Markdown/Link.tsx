@@ -4,30 +4,28 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.Link;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.Link;
 }
 
 const Link: Component<Props> = (props) => {
 	return (
 		<a
-			href={props.node.url}
-			title={props.node.title ?? undefined}
-			target="_blank"
-			rel="noreferrer"
 			class={css({
-				color: "accent.secondary",
-
-				_hover: {
-					color: "accent.main",
-				},
-
 				_focus: {
 					color: "accent.main",
 				},
+				_hover: {
+					color: "accent.main",
+				},
+				color: "accent.secondary",
 			})}
+			href={props.node.url}
+			rel="noreferrer"
+			target="_blank"
+			title={props.node.title ?? undefined}
 		>
-			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
+			<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={props.node.children} />
 		</a>
 	);
 };

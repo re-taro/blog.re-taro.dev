@@ -12,8 +12,8 @@ export const strikethrough: Handler<M.Delete> = async (
 		return;
 
 	return {
-		type: "delete",
 		children,
 		position: node.position,
+		type: "delete",
 	};
 };

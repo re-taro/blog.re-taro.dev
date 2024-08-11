@@ -25,109 +25,109 @@ const Content: Component = () => {
 	return (
 		<>
 			<Title>blog.re-taro.dev</Title>
-			<Meta name="description" content="ブログ記事一覧" />
-			<OgMetaTags title="blog.re-taro.dev" description="ブログ記事一覧" imgUrl="https://og.re-taro.dev?title=Blog+posts&text=blog.re-taro.dev" type="website" twitter={{ username: "re_taro_", imgType: "summary_large_image" }} />
+			<Meta content="ブログ記事一覧" name="description" />
+			<OgMetaTags description="ブログ記事一覧" imgUrl="https://og.re-taro.dev?title=Blog+posts&text=blog.re-taro.dev" title="blog.re-taro.dev" twitter={{ imgType: "summary_large_image", username: "re_taro_" }} type="website" />
 			<Show
 				when={allBlogs()}
 			>
-				<div
-					class={css({
-						marginTop: "[6.25rem]",
-						paddingX: "6",
-					})}
-				>
-					<section
+				{blogs => (
+					<div
 						class={css({
-							maxWidth: "[calc(110ch + 1rem)]",
-							marginX: "auto",
+							marginTop: "[6.25rem]",
+							paddingX: "6",
 						})}
 					>
-						<h1
+						<section
 							class={css({
-								color: "text.main",
-								fontWeight: "bold",
-								lineHeight: "tight",
-								textAlign: "center",
-								position: "relative",
-								fontSize: "3xl",
-								marginLeft: "[1em]",
-
-								_before: {
-									position: "absolute",
-									content: "'#'",
-									marginLeft: "[-1em]",
-
-									_supportsAlternativeTextAfter: {
-										content: "'#' / ''",
-									},
-								},
+								marginX: "auto",
+								maxWidth: "[calc(110ch + 1rem)]",
 							})}
 						>
-							Archive
-						</h1>
-						<Index
-							each={allBlogs()!.filter(blog => import.meta.env.DEV || blog.published).sort((a, b) => Temporal.ZonedDateTime.compare(
-								Temporal.ZonedDateTime.from(b.publishedAt),
-								Temporal.ZonedDateTime.from(a.publishedAt),
-							))}
-						>
-							{blog => (
-								<section
-									class={css({
-										marginTop: "6",
-										paddingBottom: "2",
-										borderBottom: "[1.2px solid {colors.border.main}]",
-									})}
-								>
-									<h2
-										class={css({
-											color: "text.main",
-											fontWeight: "bold",
-											lineHeight: "tight",
-											fontSize: "2xl",
-										})}
-									>
-										<A
-											class={css({
-												_hover: {
-													color: "accent.main",
-												},
+							<h1
+								class={css({
+									_before: {
+										_supportsAlternativeTextAfter: {
+											content: "'#' / ''",
+										},
+										content: "'#'",
+										marginLeft: "[-1em]",
 
-												_focus: {
-													color: "accent.main",
-												},
+										position: "absolute",
+									},
+									color: "text.main",
+									fontSize: "3xl",
+									fontWeight: "bold",
+									lineHeight: "tight",
+									marginLeft: "[1em]",
+									position: "relative",
+									textAlign: "center",
+								})}
+							>
+								Archive
+							</h1>
+							<Index
+								each={blogs().filter(blog => import.meta.env.DEV || blog.published).sort((a, b) => Temporal.ZonedDateTime.compare(
+									Temporal.ZonedDateTime.from(b.publishedAt),
+									Temporal.ZonedDateTime.from(a.publishedAt),
+								))}
+							>
+								{blog => (
+									<section
+										class={css({
+											borderBottom: "[1.2px solid {colors.border.main}]",
+											marginTop: "6",
+											paddingBottom: "2",
+										})}
+									>
+										<h2
+											class={css({
+												color: "text.main",
+												fontSize: "2xl",
+												fontWeight: "bold",
+												lineHeight: "tight",
 											})}
-											href={`/p/${blog()._meta.directory}`}
 										>
-											{blog().title}
-										</A>
-									</h2>
-									<time
-										class={css({
-											color: "text.secondary",
-											fontSize: "m",
-											lineHeight: "normal",
-											marginY: "2",
-										})}
-										dateTime={Temporal.ZonedDateTime.from(blog().publishedAt).toString()}
-									>
-										{Temporal.PlainDate.from(blog().publishedAt).toString()}
-									</time>
-									<p
-										class={css({
-											color: "text.secondary",
-											fontSize: "m",
-											lineHeight: "normal",
-											marginY: "4",
-										})}
-									>
-										{`${blog().abstract.slice(0, 140)}...`}
-									</p>
-								</section>
-							)}
-						</Index>
-					</section>
-				</div>
+											<A
+												class={css({
+													_focus: {
+														color: "accent.main",
+													},
+													_hover: {
+														color: "accent.main",
+													},
+												})}
+												href={`/p/${blog()._meta.directory}`}
+											>
+												{blog().title}
+											</A>
+										</h2>
+										<time
+											class={css({
+												color: "text.secondary",
+												fontSize: "m",
+												lineHeight: "normal",
+												marginY: "2",
+											})}
+											dateTime={Temporal.ZonedDateTime.from(blog().publishedAt).toString()}
+										>
+											{Temporal.PlainDate.from(blog().publishedAt).toString()}
+										</time>
+										<p
+											class={css({
+												color: "text.secondary",
+												fontSize: "m",
+												lineHeight: "normal",
+												marginY: "4",
+											})}
+										>
+											{`${blog().abstract.slice(0, 140)}...`}
+										</p>
+									</section>
+								)}
+							</Index>
+						</section>
+					</div>
+				)}
 			</Show>
 		</>
 	);

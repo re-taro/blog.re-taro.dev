@@ -16,9 +16,9 @@ export const table: Handler<M.Table> = async (
     ?? Array.from({ length: node.children[0]?.children.length ?? 0 }, () => null);
 
 	return {
-		type: "table",
 		align,
 		children,
 		position: node.position,
+		type: "table",
 	};
 };

@@ -12,8 +12,8 @@ export const strong: Handler<M.Strong> = async (
 		return;
 
 	return {
-		type: "strong",
 		children,
 		position: node.position,
+		type: "strong",
 	};
 };

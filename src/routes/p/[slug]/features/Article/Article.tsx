@@ -11,23 +11,23 @@ import { css } from "~/styled-system/css";
 import Markdown from "~/components/Markdown/Markdown";
 
 interface Props {
-	article: A.Article;
 	abstract: string;
-	slug: string;
+	article: A.Article;
 	publishedAt: string;
-	updatedAt?: string | undefined;
+	slug: string;
 	tags: Array<string>;
+	updatedAt?: string | undefined;
 }
 
 const Article: Component<Props> = (props) => {
 	const jsonLd: WithContext<JsonLdArticle> = {
 		"@context": "https://schema.org",
 		"@type": "Article",
-		"headline": props.article.title.plain,
 		"abstract": props.abstract,
 		"datePublished": Temporal.ZonedDateTime.from(props.publishedAt).toString({
 			timeZoneName: "never",
 		}),
+		"headline": props.article.title.plain,
 		...(typeof props.updatedAt !== "undefined"
 			? {
 					dateModified: Temporal.ZonedDateTime.from(props.updatedAt).toString(
@@ -37,67 +37,66 @@ const Article: Component<Props> = (props) => {
 					),
 				}
 			: {}),
-		"image": createOgpImageUrl(props.article.title.plain, props.tags)
-			.href,
 		"author": {
 			"@type": "Person",
 			"name": "Rintaro Itokawa",
 			"url": "https://re-taro.dev",
 		},
+		"image": createOgpImageUrl(props.article.title.plain, props.tags)
+			.href,
 	};
 
 	return (
 		<article>
 			<Header
-				title={props.article.title}
-				publishedAt={props.publishedAt}
-				updatedAt={props.updatedAt}
-				tags={props.tags}
 				css={css.raw({
-					maxWidth: "[calc(80ch + 30ch + 1rem)]",
 					marginX: "auto",
+					maxWidth: "[calc(80ch + 30ch + 1rem)]",
 				})}
+				publishedAt={props.publishedAt}
+				tags={props.tags}
+				title={props.article.title}
+				updatedAt={props.updatedAt}
 			/>
-			<div class={css({
-				display: "flex",
-				flexDirection: "row-reverse",
-				columnGap: "4",
-				maxWidth: "[calc(80ch + 30ch + 1rem)]",
-				marginX: "auto",
-			})}
+			<div
+				class={css({
+					columnGap: "4",
+					display: "flex",
+					flexDirection: "row-reverse",
+					marginX: "auto",
+					maxWidth: "[calc(80ch + 30ch + 1rem)]",
+				})}
 			>
 				<Toc
-					toc={props.article.toc}
 					css={css.raw({
-						"width": "[30ch]",
-
 						"@media screen and (max-width: 130ch)": {
 							display: "none",
 						},
+						"width": "[30ch]",
 					})}
+					toc={props.article.toc}
 				/>
-				<div class={css({
-					"width": "[calc(100% - 30ch - 1rem)]",
-					"color": "text.main",
-					"fontSize": "m",
-					"fontWeight": "normal",
-					"lineHeight": "normal",
-
-					"& > .markdown_section:first-child > .markdown_heading": {
-						marginTop: "0",
-					},
-
-					"@media screen and (max-width: 130ch)": {
-						width: "full",
-					},
-				})}
+				<div
+					class={css({
+						"& > .markdown_section:first-child > .markdown_heading": {
+							marginTop: "0",
+						},
+						"@media screen and (max-width: 130ch)": {
+							width: "full",
+						},
+						"color": "text.main",
+						"fontSize": "m",
+						"fontWeight": "normal",
+						"lineHeight": "normal",
+						"width": "[calc(100% - 30ch - 1rem)]",
+					})}
 				>
-					<Markdown nodes={props.article.children} footnoteDefs={props.article.footnotes} />
+					<Markdown footnoteDefs={props.article.footnotes} nodes={props.article.children} />
 					<Footnote footnotes={props.article.footnotes} />
 					<Footer plainTitle={props.article.title.plain} slug={props.slug} />
 				</div>
 			</div>
-			<script type="application/ld+json" innerHTML={JSON.stringify(jsonLd)} />
+			<script innerText={JSON.stringify(jsonLd)} type="application/ld+json" />
 		</article>
 	);
 };

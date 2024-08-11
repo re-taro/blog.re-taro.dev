@@ -8,29 +8,26 @@ interface Props {
 
 const InlineCode: Component<Props> = (props) => {
 	return (
-		<code class={css({
-			paddingY: "[.1rem]",
-			paddingX: "[.4rem]",
-			fontFamily: "mono",
-
-			_before: {
-				content: "'`'",
-			},
-
-			_after: {
-				content: "'`'",
-			},
-
-			_supportsAlternativeTextAfter: {
-				_before: {
-					content: "'`' / ''",
-				},
-
+		<code
+			class={css({
 				_after: {
-					content: "'`' / ''",
+					content: "'`'",
 				},
-			},
-		})}
+				_before: {
+					content: "'`'",
+				},
+				_supportsAlternativeTextAfter: {
+					_after: {
+						content: "'`' / ''",
+					},
+					_before: {
+						content: "'`' / ''",
+					},
+				},
+				fontFamily: "mono",
+				paddingX: "[.4rem]",
+				paddingY: "[.1rem]",
+			})}
 		>
 			{props.node.value}
 		</code>

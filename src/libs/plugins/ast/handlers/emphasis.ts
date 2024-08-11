@@ -12,8 +12,8 @@ export const emphasis: Handler<M.Emphasis> = async (
 		return;
 
 	return {
-		type: "emphasis",
 		children,
 		position: node.position,
+		type: "emphasis",
 	};
 };

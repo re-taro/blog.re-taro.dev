@@ -4,14 +4,14 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.Paragraph;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.Paragraph;
 }
 
 const Paragraph: Component<Props> = (props) => {
 	return (
 		<p class={css({ lineHeight: "normal" })}>
-			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
+			<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={props.node.children} />
 		</p>
 	);
 };

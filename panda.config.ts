@@ -6,29 +6,30 @@ import { tokens } from "~/styles/tokens";
 import { globalCss } from "~/styles/globalCss";
 
 export default defineConfig({
-	jsxFramework: "qwik",
-	include: ["./src/**/*.tsx"],
-	exclude: [],
-	outdir: "src/styled-system",
-	minify: true,
-	hash: true,
-	clean: true,
-	lightningcss: true,
 	browserslist: ["defaults and > 0.3%"],
-	strictTokens: true,
-	strictPropertyValues: true,
-	preflight: true,
+	clean: true,
+	conditions: {
+		extend: {
+			supportsAlternativeTextAfter: "@supports (content: \"a\" / \"b\")",
+		},
+	},
+	exclude: [],
+	globalCss,
+	hash: true,
 	hooks: {
 		"cssgen:done": ({ artifact, content }) => {
 			if (artifact === "styles.css")
 				return removeUnusedCssVars(removeUnusedKeyframes(content));
 		},
 	},
-	conditions: {
-		extend: {
-			supportsAlternativeTextAfter: "@supports (content: \"a\" / \"b\")",
-		},
-	},
+	include: ["./src/**/*.tsx"],
+	jsxFramework: "qwik",
+	lightningcss: true,
+	minify: true,
+	outdir: "src/styled-system",
+	preflight: true,
+	strictPropertyValues: true,
+	strictTokens: true,
 	theme: {
 		extend: {
 			breakpoints: {
@@ -37,5 +38,4 @@ export default defineConfig({
 			tokens,
 		},
 	},
-	globalCss,
 });

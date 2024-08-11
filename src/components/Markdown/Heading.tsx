@@ -1,12 +1,13 @@
 import type { Component } from "solid-js";
+import { Match, Switch, createMemo } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import MarkdownChildren from "./Markdown";
 import type * as A from "~/libs/plugins/ast/ast";
 import { cva, cx } from "~/styled-system/css";
 
 interface Props {
-	node: A.Heading;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.Heading;
 }
 
 const heading = cva({
@@ -18,64 +19,56 @@ const heading = cva({
 	variants: {
 		level: {
 			1: {
-				position: "relative",
-				fontSize: "2xl",
-				marginLeft: "[1em]",
-
 				_before: {
-					position: "absolute",
-					content: "'#'",
-					marginLeft: "[-1em]",
-
 					_supportsAlternativeTextAfter: {
 						content: "'#' / ''",
 					},
+					content: "'#'",
+					marginLeft: "[-1em]",
+					position: "absolute",
 				},
+				fontSize: "2xl",
+				marginLeft: "[1em]",
+				position: "relative",
 			},
 			2: {
-				position: "relative",
-				fontSize: "2xl",
-				marginLeft: "[1.8em]",
-
 				_before: {
-					position: "absolute",
-					content: "'##'",
-					marginLeft: "[-1.8em]",
-
 					_supportsAlternativeTextAfter: {
 						content: "'##' / ''",
 					},
+					content: "'##'",
+					marginLeft: "[-1.8em]",
+					position: "absolute",
 				},
+				fontSize: "2xl",
+				marginLeft: "[1.8em]",
+				position: "relative",
 			},
 			3: {
-				position: "relative",
-				fontSize: "xl",
-				marginLeft: "[2.4em]",
-
 				_before: {
-					position: "absolute",
-					content: "'###'",
-					marginLeft: "[-2.4em]",
-
 					_supportsAlternativeTextAfter: {
 						content: "'###' / ''",
 					},
+					content: "'###'",
+					marginLeft: "[-2.4em]",
+					position: "absolute",
 				},
+				fontSize: "xl",
+				marginLeft: "[2.4em]",
+				position: "relative",
 			},
 			4: {
-				position: "relative",
-				fontSize: "ml",
-				marginLeft: "[3em]",
-
 				_before: {
-					position: "absolute",
-					content: "'####'",
-					marginLeft: "[-3em]",
-
 					_supportsAlternativeTextAfter: {
 						content: "'####' / ''",
 					},
+					content: "'####'",
+					marginLeft: "[-3em]",
+					position: "absolute",
 				},
+				fontSize: "ml",
+				marginLeft: "[3em]",
+				position: "relative",
 			},
 			5: {
 				fontSize: "sl",
@@ -89,16 +82,25 @@ const heading = cva({
 
 const Heading: Component<Props> = (props) => {
 	const tag = `h${props.node.level}` as const;
+	const memoizedH1 = createMemo(() => props.node.level === 1 ? props.node : undefined);
+	const memoizedOher = createMemo(() => props.node.level > 1 ? props.node : undefined);
 
 	return (
-		<Dynamic component={tag} id={props.node.id} title={props.node.id} class={cx(heading({ level: props.node.level }), "markdown_heading")}>
-			{props.node.level > 1
-				? (
-					<a href={`#${props.node.id}`} aria-hidden="true" tabIndex={-1}>
-						<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
-					</a>
-					)
-				: <MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />}
+		<Dynamic class={cx(heading({ level: props.node.level }), "markdown_heading")} component={tag} id={props.node.id} title={props.node.id}>
+			<Switch>
+				<Match when={memoizedH1()}>
+					{node => (
+						<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={node().children} />
+					)}
+				</Match>
+				<Match when={memoizedOher()}>
+					{node => (
+						<a aria-hidden="true" href={`#${props.node.id}`} tabIndex={-1}>
+							<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={node().children} />
+						</a>
+					)}
+				</Match>
+			</Switch>
 		</Dynamic>
 	);
 };

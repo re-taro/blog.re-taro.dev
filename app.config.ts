@@ -6,11 +6,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
 	server: {
-		preset: "cloudflare-pages",
 		prerender: {
 			autoSubfolderIndex: false,
 			crawlLinks: true,
 		},
+		preset: "cloudflare-pages",
 	},
 	vite: {
 		plugins: [

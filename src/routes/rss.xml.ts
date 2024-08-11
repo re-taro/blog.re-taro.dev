@@ -7,18 +7,18 @@ import { GET as SolidGET } from "@solidjs/start";
 function blog2xml(blog: Blog) {
 	return {
 		item: {
-			title: blog.title,
-			link: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
+			description: blog.description,
 			guid: {
+				_: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 				$: {
 					isPermaLink: true,
 				},
-				_: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 			},
-			description: blog.description,
+			link: `https://blog.re-taro.dev/p/${blog._meta.directory}`,
 			pubDate: new Date(Temporal.ZonedDateTime.from(blog.publishedAt).toString({
 				timeZoneName: "never",
 			})).toUTCString(),
+			title: blog.title,
 		},
 	};
 }
@@ -62,5 +62,5 @@ export const GET = SolidGET(() => {
 	const builder = new Builder();
 	const xml = builder.buildObject(generateXmlAst());
 
-	return new Response(xml, { status: 200, headers: { "Content-Type": "application/xml" } });
+	return new Response(xml, { headers: { "Content-Type": "application/xml" }, status: 200 });
 });

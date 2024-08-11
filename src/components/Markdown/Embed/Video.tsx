@@ -9,7 +9,8 @@ interface Props {
 
 const Video: Component<Props> = (props) => {
 	return (
-		<div class={css({ width: "full" })} innerHTML={sanitize(props.node.html)} data-oembed />
+		// eslint-disable-next-line solid/no-innerhtml
+		<div data-oembed class={css({ width: "full" })} innerHTML={sanitize(props.node.html)} />
 	);
 };
 

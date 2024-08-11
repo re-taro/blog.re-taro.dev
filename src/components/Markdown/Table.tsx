@@ -5,8 +5,8 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css } from "~/styled-system/css";
 
 interface Props {
-	node: A.Table;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.Table;
 }
 
 const Table: Component<Props> = (props) => {
@@ -15,19 +15,18 @@ const Table: Component<Props> = (props) => {
 	return (
 		<table
 			class={css({
-				marginInlineStart: "0",
-				marginX: "0",
-				marginY: "4",
-				borderSpacingY: "0",
-				borderSpacingX: "[.4rem]",
-				fontFamily: "mono",
-				textAlign: "left",
-				whiteSpace: "nowrap",
 				borderCollapse: "collapse",
-
+				borderSpacingX: "[.4rem]",
+				borderSpacingY: "0",
+				fontFamily: "mono",
 				lg: {
 					overflowX: "scroll",
 				},
+				marginInlineStart: "0",
+				marginX: "0",
+				marginY: "4",
+				textAlign: "left",
+				whiteSpace: "nowrap",
 			})}
 		>
 			<thead
@@ -42,12 +41,12 @@ const Table: Component<Props> = (props) => {
 					},
 				})}
 			>
-				<TableRow node={headerRow} footnoteDefs={props.footnoteDefs} align={props.node.align} head />
+				<TableRow head align={props.node.align} footnoteDefs={props.footnoteDefs} node={headerRow} />
 			</thead>
 			<tbody>
 				<Index each={bodyRows}>
 					{row => (
-						<TableRow node={row()} footnoteDefs={props.footnoteDefs} align={props.node.align} />
+						<TableRow align={props.node.align} footnoteDefs={props.footnoteDefs} node={row()} />
 					)}
 				</Index>
 			</tbody>

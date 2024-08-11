@@ -12,8 +12,8 @@ export const listItem: Handler<M.ListItem> = async (
 		return;
 
 	return {
-		type: "listItem",
 		children,
 		position: node.position,
+		type: "listItem",
 	};
 };

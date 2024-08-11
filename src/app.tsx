@@ -16,11 +16,11 @@ const Layout: Component<Props> = (props) => {
 	return (
 		<div class={css({
 			display: "grid",
-			gridTemplateRows: "[auto 1fr auto]",
 			gridTemplateAreas: `
         "header"
         "main"
         "footer"`,
+			gridTemplateRows: "[auto 1fr auto]",
 			minHeight: "[100lvh]",
 		})}
 		>

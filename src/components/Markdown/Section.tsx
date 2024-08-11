@@ -4,8 +4,8 @@ import type * as A from "~/libs/plugins/ast/ast";
 import { css, cx } from "~/styled-system/css";
 
 interface Props {
-	node: A.Section;
 	footnoteDefs: Array<A.FootnoteDefinition>;
+	node: A.Section;
 }
 
 const Section: Component<Props> = (props) => {
@@ -15,17 +15,16 @@ const Section: Component<Props> = (props) => {
 				"& > * + *": {
 					marginTop: "6",
 				},
-
 				"& > .markdown_heading": {
-					paddingBottom: "1",
-					marginTop: "8",
 					fontWeight: "bold",
+					marginTop: "8",
+					paddingBottom: "1",
 					scrollMarginTop: "[6.25rem]",
 				},
 			}), "markdown_section")}
 			aria-labelledby={props.node.children[0].id}
 		>
-			<MarkdownChildren nodes={props.node.children} footnoteDefs={props.footnoteDefs} />
+			<MarkdownChildren footnoteDefs={props.footnoteDefs} nodes={props.node.children} />
 		</section>
 	);
 };

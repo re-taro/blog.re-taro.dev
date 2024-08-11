@@ -30,25 +30,31 @@ const Content: Component<{ slug: string }> = (props) => {
 	const blog = createAsync(() => loadPost(props.slug));
 
 	return (
-		<Show when={blog()} fallback={null}>
-			<Title>{blog()!.title}</Title>
-			<Meta name="description" content={blog()!.description} />
-			<Meta name="article:published_time" content={Temporal.ZonedDateTime.from(blog()!.publishedAt).toString({ timeZoneName: "never" })} />
-			{blog()!.updatedAt && (
-				<Meta name="article:modified_time" content={Temporal.ZonedDateTime.from(blog()!.updatedAt as string).toString({ timeZoneName: "never" })} />
+		<Show when={blog()}>
+			{slug => (
+				<>
+					<Title>{slug().title}</Title>
+					<Meta content={slug().description} name="description" />
+					<Meta content={Temporal.ZonedDateTime.from(slug().publishedAt).toString({ timeZoneName: "never" })} name="article:published_time" />
+					<Show when={slug().updatedAt}>
+						{updatedAt => (
+							<Meta content={Temporal.ZonedDateTime.from(updatedAt()).toString({ timeZoneName: "never" })} name="article:modified_time" />
+						)}
+					</Show>
+					<OgMetaTags description={slug().description} imgUrl={createOgpImageUrl(slug().title, slug().tags).href} title={slug().title} twitter={{ imgType: "summary_large_image", username: "re_taro_" }} type="article" />
+					<ArticleTags tags={slug().tags} />
+					<div
+						class={css({
+							marginTop: "[5.25rem]",
+							paddingX: "6",
+							paddingY: "4",
+							width: "[100dvw]",
+						})}
+					>
+						<Article abstract={slug().abstract} article={slug().mdast as A.Article} publishedAt={slug().publishedAt} slug={slug()._meta.directory} tags={slug().tags} updatedAt={slug().updatedAt} />
+					</div>
+				</>
 			)}
-			<OgMetaTags title={blog()!.title} description={blog()!.description} imgUrl={createOgpImageUrl(blog()!.title, blog()!.tags).href} type="article" twitter={{ username: "re_taro_", imgType: "summary_large_image" }} />
-			<ArticleTags tags={blog()!.tags} />
-			<div
-				class={css({
-					marginTop: "[5.25rem]",
-					paddingX: "6",
-					paddingY: "4",
-					width: "[100dvw]",
-				})}
-			>
-				<Article article={blog()!.mdast as A.Article} abstract={blog()!.abstract} slug={blog()!._meta.directory} publishedAt={blog()!.publishedAt} updatedAt={blog()!.updatedAt} tags={blog()!.tags} />
-			</div>
 		</Show>
 	);
 };

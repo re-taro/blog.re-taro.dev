@@ -22,10 +22,10 @@ export const code: Handler<M.Code> = async (node): Promise<A.Code> => {
 		.exhaustive();
 
 	return {
-		type: "code",
-		lang,
 		filename,
-		value: node.value,
+		lang,
 		position: node.position,
+		type: "code",
+		value: node.value,
 	};
 };

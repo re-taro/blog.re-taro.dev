@@ -14,11 +14,11 @@ export const astArticle: Plugin<Array<never>, A.Root, A.Article> = function () {
 		const [{ children: toc }] = rawToc;
 
 		const article: A.Article = {
-			type: "article",
-			title,
-			footnotes: tree.footnotes,
-			toc,
 			children,
+			footnotes: tree.footnotes,
+			title,
+			toc,
+			type: "article",
 		};
 
 		return article;

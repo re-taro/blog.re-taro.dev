@@ -6,6 +6,7 @@ interface Props {
 }
 
 const HTML: Component<Props> = (props) => {
+	// eslint-disable-next-line solid/no-innerhtml
 	return <span innerHTML={props.node.value} />;
 };
 

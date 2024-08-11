@@ -16,10 +16,10 @@ export const astToc: Plugin<Array<never>, A.Root> = function () {
 function process(tree: A.Parent): Array<A.Toc> {
 	return tree.children.filter(isSection).map(
 		(section): A.Toc => ({
-			type: "toc",
-			plain: section.children[0].plain,
-			id: section.children[0].id,
 			children: process(section),
+			id: section.children[0].id,
+			plain: section.children[0].plain,
+			type: "toc",
 		}),
 	);
 }

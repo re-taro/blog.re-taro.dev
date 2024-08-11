@@ -5,7 +5,7 @@ export const globalCss = defineGlobalStyles({
 		backgroundColor: "bg.main",
 
 		fontFamily: "Inter, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", Meiryo, sans-serif",
-		WebkitFontSmoothing: "antialiased",
 		MozOsxFontSmoothing: "grayscale",
+		WebkitFontSmoothing: "antialiased",
 	},
 });

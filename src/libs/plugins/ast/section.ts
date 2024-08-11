@@ -27,11 +27,11 @@ function transform(tree: A.Parent, level: number): void {
 		];
 		const firstChild = children.at(0);
 		const lastChild = children.at(-1);
-		const position: Position | undefined = firstChild?.position && lastChild?.position ? { start: firstChild.position.start, end: lastChild.position.end } : undefined;
+		const position: Position | undefined = firstChild?.position && lastChild?.position ? { end: lastChild.position.end, start: firstChild.position.start } : undefined;
 		const section: A.Section = {
-			type: "section",
 			children,
 			position,
+			type: "section",
 		};
 		tree.children.splice(startIdx, children.length, section);
 
