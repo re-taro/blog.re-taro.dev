@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.1.0
+
+### Minor Changes
+
+- [#282](https://github.com/re-taro/blog.re-taro.dev/pull/282) [`04aaa39`](https://github.com/re-taro/blog.re-taro.dev/commit/04aaa391c96e42e2d876df63d2bf5835a327e3ca) Thanks [@renovate](https://github.com/apps/renovate)! - More solidy
+
 ## 2.0.0
 
 ### Major Changes
