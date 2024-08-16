@@ -81,7 +81,7 @@
     "retext-equality": "7.1.0",
     "retext-stringify": "4.0.0",
     "schema-dts": "1.1.2",
-    "sharp": "0.33.4",
+    "sharp": "0.33.5",
     "sirv-cli": "2.0.2",
     "textlint": "14.0.5",
     "textlint-filter-rule-comments": "1.2.2",
