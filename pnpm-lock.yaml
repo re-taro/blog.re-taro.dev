@@ -65,7 +65,7 @@ importers:
         version: 0.1.1
       '@re-taro/eslint-config':
         specifier: 5.2.0
-        version: 5.2.0(eslint-plugin-format@0.1.2(eslint@9.9.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.1(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)(vitest@2.0.5(@types/node@20.15.0)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))
+        version: 5.2.0(eslint-plugin-format@0.1.2(eslint@9.9.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.2(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)(vitest@2.0.5(@types/node@20.15.0)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))
       '@shikijs/transformers':
         specifier: 1.13.0
         version: 1.13.0
@@ -103,8 +103,8 @@ importers:
         specifier: 0.1.2
         version: 0.1.2(eslint@9.9.0(jiti@1.21.6))
       eslint-plugin-solid:
-        specifier: 0.14.1
-        version: 0.14.1(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
+        specifier: 0.14.2
+        version: 0.14.2(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
       github-slugger:
         specifier: 2.0.0
         version: 2.0.0
@@ -3196,8 +3196,8 @@ packages:
     peerDependencies:
       eslint: '>=8.44.0'
 
-  eslint-plugin-solid@0.14.1:
-    resolution: {integrity: sha512-2bR21xTGhXufK5qqib0h8fQkoZbVm0Xmsgioj+D6ynLXvVq20Atf5F/qyu2WUVNukKJkpd6WsYW0JRWFo2yZvQ==}
+  eslint-plugin-solid@0.14.2:
+    resolution: {integrity: sha512-uyX+/ONsM0IoVBV9EBv7uAhhFXqTfAGd3lxUCNfC+XmJazme1f4UAPhPNbqSfqnzaCbXwB1rsD/9ZpAgO6mzew==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -8350,7 +8350,7 @@ snapshots:
 
   '@qnighy/dedent@0.1.1': {}
 
-  '@re-taro/eslint-config@5.2.0(eslint-plugin-format@0.1.2(eslint@9.9.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.1(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)(vitest@2.0.5(@types/node@20.15.0)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@re-taro/eslint-config@5.2.0(eslint-plugin-format@0.1.2(eslint@9.9.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.2(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)(vitest@2.0.5(@types/node@20.15.0)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
       '@antfu/install-pkg': 0.3.3
       '@clack/prompts': 0.7.0
@@ -8388,7 +8388,7 @@ snapshots:
       yaml-eslint-parser: 1.2.3
     optionalDependencies:
       eslint-plugin-format: 0.1.2(eslint@9.9.0(jiti@1.21.6))
-      eslint-plugin-solid: 0.14.1(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
+      eslint-plugin-solid: 0.14.2(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
     transitivePeerDependencies:
       - supports-color
       - svelte
@@ -10600,9 +10600,9 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-solid@0.14.1(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4):
+  eslint-plugin-solid@0.14.2(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4):
     dependencies:
-      '@typescript-eslint/utils': 7.18.0(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
+      '@typescript-eslint/utils': 8.0.1(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4)
       eslint: 9.9.0(jiti@1.21.6)
       estraverse: 5.3.0
       is-html: 2.0.0
