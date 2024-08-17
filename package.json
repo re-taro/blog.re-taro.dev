@@ -65,7 +65,7 @@
     "concurrently": "8.2.2",
     "eslint": "9.9.0",
     "eslint-plugin-format": "0.1.2",
-    "eslint-plugin-solid": "0.14.1",
+    "eslint-plugin-solid": "0.14.2",
     "github-slugger": "2.0.0",
     "hast-util-from-html": "2.0.1",
     "hast-util-select": "6.0.2",
