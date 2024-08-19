@@ -42,7 +42,7 @@
     "xml2js": "0.6.2"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.9.1",
+    "@axe-core/playwright": "4.10.0",
     "@builder.io/partytown": "0.10.2",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.7",
