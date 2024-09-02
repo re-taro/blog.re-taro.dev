@@ -73,7 +73,7 @@
     "mdast-util-from-markdown": "2.0.1",
     "playwright": "1.46.1",
     "plop": "4.0.1",
-    "postcss": "8.4.43",
+    "postcss": "8.4.44",
     "remark-gfm": "4.0.0",
     "remark-parse": "11.0.0",
     "remark-retext": "6.0.0",
