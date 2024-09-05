@@ -52,8 +52,8 @@ importers:
         specifier: 0.7.0
         version: 0.7.0(typescript@5.5.4)
       '@content-collections/vite':
-        specifier: 0.2.1
-        version: 0.2.1(@content-collections/core@0.7.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
+        specifier: 0.2.2
+        version: 0.2.2(@content-collections/core@0.7.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
       '@pandacss/dev':
         specifier: 0.45.2
         version: 0.45.2(jsdom@24.1.1)(typescript@5.5.4)
@@ -484,18 +484,13 @@ packages:
     peerDependencies:
       typescript: ^5.0.2
 
-  '@content-collections/integrations@0.1.1':
-    resolution: {integrity: sha512-doJ/PZ79+bhmj2dne6qvAkH4XYMm3NjjP54jq6oDE7Gk6pGUrHW5+wXkc6WHYg/8i1iJZAl0iNShaJn4r23g2g==}
-    peerDependencies:
-      '@content-collections/core': 0.x
-
   '@content-collections/integrations@0.2.0':
     resolution: {integrity: sha512-JANx5ZPoHesT0kyr5mAajTIriMJDuF5vlCry4jLGsHnrcsna6jc4DQ0ZtEaIJbSPopU+huC2+sGLmjgsohN1Vg==}
     peerDependencies:
       '@content-collections/core': 0.x
 
-  '@content-collections/vite@0.2.1':
-    resolution: {integrity: sha512-Wbl4c8MOryWGp/D9AhrM7IRrca+RvjUj9ABTBM1tjoRc/1+UCkd8D0qNis3XSSGnd2F8cEhvW0i32HxhSxjGJw==}
+  '@content-collections/vite@0.2.2':
+    resolution: {integrity: sha512-cwAsCXVoxe8FfXHa2cfh+t2SKTnSlQ/pju0FVeRMXIW3JVG57MQGV48b4AuDqon3P/6f8LLvFPtGDagz4vQt/A==}
     peerDependencies:
       '@content-collections/core': ^0.x
       vite: ^5
@@ -7519,18 +7514,14 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/integrations@0.1.1(@content-collections/core@0.7.0(typescript@5.5.4))':
-    dependencies:
-      '@content-collections/core': 0.7.0(typescript@5.5.4)
-
   '@content-collections/integrations@0.2.0(@content-collections/core@0.7.0(typescript@5.5.4))':
     dependencies:
       '@content-collections/core': 0.7.0(typescript@5.5.4)
 
-  '@content-collections/vite@0.2.1(@content-collections/core@0.7.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@content-collections/vite@0.2.2(@content-collections/core@0.7.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
       '@content-collections/core': 0.7.0(typescript@5.5.4)
-      '@content-collections/integrations': 0.1.1(@content-collections/core@0.7.0(typescript@5.5.4))
+      '@content-collections/integrations': 0.2.0(@content-collections/core@0.7.0(typescript@5.5.4))
       vite: 5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3)
 
   '@cspotcode/source-map-support@0.8.1':
