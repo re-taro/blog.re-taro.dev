@@ -47,13 +47,13 @@ importers:
         version: 2.27.8
       '@content-collections/cli':
         specifier: 0.1.2
-        version: 0.1.2(@content-collections/core@0.6.4(typescript@5.5.4))
+        version: 0.1.2(@content-collections/core@0.7.0(typescript@5.5.4))
       '@content-collections/core':
-        specifier: 0.6.4
-        version: 0.6.4(typescript@5.5.4)
+        specifier: 0.7.0
+        version: 0.7.0(typescript@5.5.4)
       '@content-collections/vite':
         specifier: 0.2.1
-        version: 0.2.1(@content-collections/core@0.6.4(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
+        version: 0.2.1(@content-collections/core@0.7.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
       '@pandacss/dev':
         specifier: 0.45.2
         version: 0.45.2(jsdom@24.1.1)(typescript@5.5.4)
@@ -479,8 +479,8 @@ packages:
     peerDependencies:
       '@content-collections/core': 0.x
 
-  '@content-collections/core@0.6.4':
-    resolution: {integrity: sha512-Hn76c2ZR/IhNwdSkmOlDnmCGWFAuFhLtVOXgptTrSOnjFPGCBz6caDDdG9B5yg9zvdSBO9KesztU6bsvDwJQrg==}
+  '@content-collections/core@0.7.0':
+    resolution: {integrity: sha512-S1YQ5WSNiQtmf8tPhRAzqEmst4fPCMGE5iCt04gBkuAJM3EZdIRbV06eQsyJAiRNk2/L7Bqz3VIKdYSgdk84zg==}
     peerDependencies:
       typescript: ^5.0.2
 
@@ -2340,6 +2340,12 @@ packages:
     resolution: {integrity: sha512-PKA4BeSvBpQKQ8iPOGCSiell+N8P+Tf1DlwqmYhpe2gAhKPHn8EYOxVT+ShuGmhg8lN8XiSlS80yiExKXrURlw==}
     engines: {node: '>=12'}
 
+  bundle-require@5.0.0:
+    resolution: {integrity: sha512-GuziW3fSSmopcx4KRymQEJVbZUfqlCqcq7dvs6TYwKRZiegK/2buMxQTPs6MGlNv50wms1699qYO54R8XfRX4w==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      esbuild: '>=0.18'
+
   c12@1.11.1:
     resolution: {integrity: sha512-KDU0TvSvVdaYcQKQ6iPHATGz/7p/KiVjPg4vQrB6Jg/wX9R0yl5RZxWm9IoZqaIHD2+6PZd81+KMGwRr/lRIUg==}
     peerDependencies:
@@ -3402,6 +3408,14 @@ packages:
   fault@1.0.4:
     resolution: {integrity: sha512-CJ0HCB5tL5fYTEA7ToAq5+kTwd++Borf1/bifxd9iT70QcXr4MRrO3Llf8Ifs70q+SJcGHFtnIE/Nw6giCtECA==}
 
+  fdir@6.3.0:
+    resolution: {integrity: sha512-QOnuT+BOtivR77wYvCWHfGt9s4Pz1VIMbD463vegT5MLqNXy8rYFT/lPVEqf/bhYeT6qmqrNHhsX+rWwe3rOCQ==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+
   figures@5.0.0:
     resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}
     engines: {node: '>=14'}
@@ -4417,6 +4431,10 @@ packages:
     resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}
     engines: {node: '>=4'}
 
+  load-tsconfig@0.2.5:
+    resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
   local-access@1.1.0:
     resolution: {integrity: sha512-XfegD5pyTAfb+GY6chk283Ox5z8WexG56OvM06RWLpAc/UHozO8X6xAxEkIitZOtsSMM1Yr3DkHgW5W+onLhCw==}
     engines: {node: '>=6'}
@@ -5098,6 +5116,10 @@ packages:
   p-limit@3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
     engines: {node: '>=10'}
+
+  p-limit@6.1.0:
+    resolution: {integrity: sha512-H0jc0q1vOzlEk0TqAKXKZxdl7kX3OFUzCnNVUnq5Pc3DGo0kpeaMuPqxQn235HibwBEb0/pm9dgKTjXy66fBkg==}
+    engines: {node: '>=18'}
 
   p-locate@2.0.0:
     resolution: {integrity: sha512-nQja7m7gSKuewoVRen45CtVfODR3crN3goVQ0DDZ9N3yHxgpkuBhZqsaiotSQRrADUrne346peY7kT3TSACykg==}
@@ -6303,6 +6325,10 @@ packages:
     resolution: {integrity: sha512-7cR8rLy2QhYHpsBDBVYnnWXm8uRTr38RoZakFSW7Bs7PzfMPNZthuMLkwqZv7MTu8lhQ91cOFYS5a7iFj2oR3w==}
     engines: {node: '>=4'}
 
+  tinyglobby@0.2.5:
+    resolution: {integrity: sha512-Dlqgt6h0QkoHttG53/WGADNh9QhcjCAIZMTERAVhdpmIBEejSuLI9ZmGKWzB7tweBjlk30+s/ofi4SLmBeTYhw==}
+    engines: {node: '>=12.0.0'}
+
   tinypool@1.0.0:
     resolution: {integrity: sha512-KIKExllK7jp3uvrNtvRBYBWBOAXSX8ZvoaD8T+7KB/QHIuoJW3Pmr60zucywjAlMb5TeXUkcs/MWeWLu0qvuAQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -7038,6 +7064,10 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  yocto-queue@1.1.1:
+    resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
+    engines: {node: '>=12.20'}
+
   yoctocolors-cjs@2.1.2:
     resolution: {integrity: sha512-cYVsTjKl8b+FrnidjibDWskAv7UKOfcwaVZdp/it9n1s9fU3IkgDbhdIRKCW4JDsAlECJY0ytoVPT3sK6kideA==}
     engines: {node: '>=18'}
@@ -7462,34 +7492,36 @@ snapshots:
 
   '@cloudflare/workers-shared@0.4.1': {}
 
-  '@content-collections/cli@0.1.2(@content-collections/core@0.6.4(typescript@5.5.4))':
+  '@content-collections/cli@0.1.2(@content-collections/core@0.7.0(typescript@5.5.4))':
     dependencies:
-      '@content-collections/core': 0.6.4(typescript@5.5.4)
-      '@content-collections/integrations': 0.1.1(@content-collections/core@0.6.4(typescript@5.5.4))
+      '@content-collections/core': 0.7.0(typescript@5.5.4)
+      '@content-collections/integrations': 0.1.1(@content-collections/core@0.7.0(typescript@5.5.4))
       clerc: 0.42.2
 
-  '@content-collections/core@0.6.4(typescript@5.5.4)':
+  '@content-collections/core@0.7.0(typescript@5.5.4)':
     dependencies:
       '@parcel/watcher': 2.4.1
+      bundle-require: 5.0.0(esbuild@0.21.5)
       camelcase: 8.0.0
       esbuild: 0.21.5
-      fast-glob: 3.3.2
       gray-matter: 4.0.3
-      micromatch: 4.0.7
+      p-limit: 6.1.0
+      picomatch: 4.0.2
       pluralize: 8.0.0
       serialize-javascript: 6.0.2
+      tinyglobby: 0.2.5
       typescript: 5.5.4
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/integrations@0.1.1(@content-collections/core@0.6.4(typescript@5.5.4))':
+  '@content-collections/integrations@0.1.1(@content-collections/core@0.7.0(typescript@5.5.4))':
     dependencies:
-      '@content-collections/core': 0.6.4(typescript@5.5.4)
+      '@content-collections/core': 0.7.0(typescript@5.5.4)
 
-  '@content-collections/vite@0.2.1(@content-collections/core@0.6.4(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@content-collections/vite@0.2.1(@content-collections/core@0.7.0(typescript@5.5.4))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
-      '@content-collections/core': 0.6.4(typescript@5.5.4)
-      '@content-collections/integrations': 0.1.1(@content-collections/core@0.6.4(typescript@5.5.4))
+      '@content-collections/core': 0.7.0(typescript@5.5.4)
+      '@content-collections/integrations': 0.1.1(@content-collections/core@0.7.0(typescript@5.5.4))
       vite: 5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3)
 
   '@cspotcode/source-map-support@0.8.1':
@@ -9564,6 +9596,11 @@ snapshots:
     dependencies:
       run-applescript: 5.0.0
 
+  bundle-require@5.0.0(esbuild@0.21.5):
+    dependencies:
+      esbuild: 0.21.5
+      load-tsconfig: 0.2.5
+
   c12@1.11.1:
     dependencies:
       chokidar: 3.6.0
@@ -10840,6 +10877,10 @@ snapshots:
     dependencies:
       format: 0.2.2
 
+  fdir@6.3.0(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
+
   figures@5.0.0:
     dependencies:
       escape-string-regexp: 5.0.0
@@ -11946,6 +11987,8 @@ snapshots:
       pify: 3.0.0
       strip-bom: 3.0.0
 
+  load-tsconfig@0.2.5: {}
+
   local-access@1.1.0: {}
 
   local-pkg@0.5.0:
@@ -12978,6 +13021,10 @@ snapshots:
   p-limit@3.1.0:
     dependencies:
       yocto-queue: 0.1.0
+
+  p-limit@6.1.0:
+    dependencies:
+      yocto-queue: 1.1.1
 
   p-locate@2.0.0:
     dependencies:
@@ -14448,6 +14495,11 @@ snapshots:
 
   tinydate@1.3.0: {}
 
+  tinyglobby@0.2.5:
+    dependencies:
+      fdir: 6.3.0(picomatch@4.0.2)
+      picomatch: 4.0.2
+
   tinypool@1.0.0: {}
 
   tinyrainbow@1.2.0: {}
@@ -15290,6 +15342,8 @@ snapshots:
       yargs-parser: 21.1.1
 
   yocto-queue@0.1.0: {}
+
+  yocto-queue@1.1.1: {}
 
   yoctocolors-cjs@2.1.2: {}
 
