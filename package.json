@@ -96,7 +96,7 @@
     "unist-util-visit": "5.0.0",
     "vinxi": "0.4.2",
     "vite-tsconfig-paths": "5.0.1",
-    "vitest": "2.1.0",
+    "vitest": "2.1.1",
     "wait-on": "8.0.1",
     "wrangler": "3.77.0"
   },
