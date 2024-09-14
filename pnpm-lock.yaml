@@ -16,7 +16,7 @@ importers:
         version: 0.14.3(solid-js@1.8.22)
       '@solidjs/start':
         specifier: 1.0.6
-        version: 1.0.6(rollup@4.20.0)(solid-js@1.8.22)(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
+        version: 1.0.6(rollup@4.20.0)(solid-js@1.8.22)(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
       dompurify:
         specifier: 3.1.6
         version: 3.1.6
@@ -190,8 +190,8 @@ importers:
         specifier: 5.0.0
         version: 5.0.0
       vinxi:
-        specifier: 0.4.2
-        version: 0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
+        specifier: 0.4.3
+        version: 0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
       vite-tsconfig-paths:
         specifier: 5.0.1
         version: 5.0.1(typescript@5.6.2)(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
@@ -6796,8 +6796,8 @@ packages:
   vfile@6.0.2:
     resolution: {integrity: sha512-zND7NlS8rJYb/sPqkb13ZvbbUoExdbi4w3SfRrMq6R3FvnLQmmfpajJNITuuYm6AZ5uao9vy4BAos3EXBPf2rg==}
 
-  vinxi@0.4.2:
-    resolution: {integrity: sha512-BbvIum9BLUQ22O/lU1RX0+aKNMXXcl58hofNoWFnFcKkm+efgVsHiD2d7HG3w8QLdb2Asdhmz5/ZzI1Y3zTBXw==}
+  vinxi@0.4.3:
+    resolution: {integrity: sha512-RgJz7RWftML5h/qfPsp3QKVc2FSlvV4+HevpE0yEY2j+PS/I2ULjoSsZDXaR8Ks2WYuFFDzQr8yrox7v8aqkng==}
     hasBin: true
 
   vite-node@2.1.1:
@@ -8599,11 +8599,11 @@ snapshots:
     dependencies:
       solid-js: 1.8.22
 
-  '@solidjs/start@1.0.6(rollup@4.20.0)(solid-js@1.8.22)(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@solidjs/start@1.0.6(rollup@4.20.0)(solid-js@1.8.22)(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
-      '@vinxi/server-components': 0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
-      '@vinxi/server-functions': 0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/plugin-directives': 0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/server-components': 0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/server-functions': 0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
       defu: 6.1.4
       error-stack-parser: 2.1.4
       glob: 10.4.5
@@ -9211,7 +9211,7 @@ snapshots:
     transitivePeerDependencies:
       - uWebSockets.js
 
-  '@vinxi/plugin-directives@0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
+  '@vinxi/plugin-directives@0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
       '@babel/parser': 7.25.3
       acorn: 8.12.1
@@ -9222,29 +9222,29 @@ snapshots:
       magicast: 0.2.11
       recast: 0.23.9
       tslib: 2.6.3
-      vinxi: 0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
+      vinxi: 0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
 
-  '@vinxi/server-components@0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
+  '@vinxi/server-components@0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/plugin-directives': 0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
       acorn: 8.12.1
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.12.1)
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
+      vinxi: 0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
 
-  '@vinxi/server-functions@0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
+  '@vinxi/server-functions@0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
-      '@vinxi/plugin-directives': 0.4.1(vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
+      '@vinxi/plugin-directives': 0.4.1(vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
       acorn: 8.12.1
       acorn-loose: 8.4.0
       acorn-typescript: 1.4.13(acorn@8.12.1)
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.9
-      vinxi: 0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
+      vinxi: 0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
 
   '@vitest/expect@2.1.1':
     dependencies:
@@ -15019,7 +15019,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vinxi@0.4.2(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2):
+  vinxi@0.4.3(@types/node@20.16.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2):
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-syntax-jsx': 7.24.7(@babel/core@7.25.2)
