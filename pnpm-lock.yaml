@@ -47,13 +47,13 @@ importers:
         version: 2.27.8
       '@content-collections/cli':
         specifier: 0.1.4
-        version: 0.1.4(@content-collections/core@0.7.0(typescript@5.6.2))
+        version: 0.1.4(@content-collections/core@0.7.1(typescript@5.6.2))
       '@content-collections/core':
-        specifier: 0.7.0
-        version: 0.7.0(typescript@5.6.2)
+        specifier: 0.7.1
+        version: 0.7.1(typescript@5.6.2)
       '@content-collections/vite':
         specifier: 0.2.2
-        version: 0.2.2(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
+        version: 0.2.2(@content-collections/core@0.7.1(typescript@5.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))
       '@pandacss/dev':
         specifier: 0.46.0
         version: 0.46.0(jsdom@24.1.1)(typescript@5.6.2)
@@ -479,8 +479,8 @@ packages:
     peerDependencies:
       '@content-collections/core': 0.x
 
-  '@content-collections/core@0.7.0':
-    resolution: {integrity: sha512-S1YQ5WSNiQtmf8tPhRAzqEmst4fPCMGE5iCt04gBkuAJM3EZdIRbV06eQsyJAiRNk2/L7Bqz3VIKdYSgdk84zg==}
+  '@content-collections/core@0.7.1':
+    resolution: {integrity: sha512-qa9oR9Z9aHExNMu2LzAKIYC/rqgDnKQ7Lnc/AmKaYhf/PBWvJBvjXyeYQ3YFhEOrM6qdCqSKaml1fG7zzKpOrQ==}
     peerDependencies:
       typescript: ^5.0.2
 
@@ -2364,12 +2364,6 @@ packages:
   bundle-name@3.0.0:
     resolution: {integrity: sha512-PKA4BeSvBpQKQ8iPOGCSiell+N8P+Tf1DlwqmYhpe2gAhKPHn8EYOxVT+ShuGmhg8lN8XiSlS80yiExKXrURlw==}
     engines: {node: '>=12'}
-
-  bundle-require@5.0.0:
-    resolution: {integrity: sha512-GuziW3fSSmopcx4KRymQEJVbZUfqlCqcq7dvs6TYwKRZiegK/2buMxQTPs6MGlNv50wms1699qYO54R8XfRX4w==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    peerDependencies:
-      esbuild: '>=0.18'
 
   c12@1.11.1:
     resolution: {integrity: sha512-KDU0TvSvVdaYcQKQ6iPHATGz/7p/KiVjPg4vQrB6Jg/wX9R0yl5RZxWm9IoZqaIHD2+6PZd81+KMGwRr/lRIUg==}
@@ -4451,10 +4445,6 @@ packages:
   load-json-file@4.0.0:
     resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}
     engines: {node: '>=4'}
-
-  load-tsconfig@0.2.5:
-    resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   local-access@1.1.0:
     resolution: {integrity: sha512-XfegD5pyTAfb+GY6chk283Ox5z8WexG56OvM06RWLpAc/UHozO8X6xAxEkIitZOtsSMM1Yr3DkHgW5W+onLhCw==}
@@ -7529,16 +7519,15 @@ snapshots:
       mime: 3.0.0
       zod: 3.23.8
 
-  '@content-collections/cli@0.1.4(@content-collections/core@0.7.0(typescript@5.6.2))':
+  '@content-collections/cli@0.1.4(@content-collections/core@0.7.1(typescript@5.6.2))':
     dependencies:
-      '@content-collections/core': 0.7.0(typescript@5.6.2)
-      '@content-collections/integrations': 0.2.0(@content-collections/core@0.7.0(typescript@5.6.2))
+      '@content-collections/core': 0.7.1(typescript@5.6.2)
+      '@content-collections/integrations': 0.2.0(@content-collections/core@0.7.1(typescript@5.6.2))
       clerc: 0.44.0
 
-  '@content-collections/core@0.7.0(typescript@5.6.2)':
+  '@content-collections/core@0.7.1(typescript@5.6.2)':
     dependencies:
       '@parcel/watcher': 2.4.1
-      bundle-require: 5.0.0(esbuild@0.21.5)
       camelcase: 8.0.0
       esbuild: 0.21.5
       gray-matter: 4.0.3
@@ -7551,14 +7540,14 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/integrations@0.2.0(@content-collections/core@0.7.0(typescript@5.6.2))':
+  '@content-collections/integrations@0.2.0(@content-collections/core@0.7.1(typescript@5.6.2))':
     dependencies:
-      '@content-collections/core': 0.7.0(typescript@5.6.2)
+      '@content-collections/core': 0.7.1(typescript@5.6.2)
 
-  '@content-collections/vite@0.2.2(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@content-collections/vite@0.2.2(@content-collections/core@0.7.1(typescript@5.6.2))(vite@5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
-      '@content-collections/core': 0.7.0(typescript@5.6.2)
-      '@content-collections/integrations': 0.2.0(@content-collections/core@0.7.0(typescript@5.6.2))
+      '@content-collections/core': 0.7.1(typescript@5.6.2)
+      '@content-collections/integrations': 0.2.0(@content-collections/core@0.7.1(typescript@5.6.2))
       vite: 5.3.5(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.31.3)
 
   '@cspotcode/source-map-support@0.8.1':
@@ -9663,11 +9652,6 @@ snapshots:
   bundle-name@3.0.0:
     dependencies:
       run-applescript: 5.0.0
-
-  bundle-require@5.0.0(esbuild@0.21.5):
-    dependencies:
-      esbuild: 0.21.5
-      load-tsconfig: 0.2.5
 
   c12@1.11.1:
     dependencies:
@@ -12048,8 +12032,6 @@ snapshots:
       parse-json: 4.0.0
       pify: 3.0.0
       strip-bom: 3.0.0
-
-  load-tsconfig@0.2.5: {}
 
   local-access@1.1.0: {}
 
