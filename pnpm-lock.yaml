@@ -46,8 +46,8 @@ importers:
         specifier: 2.27.8
         version: 2.27.8
       '@content-collections/cli':
-        specifier: 0.1.4
-        version: 0.1.4(@content-collections/core@0.7.1(typescript@5.6.2))
+        specifier: 0.1.5
+        version: 0.1.5(@content-collections/core@0.7.1(typescript@5.6.2))
       '@content-collections/core':
         specifier: 0.7.1
         version: 0.7.1(typescript@5.6.2)
@@ -473,8 +473,8 @@ packages:
     resolution: {integrity: sha512-PNL/0TjKRdUHa1kwgVdqUNJVZ9ez4kacsi8omz+gv859EvJmsVuGiMAClY2YfJnC9LVKhKCcjqmFgKNXG9/IXA==}
     engines: {node: '>=16.7.0'}
 
-  '@content-collections/cli@0.1.4':
-    resolution: {integrity: sha512-VXWjk8pgkKGKglvhDu0q/awa3Aw8z9MSOH0kfxgPAbbSwO4uWNWCkfHIrYT3DHI0jEkNUWKan+tHCmVkMBNZ8g==}
+  '@content-collections/cli@0.1.5':
+    resolution: {integrity: sha512-+MJ0EvnBnxtlUk92TM2DSyI3sQW+U/9KCLcpYcxv7fBoIqtVPccyLA2czUSstpN0sW0wMg343a/AW0YjlDKZVQ==}
     hasBin: true
     peerDependencies:
       '@content-collections/core': 0.x
@@ -486,6 +486,11 @@ packages:
 
   '@content-collections/integrations@0.2.0':
     resolution: {integrity: sha512-JANx5ZPoHesT0kyr5mAajTIriMJDuF5vlCry4jLGsHnrcsna6jc4DQ0ZtEaIJbSPopU+huC2+sGLmjgsohN1Vg==}
+    peerDependencies:
+      '@content-collections/core': 0.x
+
+  '@content-collections/integrations@0.2.1':
+    resolution: {integrity: sha512-AyEcS2MmcOXSYt6vNmJsAiu6EBYjtNiwYGUVUmpG3llm8Gt8uiNrhIhlHyv3cuk+N8KJ2PWemLcMqtQJ+sW3bA==}
     peerDependencies:
       '@content-collections/core': 0.x
 
@@ -7518,10 +7523,10 @@ snapshots:
       mime: 3.0.0
       zod: 3.23.8
 
-  '@content-collections/cli@0.1.4(@content-collections/core@0.7.1(typescript@5.6.2))':
+  '@content-collections/cli@0.1.5(@content-collections/core@0.7.1(typescript@5.6.2))':
     dependencies:
       '@content-collections/core': 0.7.1(typescript@5.6.2)
-      '@content-collections/integrations': 0.2.0(@content-collections/core@0.7.1(typescript@5.6.2))
+      '@content-collections/integrations': 0.2.1(@content-collections/core@0.7.1(typescript@5.6.2))
       clerc: 0.44.0
 
   '@content-collections/core@0.7.1(typescript@5.6.2)':
@@ -7540,6 +7545,10 @@ snapshots:
       zod: 3.23.8
 
   '@content-collections/integrations@0.2.0(@content-collections/core@0.7.1(typescript@5.6.2))':
+    dependencies:
+      '@content-collections/core': 0.7.1(typescript@5.6.2)
+
+  '@content-collections/integrations@0.2.1(@content-collections/core@0.7.1(typescript@5.6.2))':
     dependencies:
       '@content-collections/core': 0.7.1(typescript@5.6.2)
 
