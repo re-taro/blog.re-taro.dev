@@ -47,7 +47,7 @@
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.8",
     "@content-collections/cli": "0.1.5",
-    "@content-collections/core": "0.7.1",
+    "@content-collections/core": "0.7.2",
     "@content-collections/vite": "0.2.2",
     "@pandacss/dev": "0.46.1",
     "@playwright/test": "1.47.2",
