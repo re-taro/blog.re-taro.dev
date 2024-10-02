@@ -37,7 +37,7 @@
     "@solidjs/start": "1.0.6",
     "dompurify": "3.1.6",
     "shiki": "1.18.0",
-    "solid-js": "1.8.22",
+    "solid-js": "1.8.23",
     "temporal-polyfill": "0.2.5",
     "xml2js": "0.6.2"
   },
