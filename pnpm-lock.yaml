@@ -88,8 +88,8 @@ importers:
         specifier: 0.4.14
         version: 0.4.14
       axe-core:
-        specifier: 4.10.1
-        version: 4.10.1
+        specifier: 4.10.2
+        version: 4.10.2
       axe-playwright:
         specifier: 2.0.3
         version: 2.0.3(playwright@1.48.1)
@@ -2157,8 +2157,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axe-core@4.10.1:
-    resolution: {integrity: sha512-qPC9o+kD8Tir0lzNGLeghbOrWMr3ZJpaRlCIb6Uobt/7N4FiEDvqUMnxzCHRHmg8vOg14kr5gVNyScRmbMaJ9g==}
+  axe-core@4.10.2:
+    resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
     engines: {node: '>=4'}
 
   axe-html-reporter@2.2.11:
@@ -6937,7 +6937,7 @@ snapshots:
 
   '@axe-core/playwright@4.10.0(playwright-core@1.48.1)':
     dependencies:
-      axe-core: 4.10.1
+      axe-core: 4.10.2
       playwright-core: 1.48.1
 
   '@azu/format-text@1.0.2': {}
@@ -9165,18 +9165,18 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axe-core@4.10.1: {}
+  axe-core@4.10.2: {}
 
-  axe-html-reporter@2.2.11(axe-core@4.10.1):
+  axe-html-reporter@2.2.11(axe-core@4.10.2):
     dependencies:
-      axe-core: 4.10.1
+      axe-core: 4.10.2
       mustache: 4.2.0
 
   axe-playwright@2.0.3(playwright@1.48.1):
     dependencies:
       '@types/junit-report-builder': 3.0.2
-      axe-core: 4.10.1
-      axe-html-reporter: 2.2.11(axe-core@4.10.1)
+      axe-core: 4.10.2
+      axe-html-reporter: 2.2.11(axe-core@4.10.2)
       junit-report-builder: 5.1.1
       picocolors: 1.1.0
       playwright: 1.48.1
