@@ -13,44 +13,47 @@ const Table: Component<Props> = (props) => {
 	const [headerRow, ...bodyRows] = props.node.children;
 
 	return (
-		<table
+		<div
 			class={css({
-				borderCollapse: "collapse",
-				borderSpacingX: "[.4rem]",
-				borderSpacingY: "0",
-				fontFamily: "mono",
-				lg: {
-					overflowX: "scroll",
-				},
-				marginInlineStart: "0",
 				marginX: "0",
 				marginY: "4",
-				textAlign: "left",
-				whiteSpace: "nowrap",
+				overflowX: "scroll",
 			})}
 		>
-			<thead
+			<table
 				class={css({
-					_supportsAlternativeTextAfter: {
-						"& tr:last-child": {
-							_after: {
-								content: "'|\\A|' / ''",
-								whiteSpace: "pre",
-							},
-						},
-					},
+					borderCollapse: "collapse",
+					borderSpacingX: "[.4rem]",
+					borderSpacingY: "0",
+					fontFamily: "mono",
+					marginInlineStart: "0",
+					textAlign: "left",
+					whiteSpace: "nowrap",
 				})}
 			>
-				<TableRow head align={props.node.align} footnoteDefs={props.footnoteDefs} node={headerRow} />
-			</thead>
-			<tbody>
-				<Index each={bodyRows}>
-					{row => (
-						<TableRow align={props.node.align} footnoteDefs={props.footnoteDefs} node={row()} />
-					)}
-				</Index>
-			</tbody>
-		</table>
+				<thead
+					class={css({
+						_supportsAlternativeTextAfter: {
+							"& tr:last-child": {
+								_after: {
+									content: "'|\\A|' / ''",
+									whiteSpace: "pre",
+								},
+							},
+						},
+					})}
+				>
+					<TableRow head align={props.node.align} footnoteDefs={props.footnoteDefs} node={headerRow} />
+				</thead>
+				<tbody>
+					<Index each={bodyRows}>
+						{row => (
+							<TableRow align={props.node.align} footnoteDefs={props.footnoteDefs} node={row()} />
+						)}
+					</Index>
+				</tbody>
+			</table>
+		</div>
 	);
 };
 
