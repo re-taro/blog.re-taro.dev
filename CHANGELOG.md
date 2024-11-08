@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.2.1
+
+### Patch Changes
+
+- [#497](https://github.com/re-taro/blog.re-taro.dev/pull/497) [`6333636`](https://github.com/re-taro/blog.re-taro.dev/commit/6333636ba87fc686d1643b6c1e93d1424e51fc09) Thanks [@re-taro](https://github.com/re-taro)! - Fix Twitter OG meta tag
+
 ## 2.2.0
 
 ### Minor Changes
