@@ -96,7 +96,8 @@ const Article: Component<Props> = (props) => {
 					<Footer plainTitle={props.article.title.plain} slug={props.slug} />
 				</div>
 			</div>
-			<script innerText={JSON.stringify(jsonLd)} type="application/ld+json" />
+			{/*  eslint-disable-next-line solid/no-innerhtml */}
+			<script innerHTML={JSON.stringify(jsonLd)} type="application/ld+json" />
 		</article>
 	);
 };
