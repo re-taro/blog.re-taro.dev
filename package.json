@@ -24,6 +24,7 @@
     "lint:textlint": "textlint contents/**/slug.md",
     "prebuild": "pnpm run /^prebuild:.*/",
     "prebuild:pandacss": "panda codegen --silent",
+    "prebuild:partytown": "partytown copylib public/~partytown",
     "prebuild:content-collections": "content-collections build",
     "prepare": "panda codegen",
     "start": "NODE_ENV=production wrangler pages dev dist",

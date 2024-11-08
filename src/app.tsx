@@ -41,17 +41,18 @@ export default function App() {
 			<>
 				{import.meta.env.PROD && (
 					<Assets>
-						<script>{partytownSnippet({ forward: ["dataLayer.push"] })}</script>
-						<script
-							type="text/partytown"
-						>
+						<script>{partytownSnippet()}</script>
+						<script type="text/partytown">{`partytown = { forward: ['gtag', 'dataLayer.push'] }`}</script>
+						<script src="https://www.googletagmanager.com/gtag/js?id=GTM-KDDWP2FS" type="text/partytown" />
+						<script type="text/partytown">
 							{`
-							(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-							new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-							j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-							'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-							})(window,document,'script','dataLayer','GTM-KDDWP2FS');
-						`}
+								window.dataLayer = window.dataLayer || [];
+      					window.gtag = function () {
+        					dataLayer.push(arguments);
+    						};
+    						window.gtag('js', new Date());
+   							window. gtag('config', 'GTM-KDDWP2FS');
+							`.trim()}
 						</script>
 					</Assets>
 				)}
