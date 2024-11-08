@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.2.2
+
+### Patch Changes
+
+- [#500](https://github.com/re-taro/blog.re-taro.dev/pull/500) [`8bbc46f`](https://github.com/re-taro/blog.re-taro.dev/commit/8bbc46fbef1306122ecd921fa2adb8361c3704f7) Thanks [@re-taro](https://github.com/re-taro)! - Fix partytown
+
 ## 2.2.1
 
 ### Patch Changes
