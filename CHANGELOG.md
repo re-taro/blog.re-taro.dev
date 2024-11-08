@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.2.0
+
+### Minor Changes
+
+- [#495](https://github.com/re-taro/blog.re-taro.dev/pull/495) [`4558180`](https://github.com/re-taro/blog.re-taro.dev/commit/455818015c39120fe9fefbe2aa05ee049df4c06b) Thanks [@re-taro](https://github.com/re-taro)! - Wrote blog about Lifecycle scripts
+
 ## 2.1.2
 
 ### Patch Changes
