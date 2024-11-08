@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.1.2
+
+### Patch Changes
+
+- [#493](https://github.com/re-taro/blog.re-taro.dev/pull/493) [`38e81b3`](https://github.com/re-taro/blog.re-taro.dev/commit/38e81b3b603e6f6c5ccd1dc8d690d8f5755704ec) Thanks [@re-taro](https://github.com/re-taro)! - Fix GTM loader
+
 ## 2.1.1
 
 ### Patch Changes
