@@ -41,7 +41,7 @@ const Content: Component<{ slug: string }> = (props) => {
 							<Meta content={Temporal.ZonedDateTime.from(updatedAt()).toString({ timeZoneName: "never" })} name="article:modified_time" />
 						)}
 					</Show>
-					<OgMetaTags description={slug().description} imgUrl={createOgpImageUrl(slug().title, slug().tags).href} title={slug().title} twitter={{ imgType: "summary_large_image", username: "re_taro_" }} type="article" />
+					<OgMetaTags description={slug().description} imgUrl={createOgpImageUrl(slug().title, slug().tags).href} title={slug().title} twitter={{ description: slug().description, imgType: "summary_large_image", imgUrl: createOgpImageUrl(slug().title, slug().tags).href, title: slug().title, username: "re_taro_" }} type="article" />
 					<ArticleTags tags={slug().tags} />
 					<div
 						class={css({
