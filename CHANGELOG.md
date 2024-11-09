@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.3.0
+
+### Minor Changes
+
+- [#505](https://github.com/re-taro/blog.re-taro.dev/pull/505) [`f8101df`](https://github.com/re-taro/blog.re-taro.dev/commit/f8101df741d616b7176c20115a0af6afe319b3a4) Thanks [@re-taro](https://github.com/re-taro)! - Wrote post about `@cloudflare/workers-types`
+
 ## 2.2.3
 
 ### Patch Changes
