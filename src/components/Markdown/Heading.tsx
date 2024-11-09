@@ -27,8 +27,11 @@ const heading = cva({
 					marginLeft: "[-1em]",
 					position: "absolute",
 				},
-				fontSize: "2xl",
+				fontSize: "xl",
 				marginLeft: "[1em]",
+				md: {
+					fontSize: "2xl",
+				},
 				position: "relative",
 			},
 			2: {
@@ -40,8 +43,11 @@ const heading = cva({
 					marginLeft: "[-1.8em]",
 					position: "absolute",
 				},
-				fontSize: "2xl",
+				fontSize: "xl",
 				marginLeft: "[1.8em]",
+				md: {
+					fontSize: "2xl",
+				},
 				position: "relative",
 			},
 			3: {
@@ -53,8 +59,11 @@ const heading = cva({
 					marginLeft: "[-2.4em]",
 					position: "absolute",
 				},
-				fontSize: "xl",
+				fontSize: "l",
 				marginLeft: "[2.4em]",
+				md: {
+					fontSize: "xl",
+				},
 				position: "relative",
 			},
 			4: {
@@ -66,15 +75,24 @@ const heading = cva({
 					marginLeft: "[-3em]",
 					position: "absolute",
 				},
-				fontSize: "ml",
+				fontSize: "sl",
 				marginLeft: "[3em]",
+				md: {
+					fontSize: "ml",
+				},
 				position: "relative",
 			},
 			5: {
-				fontSize: "sl",
+				fontSize: "l",
+				md: {
+					fontSize: "sl",
+				},
 			},
 			6: {
-				fontSize: "l",
+				fontSize: "m",
+				md: {
+					fontSize: "l",
+				},
 			},
 		},
 	},
