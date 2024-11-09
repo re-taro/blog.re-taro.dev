@@ -4,6 +4,7 @@ description: 混乱しがちな Life Cycle Scripts の挙動を理解する
 tags: ["npm scripts", "package manager"]
 published: true
 publishedAt: 2024-11-08T21:04:11.79+09:00[Asia/Tokyo]
+updatedAt: 2024-11-09T22:54:16.82+09:00[Asia/Tokyo]
 ---
 
 # Life Cycle Scripts を理解する
@@ -97,11 +98,21 @@ tarball が作成された後に実行されるスクリプトである。
 
 また yarn[^5] や pnpm[^7] では定義されている Life Cycle Scripts が npm と異なるので注意が必要である。
 
+---
+
+[@s6n_jp](https://twitter.com/s6n_jp) から指摘されて気づいたのだが、どうやら pnpm v9 以降では Life Cycle Scripts がサポートされるようになった[^8]ようだ。これにより、pnpm でも npm と同様に Life Cycle Scripts が実行されるようになった。
+
+Twitter で poll を取った結果[^9]入った変更のようで、多くの人がこの変更を望んでいたようだ。
+
 [^5]: https://yarnpkg.com/advanced/lifecycle-scripts
 
 [^6]: https://github.com/pnpm/pnpm/issues/2891
 
 [^7]: https://pnpm.io/scripts
+
+[^8]: https://github.com/pnpm/pnpm/pull/7634
+
+[^9]: https://twitter.com/pnpmjs/status/1755902257751605717
 
 ## まとめ
 
