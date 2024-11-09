@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.2.3
+
+### Patch Changes
+
+- [#503](https://github.com/re-taro/blog.re-taro.dev/pull/503) [`bf976ff`](https://github.com/re-taro/blog.re-taro.dev/commit/bf976fffcf1b3dbd51ecd1c2f321f26cc4902fc7) Thanks [@re-taro](https://github.com/re-taro)! - Fix life cycle scripts post for about pnpm@v9
+
 ## 2.2.2
 
 ### Patch Changes
