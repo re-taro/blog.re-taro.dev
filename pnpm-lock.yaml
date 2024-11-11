@@ -34,8 +34,8 @@ importers:
         version: 0.6.2
     devDependencies:
       '@axe-core/playwright':
-        specifier: 4.10.0
-        version: 4.10.0(playwright-core@1.48.2)
+        specifier: 4.10.1
+        version: 4.10.1(playwright-core@1.48.2)
       '@builder.io/partytown':
         specifier: 0.10.2
         version: 0.10.2
@@ -214,8 +214,8 @@ packages:
   '@antfu/install-pkg@0.4.1':
     resolution: {integrity: sha512-T7yB5QNG29afhWVkVq7XeIMBa5U/vs9mX69YqayXypPRmYzUmzwnYltplHmPtZ4HPCn+sQKeXW8I47wCbuBOjw==}
 
-  '@axe-core/playwright@4.10.0':
-    resolution: {integrity: sha512-kEr3JPEVUSnKIYp/egV2jvFj+chIjCjPp3K3zlpJMza/CB3TFw8UZNbI9agEC2uMz4YbgAOyzlbUy0QS+OofFA==}
+  '@axe-core/playwright@4.10.1':
+    resolution: {integrity: sha512-EV5t39VV68kuAfMKqb/RL+YjYKhfuGim9rgIaQ6Vntb2HgaCaau0h98Y3WEUqW1+PbdzxDtDNjFAipbtZuBmEA==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
 
@@ -6983,7 +6983,7 @@ snapshots:
       package-manager-detector: 0.2.0
       tinyexec: 0.3.0
 
-  '@axe-core/playwright@4.10.0(playwright-core@1.48.2)':
+  '@axe-core/playwright@4.10.1(playwright-core@1.48.2)':
     dependencies:
       axe-core: 4.10.2
       playwright-core: 1.48.2
