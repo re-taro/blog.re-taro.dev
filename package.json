@@ -55,7 +55,7 @@
     "@qnighy/dedent": "0.1.1",
     "@re-taro/eslint-config": "5.2.1",
     "@shikijs/transformers": "1.23.1",
-    "@types/dompurify": "3.0.5",
+    "@types/dompurify": "3.2.0",
     "@types/hast": "3.0.4",
     "@types/mdast": "4.0.4",
     "@types/node": "22.9.1",
