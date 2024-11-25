@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.4.0
+
+### Minor Changes
+
+- [#538](https://github.com/re-taro/blog.re-taro.dev/pull/538) [`6e00080`](https://github.com/re-taro/blog.re-taro.dev/commit/6e00080a29c3ee8fe314a335ba9c0dc05edd3217) Thanks [@re-taro](https://github.com/re-taro)! - Wrote post about Cf pages and custom domain and optimization
+
 ## 2.3.0
 
 ### Minor Changes
