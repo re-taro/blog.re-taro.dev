@@ -65,7 +65,7 @@ importers:
         version: 0.1.1
       '@re-taro/eslint-config':
         specifier: 5.2.1
-        version: 5.2.1(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint-plugin-format@0.1.2(eslint@9.14.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.3(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.7(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))
+        version: 5.2.1(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint-plugin-format@0.1.2(eslint@9.14.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.3(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.8(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))
       '@shikijs/transformers':
         specifier: 1.24.0
         version: 1.24.0
@@ -196,8 +196,8 @@ importers:
         specifier: 5.1.3
         version: 5.1.3(typescript@5.7.2)(vite@5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3))
       vitest:
-        specifier: 2.1.7
-        version: 2.1.7(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3)
+        specifier: 2.1.8
+        version: 2.1.8(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3)
       wait-on:
         specifier: 8.0.1
         version: 8.0.1
@@ -1938,11 +1938,11 @@ packages:
       vitest:
         optional: true
 
-  '@vitest/expect@2.1.7':
-    resolution: {integrity: sha512-folWk4qQDEedgUyvaZw94LIJuNLoDtY+rhKhhNy0csdwifn/pQz8EWVRnyrW3j0wMpy+xwJT8WiwiYxk+i+s7w==}
+  '@vitest/expect@2.1.8':
+    resolution: {integrity: sha512-8ytZ/fFHq2g4PJVAtDX57mayemKgDR6X3Oa2Foro+EygiOJHUXhCqBAAKQYYajZpFoIfvBCF1j6R6IYRSIUFuw==}
 
-  '@vitest/mocker@2.1.7':
-    resolution: {integrity: sha512-nKMTnuJrarFH+7llWxeLmYRldIwTY3OM1DzdytHj0f2+fah6Cyk4XbswhjOiTCnAvXsZAEoo1OaD6rneSSU+3Q==}
+  '@vitest/mocker@2.1.8':
+    resolution: {integrity: sha512-7guJ/47I6uqfttp33mgo6ga5Gr1VnL58rcqYKyShoRK9ebu8T5Rs6HN3s1NABiBeVTdWNrwUMcHH54uXZBN4zA==}
     peerDependencies:
       msw: ^2.4.9
       vite: ^5.0.0
@@ -1952,20 +1952,20 @@ packages:
       vite:
         optional: true
 
-  '@vitest/pretty-format@2.1.7':
-    resolution: {integrity: sha512-HoqRIyfQlXPrRDB43h0lC8eHPUDPwFweMaD6t+psOvwClCC+oZZim6wPMjuoMnRdiFxXqbybg/QbuewgTwK1vA==}
+  '@vitest/pretty-format@2.1.8':
+    resolution: {integrity: sha512-9HiSZ9zpqNLKlbIDRWOnAWqgcA7xu+8YxXSekhr0Ykab7PAYFkhkwoqVArPOtJhPmYeE2YHgKZlj3CP36z2AJQ==}
 
-  '@vitest/runner@2.1.7':
-    resolution: {integrity: sha512-MrDNpXUIXksR57qipYh068SOX4N1hVw6oVILlTlfeTyA1rp0asuljyp15IZwKqhjpWLObFj+tiNrOM4R8UnSqg==}
+  '@vitest/runner@2.1.8':
+    resolution: {integrity: sha512-17ub8vQstRnRlIU5k50bG+QOMLHRhYPAna5tw8tYbj+jzjcspnwnwtPtiOlkuKC4+ixDPTuLZiqiWWQ2PSXHVg==}
 
-  '@vitest/snapshot@2.1.7':
-    resolution: {integrity: sha512-OioIxV/xS393DKdlkRNhmtY0K37qVdCv8w1M2SlLTBSX+fNK6zgcd01VlT1nXdbKVDaB8Zb6BOfQYYoGeGTEGg==}
+  '@vitest/snapshot@2.1.8':
+    resolution: {integrity: sha512-20T7xRFbmnkfcmgVEz+z3AU/3b0cEzZOt/zmnvZEctg64/QZbSDJEVm9fLnnlSi74KibmRsO9/Qabi+t0vCRPg==}
 
-  '@vitest/spy@2.1.7':
-    resolution: {integrity: sha512-e5pzIaIC0LBrb/j1FaF7HXlPJLGtltiAkwXTMqNEHALJc7USSLEwziJ+aIWTmjsWNg89zazg37h7oZITnublsQ==}
+  '@vitest/spy@2.1.8':
+    resolution: {integrity: sha512-5swjf2q95gXeYPevtW0BLk6H8+bPlMb4Vw/9Em4hFxDcaOxS+e0LOX4yqNxoHzMR2akEB2xfpnWUzkZokmgWDg==}
 
-  '@vitest/utils@2.1.7':
-    resolution: {integrity: sha512-7gUdvIzCCuIrMZu0WHTvDJo8C1NsUtOqmwmcS3bRHUcfHemj29wmkzLVNuWQD7WHoBD/+I7WIgrnzt7kxR54ow==}
+  '@vitest/utils@2.1.8':
+    resolution: {integrity: sha512-dwSoui6djdwbfFmIgbIjX2ZhIoG7Ex/+xpxyiEgIGzjliY8xGkcpITKTlp6B4MgtGkF2ilvm97cPM96XZaAgcA==}
 
   '@vue/compiler-core@3.4.19':
     resolution: {integrity: sha512-gj81785z0JNzRcU0Mq98E56e4ltO1yf8k5PQ+tV/7YHnbZkrM0fyFyuttnN8ngJZjbpofWE/m4qjKBiLl8Ju4w==}
@@ -6654,9 +6654,9 @@ packages:
     resolution: {integrity: sha512-RgJz7RWftML5h/qfPsp3QKVc2FSlvV4+HevpE0yEY2j+PS/I2ULjoSsZDXaR8Ks2WYuFFDzQr8yrox7v8aqkng==}
     hasBin: true
 
-  vite-node@2.1.7:
-    resolution: {integrity: sha512-b/5MxSWd0ftWt1B1LHfzCw0ASzaxHztUwP0rcsBhkDSGy9ZDEDieSIjFG3I78nI9dUN0eSeD6LtuKPZGjwwpZQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+  vite-node@2.1.8:
+    resolution: {integrity: sha512-uPAwSr57kYjAUux+8E2j0q0Fxpn8M9VoyfGiRI8Kfktz9NcYMCenwY5RnZxnF1WTu3TGiYipirIzacLL3VVGFg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
   vite-plugin-solid@2.10.2:
@@ -6713,15 +6713,15 @@ packages:
       vite:
         optional: true
 
-  vitest@2.1.7:
-    resolution: {integrity: sha512-wzJ7Wri44ufkzTZbI1lHsdHfiGdFRmnJ9qIudDQ6tknjJeHhF5QgNSSjk7KRZUU535qEiEXFJ7tSHqyzyIv0jQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+  vitest@2.1.8:
+    resolution: {integrity: sha512-1vBKTZskHw/aosXqQUlVWWlGUxSJR8YtiyZDJAFeW2kPAeX6S3Sool0mjspO+kXLuxVWlEDDowBAeqeAQefqLQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
-      '@vitest/browser': 2.1.7
-      '@vitest/ui': 2.1.7
+      '@types/node': ^18.0.0 || >=20.0.0
+      '@vitest/browser': 2.1.8
+      '@vitest/ui': 2.1.8
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -8220,7 +8220,7 @@ snapshots:
 
   '@qnighy/dedent@0.1.1': {}
 
-  '@re-taro/eslint-config@5.2.1(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint-plugin-format@0.1.2(eslint@9.14.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.3(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.7(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@re-taro/eslint-config@5.2.1(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint-plugin-format@0.1.2(eslint@9.14.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.3(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.8(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@clack/prompts': 0.7.0
@@ -8229,7 +8229,7 @@ snapshots:
       '@stylistic/eslint-plugin': 2.9.0(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)
       '@typescript-eslint/eslint-plugin': 8.8.1(@typescript-eslint/parser@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)
       '@typescript-eslint/parser': 8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)
-      '@vitest/eslint-plugin': 1.1.7(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.7(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))
+      '@vitest/eslint-plugin': 1.1.7(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.8(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))
       eslint: 9.14.0(jiti@1.21.6)
       eslint-config-flat-gitignore: 0.3.0(eslint@9.14.0(jiti@1.21.6))
       eslint-flat-config-utils: 0.4.0
@@ -8936,51 +8936,51 @@ snapshots:
       recast: 0.23.9
       vinxi: 0.4.3(@types/node@22.10.1)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2)
 
-  '@vitest/eslint-plugin@1.1.7(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.7(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@vitest/eslint-plugin@1.1.7(@typescript-eslint/utils@8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2))(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)(vitest@2.1.8(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
       '@typescript-eslint/utils': 8.8.1(eslint@9.14.0(jiti@1.21.6))(typescript@5.7.2)
       eslint: 9.14.0(jiti@1.21.6)
     optionalDependencies:
       typescript: 5.7.2
-      vitest: 2.1.7(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3)
+      vitest: 2.1.8(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3)
 
-  '@vitest/expect@2.1.7':
+  '@vitest/expect@2.1.8':
     dependencies:
-      '@vitest/spy': 2.1.7
-      '@vitest/utils': 2.1.7
+      '@vitest/spy': 2.1.8
+      '@vitest/utils': 2.1.8
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.7(vite@5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@vitest/mocker@2.1.8(vite@5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
-      '@vitest/spy': 2.1.7
+      '@vitest/spy': 2.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
       vite: 5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3)
 
-  '@vitest/pretty-format@2.1.7':
+  '@vitest/pretty-format@2.1.8':
     dependencies:
       tinyrainbow: 1.2.0
 
-  '@vitest/runner@2.1.7':
+  '@vitest/runner@2.1.8':
     dependencies:
-      '@vitest/utils': 2.1.7
+      '@vitest/utils': 2.1.8
       pathe: 1.1.2
 
-  '@vitest/snapshot@2.1.7':
+  '@vitest/snapshot@2.1.8':
     dependencies:
-      '@vitest/pretty-format': 2.1.7
+      '@vitest/pretty-format': 2.1.8
       magic-string: 0.30.12
       pathe: 1.1.2
 
-  '@vitest/spy@2.1.7':
+  '@vitest/spy@2.1.8':
     dependencies:
       tinyspy: 3.0.2
 
-  '@vitest/utils@2.1.7':
+  '@vitest/utils@2.1.8':
     dependencies:
-      '@vitest/pretty-format': 2.1.7
+      '@vitest/pretty-format': 2.1.8
       loupe: 3.1.2
       tinyrainbow: 1.2.0
 
@@ -14723,7 +14723,7 @@ snapshots:
       - uWebSockets.js
       - xml2js
 
-  vite-node@2.1.7(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3):
+  vite-node@2.1.8(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
@@ -14779,15 +14779,15 @@ snapshots:
     optionalDependencies:
       vite: 5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3)
 
-  vitest@2.1.7(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3):
+  vitest@2.1.8(@types/node@22.10.1)(jsdom@24.1.1)(lightningcss@1.25.1)(terser@5.31.3):
     dependencies:
-      '@vitest/expect': 2.1.7
-      '@vitest/mocker': 2.1.7(vite@5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3))
-      '@vitest/pretty-format': 2.1.7
-      '@vitest/runner': 2.1.7
-      '@vitest/snapshot': 2.1.7
-      '@vitest/spy': 2.1.7
-      '@vitest/utils': 2.1.7
+      '@vitest/expect': 2.1.8
+      '@vitest/mocker': 2.1.8(vite@5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3))
+      '@vitest/pretty-format': 2.1.8
+      '@vitest/runner': 2.1.8
+      '@vitest/snapshot': 2.1.8
+      '@vitest/spy': 2.1.8
+      '@vitest/utils': 2.1.8
       chai: 5.1.2
       debug: 4.3.7
       expect-type: 1.1.0
@@ -14799,7 +14799,7 @@ snapshots:
       tinypool: 1.0.1
       tinyrainbow: 1.2.0
       vite: 5.3.5(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3)
-      vite-node: 2.1.7(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3)
+      vite-node: 2.1.8(@types/node@22.10.1)(lightningcss@1.25.1)(terser@5.31.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.10.1
