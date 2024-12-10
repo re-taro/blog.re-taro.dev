@@ -53,7 +53,7 @@
     "@pandacss/dev": "0.47.1",
     "@playwright/test": "1.49.1",
     "@qnighy/dedent": "0.1.1",
-    "@re-taro/eslint-config": "5.2.1",
+    "@re-taro/eslint-config": "5.3.0",
     "@shikijs/transformers": "1.24.1",
     "@types/dompurify": "3.2.0",
     "@types/hast": "3.0.4",
