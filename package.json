@@ -70,7 +70,7 @@
     "github-slugger": "2.0.0",
     "hast-util-from-html": "2.0.3",
     "hast-util-select": "6.0.3",
-    "hast-util-to-html": "9.0.3",
+    "hast-util-to-html": "9.0.4",
     "mdast-util-from-markdown": "2.0.2",
     "playwright": "1.49.1",
     "plop": "4.0.1",
