@@ -46,7 +46,7 @@
     "@axe-core/playwright": "4.10.1",
     "@builder.io/partytown": "0.10.2",
     "@changesets/changelog-github": "0.5.0",
-    "@changesets/cli": "2.27.10",
+    "@changesets/cli": "2.27.11",
     "@content-collections/cli": "0.1.5",
     "@content-collections/core": "0.7.3",
     "@content-collections/vite": "0.2.3",
