@@ -46,8 +46,8 @@ importers:
         specifier: 2.27.11
         version: 2.27.11
       '@content-collections/cli':
-        specifier: 0.1.5
-        version: 0.1.5(@content-collections/core@0.8.0(typescript@5.7.2))
+        specifier: 0.1.6
+        version: 0.1.6(@content-collections/core@0.8.0(typescript@5.7.2))
       '@content-collections/core':
         specifier: 0.8.0
         version: 0.8.0(typescript@5.7.2)
@@ -402,23 +402,8 @@ packages:
     peerDependencies:
       '@clerc/core': '*'
 
-  '@clerc/plugin-friendly-error@0.44.0':
-    resolution: {integrity: sha512-hbGp+T+fl9Dz+Ln1LGoijbNL7N+RfBqhSRWtT55QdFPs86O7Mi5oqiqIrUS9wDpaHzJGn+ETFPIOUyDRdrD8ag==}
-    peerDependencies:
-      '@clerc/core': '*'
-
   '@clerc/plugin-help@0.44.0':
     resolution: {integrity: sha512-QIH+Lrk6WZtXKNxEAA4gOk7dwseS7U0jTZ0TbJfcyOoNA3fF2p48UV8c7hmKk7OhfPS5009eJRW5CVQEgBB8Ng==}
-    peerDependencies:
-      '@clerc/core': '*'
-
-  '@clerc/plugin-not-found@0.44.0':
-    resolution: {integrity: sha512-8GIxDv/V2qaKRJKy+jjHAmlCEbTabLYPIeklqY231skiNOYCDQ3wJS3isP7EQgARfhm0otMDRXPPC2aNfSJjRw==}
-    peerDependencies:
-      '@clerc/core': '*'
-
-  '@clerc/plugin-strict-flags@0.44.0':
-    resolution: {integrity: sha512-8ztQrn4pfCj6b/sDN1mU0MVlfSqp3qHohW59v6k6nS3UUnYytJDU5wZQZmQ+7t3DZqjw+Xle6ZzEIWQatAdZ9A==}
     peerDependencies:
       '@clerc/core': '*'
 
@@ -466,8 +451,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@content-collections/cli@0.1.5':
-    resolution: {integrity: sha512-+MJ0EvnBnxtlUk92TM2DSyI3sQW+U/9KCLcpYcxv7fBoIqtVPccyLA2czUSstpN0sW0wMg343a/AW0YjlDKZVQ==}
+  '@content-collections/cli@0.1.6':
+    resolution: {integrity: sha512-1MrxENMhAOAMFoLYNmlyCgwVB3i75PMX9vNLJ+jVh7akSfDrRRDWGn4E4WXDWCs27krSN7o98OJQVNav7Ndapw==}
     hasBin: true
     peerDependencies:
       '@content-collections/core': 0.x
@@ -2416,9 +2401,6 @@ packages:
     resolution: {integrity: sha512-LYv6XPxoyODi36Dp976riBtSY27VmFo+MKqEU9QCCWyTrdEPDog+RWA7xQWHi6Vbp61j5c4cdzzX1NidnwtUWg==}
     engines: {node: '>=12'}
 
-  clerc@0.44.0:
-    resolution: {integrity: sha512-fy7JcE7qW3hi5hvPeaEXKdgzeOz3WwE8Nd1SCfOpOSyWxoFJsLuHwUhwFggvJqEJIQ6kLTLZ7yWguwoTcMXO5w==}
-
   cli-boxes@3.0.0:
     resolution: {integrity: sha512-/lzGpEWL/8PfI0BmBOPRwp0c/wFNX1RdUML3jK/RcSBA9T8mZDdQpqYBKtCFTOfQbwPqWEOpjqW+Fnayc0969g==}
     engines: {node: '>=10'}
@@ -2777,10 +2759,6 @@ packages:
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
-
-  didyoumean2@6.0.1:
-    resolution: {integrity: sha512-PSy0zQwMg5O+LjT5Mz7vnKC8I7DfWLPF6M7oepqW7WP5mn2CY3hz46xZOa1GJY+KVfyXhdmz6+tdgXwrHlZc5g==}
-    engines: {node: ^16.14.0 || >=18.12.0}
 
   diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
@@ -3321,10 +3299,6 @@ packages:
   fast-uri@3.0.1:
     resolution: {integrity: sha512-MWipKbbYiYI0UC7cl8m/i/IWTqfC8YXsqjzybjddLsFjStroQzsHXkc73JutMvBiXmOvapk+axIl79ig5t55Bw==}
 
-  fastest-levenshtein@1.0.16:
-    resolution: {integrity: sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==}
-    engines: {node: '>= 4.9.1'}
-
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
 
@@ -3338,10 +3312,6 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
-
-  figures@5.0.0:
-    resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}
-    engines: {node: '>=14'}
 
   file-entry-cache@5.0.1:
     resolution: {integrity: sha512-bCg29ictuBaKUwwArK4ouCaqDgLZcysCFLmM/Yn/FDoqndh/9vNuQfXRDvTuXKLxfD/JtZQGKFT8MGcJBK644g==}
@@ -4245,9 +4215,6 @@ packages:
   known-css-properties@0.30.0:
     resolution: {integrity: sha512-VSWXYUnsPu9+WYKkfmJyLKtIvaRJi1kXUqVmBACORXZQxT5oZDsoZ2vQP+bQFDnWtpI/4eq3MLoRMjI2fnLzTQ==}
 
-  kons@0.7.1:
-    resolution: {integrity: sha512-mW1CkTgrLeIQjiBYd1n0U73T/2W7Vdzxx8rpta5Q4cSDAlr8hXw+ZctxGZlGgdUAmlcDlpkh0vUX8AOW+y1dog==}
-
   kuromoji@0.1.2:
     resolution: {integrity: sha512-V0dUf+C2LpcPEXhoHLMAop/bOht16Dyr+mDiIE39yX3vqau7p80De/koFqpiTcL1zzdZlc3xuHZ8u5gjYRfFaQ==}
 
@@ -4361,9 +4328,6 @@ packages:
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
-
-  lodash.deburr@4.1.0:
-    resolution: {integrity: sha512-m/M1U1f3ddMCs6Hq2tAsYThTBDaAKFDX3dwDo97GEYzamXi9SqUpjWi/Rrj/gf3X2n8ktwgZrlP1z6E3v/IExQ==}
 
   lodash.defaults@4.2.0:
     resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
@@ -7299,11 +7263,6 @@ snapshots:
       '@clerc/core': 0.44.0
       '@clerc/utils': 0.44.0(@clerc/core@0.44.0)
 
-  '@clerc/plugin-friendly-error@0.44.0(@clerc/core@0.44.0)':
-    dependencies:
-      '@clerc/core': 0.44.0
-      kons: 0.7.1
-
   '@clerc/plugin-help@0.44.0(@clerc/core@0.44.0)':
     dependencies:
       '@clerc/core': 0.44.0
@@ -7312,17 +7271,6 @@ snapshots:
       string-width: 6.1.0
       text-table: 0.2.0
       yoctocolors: 1.0.0
-
-  '@clerc/plugin-not-found@0.44.0(@clerc/core@0.44.0)':
-    dependencies:
-      '@clerc/core': 0.44.0
-      '@clerc/utils': 0.44.0(@clerc/core@0.44.0)
-      didyoumean2: 6.0.1
-      yoctocolors: 1.0.0
-
-  '@clerc/plugin-strict-flags@0.44.0(@clerc/core@0.44.0)':
-    dependencies:
-      '@clerc/core': 0.44.0
 
   '@clerc/plugin-version@0.44.0(@clerc/core@0.44.0)':
     dependencies:
@@ -7352,11 +7300,14 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20241218.0':
     optional: true
 
-  '@content-collections/cli@0.1.5(@content-collections/core@0.8.0(typescript@5.7.2))':
+  '@content-collections/cli@0.1.6(@content-collections/core@0.8.0(typescript@5.7.2))':
     dependencies:
+      '@clerc/core': 0.44.0
+      '@clerc/plugin-completions': 0.44.0(@clerc/core@0.44.0)
+      '@clerc/plugin-help': 0.44.0(@clerc/core@0.44.0)
+      '@clerc/plugin-version': 0.44.0(@clerc/core@0.44.0)
       '@content-collections/core': 0.8.0(typescript@5.7.2)
       '@content-collections/integrations': 0.2.1(@content-collections/core@0.8.0(typescript@5.7.2))
-      clerc: 0.44.0
 
   '@content-collections/core@0.8.0(typescript@5.7.2)':
     dependencies:
@@ -9497,16 +9448,6 @@ snapshots:
     dependencies:
       escape-string-regexp: 5.0.0
 
-  clerc@0.44.0:
-    dependencies:
-      '@clerc/core': 0.44.0
-      '@clerc/plugin-completions': 0.44.0(@clerc/core@0.44.0)
-      '@clerc/plugin-friendly-error': 0.44.0(@clerc/core@0.44.0)
-      '@clerc/plugin-help': 0.44.0(@clerc/core@0.44.0)
-      '@clerc/plugin-not-found': 0.44.0(@clerc/core@0.44.0)
-      '@clerc/plugin-strict-flags': 0.44.0(@clerc/core@0.44.0)
-      '@clerc/plugin-version': 0.44.0(@clerc/core@0.44.0)
-
   cli-boxes@3.0.0: {}
 
   cli-cursor@3.1.0:
@@ -9810,12 +9751,6 @@ snapshots:
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
-
-  didyoumean2@6.0.1:
-    dependencies:
-      '@babel/runtime': 7.25.0
-      fastest-levenshtein: 1.0.16
-      lodash.deburr: 4.1.0
 
   diff@4.0.2: {}
 
@@ -10585,8 +10520,6 @@ snapshots:
 
   fast-uri@3.0.1: {}
 
-  fastest-levenshtein@1.0.16: {}
-
   fastq@1.17.1:
     dependencies:
       reusify: 1.0.4
@@ -10598,11 +10531,6 @@ snapshots:
   fdir@6.3.0(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
-
-  figures@5.0.0:
-    dependencies:
-      escape-string-regexp: 5.0.0
-      is-unicode-supported: 1.3.0
 
   file-entry-cache@5.0.1:
     dependencies:
@@ -11578,11 +11506,6 @@ snapshots:
 
   known-css-properties@0.30.0: {}
 
-  kons@0.7.1:
-    dependencies:
-      figures: 5.0.0
-      picocolors: 1.1.1
-
   kuromoji@0.1.2:
     dependencies:
       async: 2.6.4
@@ -11716,8 +11639,6 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
-
-  lodash.deburr@4.1.0: {}
 
   lodash.defaults@4.2.0: {}
 
