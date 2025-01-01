@@ -84,7 +84,7 @@
     "schema-dts": "1.1.2",
     "sharp": "0.33.5",
     "sirv-cli": "3.0.0",
-    "textlint": "14.4.1",
+    "textlint": "14.4.2",
     "textlint-filter-rule-comments": "1.2.2",
     "textlint-rule-ja-space-around-link": "2.4.2",
     "textlint-rule-preset-overflow-techblog": "0.0.2",
