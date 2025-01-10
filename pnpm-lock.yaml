@@ -15,8 +15,8 @@ importers:
         specifier: 0.14.8
         version: 0.14.8(solid-js@1.9.3)
       '@solidjs/start':
-        specifier: 1.0.10
-        version: 1.0.10(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))
+        specifier: 1.0.11
+        version: 1.0.11(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))
       dompurify:
         specifier: 3.2.3
         version: 3.2.3
@@ -1995,8 +1995,8 @@ packages:
     peerDependencies:
       solid-js: ^1.8.6
 
-  '@solidjs/start@1.0.10':
-    resolution: {integrity: sha512-3yg4KraSxc4rXs9dy/3kkqjDhU0JCPsZFLmDl5n6hHRPwtLLac6WUhs2k5VxGzitHaaJM/ZQCfT7i544Mf+4tw==}
+  '@solidjs/start@1.0.11':
+    resolution: {integrity: sha512-ZkrHtwxnmaVGItah13BtmST6rh3PtATcj0RyXM19Shj6MK/cIpDBBsDTsgwqCbZoa/AT8/JLM5xUHFjQyBjRCA==}
 
   '@stylistic/eslint-plugin@2.9.0':
     resolution: {integrity: sha512-OrDyFAYjBT61122MIY1a3SfEgy3YCMgt2vL4eoPmvTwDBwyQhAXurxNQznlRD/jESNfYWfID8Ej+31LljvF7Xg==}
@@ -7037,12 +7037,12 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite-plugin-solid@2.10.2:
-    resolution: {integrity: sha512-AOEtwMe2baBSXMXdo+BUwECC8IFHcKS6WQV/1NEd+Q7vHPap5fmIhLcAzr+DUJ04/KHx/1UBU0l1/GWP+rMAPQ==}
+  vite-plugin-solid@2.11.0:
+    resolution: {integrity: sha512-G+NiwDj4EAeUE0wt3Ur9f+Lt9oMUuLd0FIxYuqwJSqRacKQRteCwUFzNy8zMEt88xWokngQhiFjfJMhjc1fDXw==}
     peerDependencies:
       '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
       solid-js: ^1.7.2
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
     peerDependenciesMeta:
       '@testing-library/jest-dom':
         optional: true
@@ -7083,10 +7083,10 @@ packages:
       terser:
         optional: true
 
-  vitefu@0.2.5:
-    resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
+  vitefu@1.0.5:
+    resolution: {integrity: sha512-h4Vflt9gxODPFNGPwp4zAMZRpZR7eslzwH2c5hn5kNZ5rhnKyRJ50U+yGCdc2IRaBs8O4haIgLNGrV5CrpMsCA==}
     peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
     peerDependenciesMeta:
       vite:
         optional: true
@@ -9643,7 +9643,7 @@ snapshots:
     dependencies:
       solid-js: 1.9.3
 
-  '@solidjs/start@1.0.10(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@solidjs/start@1.0.11(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
       '@vinxi/plugin-directives': 0.4.3(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
       '@vinxi/server-components': 0.4.3(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
@@ -9658,7 +9658,7 @@ snapshots:
       source-map-js: 1.2.1
       terracotta: 1.0.5(solid-js@1.9.3)
       tinyglobby: 0.2.5
-      vite-plugin-solid: 2.10.2(solid-js@1.9.3)(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))
+      vite-plugin-solid: 2.11.0(solid-js@1.9.3)(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))
     transitivePeerDependencies:
       - '@testing-library/jest-dom'
       - solid-js
@@ -10110,10 +10110,10 @@ snapshots:
   '@vinxi/plugin-directives@0.4.3(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
       '@babel/parser': 7.25.3
-      acorn: 8.12.1
-      acorn-jsx: 5.3.2(acorn@8.12.1)
+      acorn: 8.14.0
+      acorn-jsx: 5.3.2(acorn@8.14.0)
       acorn-loose: 8.4.0
-      acorn-typescript: 1.4.13(acorn@8.12.1)
+      acorn-typescript: 1.4.13(acorn@8.14.0)
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.9
@@ -10123,9 +10123,9 @@ snapshots:
   '@vinxi/server-components@0.4.3(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
       '@vinxi/plugin-directives': 0.4.3(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
-      acorn: 8.12.1
+      acorn: 8.14.0
       acorn-loose: 8.4.0
-      acorn-typescript: 1.4.13(acorn@8.12.1)
+      acorn-typescript: 1.4.13(acorn@8.14.0)
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.9
@@ -10134,9 +10134,9 @@ snapshots:
   '@vinxi/server-functions@0.4.3(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))':
     dependencies:
       '@vinxi/plugin-directives': 0.4.3(vinxi@0.4.3(@types/node@22.10.5)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.31.3)(xml2js@0.6.2))
-      acorn: 8.12.1
+      acorn: 8.14.0
       acorn-loose: 8.4.0
-      acorn-typescript: 1.4.13(acorn@8.12.1)
+      acorn-typescript: 1.4.13(acorn@8.14.0)
       astring: 1.8.6
       magicast: 0.2.11
       recast: 0.23.9
@@ -10244,9 +10244,9 @@ snapshots:
     dependencies:
       acorn: 8.14.0
 
-  acorn-typescript@1.4.13(acorn@8.12.1):
+  acorn-typescript@1.4.13(acorn@8.14.0):
     dependencies:
-      acorn: 8.12.1
+      acorn: 8.14.0
 
   acorn-walk@8.3.3:
     dependencies:
@@ -15959,7 +15959,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-solid@2.10.2(solid-js@1.9.3)(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3)):
+  vite-plugin-solid@2.11.0(solid-js@1.9.3)(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3)):
     dependencies:
       '@babel/core': 7.25.2
       '@types/babel__core': 7.20.5
@@ -15968,7 +15968,7 @@ snapshots:
       solid-js: 1.9.3
       solid-refresh: 0.6.3(solid-js@1.9.3)
       vite: 5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3)
-      vitefu: 0.2.5(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))
+      vitefu: 1.0.5(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3))
     transitivePeerDependencies:
       - supports-color
 
@@ -15994,7 +15994,7 @@ snapshots:
       lightningcss: 1.25.1
       terser: 5.31.3
 
-  vitefu@0.2.5(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3)):
+  vitefu@1.0.5(vite@5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3)):
     optionalDependencies:
       vite: 5.3.5(@types/node@22.10.5)(lightningcss@1.25.1)(terser@5.31.3)
 
