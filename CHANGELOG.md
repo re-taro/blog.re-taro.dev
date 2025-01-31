@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.5.0
+
+### Minor Changes
+
+- [#603](https://github.com/re-taro/blog.re-taro.dev/pull/603) [`e9fc0eb`](https://github.com/re-taro/blog.re-taro.dev/commit/e9fc0ebaf41f38e1c546291c5aea724ea9469d18) Thanks [@re-taro](https://github.com/re-taro)! - wrote about pnpm
+
 ## 2.4.0
 
 ### Minor Changes
