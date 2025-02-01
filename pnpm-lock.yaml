@@ -52,8 +52,8 @@ importers:
         specifier: 0.8.0
         version: 0.8.0(typescript@5.7.3)
       '@content-collections/vite':
-        specifier: 0.2.3
-        version: 0.2.3(@content-collections/core@0.8.0(typescript@5.7.3))(vite@5.3.5(@types/node@22.10.7)(lightningcss@1.25.1)(terser@5.31.3))
+        specifier: 0.2.4
+        version: 0.2.4(@content-collections/core@0.8.0(typescript@5.7.3))(vite@5.3.5(@types/node@22.10.7)(lightningcss@1.25.1)(terser@5.31.3))
       '@pandacss/dev':
         specifier: 0.47.1
         version: 0.47.1(jsdom@24.1.1)(typescript@5.7.3)
@@ -630,8 +630,8 @@ packages:
     peerDependencies:
       '@content-collections/core': 0.x
 
-  '@content-collections/vite@0.2.3':
-    resolution: {integrity: sha512-W4yAXVpKm+h2YH4LvXMHqi++y1YzUcKVtMnM8rZL44mPWeSJnMPcPVeECCahsLDyuyVeCKsL/5JrH7EPTdX7Aw==}
+  '@content-collections/vite@0.2.4':
+    resolution: {integrity: sha512-3+n7pUnUMyjVasZLyxoUEU9VtJigWN/REliCyvAjsm0obv+6UpHAiRrkuLhn9luKAiHw4PRcFIJefBGz4i8Uzw==}
     peerDependencies:
       '@content-collections/core': ^0.x
       vite: ^5
@@ -8246,7 +8246,7 @@ snapshots:
     dependencies:
       '@content-collections/core': 0.8.0(typescript@5.7.3)
 
-  '@content-collections/vite@0.2.3(@content-collections/core@0.8.0(typescript@5.7.3))(vite@5.3.5(@types/node@22.10.7)(lightningcss@1.25.1)(terser@5.31.3))':
+  '@content-collections/vite@0.2.4(@content-collections/core@0.8.0(typescript@5.7.3))(vite@5.3.5(@types/node@22.10.7)(lightningcss@1.25.1)(terser@5.31.3))':
     dependencies:
       '@content-collections/core': 0.8.0(typescript@5.7.3)
       '@content-collections/integrations': 0.2.1(@content-collections/core@0.8.0(typescript@5.7.3))
