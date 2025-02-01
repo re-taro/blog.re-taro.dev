@@ -1,17 +1,25 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>re-taro/renovate-config"],
+  "extends": [
+    "local>re-taro/renovate-config"
+  ],
   "npm": {
     "packageRules": [
       {
         "groupName": "playwright",
-        "matchPackagePatterns": ["@playwright/*", "playwright"],
-        "semanticCommitType": "fix"
+        "semanticCommitType": "fix",
+        "matchPackageNames": [
+          "/@playwright/*/",
+          "/playwright/"
+        ]
       },
       {
         "groupName": "shiki",
-        "matchPackagePatterns": ["@shikijs/*", "shiki"],
-        "semanticCommitType": "fix"
+        "semanticCommitType": "fix",
+        "matchPackageNames": [
+          "/@shikijs/*/",
+          "/shiki/"
+        ]
       }
     ]
   }
