@@ -36,7 +36,7 @@
     "@solidjs/meta": "0.29.4",
     "@solidjs/router": "0.14.8",
     "@solidjs/start": "1.0.11",
-    "dompurify": "3.2.3",
+    "dompurify": "3.2.4",
     "shiki": "1.26.2",
     "solid-js": "1.9.4",
     "temporal-polyfill": "0.2.5",
