@@ -49,7 +49,7 @@
     "@changesets/cli": "2.27.12",
     "@content-collections/cli": "0.1.6",
     "@content-collections/core": "0.8.0",
-    "@content-collections/vite": "0.2.3",
+    "@content-collections/vite": "0.2.4",
     "@pandacss/dev": "0.47.1",
     "@playwright/test": "1.49.1",
     "@qnighy/dedent": "0.1.1",
