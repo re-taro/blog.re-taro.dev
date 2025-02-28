@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.6.0
+
+### Minor Changes
+
+- [#613](https://github.com/re-taro/blog.re-taro.dev/pull/613) [`5116416`](https://github.com/re-taro/blog.re-taro.dev/commit/5116416c443ecebba58625d42c85a364e2e00a72) Thanks [@re-taro](https://github.com/re-taro)! - Wrote blog about future of web
+
 ## 2.5.0
 
 ### Minor Changes
