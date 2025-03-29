@@ -6,7 +6,7 @@ export const tokens = defineTokens({
 	colors,
 	fonts: {
 		mono: {
-			value: "\"SFMono-Regular\", \"Consolas\", \"Liberation Mono\", \"Menlo\", monospace;",
+			value: "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
 		},
 	},
 	fontSizes: {

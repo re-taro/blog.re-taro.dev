@@ -5,7 +5,7 @@ import { FileRoutes } from "@solidjs/start/router";
 import "./global.css";
 import { MetaProvider } from "@solidjs/meta";
 import { Assets } from "solid-js/web";
-import { partytownSnippet } from "@builder.io/partytown/integration";
+import { partytownSnippet } from "@qwik.dev/partytown/integration";
 import { css } from "./styled-system/css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
