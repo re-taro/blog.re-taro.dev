@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.6.1
+
+### Patch Changes
+
+- [#577](https://github.com/re-taro/blog.re-taro.dev/pull/577) [`df66c64`](https://github.com/re-taro/blog.re-taro.dev/commit/df66c64145306495049d51700f9acc776e9584cf) Thanks [@renovate](https://github.com/apps/renovate)! - Update partytown
+
 ## 2.6.0
 
 ### Minor Changes
