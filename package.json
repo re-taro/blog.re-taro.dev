@@ -24,7 +24,6 @@
     "lint:textlint": "textlint contents/**/slug.md",
     "prebuild": "pnpm run /^prebuild:.*/",
     "prebuild:pandacss": "panda codegen --silent",
-    "prebuild:partytown": "partytown copylib public/~partytown",
     "prebuild:content-collections": "content-collections build",
     "prepare": "panda codegen",
     "start": "NODE_ENV=production wrangler pages dev dist",
@@ -44,7 +43,6 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.10.1",
-    "@builder.io/partytown": "0.10.3",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.12",
     "@content-collections/cli": "0.1.6",
@@ -53,9 +51,9 @@
     "@pandacss/dev": "0.47.1",
     "@playwright/test": "1.49.1",
     "@qnighy/dedent": "0.1.1",
+    "@qwik.dev/partytown": "0.11.0",
     "@re-taro/eslint-config": "5.2.1",
     "@shikijs/transformers": "1.26.2",
-    "@types/dompurify": "3.2.0",
     "@types/hast": "3.0.4",
     "@types/mdast": "4.0.4",
     "@types/node": "22.13.0",
@@ -99,7 +97,7 @@
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "2.1.8",
     "wait-on": "8.0.2",
-    "wrangler": "3.101.0"
+    "wrangler": "4.6.0"
   },
   "browserslist": [
     "defaults and > 0.3%"
