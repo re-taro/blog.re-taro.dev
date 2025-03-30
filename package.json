@@ -18,7 +18,7 @@
     "fmt:eslint": "pnpm run lint:eslint --fix",
     "fmt:textlint": "pnpm run lint:textlint --fix",
     "gen": "plop",
-    "lint": "pnpm run --parallel /^lint:.*/",
+    "lint": "pnpm run /^lint:.*/",
     "lint:eslint": "eslint .",
     "lint:tsc": "tsc -p . --incremental --noEmit",
     "lint:textlint": "textlint contents/**/slug.md",
@@ -27,7 +27,7 @@
     "prebuild:content-collections": "content-collections build",
     "prepare": "panda codegen",
     "start": "NODE_ENV=production wrangler pages dev dist",
-    "test": "pnpm run --parallel /^test:.*/",
+    "test": "pnpm run /^test:.*/",
     "test:integration": "playwright test",
     "test:unit": "vitest"
   },
