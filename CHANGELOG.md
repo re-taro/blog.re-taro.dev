@@ -1,5 +1,11 @@
 # blog.re-taro.dev
 
+## 2.7.0
+
+### Minor Changes
+
+- [#621](https://github.com/re-taro/blog.re-taro.dev/pull/621) [`51abc6b`](https://github.com/re-taro/blog.re-taro.dev/commit/51abc6b925603b060cdb7e7f6dfa629d464dd754) Thanks [@re-taro](https://github.com/re-taro)! - Wrote post about styled-components
+
 ## 2.6.1
 
 ### Patch Changes
