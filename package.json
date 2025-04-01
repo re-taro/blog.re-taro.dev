@@ -56,7 +56,7 @@
     "@shikijs/transformers": "1.26.2",
     "@types/hast": "3.0.4",
     "@types/mdast": "4.0.4",
-    "@types/node": "22.13.15",
+    "@types/node": "22.13.16",
     "@types/unist": "3.0.3",
     "@types/xml2js": "0.4.14",
     "axe-core": "4.10.2",
