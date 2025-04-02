@@ -36,7 +36,7 @@
     "@solidjs/router": "0.14.8",
     "@solidjs/start": "1.0.11",
     "dompurify": "3.2.4",
-    "shiki": "1.26.2",
+    "shiki": "3.2.1",
     "solid-js": "1.9.4",
     "temporal-polyfill": "0.2.5",
     "xml2js": "0.6.2"
@@ -53,7 +53,7 @@
     "@qnighy/dedent": "0.1.1",
     "@qwik.dev/partytown": "0.11.0",
     "@re-taro/eslint-config": "5.2.1",
-    "@shikijs/transformers": "1.26.2",
+    "@shikijs/transformers": "3.2.1",
     "@types/hast": "3.0.4",
     "@types/mdast": "4.0.4",
     "@types/node": "22.13.16",
