@@ -52,7 +52,7 @@
     "@playwright/test": "1.49.1",
     "@qnighy/dedent": "0.1.1",
     "@qwik.dev/partytown": "0.11.0",
-    "@re-taro/eslint-config": "5.2.1",
+    "@re-taro/eslint-config": "5.3.0",
     "@shikijs/transformers": "3.2.1",
     "@types/hast": "3.0.4",
     "@types/mdast": "4.0.4",
