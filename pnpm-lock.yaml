@@ -175,8 +175,8 @@ importers:
         specifier: 5.7.3
         version: 5.7.3
       ulid:
-        specifier: 2.3.0
-        version: 2.3.0
+        specifier: 3.0.0
+        version: 3.0.0
       unfurl.js:
         specifier: 6.4.0
         version: 6.4.0
@@ -6831,8 +6831,8 @@ packages:
     engines: {node: '>=0.8.0'}
     hasBin: true
 
-  ulid@2.3.0:
-    resolution: {integrity: sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==}
+  ulid@3.0.0:
+    resolution: {integrity: sha512-yvZYdXInnJve6LdlPIuYmURdS2NP41ZoF4QW7SXwbUKYt53+0eDAySO+rGSvM2O/ciuB/G+8N7GQrZ1mCJpuqw==}
     hasBin: true
 
   unbox-primitive@1.0.2:
@@ -15290,7 +15290,7 @@ snapshots:
   uglify-js@3.19.1:
     optional: true
 
-  ulid@2.3.0: {}
+  ulid@3.0.0: {}
 
   unbox-primitive@1.0.2:
     dependencies:
