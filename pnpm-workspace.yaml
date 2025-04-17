@@ -1,5 +1,9 @@
 saveExact: true
 onlyBuiltDependencies:
+  - '@swc/core'
   - esbuild
   - sharp
   - workerd
+packages:
+  - packages/*
+  - app

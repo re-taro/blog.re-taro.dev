@@ -1,0 +1,41 @@
+{
+	"name": "remark-description-list",
+	"version": "2.7.0",
+	"type": "module",
+	"private": true,
+	"exports": {
+		".": {
+			"default": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"format": "prettier --write .",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint .",
+		"lint:prettier": "prettier --check .",
+		"lint:tsc": "tsc -p . --noEmit",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@types/mdast": "4.0.4",
+		"@types/unist": "3.0.3",
+		"ast": "workspace:*",
+		"mdast-util-from-markdown": "2.0.2",
+		"remark-check": "workspace:*",
+		"unified": "11.0.5",
+		"utils": "workspace:*",
+		"visit": "workspace:*"
+	},
+	"devDependencies": {
+		"remark-parse": "11.0.0",
+		"rollup-config": "workspace:*"
+	}
+}

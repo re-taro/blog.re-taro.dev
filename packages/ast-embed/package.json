@@ -1,0 +1,38 @@
+{
+	"name": "ast-embed",
+	"version": "2.7.0",
+	"type": "module",
+	"private": true,
+	"exports": {
+		".": {
+			"default": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"format": "prettier --write .",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint .",
+		"lint:prettier": "prettier --check .",
+		"lint:tsc": "tsc -p . --noEmit",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"ast": "workspace:*",
+		"ast-transform": "workspace:*",
+		"oembed": "workspace:*",
+		"remark-embed": "workspace:*",
+		"unfurl.js": "6.4.0",
+		"unified": "11.0.5"
+	},
+	"devDependencies": {
+		"rollup-config": "workspace:*"
+	}
+}

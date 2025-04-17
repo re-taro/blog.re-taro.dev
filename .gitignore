@@ -1,20 +1,12 @@
-# Build
-/.solid
-/.output
-/.vinxi
-/dist
-
-# Development
+dist
 node_modules
+.rollup.cache
 *.local
 tsconfig.tsbuildinfo
-/storybook-static
-/playwright-report
-/test-results
-/.wrangler
-
-# Generated
-src/styled-system
+storybook-static
+playwright-report
+test-results
+.wrangler
+styled-system
 .content-collections
-/public/img
-/public/~partytown
+**/public/img

@@ -1,0 +1,37 @@
+{
+	"name": "ast-section",
+	"version": "2.7.0",
+	"type": "module",
+	"private": true,
+	"exports": {
+		".": {
+			"default": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"format": "prettier --write .",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint .",
+		"lint:prettier": "prettier --check .",
+		"lint:tsc": "tsc -p . --noEmit",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@types/unist": "3.0.3",
+		"ast": "workspace:*",
+		"unified": "11.0.5"
+	},
+	"devDependencies": {
+		"ast-transform": "workspace:*",
+		"remark-parse": "11.0.0",
+		"rollup-config": "workspace:*"
+	}
+}
