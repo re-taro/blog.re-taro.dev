@@ -2,7 +2,6 @@
 name = "contents"
 main = "src/index.ts"
 compatibility_date = "2025-04-09"
-vars = { ENVIRONMENT = "dev" }
 
 [observability]
 enabled = true
@@ -10,5 +9,5 @@ enabled = true
 [dev]
 port = 8000
 
-[env.production]
-vars = { ENVIRONMENT = "production" }
+[vars]
+ENVIRONMENT = "prd"
