@@ -21,8 +21,7 @@
 		"lint": "pnpm run /^lint:.*/",
 		"lint:eslint": "eslint .",
 		"lint:prettier": "prettier --check .",
-		"lint:tsc": "tsc -p . --noEmit",
-		"test": "vitest"
+		"lint:tsc": "tsc -p . --noEmit"
 	},
 	"dependencies": {
 		"ast": "workspace:*",

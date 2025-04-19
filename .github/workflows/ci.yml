@@ -28,6 +28,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
+      - name: Setup | content-collections
+        run: pnpm -C apps/contents run pre:ci
       - name: Run | ESLint
         run: pnpm run lint:eslint
   type-test:
@@ -40,8 +42,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
-      - name: Setup | Build
-        run: pnpm prebuild:content-collections
+      - name: Setup | content-collections
+        run: pnpm -C apps/contents run pre:ci
       - name: Run | tsc
         run: pnpm run lint:tsc
   prettier-test:

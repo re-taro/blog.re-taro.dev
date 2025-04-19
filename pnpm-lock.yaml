@@ -32,6 +32,9 @@ importers:
       eslint:
         specifier: 9.24.0
         version: 9.24.0(jiti@1.21.6)
+      playwright:
+        specifier: 1.52.0
+        version: 1.52.0
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -189,7 +192,7 @@ importers:
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.10.1
-        version: 4.10.1(playwright-core@1.49.1)
+        version: 4.10.1(playwright-core@1.52.0)
       '@pandacss/dev':
         specifier: 0.53.3
         version: 0.53.3(jsdom@24.1.1)(typescript@5.8.3)
@@ -213,16 +216,13 @@ importers:
         version: 4.10.3
       axe-playwright:
         specifier: 2.0.3
-        version: 2.0.3(playwright@1.49.1)
+        version: 2.0.3(playwright@1.52.0)
       contents:
         specifier: workspace:*
         version: link:../contents
       oembed:
         specifier: workspace:*
         version: link:../../packages/oembed
-      playwright:
-        specifier: 1.49.1
-        version: 1.49.1
       postcss:
         specifier: 8.5.1
         version: 8.5.1
@@ -5486,8 +5486,18 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  playwright-core@1.52.0:
+    resolution: {integrity: sha512-l2osTgLXSMeuLZOML9qYODUQoPPnUsKsb5/P6LJ2e6uPKXUdPK5WYhN4z03G+YNbWmGDY4YENauNu4ZKczreHg==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   playwright@1.49.1:
     resolution: {integrity: sha512-VYL8zLoNTBxVOrJBbDuRgDWa3i+mfQgDTrL8Ah9QXZ7ax4Dsj0MSq5bYgytRnDVVe+njoKnfsYkH3HzqVj5UZA==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.52.0:
+    resolution: {integrity: sha512-JAwMNMBlxJ2oD1kce4KPtMkDeKGHQstdpFPcPH3maElAXon/QZeTvtsfXmTMRyO9TslfoYOXkSsvao2nE1ilTw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7150,6 +7160,11 @@ snapshots:
     dependencies:
       axe-core: 4.10.3
       playwright-core: 1.49.1
+
+  '@axe-core/playwright@4.10.1(playwright-core@1.52.0)':
+    dependencies:
+      axe-core: 4.10.3
+      playwright-core: 1.52.0
 
   '@azu/format-text@1.0.2': {}
 
@@ -9637,6 +9652,15 @@ snapshots:
       junit-report-builder: 5.1.1
       picocolors: 1.1.1
       playwright: 1.49.1
+
+  axe-playwright@2.0.3(playwright@1.52.0):
+    dependencies:
+      '@types/junit-report-builder': 3.0.2
+      axe-core: 4.10.3
+      axe-html-reporter: 2.2.11(axe-core@4.10.3)
+      junit-report-builder: 5.1.1
+      picocolors: 1.1.1
+      playwright: 1.52.0
 
   axios@1.8.4:
     dependencies:
@@ -12812,9 +12836,17 @@ snapshots:
 
   playwright-core@1.49.1: {}
 
+  playwright-core@1.52.0: {}
+
   playwright@1.49.1:
     dependencies:
       playwright-core: 1.49.1
+    optionalDependencies:
+      fsevents: 2.3.2
+
+  playwright@1.52.0:
+    dependencies:
+      playwright-core: 1.52.0
     optionalDependencies:
       fsevents: 2.3.2
 

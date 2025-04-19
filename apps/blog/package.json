@@ -44,7 +44,6 @@
 		"axe-playwright": "2.0.3",
 		"contents": "workspace:*",
 		"oembed": "workspace:*",
-		"playwright": "1.49.1",
 		"postcss": "8.5.1",
 		"react-server-dom-webpack": "canary",
 		"schema-dts": "1.1.5",

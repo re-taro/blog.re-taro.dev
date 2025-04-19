@@ -17,6 +17,7 @@
 	},
 	"scripts": {
 		"build": "content-collections build && wrangler deploy --env production --dry-run --minify --outdir dist",
+		"pre:ci": "content-collections build",
 		"format": "prettier --write .",
 		"lint": "pnpm run /^lint:.*/",
 		"lint:eslint": "eslint .",
