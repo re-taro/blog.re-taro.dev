@@ -9,6 +9,6 @@ export default re_taro(
 		},
 	},
 	{
-		ignores: ['app/worker-configuration.d.ts', 'packages/rollup/index.d.ts', 'app/contents/**/*.md'],
+		ignores: ['apps/blog/worker-configuration.d.ts','apps/contents/worker-configuration.d.ts', 'packages/rollup/index.d.ts', 'apps/contents/**/*.md'],
 	},
 );

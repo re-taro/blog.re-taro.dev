@@ -56,9 +56,16 @@ jobs:
           node-version-file: .tool-versions
       - name: Deploy | Build
         run: pnpm build
-      - name: Deploy | Deploy to Cloudflare Pages
+      - name: Deploy | Deploy contents to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3.13.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy --project-name blog --directory dist
+          command: deploy --env production --project-name contents --directory apps/contents/dist
+      - name: Deploy | Deploy blog to Cloudflare Workers
+        id: page
+        uses: cloudflare/wrangler-action@v3.13.1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: deploy --project-name blog --directory apps/blog/dist

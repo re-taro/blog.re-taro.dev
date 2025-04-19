@@ -6,4 +6,4 @@ onlyBuiltDependencies:
   - workerd
 packages:
   - packages/*
-  - app
+  - apps/*

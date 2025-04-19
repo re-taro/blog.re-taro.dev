@@ -2,12 +2,12 @@
 
 import cjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
-import nodeResolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import { defineConfig } from 'rollup';
-import outputSize, { summarize } from 'rollup-plugin-output-size';
+import { summarize, outputSize } from 'rollup-plugin-output-size';
 
 /**
  * @param {import('rollup').RollupOptions} options

@@ -1,0 +1,12 @@
+# :schema node_modules/wrangler/config-schema.json
+name = "blog"
+main = "src/worker.ts"
+compatibility_date = "2025-04-09"
+compatibility_flags = ["nodejs_compat"]
+
+[[services]]
+service = "contents"
+binding = "CONTENTS"
+
+[observability]
+enabled = true
