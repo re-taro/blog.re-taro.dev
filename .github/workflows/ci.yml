@@ -28,6 +28,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Setup | content-collections
         run: pnpm -C apps/contents run pre:ci
       - name: Run | ESLint
@@ -42,6 +44,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Setup | content-collections
         run: pnpm -C apps/contents run pre:ci
       - name: Run | tsc
@@ -80,6 +84,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Test | Unit
         run: pnpm run test:unit
   integration-test:

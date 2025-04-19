@@ -17,13 +17,13 @@
 	},
 	"scripts": {
 		"build": "content-collections build && wrangler deploy --env production --dry-run --minify --outdir dist",
-		"pre:ci": "content-collections build",
 		"format": "prettier --write .",
 		"lint": "pnpm run /^lint:.*/",
 		"lint:eslint": "eslint .",
 		"lint:prettier": "prettier --check .",
 		"lint:textlint": "textlint contents/**/slug.md",
 		"lint:tsc": "tsc -p . --noEmit",
+		"pre:ci": "content-collections build",
 		"start": "concurrently 'content-collections watch' 'wait-on .content-collections/generated/index.js && wrangler dev'",
 		"typegen": "wrangler types"
 	},
