@@ -1,0 +1,11 @@
+{
+	"extends": "tsconfig/tsconfig.app.json",
+	"compilerOptions": {
+		"paths": {
+			"styled-system/*": ["./styled-system/*"]
+		},
+		"checkJs": false,
+		"types": ["vite/client", "@cloudflare/workers-types/2023-07-01", "./worker-configuration.d.ts"]
+	},
+	"include": ["**/*.ts", "**/*.tsx"]
+}

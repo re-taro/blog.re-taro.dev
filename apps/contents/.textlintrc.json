@@ -1,0 +1,27 @@
+{
+	"filters": {
+		"comments": true
+	},
+	"rules": {
+		"ja-space-around-link": {
+			"after": true,
+			"before": true
+		},
+		"preset-overflow-techblog": {
+			"ja-no-mixed-period": false,
+			"ja-no-successive-word": false,
+			"ja-no-weak-phrase": false,
+			"ja-space-around-code": {
+				"after": true,
+				"before": true
+			},
+			"ja-space-between-half-and-full-width": {
+				"space": "always"
+			},
+			"no-exclamation-question-mark": false,
+			"sentence-length": {
+				"max": 150
+			}
+		}
+	}
+}

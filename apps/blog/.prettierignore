@@ -1,0 +1,11 @@
+dist
+.rollup.cache/
+node_modules
+tsconfig.tsbuildinfo
+storybook-static
+playwright-report
+test-results
+.wrangler
+styled-system
+.content-collections
+public/img

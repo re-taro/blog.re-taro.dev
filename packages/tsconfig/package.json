@@ -1,0 +1,19 @@
+{
+	"name": "tsconfig",
+	"version": "2.7.0",
+	"type": "module",
+	"private": true,
+	"exports": {
+		"./tsconfig.app.json": "./tsconfig.app.json",
+		"./tsconfig.lib.json": "./tsconfig.lib.json"
+	},
+	"files": [
+		"tsconfig.app.json",
+		"tsconfig.lib.json"
+	],
+	"scripts": {
+		"format": "prettier --write .",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:prettier": "prettier --check ."
+	}
+}
