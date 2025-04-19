@@ -233,7 +233,7 @@ const blog = defineCollection({
 		const mdast = await processor.run(processor.parse(document.content));
 
 		const config = {
-			outputRoot: path.join(import.meta.dirname, '..', '..', '..', 'app', 'public'),
+			outputRoot: path.join(import.meta.dirname, '..', '..', '..', 'blog', 'public'),
 			outputSubDir: 'img',
 			scaling: 0.7,
 			sourceBaseDir: 'contents',
