@@ -104,6 +104,6 @@ jobs:
         run: pnpm build
       - name: Test | Integration
         run: |
-          concurrently -k -s first -n "APP,TEST" -c "magenta,blue" \
+          pnpm concurrently -k -s first -n "APP,TEST" -c "magenta,blue" \
             "pnpm start" \
-            "wait-on http://127.0.0.1:8788 && pnpm test:integration"
+            "pnpm wait-on http://127.0.0.1:8788 && pnpm test:integration"
