@@ -93,7 +93,7 @@
     "unfurl.js": "6.4.0",
     "unified": "11.0.5",
     "unist-util-visit": "5.0.0",
-    "vinxi": "0.4.3",
+    "vinxi": "0.5.6",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "2.1.8",
     "wait-on": "8.0.2",
