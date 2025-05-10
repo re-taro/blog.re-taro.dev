@@ -42,6 +42,7 @@ export const createRollupConfig = (options) =>
 				emitDeclarationOnly: true,
 				isolatedDeclarations: true,
 				rootDir: 'src',
+				incremental: false,
 			}),
 			terser({
 				compress: {
