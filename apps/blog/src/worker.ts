@@ -1,6 +1,6 @@
-import { index, render, route } from '@redwoodjs/sdk/router';
-import { defineApp } from '@redwoodjs/sdk/worker';
 import { env } from 'cloudflare:workers';
+import { index, render, route } from 'rwsdk/router';
+import { defineApp } from 'rwsdk/worker';
 import { Builder } from 'xml2js';
 import { generateXmlAst } from './app/context/rss';
 import { createUrlSet } from './app/context/sitemap';

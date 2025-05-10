@@ -1,6 +1,6 @@
 import path from 'node:path';
 import { partytownVite } from '@qwik.dev/partytown/utils';
-import { redwood } from '@redwoodjs/sdk/vite';
+import { redwood } from 'rwsdk/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({

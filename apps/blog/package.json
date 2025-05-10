@@ -19,15 +19,13 @@
 		"test:integration": "playwright test"
 	},
 	"dependencies": {
-		"@redwoodjs/sdk": "0.0.76",
 		"@types/hast": "3.0.4",
 		"ast": "workspace:*",
 		"dompurify": "3.2.5",
 		"hast-util-from-html": "2.0.3",
 		"hast-util-select": "6.0.4",
 		"hast-util-to-html": "9.0.5",
-		"react": "19.2.0-canary-bc6184dd-20250417",
-		"react-dom": "19.2.0-canary-bc6184dd-20250417",
+		"rwsdk": "0.0.81",
 		"shiki": "3.2.2",
 		"temporal-polyfill": "0.3.0",
 		"xml2js": "0.6.2"
@@ -45,7 +43,6 @@
 		"contents": "workspace:*",
 		"oembed": "workspace:*",
 		"postcss": "8.5.1",
-		"react-server-dom-webpack": "canary",
 		"schema-dts": "1.1.5",
 		"sirv-cli": "3.0.0",
 		"unfurl.js": "6.4.0",

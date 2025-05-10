@@ -1,5 +1,5 @@
-import { IS_DEV } from '@redwoodjs/sdk/constants';
-import type { RouteMiddleware } from '@redwoodjs/sdk/router';
+import { IS_DEV } from 'rwsdk/constants';
+import type { RouteMiddleware } from 'rwsdk/router';
 
 export const setCommonHeaders =
 	(): RouteMiddleware =>
