@@ -1,5 +1,6 @@
-/* eslint-disable array-callback-return */
 'use client';
+
+/* eslint-disable array-callback-return */
 
 import { useEffect, useState } from 'react';
 import { css } from 'styled-system/css';

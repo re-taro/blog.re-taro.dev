@@ -1,5 +1,3 @@
-'use client';
-
 import { css, cx } from 'styled-system/css';
 import type * as A from 'ast';
 import type { FC } from 'react';
