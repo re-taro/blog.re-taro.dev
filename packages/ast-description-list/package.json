@@ -28,7 +28,7 @@
 		"ast": "workspace:*",
 		"ast-transform": "workspace:*",
 		"remark-description-list": "workspace:*",
-		"unified": "11.0.5"
+		"unified": "catalog:"
 	},
 	"devDependencies": {
 		"rollup-config": "workspace:*"

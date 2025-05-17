@@ -25,6 +25,6 @@
 		"lint:tsc": "tsc -p . --noEmit"
 	},
 	"dependencies": {
-		"@types/mdast": "4.0.4"
+		"@types/mdast": "catalog:"
 	}
 }

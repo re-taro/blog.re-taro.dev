@@ -26,11 +26,11 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@types/mdast": "4.0.4",
+		"@types/mdast": "catalog:",
 		"ast": "workspace:*",
-		"mdast-util-from-markdown": "2.0.2",
+		"mdast-util-from-markdown": "catalog:",
 		"remark-check": "workspace:*",
-		"unified": "11.0.5",
+		"unified": "catalog:",
 		"visit": "workspace:*"
 	},
 	"devDependencies": {

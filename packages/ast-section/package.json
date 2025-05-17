@@ -26,9 +26,9 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@types/unist": "3.0.3",
+		"@types/unist": "catalog:",
 		"ast": "workspace:*",
-		"unified": "11.0.5"
+		"unified": "catalog:"
 	},
 	"devDependencies": {
 		"ast-transform": "workspace:*",

@@ -25,12 +25,12 @@
 		"lint:tsc": "tsc -p . --noEmit"
 	},
 	"dependencies": {
-		"@types/mdast": "4.0.4",
+		"@types/mdast": "catalog:",
 		"ast": "workspace:*",
 		"github-slugger": "2.0.0",
 		"remark-check": "workspace:*",
 		"ts-pattern": "5.7.0",
-		"unified": "11.0.5",
+		"unified": "catalog:",
 		"utils": "workspace:*",
 		"visit": "workspace:*"
 	},

@@ -4,6 +4,30 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@types/mdast':
+      specifier: 4.0.4
+      version: 4.0.4
+    '@types/unist':
+      specifier: 3.0.3
+      version: 3.0.3
+    mdast-util-from-markdown:
+      specifier: 2.0.2
+      version: 2.0.2
+    shiki:
+      specifier: 3.2.2
+      version: 3.2.2
+    temporal-polyfill:
+      specifier: 0.3.0
+      version: 0.3.0
+    unfurl.js:
+      specifier: 6.4.0
+      version: 6.4.0
+    unified:
+      specifier: 11.0.5
+      version: 11.0.5
+
 importers:
 
   .:
@@ -81,10 +105,10 @@ importers:
         specifier: 0.0.83
         version: 0.0.83(rollup@4.39.0)(typescript@5.8.3)(vite@6.2.6(@types/node@22.14.1)(jiti@1.21.6)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0))(webpack@5.99.5)(workerd@1.20250507.0)
       shiki:
-        specifier: 3.2.2
+        specifier: 'catalog:'
         version: 3.2.2
       temporal-polyfill:
-        specifier: 0.3.0
+        specifier: 'catalog:'
         version: 0.3.0
       xml2js:
         specifier: 0.6.2
@@ -133,7 +157,7 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       unfurl.js:
-        specifier: 6.4.0
+        specifier: 'catalog:'
         version: 6.4.0
       vite:
         specifier: 6.2.6
@@ -148,7 +172,7 @@ importers:
         specifier: 4.7.7
         version: 4.7.7
       temporal-polyfill:
-        specifier: 0.3.0
+        specifier: 'catalog:'
         version: 0.3.0
     devDependencies:
       '@content-collections/cli':
@@ -215,7 +239,7 @@ importers:
         specifier: 0.34.1
         version: 0.34.1
       shiki:
-        specifier: 3.2.2
+        specifier: 'catalog:'
         version: 3.2.2
       textlint:
         specifier: 14.4.2
@@ -233,19 +257,19 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
 
   packages/ast:
     dependencies:
       '@types/unist':
-        specifier: 3.0.3
+        specifier: 'catalog:'
         version: 3.0.3
       oembed:
         specifier: workspace:*
         version: link:../oembed
       unfurl.js:
-        specifier: 6.4.0
+        specifier: 'catalog:'
         version: 6.4.0
 
   packages/ast-article:
@@ -257,7 +281,7 @@ importers:
         specifier: workspace:*
         version: link:../ast-check
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
     devDependencies:
       rollup-config:
@@ -282,7 +306,7 @@ importers:
         specifier: workspace:*
         version: link:../remark-description-list
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
     devDependencies:
       rollup-config:
@@ -304,10 +328,10 @@ importers:
         specifier: workspace:*
         version: link:../remark-embed
       unfurl.js:
-        specifier: 6.4.0
+        specifier: 'catalog:'
         version: 6.4.0
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
     devDependencies:
       rollup-config:
@@ -317,13 +341,13 @@ importers:
   packages/ast-section:
     dependencies:
       '@types/unist':
-        specifier: 3.0.3
+        specifier: 'catalog:'
         version: 3.0.3
       ast:
         specifier: workspace:*
         version: link:../ast
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
     devDependencies:
       ast-transform:
@@ -345,7 +369,7 @@ importers:
         specifier: workspace:*
         version: link:../ast-check
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
     devDependencies:
       rollup-config:
@@ -355,7 +379,7 @@ importers:
   packages/ast-transform:
     dependencies:
       '@types/mdast':
-        specifier: 4.0.4
+        specifier: 'catalog:'
         version: 4.0.4
       ast:
         specifier: workspace:*
@@ -370,7 +394,7 @@ importers:
         specifier: 5.7.0
         version: 5.7.0
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
       utils:
         specifier: workspace:*
@@ -388,28 +412,28 @@ importers:
   packages/remark-check:
     dependencies:
       '@types/mdast':
-        specifier: 4.0.4
+        specifier: 'catalog:'
         version: 4.0.4
 
   packages/remark-description-list:
     dependencies:
       '@types/mdast':
-        specifier: 4.0.4
+        specifier: 'catalog:'
         version: 4.0.4
       '@types/unist':
-        specifier: 3.0.3
+        specifier: 'catalog:'
         version: 3.0.3
       ast:
         specifier: workspace:*
         version: link:../ast
       mdast-util-from-markdown:
-        specifier: 2.0.2
+        specifier: 'catalog:'
         version: 2.0.2
       remark-check:
         specifier: workspace:*
         version: link:../remark-check
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
       utils:
         specifier: workspace:*
@@ -428,19 +452,19 @@ importers:
   packages/remark-embed:
     dependencies:
       '@types/mdast':
-        specifier: 4.0.4
+        specifier: 'catalog:'
         version: 4.0.4
       ast:
         specifier: workspace:*
         version: link:../ast
       mdast-util-from-markdown:
-        specifier: 2.0.2
+        specifier: 'catalog:'
         version: 2.0.2
       remark-check:
         specifier: workspace:*
         version: link:../remark-check
       unified:
-        specifier: 11.0.5
+        specifier: 'catalog:'
         version: 11.0.5
       visit:
         specifier: workspace:*
@@ -491,7 +515,7 @@ importers:
   packages/visit:
     dependencies:
       '@types/mdast':
-        specifier: 4.0.4
+        specifier: 'catalog:'
         version: 4.0.4
       unist-util-visit:
         specifier: 5.0.0
@@ -4861,14 +4885,8 @@ packages:
   micromark-util-combine-extensions@2.0.0:
     resolution: {integrity: sha512-vZZio48k7ON0fVS3CUgFatWHoKbbLTK/rT7pzpJ4Bjp5JjkZeasRfrS9wsBdDJK2cJLHMckXZdzPSSr1B8a4oQ==}
 
-  micromark-util-decode-numeric-character-reference@2.0.1:
-    resolution: {integrity: sha512-bmkNc7z8Wn6kgjZmVHOX3SowGmVdhYS7yBpMnuMnPzDq/6xwVA604DuOXMZTO1lvq01g+Adfa0pE2UKGlxL1XQ==}
-
   micromark-util-decode-numeric-character-reference@2.0.2:
     resolution: {integrity: sha512-ccUbYk6CwVdkmCQMyr64dXz42EfHGkPQlBj5p7YVGzq8I7CtjXZJrubAYezf7Rp+bjPseiROqe7G6foFd+lEuw==}
-
-  micromark-util-decode-string@2.0.0:
-    resolution: {integrity: sha512-r4Sc6leeUTn3P6gk20aFMj2ntPwn6qpDZqWvYmAG6NgvFTIlj4WtrAudLi65qYoaGdXYViXYw2pkmn7QnIFasA==}
 
   micromark-util-decode-string@2.0.1:
     resolution: {integrity: sha512-nDV/77Fj6eH1ynwscYTOsbK7rR//Uj0bZXBwJZRfaLEJ1iGBR6kIfNmlNqaqJf649EP0F3NWNdeJi03elllNUQ==}
@@ -11743,15 +11761,15 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
-      decode-named-character-reference: 1.0.2
+      decode-named-character-reference: 1.1.0
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
       micromark: 4.0.0
-      micromark-util-decode-numeric-character-reference: 2.0.1
-      micromark-util-decode-string: 2.0.0
-      micromark-util-normalize-identifier: 2.0.0
-      micromark-util-symbol: 2.0.0
-      micromark-util-types: 2.0.0
+      micromark-util-decode-numeric-character-reference: 2.0.2
+      micromark-util-decode-string: 2.0.1
+      micromark-util-normalize-identifier: 2.0.1
+      micromark-util-symbol: 2.0.1
+      micromark-util-types: 2.0.2
       unist-util-stringify-position: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -12101,20 +12119,9 @@ snapshots:
       micromark-util-chunked: 2.0.0
       micromark-util-types: 2.0.0
 
-  micromark-util-decode-numeric-character-reference@2.0.1:
-    dependencies:
-      micromark-util-symbol: 2.0.0
-
   micromark-util-decode-numeric-character-reference@2.0.2:
     dependencies:
       micromark-util-symbol: 2.0.1
-
-  micromark-util-decode-string@2.0.0:
-    dependencies:
-      decode-named-character-reference: 1.0.2
-      micromark-util-character: 2.1.0
-      micromark-util-decode-numeric-character-reference: 2.0.1
-      micromark-util-symbol: 2.0.0
 
   micromark-util-decode-string@2.0.1:
     dependencies:
@@ -12171,21 +12178,21 @@ snapshots:
     dependencies:
       '@types/debug': 4.1.12
       debug: 4.4.0
-      decode-named-character-reference: 1.0.2
+      decode-named-character-reference: 1.1.0
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.1
       micromark-factory-space: 2.0.0
-      micromark-util-character: 2.1.0
+      micromark-util-character: 2.1.1
       micromark-util-chunked: 2.0.0
       micromark-util-combine-extensions: 2.0.0
-      micromark-util-decode-numeric-character-reference: 2.0.1
+      micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-encode: 2.0.0
-      micromark-util-normalize-identifier: 2.0.0
+      micromark-util-normalize-identifier: 2.0.1
       micromark-util-resolve-all: 2.0.0
       micromark-util-sanitize-uri: 2.0.0
       micromark-util-subtokenize: 2.0.1
-      micromark-util-symbol: 2.0.0
-      micromark-util-types: 2.0.0
+      micromark-util-symbol: 2.0.1
+      micromark-util-types: 2.0.2
     transitivePeerDependencies:
       - supports-color
 
