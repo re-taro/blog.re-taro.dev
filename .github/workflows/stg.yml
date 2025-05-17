@@ -38,13 +38,13 @@ jobs:
         with:
           node-version-file: .tool-versions
       - name: Deploy | Build
-        run: pnpm build
+        run: pnpm build:dev
       - name: Deploy | Deploy contents to Cloudflare Workers
         uses: cloudflare/wrangler-action@7a5f8bbdfeedcde38e6777a50fe685f89259d4ca # v3.13.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: deploy --minify
+          command: deploy --minify --env development
           workingDirectory: apps/contents
       - name: Deploy | Deploy blog to Cloudflare Workers
         id: page

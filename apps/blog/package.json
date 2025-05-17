@@ -4,7 +4,8 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"build": "NODE_ENV=${NODE_ENV:-production} vite build",
+		"build": "NODE_ENV=${NODE_ENV:-production} vite build --mode production",
+		"build:dev": "NODE_ENV=${NODE_ENV:production} vite build --mode development",
 		"dev": "NODE_ENV=${NODE_ENV:-development} vite dev",
 		"dev:init": "rw-scripts dev-init",
 		"format": "prettier --write .",

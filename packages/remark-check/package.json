@@ -17,6 +17,7 @@
 	],
 	"scripts": {
 		"build": "tsc -p . --incremental false",
+		"build:dev": "pnpm run build",
 		"format": "prettier --write .",
 		"lint": "pnpm run /^lint:.*/",
 		"lint:eslint": "eslint .",

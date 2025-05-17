@@ -4,16 +4,12 @@ main = "src/worker.ts"
 compatibility_date = "2025-04-09"
 compatibility_flags = ["nodejs_compat"]
 
-[[env.prd.services]]
+[[env.production.services]]
 service = "contents"
 binding = "CONTENTS"
-[env.prd.observability]
+[env.production.observability]
 enabled = true
 
-[[env.dev.services]]
-service = "contents-dev"
-binding = "CONTENTS"
-
-[[env.local.services]]
-service = "contents-local"
+[[env.development.services]]
+service = "contents-development"
 binding = "CONTENTS"

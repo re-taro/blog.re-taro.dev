@@ -61,7 +61,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: deploy --minify
+          command: deploy --minify --env production
           workingDirectory: apps/contents
       - name: Deploy | Deploy blog to Cloudflare Workers
         id: page
