@@ -3,11 +3,16 @@ name = "contents"
 main = "src/index.ts"
 compatibility_date = "2025-04-09"
 
-[observability]
+[env.prd.vars]
+ENVIRONMENT = "prd"
+[env.prd.observability]
 enabled = true
+
+[env.dev.vars]
+ENVIRONMENT = "dev"
+
+[env.local.vars]
+ENVIRONMENT = "local"
 
 [dev]
 port = 8000
-
-[vars]
-ENVIRONMENT = "prd"
