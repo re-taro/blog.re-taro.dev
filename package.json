@@ -13,6 +13,7 @@
 	"packageManager": "pnpm@10.10.0",
 	"scripts": {
 		"build": "pnpm run -r build",
+		"build:dev": "pnpm run -r build:dev",
 		"dev": "concurrently -k -s first -n 'CONTENTS,APP' -c 'magenta,blue' 'pnpm run dev:contents' 'wait-on http://127.0.0.1:8000 && pnpm run dev:app'",
 		"dev:app": "pnpm -C apps/blog run dev",
 		"dev:contents": "pnpm -C apps/contents run start",
