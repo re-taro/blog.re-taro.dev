@@ -8,6 +8,7 @@ export interface Embed extends M.Node {
 	oembed: boolean;
 	src: string;
 	type: 'embed';
+	isGitHubPermalink: boolean;
 	allowFullScreen?: boolean | undefined;
 	height?: string | undefined;
 	width?: string | undefined;
@@ -48,6 +49,7 @@ const embed = (): Extension => {
 					src: convertToEmbedUrl(url.href),
 					type: 'embed',
 					width: '100%',
+					isGitHubPermalink: false,
 				};
 
 				parent.children[idx] = embed;
@@ -84,6 +86,22 @@ const embed = (): Extension => {
 					src: getEmbedUrl(isWeb).href,
 					type: 'embed',
 					width: '100%',
+					isGitHubPermalink: false,
+				};
+
+				parent.children[idx] = embed;
+			} else if (
+				url.hostname === 'github.com' &&
+				/\/[a-zA-Z0-9](?:-?[a-zA-Z0-9]){0,38}\/[a-zA-Z0-9](?:-?[\w.]){0,99}\/blob\/[^~\s:?[*^/\\]{2,}\/[\w!\-~.*%()'"/]+(?:#L\d+(?:-L\d+)?)?$/u.test(
+					url.pathname,
+				)
+			) {
+				const embed: Embed = {
+					oembed: false,
+					position: node.position,
+					src: url.href,
+					type: 'embed',
+					isGitHubPermalink: true,
 				};
 
 				parent.children[idx] = embed;
@@ -93,6 +111,7 @@ const embed = (): Extension => {
 					position: node.position,
 					src: url.href,
 					type: 'embed',
+					isGitHubPermalink: false,
 				};
 
 				parent.children[idx] = embed;

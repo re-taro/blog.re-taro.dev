@@ -1,4 +1,6 @@
 import { unfurl } from 'unfurl.js';
+import { fetchHtml } from './fetchHtml';
+import { parseHtml } from './parseHtml';
 import type * as A from 'ast';
 import type { Handler } from 'ast-transform';
 import type { OEmbed } from 'oembed';
@@ -16,7 +18,21 @@ const embed: Handler<M.Embed> = async (node): Promise<A.Embed> => {
 			src: node.src,
 			type: 'embed',
 		};
+	} else if (node.isGitHubPermalink) {
+		const html = await fetchHtml(node.src);
+		const data = parseHtml(html, node.src);
+
+		return {
+			filename: data.filename,
+			lang: data.lang,
+			commitHashOrBranch: data.commitHashOrBranch,
+			lines: data.lines,
+			codeLines: data.codeLines,
+			src: node.src,
+			type: 'embed',
+		};
 	}
+
 	return {
 		allowFullScreen: node.allowFullScreen,
 		height: node.height,

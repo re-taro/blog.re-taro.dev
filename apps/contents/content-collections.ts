@@ -111,13 +111,34 @@ const traverseMdAst = async (config: ImageTransformationConfig, ctx: TransformCo
 			}
 			return;
 		}
+		case 'embed': {
+			if (ast.lang != null) {
+				// This is a safty assertion
+				// eslint-disable-next-line ts/no-non-null-assertion
+				const styled = await codeToHast(ast.codeLines!, {
+					lang: ast.lang,
+					theme: 'vitesse-dark',
+					transformers: [
+						transformerNotationDiff(),
+						{
+							pre(node) {
+								node.properties['style'] = 'color: #dbd7cacc;';
+							},
+						},
+					],
+				});
+
+				// This is a safty cast
+				(ast as unknown as { hast: H.Root }).hast = styled;
+			}
+			return;
+		}
 		case 'break':
 		case 'html':
 		case 'footnoteReference':
 		case 'inlineCode':
 		case 'text':
-		case 'thematicBreak':
-		case 'embed': {
+		case 'thematicBreak': {
 			return;
 		}
 		case 'image': {
@@ -128,7 +149,7 @@ const traverseMdAst = async (config: ImageTransformationConfig, ctx: TransformCo
 			const buffer = await readFile(srcImgPath(config, ctx, ast.url));
 			const image = sharp(buffer);
 			let { height, width } = await image.metadata();
-			if (!(width && height)) return;
+			if (!(width != null && height != null)) return;
 
 			const images: TransformedImage[] = [];
 

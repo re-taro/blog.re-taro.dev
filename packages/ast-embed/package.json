@@ -27,6 +27,7 @@
 	"dependencies": {
 		"ast": "workspace:*",
 		"ast-transform": "workspace:*",
+		"node-html-parser": "7.0.1",
 		"oembed": "workspace:*",
 		"remark-embed": "workspace:*",
 		"unfurl.js": "catalog:",

@@ -4,6 +4,10 @@ main = "src/worker.ts"
 compatibility_date = "2025-04-09"
 compatibility_flags = ["nodejs_compat"]
 
+[[services]]
+service = "contents"
+binding = "CONTENTS"
+
 [[env.production.services]]
 service = "contents"
 binding = "CONTENTS"

@@ -18,6 +18,9 @@ describe('remarkEmbed', () => {
 
 			https://docs.google.com/presentation/d/1Jx4nQbzFk5BYTTZwuOMGQOd359G_orJU-OrG4Bg3ohg/edit?usp=sharing
 
+			https://github.com/swc-project/swc/blob/f960d52364e72fa7548cc8aaaf6367dfdf7b9a8f/packages/core/postinstall.js
+
+			https://github.com/styled-components/styled-components/blob/ef548a2fd1d8b7766a273084edb33caf7d8a37df/packages/styled-components/src/sheet/dom.ts#L13-L31
 		`;
 
 		const result = transformer.runSync(transformer.parse(markdown));
@@ -39,6 +42,7 @@ describe('remarkEmbed', () => {
 					},
 					src: 'https://example.com/',
 					type: 'embed',
+					isGitHubPermalink: false,
 				},
 				{
 					height: '360',
@@ -58,6 +62,7 @@ describe('remarkEmbed', () => {
 					src: 'https://www.youtube.com/embed/SHkF48SgiSA',
 					type: 'embed',
 					width: '100%',
+					isGitHubPermalink: false,
 				},
 				{
 					allowFullScreen: true,
@@ -77,13 +82,50 @@ describe('remarkEmbed', () => {
 					src: 'https://docs.google.com/presentation/d/1Jx4nQbzFk5BYTTZwuOMGQOd359G_orJU-OrG4Bg3ohg/embed',
 					type: 'embed',
 					width: '100%',
+					isGitHubPermalink: false,
+				},
+				{
+					oembed: false,
+					position: {
+						end: {
+							column: 110,
+							line: 7,
+							offset: 277,
+						},
+						start: {
+							column: 1,
+							line: 7,
+							offset: 168,
+						},
+					},
+					src: 'https://github.com/swc-project/swc/blob/f960d52364e72fa7548cc8aaaf6367dfdf7b9a8f/packages/core/postinstall.js',
+					type: 'embed',
+					isGitHubPermalink: true,
+				},
+				{
+					oembed: false,
+					position: {
+						end: {
+							column: 153,
+							line: 9,
+							offset: 431,
+						},
+						start: {
+							column: 1,
+							line: 9,
+							offset: 279,
+						},
+					},
+					src: 'https://github.com/styled-components/styled-components/blob/ef548a2fd1d8b7766a273084edb33caf7d8a37df/packages/styled-components/src/sheet/dom.ts#L13-L31',
+					type: 'embed',
+					isGitHubPermalink: true,
 				},
 			],
 			position: {
 				end: {
 					column: 1,
-					line: 7,
-					offset: 168,
+					line: 10,
+					offset: 432,
 				},
 				start: {
 					column: 1,

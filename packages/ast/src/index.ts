@@ -168,6 +168,16 @@ export interface Embed extends Node {
 	meta?: Metadata | undefined;
 	oembed?: OEmbed | undefined;
 	width?: string | undefined;
+	filename?: string | undefined;
+	lang?: string | undefined;
+	commitHashOrBranch?: string | undefined;
+	lines?:
+		| {
+				start: number;
+				end?: number;
+		  }
+		| undefined;
+	codeLines?: string | undefined;
 }
 
 export interface Section extends Parent {
