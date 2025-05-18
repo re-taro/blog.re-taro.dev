@@ -4,7 +4,7 @@ description: React Compiler における eslintSuppressionRules の使い方に�
 tags: ['React', 'React Compiler']
 published: true
 publishedAt: 2024-06-02T20:07:36.528+09:00[Asia/Tokyo]
-updatedAt: 2024-06-11T16:21:21.528+09:00[Asia/Tokyo]
+updatedAt: 2025-05-18T18:42:08.639+09:00[Asia/Tokyo]
 ---
 
 # eslintSuppressionRules を考察してみる
@@ -37,35 +37,11 @@ updatedAt: 2024-06-11T16:21:21.528+09:00[Asia/Tokyo]
 
 結論から言うと `eslintSuppressionRules` は、登録された ESLint ルールが無効化された場合に React Compiler が例外をスローするようにする設定である。
 
-```ts:Options.ts
-export type PluginOptions = {
-  // ...some options
-
-  /**
-   * By default React Compiler will skip compilation of code that suppresses the default
-   * React ESLint rules, since this is a strong indication that the code may be breaking React rules
-   * in some way.
-   *
-   * Use eslintSuppressionRules to pass a custom set of rule names: any code which suppresses the
-   * provided rules will skip compilation. To disable this feature (never bailout of compilation
-   * even if the default ESLint is suppressed), pass an empty array.
-   */
-  eslintSuppressionRules?: Array<string> | null | undefined;
-};
-```
-
 https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Options.ts#L96-L105
 
 ### 必要性
 
 `eslintSuppressionRules` はデフォルトで次の 2 つのルールが登録されている
-
-```ts:Program.ts
-const DEFAULT_ESLINT_SUPPRESSIONS = [
-	"react-hooks/exhaustive-deps",
-	"react-hooks/rules-of-hooks",
-];
-```
 
 https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Program.ts#L194-L197
 
@@ -75,36 +51,7 @@ https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/
 
 (2024/06/11 追記) ただし、 `"use no memo"` ディレクティブを書いた場合は、React Compiler は例外をスローしない。
 
-```ts:Program.ts
-  // Top level "use no forget", skip this file entirely
-  if (
-    findDirectiveDisablingMemoization(program.node.directives, options) != null
-  ) {
-    return;
-  }
-```
-
 https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Program.ts#L243-L248
-
-```ts:Program.ts
-    const useNoForget = findDirectiveDisablingMemoization(
-      fn.node.body.directives,
-      pass.opts
-    );
-    if (useNoForget != null) {
-      pass.opts.logger?.logEvent(pass.filename, {
-        kind: "CompileError",
-        fnLoc: fn.node.body.loc ?? null,
-        detail: {
-          severity: ErrorSeverity.Todo,
-          reason: 'Skipped due to "use no forget" directive.',
-          loc: useNoForget.loc ?? null,
-          suggestions: null,
-        },
-      });
-      return null;
-    }
-```
 
 https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Program.ts#L478-L493
 

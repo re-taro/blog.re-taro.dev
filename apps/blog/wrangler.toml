@@ -9,10 +9,13 @@ service = "contents"
 binding = "CONTENTS"
 
 [[env.production.services]]
-service = "contents"
+service = "contents-production"
 binding = "CONTENTS"
 [env.production.observability]
 enabled = true
+[[env.production.routes]]
+pattern = "blog.re-taro.dev"
+custom_domain = true
 
 [[env.development.services]]
 service = "contents-development"

@@ -4,6 +4,7 @@ description: ややこしすぎるopt-inとopt-outの挙動を整理する。
 tags: ['React', 'React Compiler']
 published: true
 publishedAt: 2024-06-11T15:42:49.854+09:00[Asia/Tokyo]
+updatedAt: 2025-05-18T18:42:08.639+09:00[Asia/Tokyo]
 ---
 
 # React Compiler の opt-in と opt-out を整理する
@@ -17,26 +18,6 @@ publishedAt: 2024-06-11T15:42:49.854+09:00[Asia/Tokyo]
 ## opt-in と opt-out
 
 React Compiler の設定に、`compilationMode` というものがある。これは次のように定義されている。
-
-```ts:Options.ts
-const CompilationModeSchema = z.enum([
-  /*
-   * Compiles functions annotated with "use forget" or component/hook-like functions.
-   * This latter includes:
-   * * Components declared with component syntax.
-   * * Functions which can be inferred to be a component or hook:
-   *   - Be named like a hook or component. This logic matches the ESLint rule.
-   *   - *and* create JSX and/or call a hook. This is an additional check to help prevent
-   *     false positives, since compilation has a greater impact than linting.
-   * This is the default mode
-   */
-  "infer",
-  // Compile only functions which are explicitly annotated with "use forget"
-  "annotation",
-  // Compile all top-level functions
-  "all",
-]);
-```
 
 https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Options.ts#L116-L132
 
@@ -87,72 +68,6 @@ https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/
 など、挙動はどうなるのだろうか？
 
 解答はコードに隠されていた。
-
-```ts:Program.ts
-function getReactFunctionType(
-  fn: BabelFn,
-  pass: CompilerPass
-): ReactFunctionType | null {
-  const hookPattern = pass.opts.environment?.hookPattern ?? null;
-  if (fn.node.body.type === "BlockStatement") {
-    // Opt-outs disable compilation regardless of mode
-    const useNoForget = findDirectiveDisablingMemoization(
-      fn.node.body.directives,
-      pass.opts
-    );
-    if (useNoForget != null) {
-      pass.opts.logger?.logEvent(pass.filename, {
-        kind: "CompileError",
-        fnLoc: fn.node.body.loc ?? null,
-        detail: {
-          severity: ErrorSeverity.Todo,
-          reason: 'Skipped due to "use no forget" directive.',
-          loc: useNoForget.loc ?? null,
-          suggestions: null,
-        },
-      });
-      return null;
-    }
-    // Otherwise opt-ins enable compilation regardless of mode
-    if (findDirectiveEnablingMemoization(fn.node.body.directives) != null) {
-      return getComponentOrHookLike(fn, hookPattern) ?? "Other";
-    }
-  }
-  switch (pass.opts.compilationMode) {
-    case "annotation": {
-      // opt-ins are checked above
-      return null;
-    }
-    case "infer": {
-      // Component and hook declarations are known components/hooks
-      if (fn.isFunctionDeclaration()) {
-        if (isComponentDeclaration(fn.node)) {
-          return "Component";
-        } else if (isHookDeclaration(fn.node)) {
-          return "Hook";
-        }
-      }
-
-      // Otherwise check if this is a component or hook-like function
-      return getComponentOrHookLike(fn, hookPattern);
-    }
-    case "all": {
-      // Compile only top level functions
-      if (fn.scope.getProgramParent() !== fn.scope.parent) {
-        return null;
-      }
-
-      return getComponentOrHookLike(fn, hookPattern) ?? "Other";
-    }
-    default: {
-      assertExhaustive(
-        pass.opts.compilationMode,
-        `Unexpected compilationMode \`${pass.opts.compilationMode}\``
-      );
-    }
-  }
-}
-```
 
 https://github.com/facebook/react/blob/d77dd31a329df55a051800fc76668af8da8332b4/compiler/packages/babel-plugin-react-compiler/src/Entrypoint/Program.ts#L471-L533
 

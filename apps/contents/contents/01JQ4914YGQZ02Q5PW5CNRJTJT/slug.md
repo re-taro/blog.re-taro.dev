@@ -4,7 +4,7 @@ description: styled-components のメンテナンスモードを受けて考え�
 tags: ['styled-components', 'CSS in JS', 'React']
 published: true
 publishedAt: 2025-03-24T23:31:13.108+09:00[Asia/Tokyo]
-updatedAt: 2025-04-02T00:04:33.74+09:00[Asia/Tokyo]
+updatedAt: 2025-05-18T18:42:08.639+09:00[Asia/Tokyo]
 ---
 
 # styled-components の歴史、現在、これから
@@ -106,28 +106,6 @@ styled-components もその 1 つである。
 
 ランタイム CSS in JS という集合に分けられる、 styled-components や emotion などのライブラリは、JavaScript の実行時にスタイルを生成する。
 生成されたスタイルは DOM API を介して、style タグとして挿入される。
-
-```ts:dom.ts
-/** Create a style element inside `target` or <head> after the last */
-export const makeStyleTag = (target?: InsertionTarget | undefined): HTMLStyleElement => {
-  const head = document.head;
-  const parent = target || head;
-  const style = document.createElement('style');
-  const prevStyle = findLastStyleTag(parent);
-  const nextSibling = prevStyle !== undefined ? prevStyle.nextSibling : null;
-
-  style.setAttribute(SC_ATTR, SC_ATTR_ACTIVE);
-  style.setAttribute(SC_ATTR_VERSION, SC_VERSION);
-
-  const nonce = getNonce();
-
-  if (nonce) style.setAttribute('nonce', nonce);
-
-  parent.insertBefore(style, nextSibling);
-
-  return style;
-};
-```
 
 https://github.com/styled-components/styled-components/blob/ef548a2fd1d8b7766a273084edb33caf7d8a37df/packages/styled-components/src/sheet/dom.ts#L13-L31
 

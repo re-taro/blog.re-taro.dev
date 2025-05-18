@@ -1,5 +1,6 @@
 import { css } from 'styled-system/css';
 import { LinkCard } from './LinkCard';
+import { Permalink } from './Permalink';
 import { Photo } from './Photo';
 import { Rich } from './Rich';
 import { Video } from './Video';
@@ -77,6 +78,8 @@ export const Embed: FC<EmbedProps> = ({ node }) => {
 				/>
 			</div>
 		);
+	} else if (node.codeLines != null) {
+		return <Permalink node={node} />;
 	}
 
 	return null;
