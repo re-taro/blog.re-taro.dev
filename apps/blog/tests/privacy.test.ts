@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('/privacy', () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto('http://localhost:8788/privacy');
+		await page.goto('http://localhost:8787/privacy');
 	});
 	test.describe('rendering', () => {
 		test('should render heading', async ({ page }) => {

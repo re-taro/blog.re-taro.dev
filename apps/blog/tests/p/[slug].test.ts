@@ -4,7 +4,7 @@ import { violationFingerprints } from '../utils';
 
 test.describe('/p/01HXEV0G1DXQR91W6G90M7CKGR', () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto('http://localhost:8788/p/01HXEV0G1DXQR91W6G90M7CKGR');
+		await page.goto('http://localhost:8787/p/01HXEV0G1DXQR91W6G90M7CKGR');
 	});
 	test.describe('a11y', () => {
 		test('should not have any automatically detectable accessibility issues', async ({ page }) => {
