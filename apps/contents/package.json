@@ -25,6 +25,7 @@
 		"lint:textlint": "textlint contents/**/slug.md",
 		"lint:tsc": "tsc -p . --noEmit",
 		"pre:ci": "content-collections build",
+		"scaffold": "plop",
 		"start": "concurrently 'content-collections watch' 'wait-on .content-collections/generated/index.js && wrangler dev --env development'",
 		"typegen": "wrangler types"
 	},

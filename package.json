@@ -27,7 +27,8 @@
 		"start:blog": "pnpm -C apps/blog run start",
 		"start:contents": "pnpm -C apps/contents run start",
 		"test:integration": "pnpm -C app run test:integration",
-		"test:unit": "pnpm run -r --parallel test"
+		"test:unit": "pnpm run -r --parallel test",
+		"scaffold": "pnpm -C apps/contents run scaffold"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "0.5.1",
