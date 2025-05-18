@@ -154,8 +154,8 @@ importers:
         specifier: 1.1.5
         version: 1.1.5
       sirv-cli:
-        specifier: 3.0.0
-        version: 3.0.0
+        specifier: 3.0.1
+        version: 3.0.1
       unfurl.js:
         specifier: 'catalog:'
         version: 6.4.0
@@ -6008,8 +6008,8 @@ packages:
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
 
-  sirv-cli@3.0.0:
-    resolution: {integrity: sha512-p88yHl8DmTOUJroRiW2o9ezJc/YRLxphBydX2NGQc3naKBA09B3EM4Q/yaN8FYF0e50fRSZP7dyatr72b1u5Jw==}
+  sirv-cli@3.0.1:
+    resolution: {integrity: sha512-ICXaF2u6IQhLZ0EXF6nqUF4YODfSQSt+mGykt4qqO5rY+oIiwdg7B8w2PVDBJlQulaS2a3J8666CUoDoAuCGvg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -13536,7 +13536,7 @@ snapshots:
     dependencies:
       is-arrayish: 0.3.2
 
-  sirv-cli@3.0.0:
+  sirv-cli@3.0.1:
     dependencies:
       console-clear: 1.1.1
       get-port: 5.1.1
