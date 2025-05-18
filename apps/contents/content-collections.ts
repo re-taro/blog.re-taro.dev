@@ -127,8 +127,8 @@ const traverseMdAst = async (config: ImageTransformationConfig, ctx: TransformCo
 						},
 					],
 				});
-
-				// This is a safty cast
+				// eslint-disable-next-line ts/ban-ts-comment
+				// @ts-ignore - This is a safty cast
 				(ast as unknown as { hast: H.Root }).hast = styled;
 			}
 			return;
