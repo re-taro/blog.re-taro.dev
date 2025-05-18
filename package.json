@@ -26,7 +26,7 @@
 		"start": "concurrently -k -s first -n 'CONTENTS,APP' -c 'magenta,blue' 'pnpm run start:contents' 'wait-on http://127.0.0.1:8000 && pnpm run start:blog'",
 		"start:blog": "pnpm -C apps/blog run start",
 		"start:contents": "pnpm -C apps/contents run start",
-		"test:integration": "pnpm -C app run test:integration",
+		"test:integration": "pnpm -C apps/blog run test:integration",
 		"test:unit": "pnpm run -r --parallel test",
 		"scaffold": "pnpm -C apps/contents run scaffold"
 	},

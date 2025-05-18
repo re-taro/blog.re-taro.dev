@@ -101,9 +101,9 @@ jobs:
       - name: Setup | Playwright
         uses: ./.github/actions/setup-playwright
       - name: Setup | Build
-        run: pnpm build
+        run: pnpm build:dev
       - name: Test | Integration
         run: |
           pnpm concurrently -k -s first -n "APP,TEST" -c "magenta,blue" \
             "pnpm start" \
-            "pnpm wait-on http://127.0.0.1:8788 && pnpm test:integration"
+            "pnpm wait-on http://127.0.0.1:8787 && pnpm test:integration"
