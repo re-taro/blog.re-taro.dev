@@ -1,0 +1,15 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"checkJs": false,
+		"declaration": true,
+		"declarationMap": true,
+		"isolatedDeclarations": true,
+		"lib": ["ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"sourceMap": true,
+		"target": "ES2022"
+	},
+	"extends": "./tsconfig.base.json"
+}

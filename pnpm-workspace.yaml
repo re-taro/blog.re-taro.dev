@@ -1,5 +1,17 @@
 saveExact: true
 onlyBuiltDependencies:
+  - '@swc/core'
   - esbuild
   - sharp
   - workerd
+packages:
+  - packages/*
+  - apps/*
+catalog:
+  '@types/mdast': 4.0.4
+  '@types/unist': 3.0.3
+  mdast-util-from-markdown: 2.0.2
+  shiki: 3.2.2
+  temporal-polyfill: 0.3.0
+  unfurl.js: 6.4.0
+  unified: 11.0.5

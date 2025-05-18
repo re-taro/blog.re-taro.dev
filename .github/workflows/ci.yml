@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.7.0
         with:
@@ -23,11 +23,15 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
+      - name: Setup | content-collections
+        run: pnpm -C apps/contents run pre:ci
       - name: Run | ESLint
         run: pnpm run lint:eslint
   type-test:
@@ -35,21 +39,35 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
       - name: Setup | Build
-        run: pnpm prebuild:content-collections
+        run: pnpm build
+      - name: Setup | content-collections
+        run: pnpm -C apps/contents run pre:ci
       - name: Run | tsc
         run: pnpm run lint:tsc
+  prettier-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.7.0
+        with:
+          node-version-file: .tool-versions
+      - name: Run | Prettier
+        run: pnpm run lint:prettier
   slug-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.7.0
         with:
@@ -61,11 +79,13 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
+      - name: Setup | Build
+        run: pnpm build
       - name: Test | Unit
         run: pnpm run test:unit
   integration-test:
@@ -73,7 +93,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.7.0
         with:
@@ -81,9 +101,9 @@ jobs:
       - name: Setup | Playwright
         uses: ./.github/actions/setup-playwright
       - name: Setup | Build
-        run: pnpm build
+        run: pnpm build:dev
       - name: Test | Integration
         run: |
           pnpm concurrently -k -s first -n "APP,TEST" -c "magenta,blue" \
             "pnpm start" \
-            "pnpm wait-on http://127.0.0.1:8788 && pnpm test:integration"
+            "pnpm wait-on http://127.0.0.1:8787 && pnpm test:integration"

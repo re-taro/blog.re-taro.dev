@@ -1,14 +1,14 @@
-// @ts-check
+import { re_taro } from '@re-taro/configs/eslint';
 
-import { re_taro } from "@re-taro/eslint-config";
-
-export default re_taro({
-	formatters: true,
-	ignores: ["src/styled-system"],
-	markdown: false,
-}, {
-	files: ["**/*.tsx"],
-	rules: {
-		"solid/reactivity": "off",
+export default re_taro(
+	{
+		css: {
+			rules: {
+				'css/use-baseline': 'off',
+			},
+		},
 	},
-});
+	{
+		ignores: ['apps/blog/worker-configuration.d.ts','apps/contents/worker-configuration.d.ts', 'packages/rollup/index.d.ts', 'apps/contents/**/*.md'],
+	},
+);

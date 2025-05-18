@@ -21,7 +21,7 @@ jobs:
       url: ${{ steps.page.outputs.deployment-url }}
     steps:
       - name: Setup | Comment deploy start
-        uses: mshick/add-pr-comment@v2.8.2
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
         with:
           message-id: dev-deploy
           message: |
@@ -32,22 +32,30 @@ jobs:
             |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
             ---
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
       - name: Deploy | Build
-        run: pnpm build
-      - name: Deploy | Deploy to Cloudflare Pages
-        id: page
-        uses: cloudflare/wrangler-action@v3.13.1
+        run: pnpm build:dev
+      - name: Deploy | Deploy contents to Cloudflare Workers
+        uses: cloudflare/wrangler-action@7a5f8bbdfeedcde38e6777a50fe685f89259d4ca # v3.13.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy --project-name blog --directory dist
+          command: deploy --minify --env development
+          workingDirectory: apps/contents
+      - name: Deploy | Deploy blog to Cloudflare Workers
+        id: page
+        uses: cloudflare/wrangler-action@7a5f8bbdfeedcde38e6777a50fe685f89259d4ca # v3.13.1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: deploy
+          workingDirectory: apps/blog
       - name: PostDeploy | Comment deploy url
-        uses: mshick/add-pr-comment@v2.8.2
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
         with:
           message-id: cloudflare-deploy
           message: |

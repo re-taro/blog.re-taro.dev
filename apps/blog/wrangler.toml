@@ -1,0 +1,22 @@
+# :schema node_modules/wrangler/config-schema.json
+name = "blog"
+main = "src/worker.ts"
+compatibility_date = "2025-04-09"
+compatibility_flags = ["nodejs_compat"]
+
+[[services]]
+service = "contents"
+binding = "CONTENTS"
+
+[[env.production.services]]
+service = "contents-production"
+binding = "CONTENTS"
+[env.production.observability]
+enabled = true
+[[env.production.routes]]
+pattern = "blog.re-taro.dev"
+custom_domain = true
+
+[[env.development.services]]
+service = "contents-development"
+binding = "CONTENTS"

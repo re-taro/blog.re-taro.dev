@@ -1,0 +1,53 @@
+{
+	"name": "blog",
+	"version": "2.7.0",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"build": "NODE_ENV=production vite build --mode production",
+		"build:dev": "NODE_ENV=production vite build --mode development",
+		"dev": "NODE_ENV=development vite dev",
+		"dev:init": "rw-scripts dev-init",
+		"format": "prettier --write .",
+		"generate": "rw-scripts ensure-env && wrangler types && panda codegen --silent",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint .",
+		"lint:prettier": "prettier --check .",
+		"lint:tsc": "pnpm run generate && tsc -p .",
+		"prebuild": "panda codegen --silent",
+		"scaffold": "plop",
+		"start": "wrangler dev",
+		"test:integration": "playwright test"
+	},
+	"dependencies": {
+		"@types/hast": "3.0.4",
+		"ast": "workspace:*",
+		"dompurify": "3.2.5",
+		"hast-util-from-html": "2.0.3",
+		"hast-util-select": "6.0.4",
+		"hast-util-to-html": "9.0.5",
+		"rwsdk": "0.0.83",
+		"shiki": "catalog:",
+		"temporal-polyfill": "catalog:",
+		"xml2js": "0.6.2"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "4.10.1",
+		"@pandacss/dev": "0.53.3",
+		"@playwright/test": "1.52.0",
+		"@qwik.dev/partytown": "0.11.0",
+		"@types/react": "19.1.1",
+		"@types/react-dom": "19.1.2",
+		"@types/xml2js": "0.4.14",
+		"axe-core": "4.10.3",
+		"axe-playwright": "2.1.0",
+		"contents": "workspace:*",
+		"oembed": "workspace:*",
+		"postcss": "8.5.1",
+		"schema-dts": "1.1.5",
+		"sirv-cli": "3.0.0",
+		"unfurl.js": "catalog:",
+		"vite": "6.2.6",
+		"vitest": "3.1.1"
+	}
+}

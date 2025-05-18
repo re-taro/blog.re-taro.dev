@@ -1,0 +1,34 @@
+{
+	"name": "visit",
+	"version": "2.7.0",
+	"type": "module",
+	"private": true,
+	"exports": {
+		".": {
+			"default": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"build:dev": "pnpm run build",
+		"format": "prettier --write .",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint .",
+		"lint:prettier": "prettier --check .",
+		"lint:tsc": "tsc -p . --noEmit"
+	},
+	"dependencies": {
+		"@types/mdast": "catalog:",
+		"unist-util-visit": "5.0.0"
+	},
+	"devDependencies": {
+		"rollup-config": "workspace:*"
+	}
+}

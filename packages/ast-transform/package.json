@@ -1,0 +1,40 @@
+{
+	"name": "ast-transform",
+	"version": "2.7.0",
+	"type": "module",
+	"private": true,
+	"exports": {
+		".": {
+			"default": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"build:dev": "pnpm run build",
+		"format": "prettier --write .",
+		"lint": "pnpm run /^lint:.*/",
+		"lint:eslint": "eslint .",
+		"lint:prettier": "prettier --check .",
+		"lint:tsc": "tsc -p . --noEmit"
+	},
+	"dependencies": {
+		"@types/mdast": "catalog:",
+		"ast": "workspace:*",
+		"github-slugger": "2.0.0",
+		"remark-check": "workspace:*",
+		"ts-pattern": "5.7.0",
+		"unified": "catalog:",
+		"utils": "workspace:*",
+		"visit": "workspace:*"
+	},
+	"devDependencies": {
+		"rollup-config": "workspace:*"
+	}
+}

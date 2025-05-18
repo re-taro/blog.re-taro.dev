@@ -1,0 +1,15 @@
+# :schema node_modules/wrangler/config-schema.json
+name = "contents"
+main = "src/index.ts"
+compatibility_date = "2025-04-09"
+
+[env.production.vars]
+ENVIRONMENT = "prd"
+[env.production.observability]
+enabled = true
+
+[env.development.vars]
+ENVIRONMENT = "dev"
+
+[dev]
+port = 8000
