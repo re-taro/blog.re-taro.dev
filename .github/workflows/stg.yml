@@ -34,7 +34,7 @@ jobs:
             ---
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.7.0
+        uses: re-taro/actions/setup-node@v3.7.6
         with:
           node-version-file: .tool-versions
       - name: Deploy | Build
