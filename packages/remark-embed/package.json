@@ -34,7 +34,7 @@
 		"visit": "workspace:*"
 	},
 	"devDependencies": {
-		"remark-gfm": "4.0.0",
+		"remark-gfm": "4.0.1",
 		"remark-parse": "11.0.0",
 		"rollup-config": "workspace:*"
 	}
