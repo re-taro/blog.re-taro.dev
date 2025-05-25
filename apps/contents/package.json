@@ -30,7 +30,7 @@
 		"typegen": "wrangler types"
 	},
 	"dependencies": {
-		"hono": "4.7.7",
+		"hono": "4.7.10",
 		"temporal-polyfill": "catalog:"
 	},
 	"devDependencies": {
