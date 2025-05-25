@@ -39,8 +39,8 @@ importers:
         specifier: 2.27.12
         version: 2.27.12
       '@cloudflare/workers-types':
-        specifier: 4.20250509.0
-        version: 4.20250509.0
+        specifier: 4.20250525.0
+        version: 4.20250525.0
       '@qnighy/dedent':
         specifier: 0.1.1
         version: 0.1.1
@@ -79,7 +79,7 @@ importers:
         version: 8.0.3
       wrangler:
         specifier: 4.14.4
-        version: 4.14.4(@cloudflare/workers-types@4.20250509.0)
+        version: 4.14.4(@cloudflare/workers-types@4.20250525.0)
 
   apps/blog:
     dependencies:
@@ -775,6 +775,9 @@ packages:
 
   '@cloudflare/workers-types@4.20250509.0':
     resolution: {integrity: sha512-Zqxda8NapibaTnag4pjfa7DIcObSnItcqimvfhqoYq/ShsGJ/nYGx4QaXRTKo1t6HzvC8Qn4g4UKFmdyON5e6Q==}
+
+  '@cloudflare/workers-types@4.20250525.0':
+    resolution: {integrity: sha512-3loeNVJkcDLb9giarUIHmDgvh+/4RtH+R/rHn4BCmME1qKdu73n/hvECYhH8BabCZplF8zQy1wok1MKwXEWC/A==}
 
   '@content-collections/cli@0.1.6':
     resolution: {integrity: sha512-1MrxENMhAOAMFoLYNmlyCgwVB3i75PMX9vNLJ+jVh7akSfDrRRDWGn4E4WXDWCs27krSN7o98OJQVNav7Ndapw==}
@@ -7331,6 +7334,8 @@ snapshots:
     optional: true
 
   '@cloudflare/workers-types@4.20250509.0': {}
+
+  '@cloudflare/workers-types@4.20250525.0': {}
 
   '@content-collections/cli@0.1.6(@content-collections/core@0.8.2(typescript@5.8.3))':
     dependencies:
@@ -14591,6 +14596,24 @@ snapshots:
       workerd: 1.20250507.0
     optionalDependencies:
       '@cloudflare/workers-types': 4.20250509.0
+      fsevents: 2.3.3
+      sharp: 0.33.5
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  wrangler@4.14.4(@cloudflare/workers-types@4.20250525.0):
+    dependencies:
+      '@cloudflare/kv-asset-handler': 0.4.0
+      '@cloudflare/unenv-preset': 2.3.1(unenv@2.0.0-rc.15)(workerd@1.20250507.0)
+      blake3-wasm: 2.1.5
+      esbuild: 0.25.4
+      miniflare: 4.20250507.0
+      path-to-regexp: 6.3.0
+      unenv: 2.0.0-rc.15
+      workerd: 1.20250507.0
+    optionalDependencies:
+      '@cloudflare/workers-types': 4.20250525.0
       fsevents: 2.3.3
       sharp: 0.33.5
     transitivePeerDependencies:
