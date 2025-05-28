@@ -127,11 +127,11 @@ importers:
         specifier: 0.11.0
         version: 0.11.0
       '@types/react':
-        specifier: 19.1.5
-        version: 19.1.5
+        specifier: 19.1.6
+        version: 19.1.6
       '@types/react-dom':
         specifier: 19.1.5
-        version: 19.1.5(@types/react@19.1.5)
+        version: 19.1.5(@types/react@19.1.6)
       '@types/xml2js':
         specifier: 0.4.14
         version: 0.4.14
@@ -2123,8 +2123,8 @@ packages:
   '@types/react-is@19.0.0':
     resolution: {integrity: sha512-71dSZeeJ0t3aoPyY9x6i+JNSvg5m9EF2i2OlSZI5QoJuI8Ocgor610i+4A10TQmURR+0vLwcVCEYFpXdzM1Biw==}
 
-  '@types/react@19.1.5':
-    resolution: {integrity: sha512-piErsCVVbpMMT2r7wbawdZsq4xMvIAhQuac2gedQHysu1TZYEigE6pnFfgZT+/jQnrRuF5r+SHzuehFjfRjr4g==}
+  '@types/react@19.1.6':
+    resolution: {integrity: sha512-JeG0rEWak0N6Itr6QUx+X60uQmN+5t3j9r/OVDtWzFXKaj6kD1BwJzOksD0FF6iWxZlbE1kB0q9vtnU2ekqa1Q==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -8680,15 +8680,15 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
-  '@types/react-dom@19.1.5(@types/react@19.1.5)':
+  '@types/react-dom@19.1.5(@types/react@19.1.6)':
     dependencies:
-      '@types/react': 19.1.5
+      '@types/react': 19.1.6
 
   '@types/react-is@19.0.0':
     dependencies:
-      '@types/react': 19.1.5
+      '@types/react': 19.1.6
 
-  '@types/react@19.1.5':
+  '@types/react@19.1.6':
     dependencies:
       csstype: 3.1.3
 
@@ -12985,8 +12985,8 @@ snapshots:
       '@cloudflare/workers-types': 4.20250509.0
       '@puppeteer/browsers': 2.10.4
       '@types/fs-extra': 11.0.4
-      '@types/react': 19.1.5
-      '@types/react-dom': 19.1.5(@types/react@19.1.5)
+      '@types/react': 19.1.6
+      '@types/react-dom': 19.1.5(@types/react@19.1.6)
       '@types/react-is': 19.0.0
       '@vitejs/plugin-react': 4.3.4(vite@6.2.6(@types/node@22.15.23)(jiti@1.21.6)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0))
       debug: 4.4.0
