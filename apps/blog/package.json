@@ -22,7 +22,7 @@
 	"dependencies": {
 		"@types/hast": "3.0.4",
 		"ast": "workspace:*",
-		"dompurify": "3.2.5",
+		"dompurify": "3.2.6",
 		"hast-util-from-html": "2.0.3",
 		"hast-util-select": "6.0.4",
 		"hast-util-to-html": "9.0.5",
