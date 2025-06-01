@@ -169,8 +169,8 @@ importers:
   apps/contents:
     dependencies:
       hono:
-        specifier: 4.7.10
-        version: 4.7.10
+        specifier: 4.7.11
+        version: 4.7.11
       temporal-polyfill:
         specifier: 'catalog:'
         version: 0.3.0
@@ -3884,8 +3884,8 @@ packages:
     resolution: {integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==}
     engines: {node: '>=0.10.0'}
 
-  hono@4.7.10:
-    resolution: {integrity: sha512-QkACju9MiN59CKSY5JsGZCYmPZkA6sIW6OFCUp7qDjZu6S6KHtJHhAc9Uy9mV9F8PJ1/HQ3ybZF2yjCa/73fvQ==}
+  hono@4.7.11:
+    resolution: {integrity: sha512-rv0JMwC0KALbbmwJDEnxvQCeJh+xbS3KEWW5PC9cMJ08Ur9xgatI0HmtgYZfOdOSOeYsp5LO2cOhdI8cLEbDEQ==}
     engines: {node: '>=16.9.0'}
 
   hookable@5.5.3:
@@ -10777,7 +10777,7 @@ snapshots:
     dependencies:
       parse-passwd: 1.0.0
 
-  hono@4.7.10: {}
+  hono@4.7.11: {}
 
   hookable@5.5.3: {}
 
