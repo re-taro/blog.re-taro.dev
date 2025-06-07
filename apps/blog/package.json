@@ -32,7 +32,7 @@
 		"xml2js": "0.6.2"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "4.10.1",
+		"@axe-core/playwright": "4.10.2",
 		"@pandacss/dev": "0.53.7",
 		"@playwright/test": "1.52.0",
 		"@qwik.dev/partytown": "0.11.0",
