@@ -177,10 +177,10 @@ importers:
     devDependencies:
       '@content-collections/cli':
         specifier: 0.1.6
-        version: 0.1.6(@content-collections/core@0.8.2(typescript@5.8.3))
+        version: 0.1.6(@content-collections/core@0.9.0(typescript@5.8.3))
       '@content-collections/core':
-        specifier: 0.8.2
-        version: 0.8.2(typescript@5.8.3)
+        specifier: 0.9.0
+        version: 0.9.0(typescript@5.8.3)
       '@shikijs/transformers':
         specifier: 3.2.1
         version: 3.2.1
@@ -782,8 +782,8 @@ packages:
     peerDependencies:
       '@content-collections/core': 0.x
 
-  '@content-collections/core@0.8.2':
-    resolution: {integrity: sha512-62yVC3ne47YJ1KeCw5nk0H/G/xGBagcoWyMpVyTaCnDJhoIoTvmqBrsc+78Zk8s2Ssnb0Eo1Q4w3ZHwgL88pjg==}
+  '@content-collections/core@0.9.0':
+    resolution: {integrity: sha512-CQZP6SVc0bwJUUXDns57/NqCiRoBMYrse4Gw9J2PX97gKRyqmOD9TumsSHRtnw6eJGQWWqI4TslMSLLBPSEtDQ==}
     peerDependencies:
       typescript: ^5.0.2
 
@@ -1946,6 +1946,9 @@ packages:
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
+
+  '@standard-schema/spec@1.0.0':
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
 
   '@storybook/csf@0.1.13':
     resolution: {integrity: sha512-7xOOwCLGB3ebM87eemep89MYRFTko+D8qE7EdAAq74lgdqRR5cOUtYWJLjO2dLtP94nqoOdHJo6MdLLKzg412Q==}
@@ -6926,6 +6929,9 @@ packages:
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
+  zod@3.25.56:
+    resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
+
   zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
 
@@ -7321,18 +7327,19 @@ snapshots:
 
   '@cloudflare/workers-types@4.20250601.0': {}
 
-  '@content-collections/cli@0.1.6(@content-collections/core@0.8.2(typescript@5.8.3))':
+  '@content-collections/cli@0.1.6(@content-collections/core@0.9.0(typescript@5.8.3))':
     dependencies:
       '@clerc/core': 0.44.0
       '@clerc/plugin-completions': 0.44.0(@clerc/core@0.44.0)
       '@clerc/plugin-help': 0.44.0(@clerc/core@0.44.0)
       '@clerc/plugin-version': 0.44.0(@clerc/core@0.44.0)
-      '@content-collections/core': 0.8.2(typescript@5.8.3)
-      '@content-collections/integrations': 0.2.1(@content-collections/core@0.8.2(typescript@5.8.3))
+      '@content-collections/core': 0.9.0(typescript@5.8.3)
+      '@content-collections/integrations': 0.2.1(@content-collections/core@0.9.0(typescript@5.8.3))
 
-  '@content-collections/core@0.8.2(typescript@5.8.3)':
+  '@content-collections/core@0.9.0(typescript@5.8.3)':
     dependencies:
       '@parcel/watcher': 2.4.1
+      '@standard-schema/spec': 1.0.0
       camelcase: 8.0.0
       esbuild: 0.25.4
       gray-matter: 4.0.3
@@ -7343,11 +7350,11 @@ snapshots:
       tinyglobby: 0.2.13
       typescript: 5.8.3
       yaml: 2.5.0
-      zod: 3.23.8
+      zod: 3.25.56
 
-  '@content-collections/integrations@0.2.1(@content-collections/core@0.8.2(typescript@5.8.3))':
+  '@content-collections/integrations@0.2.1(@content-collections/core@0.9.0(typescript@5.8.3))':
     dependencies:
-      '@content-collections/core': 0.8.2(typescript@5.8.3)
+      '@content-collections/core': 0.9.0(typescript@5.8.3)
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -8393,6 +8400,8 @@ snapshots:
   '@sideway/pinpoint@2.0.0': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
+
+  '@standard-schema/spec@1.0.0': {}
 
   '@storybook/csf@0.1.13':
     dependencies:
@@ -14591,6 +14600,8 @@ snapshots:
   zod@3.22.3: {}
 
   zod@3.23.8: {}
+
+  zod@3.25.56: {}
 
   zwitch@1.0.5: {}
 
