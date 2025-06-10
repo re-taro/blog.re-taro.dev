@@ -254,8 +254,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2(textlint@14.4.2)
       ulid:
-        specifier: 3.0.0
-        version: 3.0.0
+        specifier: 3.0.1
+        version: 3.0.1
       unified:
         specifier: 'catalog:'
         version: 11.0.5
@@ -6431,8 +6431,8 @@ packages:
     engines: {node: '>=0.8.0'}
     hasBin: true
 
-  ulid@3.0.0:
-    resolution: {integrity: sha512-yvZYdXInnJve6LdlPIuYmURdS2NP41ZoF4QW7SXwbUKYt53+0eDAySO+rGSvM2O/ciuB/G+8N7GQrZ1mCJpuqw==}
+  ulid@3.0.1:
+    resolution: {integrity: sha512-dPJyqPzx8preQhqq24bBG1YNkvigm87K8kVEHCD+ruZg24t6IFEFv00xMWfxcC4djmFtiTLdFuADn4+DOz6R7Q==}
     hasBin: true
 
   unbox-primitive@1.1.0:
@@ -13966,7 +13966,7 @@ snapshots:
   uglify-js@3.19.1:
     optional: true
 
-  ulid@3.0.0: {}
+  ulid@3.0.1: {}
 
   unbox-primitive@1.1.0:
     dependencies:
