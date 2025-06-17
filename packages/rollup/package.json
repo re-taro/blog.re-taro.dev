@@ -22,7 +22,7 @@
 		"lint:prettier": "prettier --check ."
 	},
 	"dependencies": {
-		"@rollup/plugin-commonjs": "28.0.3",
+		"@rollup/plugin-commonjs": "28.0.6",
 		"@rollup/plugin-json": "6.1.0",
 		"@rollup/plugin-node-resolve": "16.0.1",
 		"@rollup/plugin-replace": "6.0.2",
