@@ -35,7 +35,7 @@
 		"@axe-core/playwright": "4.10.2",
 		"@pandacss/dev": "0.53.7",
 		"@playwright/test": "1.52.0",
-		"@qwik.dev/partytown": "0.11.0",
+		"@qwik.dev/partytown": "0.11.1",
 		"@types/react": "19.1.8",
 		"@types/react-dom": "19.1.6",
 		"@types/xml2js": "0.4.14",
