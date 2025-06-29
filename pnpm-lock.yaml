@@ -124,8 +124,8 @@ importers:
         specifier: 1.52.0
         version: 1.52.0
       '@qwik.dev/partytown':
-        specifier: 0.11.0
-        version: 0.11.0
+        specifier: 0.11.1
+        version: 0.11.1
       '@types/react':
         specifier: 19.1.8
         version: 19.1.8
@@ -1730,8 +1730,8 @@ packages:
   '@qnighy/dedent@0.1.1':
     resolution: {integrity: sha512-1TogcOCQlxSL4fS2n3jUtwoTHIlXJN3cw3FmQKSdmVpbVr03gKeXTEskPxqqMT24xkid59bEGv4ZB6oUQqq2fw==}
 
-  '@qwik.dev/partytown@0.11.0':
-    resolution: {integrity: sha512-MHime7cxj7KGrapGZ1VqLkXXq5BLNqvjNZndRJVvMkUWn92F2bsezlWW1lKDoFaKCKu2xv9LRUZL99RYOs+ccA==}
+  '@qwik.dev/partytown@0.11.1':
+    resolution: {integrity: sha512-sOjcsBsl6T+SVdLOfEYlOBssPDL5aVScA2TjUalsxvf55fMHhUaLl16JgrNi8iouhCA1hAezp74i6y8Sd9wOWw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -8501,7 +8501,7 @@ snapshots:
 
   '@qnighy/dedent@0.1.1': {}
 
-  '@qwik.dev/partytown@0.11.0':
+  '@qwik.dev/partytown@0.11.1':
     dependencies:
       dotenv: 16.4.7
 
