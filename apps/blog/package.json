@@ -48,6 +48,6 @@
 		"sirv-cli": "3.0.1",
 		"unfurl.js": "catalog:",
 		"vite": "6.3.5",
-		"vitest": "3.1.4"
+		"vitest": "3.2.4"
 	}
 }
