@@ -26,7 +26,7 @@
 		"hast-util-from-html": "2.0.3",
 		"hast-util-select": "6.0.4",
 		"hast-util-to-html": "9.0.5",
-		"rwsdk": "0.0.83",
+		"rwsdk": "0.1.9",
 		"shiki": "catalog:",
 		"temporal-polyfill": "catalog:",
 		"xml2js": "0.6.2"
