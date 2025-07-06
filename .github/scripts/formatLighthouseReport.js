@@ -57,7 +57,7 @@ function createMarkdownTableRow({ reportUrl, summary, url }) {
 function createMarkdownTableHeader() {
 	return [
 		['| URL', ...Object.values(summaryKeys), 'Report |'].join(' | '),
-		['|---', ...Array.from({length: Object.keys(summaryKeys).length}).fill('---'), '---|'].join('|'),
+		['|---', ...Array.from({ length: Object.keys(summaryKeys).length }).fill('---'), '---|'].join('|'),
 	];
 }
 

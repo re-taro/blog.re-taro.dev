@@ -1,1 +1,4 @@
 templates/**/*.hbs
+.content-collections/
+.wrangler/
+dist/

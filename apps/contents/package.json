@@ -16,17 +16,14 @@
 		}
 	},
 	"scripts": {
-		"build": "content-collections build && wrangler deploy --env production --dry-run --minify --outdir dist",
-		"build:dev": "pnpm run build",
-		"format": "prettier --write .",
-		"lint": "pnpm run /^lint:.*/",
-		"lint:eslint": "eslint .",
-		"lint:prettier": "prettier --check .",
-		"lint:textlint": "textlint contents/**/slug.md",
-		"lint:tsc": "tsc -p . --noEmit",
-		"pre:ci": "content-collections build",
+		"build": "wireit",
+		"format": "wireit",
+		"lint:eslint": "wireit",
+		"lint:prettier": "wireit",
+		"lint:textlint": "wireit",
+		"lint:tsc": "wireit",
 		"scaffold": "plop",
-		"start": "concurrently 'content-collections watch' 'wait-on .content-collections/generated/index.js && wrangler dev --env development'",
+		"start": "wireit",
 		"typegen": "wrangler types"
 	},
 	"dependencies": {
@@ -56,11 +53,100 @@
 		"retext-stringify": "4.0.0",
 		"sharp": "0.34.1",
 		"shiki": "catalog:",
-		"textlint": "14.8.4",
+		"textlint": "15.1.0",
 		"textlint-filter-rule-comments": "1.2.2",
 		"textlint-rule-ja-space-around-link": "2.4.2",
+		"textlint-rule-preset-ai-writing": "1.1.0",
 		"textlint-rule-preset-overflow-techblog": "0.0.2",
 		"ulid": "3.0.1",
 		"unified": "catalog:"
+	},
+	"wireit": {
+		"build:content-collections": {
+			"command": "content-collections build",
+			"files": [
+				"./contents/**/*",
+				"./content-collections.config.ts"
+			],
+			"dependencies": [
+				"../../packages/ast:build",
+				"../../packages/ast-article:build",
+				"../../packages/ast-description-list:build",
+				"../../packages/ast-embed:build",
+				"../../packages/ast-section:build",
+				"../../packages/ast-toc:build",
+				"../../packages/ast-transform:build",
+				"../../packages/remark-description-list:build",
+				"../../packages/remark-embed:build"
+			]
+		},
+		"build": {
+			"command": "wrangler deploy --env production --dry-run --minify --outdir dist",
+			"dependencies": [
+				"build:content-collections"
+			],
+			"output": [
+				"./dist/**/*"
+			],
+			"files": [
+				"./src/**/*",
+				"./cache/**/*",
+				"./contents/**/*",
+				"content-collections.config.ts"
+			]
+		},
+		"format": {
+			"command": "prettier --write ."
+		},
+		"generate": {
+			"command": "rw-scripts ensure-env && wrangler types && panda codegen --silent",
+			"files": [
+				"./wrangler.toml",
+				"./panda.config.ts",
+				"./removeUnusedKeyframes.ts",
+				"./removeUnusedvars.ts",
+				"./postcss.config.cjs"
+			],
+			"output": [
+				"./styled-system/**/*",
+				"./worker-configuration.d.ts"
+			]
+		},
+		"lint": {
+			"dependencies": [
+				"lint:eslint",
+				"lint:prettier",
+				"lint:tsc"
+			]
+		},
+		"lint:eslint": {
+			"command": "eslint .",
+			"dependencies": [
+				"build:content-collections"
+			]
+		},
+		"lint:prettier": {
+			"command": "prettier --check ."
+		},
+		"lint:textlint": {
+			"command": "textlint contents/**/slug.md",
+			"files": [
+				"./contents/**/*",
+				"./.textlintrc.json"
+			]
+		},
+		"lint:tsc": {
+			"command": "tsc -p .",
+			"dependencies": [
+				"build:content-collections"
+			]
+		},
+		"start": {
+			"command": "concurrently 'content-collections watch' 'wait-on .content-collections/generated/index.js && wrangler dev --env development'",
+			"dependencies": [
+				"build"
+			],
+			"service": true
+		}
 	}
 }

@@ -12,23 +12,20 @@
 	"private": true,
 	"packageManager": "pnpm@10.10.0",
 	"scripts": {
-		"build": "pnpm run -r build",
-		"build:dev": "pnpm run -r build:dev",
-		"dev": "concurrently -k -s first -n 'CONTENTS,APP' -c 'magenta,blue' 'pnpm run dev:contents' 'wait-on http://127.0.0.1:8000 && pnpm run dev:app'",
-		"dev:app": "pnpm -C apps/blog run dev",
-		"dev:contents": "pnpm -C apps/contents run start",
-		"format": "pnpm run -r --parallel format",
-		"lint": "pnpm run -r --parallel lint",
-		"lint:eslint": "pnpm run -r --parallel lint:eslint",
-		"lint:prettier": "pnpm run -r --parallel lint:prettier",
-		"lint:textlint": "pnpm run -r --parallel lint:textlint",
-		"lint:tsc": "pnpm run -r --parallel lint:tsc",
-		"start": "concurrently -k -s first -n 'CONTENTS,APP' -c 'magenta,blue' 'pnpm run start:contents' 'wait-on http://127.0.0.1:8000 && pnpm run start:blog'",
-		"start:blog": "pnpm -C apps/blog run start",
-		"start:contents": "pnpm -C apps/contents run start",
-		"test:integration": "pnpm -C apps/blog run test:integration",
-		"test:unit": "pnpm run -r --parallel test",
-		"scaffold": "pnpm -C apps/contents run scaffold"
+		"build": "wireit",
+		"build:dev": "wireit",
+		"format": "wireit",
+		"lint": "wireit",
+		"lint:eslint": "wireit",
+		"lint:prettier": "wireit",
+		"lint:textlint": "wireit",
+		"lint:tsc": "wireit",
+		"scaffold": "pnpm -C apps/contents run scaffold",
+		"start": 		"concurrently -k -s first -n 'CONTENTS,APP' -c 'magenta,blue' 'pnpm run start:contents' 'wait-on http://127.0.0.1:8000 && pnpm run start:blog'",
+		"start:blog": "wireit",
+		"start:contents": "wireit",
+		"test:integration": "wireit",
+		"test:unit": "wireit"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "0.5.1",
@@ -40,15 +37,166 @@
 		"concurrently": "9.2.0",
 		"eslint": "9.30.1",
 		"playwright": "1.52.0",
-		"prettier": "3.6.2",
+		"prettier": "3.5.3",
 		"rollup": "4.44.2",
 		"tsconfig": "workspace:*",
 		"typescript": "5.8.3",
 		"vitest": "3.2.4",
 		"wait-on": "8.0.3",
+		"wireit": "0.14.12",
 		"wrangler": "4.23.0"
 	},
 	"browserslist": [
 		"defaults and > 0.3%"
-	]
+	],
+	"wireit": {
+		"build": {
+			"dependencies": [
+				"./apps/blog:build",
+				"./apps/contents:build"
+			]
+		},
+		"build:dev": {
+			"dependencies": [
+				"./apps/blog:build:dev",
+				"./apps/contents:build"
+			]
+		},
+		"format": {
+			"dependencies": [
+				"./apps/blog:format",
+				"./apps/contents:format",
+				"./packages/ast:format",
+				"./packages/ast-article:format",
+				"./packages/ast-check:format",
+				"./packages/ast-description-list:format",
+				"./packages/ast-embed:format",
+				"./packages/ast-section:format",
+				"./packages/ast-toc:format",
+				"./packages/ast-transform:format",
+				"./packages/oembed:format",
+				"./packages/remark-check:format",
+				"./packages/remark-description-list:format",
+				"./packages/remark-embed:format",
+				"./packages/rollup:format",
+				"./packages/tsconfig:format",
+				"./packages/utils:format",
+				"./packages/visit:format"
+			]
+		},
+		"lint": {
+			"dependencies": [
+				"./apps/blog:lint",
+				"./apps/contents:lint",
+				"./packages/ast:lint",
+				"./packages/ast-article:lint",
+				"./packages/ast-check:lint",
+				"./packages/ast-description-list:lint",
+				"./packages/ast-embed:lint",
+				"./packages/ast-section:lint",
+				"./packages/ast-toc:lint",
+				"./packages/ast-transform:lint",
+				"./packages/oembed:lint",
+				"./packages/remark-check:lint",
+				"./packages/remark-description-list:lint",
+				"./packages/remark-embed:lint",
+				"./packages/rollup:lint",
+				"./packages/tsconfig:lint",
+				"./packages/utils:lint",
+				"./packages/visit:lint"
+			]
+		},
+		"lint:eslint": {
+			"dependencies": [
+				"./apps/blog:lint:eslint",
+				"./apps/contents:lint:eslint",
+				"./packages/ast:lint:eslint",
+				"./packages/ast-article:lint:eslint",
+				"./packages/ast-check:lint:eslint",
+				"./packages/ast-description-list:lint:eslint",
+				"./packages/ast-embed:lint:eslint",
+				"./packages/ast-section:lint:eslint",
+				"./packages/ast-toc:lint:eslint",
+				"./packages/ast-transform:lint:eslint",
+				"./packages/oembed:lint:eslint",
+				"./packages/remark-check:lint:eslint",
+				"./packages/remark-description-list:lint:eslint",
+				"./packages/remark-embed:lint:eslint",
+				"./packages/rollup:lint:eslint",
+				"./packages/utils:lint:eslint",
+				"./packages/visit:lint:eslint"
+			]
+		},
+		"lint:prettier": {
+			"dependencies": [
+				"./apps/blog:lint:prettier",
+				"./apps/contents:lint:prettier",
+				"./packages/ast:lint:prettier",
+				"./packages/ast-article:lint:prettier",
+				"./packages/ast-check:lint:prettier",
+				"./packages/ast-description-list:lint:prettier",
+				"./packages/ast-embed:lint:prettier",
+				"./packages/ast-section:lint:prettier",
+				"./packages/ast-toc:lint:prettier",
+				"./packages/ast-transform:lint:prettier",
+				"./packages/oembed:lint:prettier",
+				"./packages/remark-check:lint:prettier",
+				"./packages/remark-description-list:lint:prettier",
+				"./packages/remark-embed:lint:prettier",
+				"./packages/rollup:lint:prettier",
+				"./packages/tsconfig:lint:prettier",
+				"./packages/utils:lint:prettier",
+				"./packages/visit:lint:prettier"
+			]
+		},
+		"lint:textlint": {
+			"dependencies": [
+				"./apps/contents:lint:textlint"
+			]
+		},
+		"lint:tsc": {
+			"dependencies": [
+				"./apps/blog:lint:tsc",
+				"./apps/contents:lint:tsc",
+				"./packages/ast:lint:tsc",
+				"./packages/ast-article:lint:tsc",
+				"./packages/ast-check:lint:tsc",
+				"./packages/ast-description-list:lint:tsc",
+				"./packages/ast-embed:lint:tsc",
+				"./packages/ast-section:lint:tsc",
+				"./packages/ast-toc:lint:tsc",
+				"./packages/ast-transform:lint:tsc",
+				"./packages/oembed:lint:tsc",
+				"./packages/remark-check:lint:tsc",
+				"./packages/remark-description-list:lint:tsc",
+				"./packages/remark-embed:lint:tsc",
+				"./packages/utils:lint:tsc",
+				"./packages/visit:lint:tsc"
+			]
+		},
+		"start:blog": {
+			"dependencies": [
+				"./apps/blog:start"
+			],
+			"command": "pnpm -C apps/blog run start"
+		},
+		"start:contents": {
+			"dependencies": [
+				"./apps/contents:start"
+			],
+			"command": "pnpm -C apps/contents run start"
+		},
+		"test:integration": {
+			"dependencies": [
+				"./apps/blog:test:integration"
+			]
+		},
+		"test:unit": {
+			"dependencies": [
+				"./packages/ast-section:test",
+				"./packages/remark-description-list:test",
+				"./packages/remark-embed:test"
+			]
+		}
+	}
 }

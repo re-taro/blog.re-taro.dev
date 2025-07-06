@@ -4,20 +4,17 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"build": "NODE_ENV=production vite build --mode production",
-		"build:dev": "NODE_ENV=production vite build --mode development",
-		"dev": "NODE_ENV=development vite dev",
+		"build": "wireit",
+		"build:dev": "wireit",
 		"dev:init": "rw-scripts dev-init",
-		"format": "prettier --write .",
-		"generate": "rw-scripts ensure-env && wrangler types && panda codegen --silent",
-		"lint": "pnpm run /^lint:.*/",
-		"lint:eslint": "eslint .",
-		"lint:prettier": "prettier --check .",
-		"lint:tsc": "pnpm run generate && tsc -p .",
-		"prebuild": "panda codegen --silent",
-		"scaffold": "plop",
-		"start": "wrangler dev",
-		"test:integration": "playwright test"
+		"format": "wireit",
+		"generate": "wireit",
+		"lint": "wireit",
+		"lint:eslint": "wireit",
+		"lint:prettier": "wireit",
+		"lint:tsc": "wireit",
+		"start": "wireit",
+		"test:integration": "wireit"
 	},
 	"dependencies": {
 		"@types/hast": "3.0.4",
@@ -49,5 +46,116 @@
 		"unfurl.js": "catalog:",
 		"vite": "6.3.5",
 		"vitest": "3.2.4"
+	},
+	"wireit": {
+		"build:pandacss": {
+			"command": "panda codegen --silent",
+			"files": [
+				"./src/**/*",
+				"./panda.config.ts",
+				"./removeUnusedKeyframes.ts",
+				"./removeUnusedvars.ts",
+				"./postcss.config.cjs"
+			],
+			"output": [
+				"./styled-system/**/*"
+			]
+		},
+		"build": {
+			"command": "NODE_ENV=production vite build --mode production",
+			"dependencies": [
+				"build:pandacss",
+				"../../packages/ast:build",
+				"../contents:build",
+				"../../packages/oembed:build"
+			],
+			"output": [
+				"./dist/**/*"
+			],
+			"files": [
+				"./src/**/*",
+				"./vite.config.ts",
+				"./panda.config.ts",
+				"./removeUnusedKeyframes.ts",
+				"./removeUnusedvars.ts"
+			]
+		},
+		"build:dev": {
+			"command": "NODE_ENV=production vite build --mode development",
+			"dependencies": [
+				"build:pandacss",
+				"../../packages/ast:build",
+				"../../packages/oembed:build"
+			],
+			"output": [
+				"./dist/**/*"
+			],
+			"files": [
+				"./src/**/*",
+				"./vite.config.ts",
+				"./panda.config.ts",
+				"./removeUnusedKeyframes.ts",
+				"./removeUnusedvars.ts"
+			]
+		},
+		"format": {
+			"command": "prettier --write ."
+		},
+		"generate": {
+			"command": "rw-scripts ensure-env && wrangler types && panda codegen --silent",
+			"files": [
+				"./wrangler.toml",
+				"./panda.config.ts",
+				"./removeUnusedKeyframes.ts",
+				"./removeUnusedvars.ts",
+				"./postcss.config.cjs"
+			],
+			"output": [
+				"./styled-system/**/*",
+				"./worker-configuration.d.ts"
+			]
+		},
+		"lint": {
+			"dependencies": [
+				"lint:eslint",
+				"lint:prettier",
+				"lint:tsc"
+			]
+		},
+		"lint:eslint": {
+			"command": "eslint .",
+			"dependencies": [
+				"generate",
+				"../../packages/ast:build",
+				"../contents:build",
+				"../../packages/oembed:build"
+			]
+		},
+		"lint:prettier": {
+			"command": "prettier --check ."
+		},
+		"lint:tsc": {
+			"command": "tsc -p .",
+			"dependencies": [
+				"generate",
+				"../../packages/ast:build",
+				"../contents:build",
+				"../../packages/oembed:build"
+			]
+		},
+		"start": {
+			"command": "wrangler dev",
+			"dependencies": [
+				"build:dev"
+			],
+			"service": true
+		},
+		"test:integration": {
+			"command": "playwright test",
+			"files": [
+				"./test/**/*",
+				"./playwright.config.ts"
+			]
+		}
 	}
 }

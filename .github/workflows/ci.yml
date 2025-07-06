@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-test:
+  setup:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -16,9 +16,26 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.6
         with:
           node-version-file: .tool-versions
+  build-test:
+    needs:
+      - setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.7.6
+        with:
+          node-version-file: .tool-versions
+      - name: Setup | wireit
+        uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Run | Build
         run: pnpm run build
   lint-test:
+    needs:
+      - setup
+      - build-test
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -28,13 +45,14 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.6
         with:
           node-version-file: .tool-versions
-      - name: Setup | Build
-        run: pnpm build
-      - name: Setup | content-collections
-        run: pnpm -C apps/contents run pre:ci
+      - name: Setup | wireit
+        uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Run | ESLint
         run: pnpm run lint:eslint
   type-test:
+    needs:
+      - setup
+      - build-test
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -44,13 +62,13 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.6
         with:
           node-version-file: .tool-versions
-      - name: Setup | Build
-        run: pnpm build
-      - name: Setup | content-collections
-        run: pnpm -C apps/contents run pre:ci
+      - name: Setup | wireit
+        uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Run | tsc
         run: pnpm run lint:tsc
   prettier-test:
+    needs:
+      - setup
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -60,9 +78,13 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.6
         with:
           node-version-file: .tool-versions
+      - name: Setup | wireit
+        uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Run | Prettier
         run: pnpm run lint:prettier
   slug-test:
+    needs:
+      - setup
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -72,9 +94,14 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.6
         with:
           node-version-file: .tool-versions
+      - name: Setup | wireit
+        uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Run | Slug
         run: pnpm run lint:textlint
   unit-test:
+    needs:
+      - setup
+      - build-test
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -84,11 +111,14 @@ jobs:
         uses: re-taro/actions/setup-node@v3.7.6
         with:
           node-version-file: .tool-versions
-      - name: Setup | Build
-        run: pnpm build
+      - name: Setup | wireit
+        uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Test | Unit
         run: pnpm run test:unit
   integration-test:
+    needs:
+      - setup
+      - build-test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -100,8 +130,8 @@ jobs:
           node-version-file: .tool-versions
       - name: Setup | Playwright
         uses: ./.github/actions/setup-playwright
-      - name: Setup | Build
-        run: pnpm build:dev
+      - name: Setup | wireit
+        uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Test | Integration
         run: |
           pnpm concurrently -k -s first -n "APP,TEST" -c "magenta,blue" \
