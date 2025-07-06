@@ -2,7 +2,7 @@
 title: React Compiler はどのように値のメモ化を決定しているのか(InferMutationAliasingEffects 篇)
 description: 「React Compiler はどのように値のメモ化を決定しているのか」の InferMutationAliasingEffects 篇
 tags: ['React', 'React Compiler']
-published: false
+published: true
 publishedAt: 2025-07-01T16:41:57.326+09:00[Asia/Tokyo]
 ---
 
@@ -142,7 +142,7 @@ switch () {
 
 これにより「この識別子はどんな値を指し得るか」「値の可変性は？」が常に問い合わせ可能になり、`applyEffect` の判断材料になる。
 
-### `InferMutationAliasingEffects` の例
+## `InferMutationAliasingEffects` の例
 
 ```js:sample.js
 const frozen = Object.freeze({x:1}); // ← 解析時点で Frozen

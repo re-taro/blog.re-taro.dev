@@ -2,7 +2,7 @@
 title: React Compiler はどのように値のメモ化を決定しているのか
 description: React Compiler core team が公開した MUTABILITY_ALIASING_MODEL.md に基づきまとめる。
 tags: ['React', 'React Compiler']
-published: false
+published: true
 publishedAt: 2025-06-29T14:53:32.238+09:00[Asia/Tokyo]
 ---
 
@@ -49,3 +49,5 @@ React Compiler の実装において、 The Mutability & Aliasing Model は、�
 
 - [React Compiler はどのように値のメモ化を決定しているのか(InferMutationAliasingEffects 篇)](/p/01JZCRHSP96KXJEB325SBKY3DF)
 - [React Compiler はどのように値のメモ化を決定しているのか(InferMutationAliasingRanges 篇)](/p/01JZCRX248EHT04B93RNTZ0Z18)
+- [React Compiler はどのように値のメモ化を決定しているのか(InferReactiveScopeVariables 篇)]()
+- [React Compiler はどのように値のメモ化を決定しているのか(AnalyzingFunction 篇)]()
