@@ -30,7 +30,7 @@
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "4.10.2",
-		"@pandacss/dev": "0.53.7",
+		"@pandacss/dev": "0.54.0",
 		"@playwright/test": "1.52.0",
 		"@qwik.dev/partytown": "0.11.1",
 		"@types/react": "19.1.8",
