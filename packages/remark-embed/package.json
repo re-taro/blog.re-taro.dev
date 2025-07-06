@@ -85,7 +85,12 @@
 			]
 		},
 		"test": {
-			"command": "vitest run"
+			"command": "vitest run",
+			"dependencies": [
+				"../ast:build",
+				"../remark-check:build",
+				"../visit:build"
+			]
 		}
 	}
 }
