@@ -16,15 +16,54 @@
 		"src"
 	],
 	"scripts": {
-		"build": "tsc -p . --incremental false",
-		"build:dev": "pnpm run build",
-		"format": "prettier --write .",
-		"lint": "pnpm run /^lint:.*/",
-		"lint:eslint": "eslint .",
-		"lint:prettier": "prettier --check .",
-		"lint:tsc": "tsc -p . --noEmit"
+		"build": "wireit",
+		"format": "wireit",
+		"lint": "wireit",
+		"lint:eslint": "wireit",
+		"lint:prettier": "wireit",
+		"lint:tsc": "wireit"
 	},
 	"dependencies": {
 		"ast": "workspace:*"
+	},
+	"wireit": {
+		"build": {
+			"command": "tsc -p . --incremental false",
+			"output": [
+				"./dist/**/*"
+			],
+			"files": [
+				"./src/**/*",
+				"./tsconfig.json"
+			],
+			"dependencies": [
+				"../ast:build"
+			]
+		},
+		"format": {
+			"command": "prettier --write ."
+		},
+		"lint": {
+			"dependencies": [
+				"lint:eslint",
+				"lint:prettier",
+				"lint:tsc"
+			]
+		},
+		"lint:eslint": {
+			"command": "eslint .",
+			"dependencies": [
+				"../ast:build"
+			]
+		},
+		"lint:prettier": {
+			"command": "prettier --check ."
+		},
+		"lint:tsc": {
+			"command": "tsc -p . --noEmit",
+			"dependencies": [
+				"../ast:build"
+			]
+		}
 	}
 }

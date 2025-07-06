@@ -16,10 +16,10 @@
 		"index.js"
 	],
 	"scripts": {
-		"format": "prettier --write .",
-		"lint": "pnpm run /^lint:.*/",
-		"lint:eslint": "eslint .",
-		"lint:prettier": "prettier --check ."
+		"format": "wireit",
+		"lint": "wireit",
+		"lint:eslint": "wireit",
+		"lint:prettier": "wireit"
 	},
 	"dependencies": {
 		"@rollup/plugin-commonjs": "28.0.6",
@@ -29,5 +29,22 @@
 		"@rollup/plugin-terser": "0.4.4",
 		"@rollup/plugin-typescript": "12.1.4",
 		"rollup-plugin-output-size": "1.5.0"
+	},
+	"wireit": {
+		"format": {
+			"command": "prettier --write ."
+		},
+		"lint": {
+			"dependencies": [
+				"lint:eslint",
+				"lint:prettier"
+			]
+		},
+		"lint:eslint": {
+			"command": "eslint ."
+		},
+		"lint:prettier": {
+			"command": "prettier --check ."
+		}
 	}
 }

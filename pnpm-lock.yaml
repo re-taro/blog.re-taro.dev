@@ -46,7 +46,7 @@ importers:
         version: 0.1.1
       '@re-taro/configs':
         specifier: 1.3.8
-        version: 1.3.8(b948098c24a6f0df8233959fda8027cf)
+        version: 1.3.8(05880aae5064cb44267ae23076269489)
       '@types/node':
         specifier: 22.16.0
         version: 22.16.0
@@ -60,8 +60,8 @@ importers:
         specifier: 1.52.0
         version: 1.52.0
       prettier:
-        specifier: 3.6.2
-        version: 3.6.2
+        specifier: 3.5.3
+        version: 3.5.3
       rollup:
         specifier: 4.44.2
         version: 4.44.2
@@ -77,6 +77,9 @@ importers:
       wait-on:
         specifier: 8.0.3
         version: 8.0.3
+      wireit:
+        specifier: 0.14.12
+        version: 0.14.12
       wrangler:
         specifier: 4.23.0
         version: 4.23.0(@cloudflare/workers-types@4.20250705.0)
@@ -2536,6 +2539,10 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
+  balanced-match@3.0.1:
+    resolution: {integrity: sha512-vjtV3hiLqYDNRoiAv0zC4QaGAMPomEoq83PRmYIofPswwZurCeWR5LByXm7SyoL0Zh5+2z0+HC7jG8gSZJUh0w==}
+    engines: {node: '>= 16'}
+
   bare-events@2.5.4:
     resolution: {integrity: sha512-+gFfDkR8pj4/TrWCGUGWmJIkBwuxPS5F+a5yWjOHQt2hHvNZd5YLzadjmDUtFmMM4y429bnKLa8bYBMHcYdnQA==}
 
@@ -2611,6 +2618,10 @@ packages:
 
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+
+  brace-expansion@4.0.1:
+    resolution: {integrity: sha512-YClrbvTCXGe70pU2JiEiPLYXO9gQkyxYeKpJIQHVS/gOs6EWMQP2RYBwjFLNT322Ji8TOC3IMPfsYCedNpzKfA==}
+    engines: {node: '>= 18'}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -3102,9 +3113,6 @@ packages:
 
   dompurify@3.2.6:
     resolution: {integrity: sha512-/2GogDQlohXPZe6D6NOgQvXLPSYBqIWMnZ8zzOhn09REE4eyAzb+Hed3jhoM9OkuaJ8P6ZGTTVWQKAi8ieIzfQ==}
-
-  domutils@3.1.0:
-    resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
 
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
@@ -5382,8 +5390,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  prettier@3.6.2:
-    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6818,6 +6826,11 @@ packages:
     engines: {node: '>=8'}
     hasBin: true
 
+  wireit@0.14.12:
+    resolution: {integrity: sha512-gNSd+nZmMo6cuICezYXRIayu6TSOeCSCDzjSF0q6g8FKDsRbdqrONrSZYzdk/uBISmRcv4vZtsno6GyGvdXwGA==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
@@ -8200,7 +8213,7 @@ snapshots:
     dependencies:
       dotenv: 16.4.7
 
-  '@re-taro/configs@1.3.8(b948098c24a6f0df8233959fda8027cf)':
+  '@re-taro/configs@1.3.8(05880aae5064cb44267ae23076269489)':
     dependencies:
       '@eslint/css': 0.6.0
       '@eslint/js': 9.30.1
@@ -8222,13 +8235,13 @@ snapshots:
       eslint-plugin-unicorn: 58.0.0(eslint@9.30.1(jiti@1.21.6))
       eslint-plugin-unused-imports: 4.1.4(@typescript-eslint/eslint-plugin@8.29.1(@typescript-eslint/parser@8.29.1(eslint@9.30.1(jiti@1.21.6))(typescript@5.8.3))(eslint@9.30.1(jiti@1.21.6))(typescript@5.8.3))(eslint@9.30.1(jiti@1.21.6))
       globals: 16.0.0
-      prettier-plugin-jsdoc: 1.3.2(prettier@3.6.2)
-      prettier-plugin-pkg: 0.19.0(prettier@3.6.2)
-      prettier-plugin-sort-json: 4.1.1(prettier@3.6.2)
+      prettier-plugin-jsdoc: 1.3.2(prettier@3.5.3)
+      prettier-plugin-pkg: 0.19.0(prettier@3.5.3)
+      prettier-plugin-sort-json: 4.1.1(prettier@3.5.3)
       typescript-eslint: 8.29.1(eslint@9.30.1(jiti@1.21.6))(typescript@5.8.3)
     optionalDependencies:
       eslint: 9.30.1(jiti@1.21.6)
-      prettier: 3.6.2
+      prettier: 3.5.3
 
   '@rollup/plugin-commonjs@28.0.6(rollup@4.44.2)':
     dependencies:
@@ -9244,6 +9257,8 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
+  balanced-match@3.0.1: {}
+
   bare-events@2.5.4:
     optional: true
 
@@ -9319,6 +9334,10 @@ snapshots:
   brace-expansion@2.0.1:
     dependencies:
       balanced-match: 1.0.2
+
+  brace-expansion@4.0.1:
+    dependencies:
+      balanced-match: 3.0.1
 
   braces@3.0.3:
     dependencies:
@@ -9809,12 +9828,6 @@ snapshots:
   dompurify@3.2.6:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
-
-  domutils@3.1.0:
-    dependencies:
-      dom-serializer: 2.0.0
-      domelementtype: 2.3.0
-      domhandler: 5.0.3
 
   domutils@3.2.2:
     dependencies:
@@ -10876,7 +10889,7 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
-      domutils: 3.1.0
+      domutils: 3.2.2
       entities: 4.5.0
 
   http-errors@2.0.0:
@@ -11948,7 +11961,7 @@ snapshots:
     dependencies:
       micromark-util-character: 2.1.0
       micromark-util-encode: 2.0.0
-      micromark-util-symbol: 2.0.0
+      micromark-util-symbol: 2.0.1
 
   micromark-util-subtokenize@2.0.1:
     dependencies:
@@ -12616,28 +12629,28 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-jsdoc@1.3.2(prettier@3.6.2):
+  prettier-plugin-jsdoc@1.3.2(prettier@3.5.3):
     dependencies:
       binary-searching: 2.0.5
       comment-parser: 1.4.1
       mdast-util-from-markdown: 2.0.2
-      prettier: 3.6.2
+      prettier: 3.5.3
     transitivePeerDependencies:
       - supports-color
 
-  prettier-plugin-pkg@0.19.0(prettier@3.6.2):
+  prettier-plugin-pkg@0.19.0(prettier@3.5.3):
     dependencies:
-      prettier: 3.6.2
+      prettier: 3.5.3
 
-  prettier-plugin-sort-json@4.1.1(prettier@3.6.2):
+  prettier-plugin-sort-json@4.1.1(prettier@3.5.3):
     dependencies:
-      prettier: 3.6.2
+      prettier: 3.5.3
 
   prettier@2.8.8: {}
 
   prettier@3.2.5: {}
 
-  prettier@3.6.2: {}
+  prettier@3.5.3: {}
 
   pretty-bytes@6.1.1: {}
 
@@ -14632,6 +14645,14 @@ snapshots:
     dependencies:
       siginfo: 2.0.0
       stackback: 0.0.2
+
+  wireit@0.14.12:
+    dependencies:
+      brace-expansion: 4.0.1
+      chokidar: 3.6.0
+      fast-glob: 3.3.3
+      jsonc-parser: 3.3.1
+      proper-lockfile: 4.1.2
 
   word-wrap@1.2.5: {}
 

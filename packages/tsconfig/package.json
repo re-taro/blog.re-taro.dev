@@ -12,8 +12,21 @@
 		"tsconfig.lib.json"
 	],
 	"scripts": {
-		"format": "prettier --write .",
-		"lint": "pnpm run /^lint:.*/",
-		"lint:prettier": "prettier --check ."
+		"format": "wireit",
+		"lint": "wireit",
+		"lint:prettier": "wireit"
+	},
+	"wireit": {
+		"format": {
+			"command": "prettier --write ."
+		},
+		"lint": {
+			"dependencies": [
+				"lint:prettier"
+			]
+		},
+		"lint:prettier": {
+			"command": "prettier --check ."
+		}
 	}
 }

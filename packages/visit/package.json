@@ -16,13 +16,12 @@
 		"src"
 	],
 	"scripts": {
-		"build": "rollup -c",
-		"build:dev": "pnpm run build",
-		"format": "prettier --write .",
-		"lint": "pnpm run /^lint:.*/",
-		"lint:eslint": "eslint .",
-		"lint:prettier": "prettier --check .",
-		"lint:tsc": "tsc -p . --noEmit"
+		"build": "wireit",
+		"format": "wireit",
+		"lint": "wireit",
+		"lint:eslint": "wireit",
+		"lint:prettier": "wireit",
+		"lint:tsc": "wireit"
 	},
 	"dependencies": {
 		"@types/mdast": "catalog:",
@@ -30,5 +29,37 @@
 	},
 	"devDependencies": {
 		"rollup-config": "workspace:*"
+	},
+	"wireit": {
+		"build": {
+			"command": "rollup -c",
+			"output": [
+				"./dist/**/*"
+			],
+			"files": [
+				"./src/**/*",
+				"./tsconfig.json",
+				"./rollup.config.js"
+			]
+		},
+		"format": {
+			"command": "prettier --write ."
+		},
+		"lint": {
+			"dependencies": [
+				"lint:eslint",
+				"lint:prettier",
+				"lint:tsc"
+			]
+		},
+		"lint:eslint": {
+			"command": "eslint ."
+		},
+		"lint:prettier": {
+			"command": "prettier --check ."
+		},
+		"lint:tsc": {
+			"command": "tsc -p . --noEmit"
+		}
 	}
 }

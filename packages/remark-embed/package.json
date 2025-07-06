@@ -16,14 +16,13 @@
 		"src"
 	],
 	"scripts": {
-		"build": "rollup -c",
-		"build:dev": "pnpm run build",
-		"format": "prettier --write .",
-		"lint": "pnpm run /^lint:.*/",
-		"lint:eslint": "eslint .",
-		"lint:prettier": "prettier --check .",
-		"lint:tsc": "tsc -p . --noEmit",
-		"test": "vitest"
+		"build": "wireit",
+		"format": "wireit",
+		"lint": "wireit",
+		"lint:eslint": "wireit",
+		"lint:prettier": "wireit",
+		"lint:tsc": "wireit",
+		"test": "wireit"
 	},
 	"dependencies": {
 		"@types/mdast": "catalog:",
@@ -37,5 +36,56 @@
 		"remark-gfm": "4.0.1",
 		"remark-parse": "11.0.0",
 		"rollup-config": "workspace:*"
+	},
+	"wireit": {
+		"build": {
+			"command": "rollup -c",
+			"output": [
+				"./dist/**/*"
+			],
+			"files": [
+				"./src/**/*",
+				"./tsconfig.json",
+				"./rollup.config.js"
+			],
+			"dependencies": [
+				"../ast:build",
+				"../remark-check:build",
+				"../visit:build"
+			]
+		},
+		"format": {
+			"command": "prettier --write ."
+		},
+		"lint": {
+			"dependencies": [
+				"lint:eslint",
+				"lint:prettier",
+				"lint:tsc"
+			],
+			"command": "pnpm run /^lint:.*/"
+		},
+		"lint:eslint": {
+			"command": "eslint .",
+			"dependencies": [
+				"../ast:build",
+				"../remark-check:build",
+				"../visit:build"
+			]
+		},
+		"lint:prettier": {
+			"command": "prettier --check ."
+		},
+		"lint:tsc": {
+			"command": "tsc -p . --noEmit",
+			"dependencies": [
+				"../ast:build",
+				"../remark-check:build",
+				"../visit:build"
+			]
+		},
+		"test": {
+			"command": "vitest run"
+		}
 	}
 }
