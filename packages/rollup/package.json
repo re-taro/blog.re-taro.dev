@@ -28,7 +28,7 @@
 		"@rollup/plugin-replace": "6.0.2",
 		"@rollup/plugin-terser": "0.4.4",
 		"@rollup/plugin-typescript": "12.1.4",
-		"rollup-plugin-output-size": "1.5.0"
+		"rollup-plugin-output-size": "1.6.1"
 	},
 	"wireit": {
 		"format": {
