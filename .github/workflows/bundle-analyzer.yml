@@ -29,7 +29,7 @@ jobs:
       - name: Setup | wireit
         uses: google/wireit@f21db1f3a6a4db31f42787a958cf2a18308effed # setup-github-actions-caching/v2.0.3
       - name: Analyze | Bundle Size
-        uses: preactjs/compressed-size-action@6fa0e7ca017120c754863b31123c5ee2860fd434 # 2.7.0
+        uses: preactjs/compressed-size-action@946a292cd35bd1088e0d7eb92b69d1a8d5b5d76a # 2.8.0
         with:
           pattern: apps/blog/dist/**/*.{js,json,html,xml,css}
           exclude: apps/blog/dist/~partytown/**/*.js
