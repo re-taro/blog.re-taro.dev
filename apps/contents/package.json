@@ -51,7 +51,7 @@
 		"retext-english": "5.0.0",
 		"retext-equality": "7.1.0",
 		"retext-stringify": "4.0.0",
-		"sharp": "0.34.1",
+		"sharp": "0.34.3",
 		"shiki": "catalog:",
 		"textlint": "15.1.0",
 		"textlint-filter-rule-comments": "1.2.2",
