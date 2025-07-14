@@ -27,7 +27,7 @@
 		"typegen": "wrangler types"
 	},
 	"dependencies": {
-		"hono": "4.7.11",
+		"hono": "4.8.5",
 		"temporal-polyfill": "catalog:"
 	},
 	"devDependencies": {
