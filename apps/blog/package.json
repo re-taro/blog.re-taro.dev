@@ -29,15 +29,15 @@
 		"xml2js": "0.6.2"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "4.10.2",
+		"@axe-core/playwright": "4.14.0",
 		"@pandacss/dev": "0.53.7",
-		"@playwright/test": "1.52.0",
+		"@playwright/test": "1.64.1",
 		"@qwik.dev/partytown": "0.11.1",
 		"@types/react": "19.1.8",
 		"@types/react-dom": "19.1.6",
 		"@types/xml2js": "0.4.14",
 		"axe-core": "4.10.3",
-		"axe-playwright": "2.1.0",
+		"axe-playwright": "2.2.2",
 		"contents": "workspace:*",
 		"oembed": "workspace:*",
 		"postcss": "8.5.6",
